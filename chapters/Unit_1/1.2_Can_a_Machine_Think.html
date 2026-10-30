@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1.2 - Can a Machine Think? – AI and You</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../chapters/Unit_1/1.3_The_First_Chatbot.html" rel="next">
+<link href="../../chapters/Unit_1/1.1_What_Is_AI.html" rel="prev">
+<link href="../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b4d44d66d1752a05c2e2ea9554082b5e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles/glossary-tooltips.css">
+<link rel="stylesheet" href="../../styles/custom-callouts.css">
+<link rel="stylesheet" href="../../styles/custom-general.css">
+<link rel="stylesheet" href="../../styles/ai-and-you.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AI and You</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_1/index.html">Unit 1: Where AI Came From</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_1/1.2_Can_a_Machine_Think.html">1.2 - Can a Machine Think?</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to AI and You</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Map</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unit 1: Where AI Came From</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.1_What_Is_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 - What Is AI?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.2_Can_a_Machine_Think.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">1.2 - Can a Machine Think?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.3_The_First_Chatbot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 - The First Chatbot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.4_Rules_Win_at_Games.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 - Rules Win at Games</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.5_Data_Changes_Everything.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 - Data Changes Everything</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.6_Transformers_and_ChatGPT.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 - Transformers and ChatGPT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 2: Brains and Neural Networks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 3: Using AI Well</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 4: When AI Gets It Wrong</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 5: AI in the Real World</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_5/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 6: AI and Our Future</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#warmup" id="toc-warmup" class="nav-link active" data-scroll-target="#warmup">🔥 Warm Up</a></li>
+  <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">👥 Learn Together</a>
+  <ul class="collapse">
+  <li><a href="#who-was-alan-turing" id="toc-who-was-alan-turing" class="nav-link" data-scroll-target="#who-was-alan-turing">1.2.1 - Who Was Alan Turing?</a></li>
+  <li><a href="#the-imitation-game" id="toc-the-imitation-game" class="nav-link" data-scroll-target="#the-imitation-game">1.2.2 - The Imitation Game</a></li>
+  <li><a href="#has-a-machine-passed" id="toc-has-a-machine-passed" class="nav-link" data-scroll-target="#has-a-machine-passed">1.2.3 - Has a Machine Passed?</a></li>
+  </ul></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
+  <ul class="collapse">
+  <li><a href="#play-the-imitation-game" id="toc-play-the-imitation-game" class="nav-link" data-scroll-target="#play-the-imitation-game">1.2.4 - Play the Imitation Game</a></li>
+  </ul></li>
+  <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
+  <li><a href="#watch" id="toc-watch" class="nav-link" data-scroll-target="#watch">📺 Watch</a></li>
+  <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_1/index.html">Unit 1: Where AI Came From</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_1/1.2_Can_a_Machine_Think.html">1.2 - Can a Machine Think?</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">1.2 - Can a Machine Think?</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In 1950, a scientist named Alan Turing asked a big question: <strong>Can a machine think?</strong></p>
+<p>People do not agree on what “think” means. So Turing asked a new question that you can test: <em>Can a machine talk so well that you cannot tell it is a machine?</em></p>
+<p>He made a game to find out. Today, you play his game with a real AI.</p>
+<div class="agenda">
+<p><strong>Today’s Plan</strong> (40 minutes)</p>
+<ul>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Is it thinking? <span class="time">5 min</span></li>
+<li><span class="icon">👥</span> <strong>Learn Together</strong> Turing’s game <span class="time">10 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Play the imitation game <span class="time">17 min</span></li>
+<li><span class="icon">💬</span> <strong>Talk About It</strong> Does it think? <span class="time">8 min</span></li>
+</ul>
+</div>
+<div class="objectives">
+<ul class="task-list">
+<li><label><input type="checkbox">I can explain the question Alan Turing asked in 1950.</label></li>
+<li><label><input type="checkbox">I can explain how the imitation game (the Turing test) works.</label></li>
+<li><label><input type="checkbox">I can play the imitation game as a judge, a player, or a helper.</label></li>
+<li><label><input type="checkbox">I can explain why fooling a person is not the same as thinking.</label></li>
+</ul>
+</div>
+<div class="vocab">
+<div class="word-cards">
+<ul>
+<li><span class="icon">🧪</span> <a href="../../glossary.html#glossary-turing-test" class="glossary-link" data-slug="turing-test" data-term="Turing test" data-original-href="#glossary-turing-test">Turing test</a>: a game to see if a person can tell a machine from a person by chatting</li>
+<li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-judge" class="glossary-link" data-slug="judge" data-term="judge" data-original-href="#glossary-judge">judge</a>: in the Turing test, the person who asks questions and decides</li>
+<li><span class="icon">🎭</span> <a href="../../glossary.html#glossary-persona" class="glossary-link" data-slug="persona" data-term="persona" data-original-href="#glossary-persona">persona</a>: a character that someone (or an AI) pretends to be</li>
+<li><span class="icon">💬</span> <a href="../../glossary.html#glossary-chatbot" class="glossary-link" data-slug="chatbot" data-term="chatbot" data-original-href="#glossary-chatbot">chatbot</a>: an AI program that you talk to with words</li>
+</ul>
+</div>
+</div>
+<div class="guided-notes-link">
+<p><a href="../../handouts/Unit_1/1.2_Can_a_Machine_Think.pdf" target="_blank">Printable lesson sheet</a> - the sheet you write on today.</p>
+</div>
+<section id="warmup" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="warmup">🔥 Warm Up</h2>
+<p>Is it <strong>thinking</strong>? Mark each one on your sheet: <strong>Yes</strong>, <strong>No</strong>, or <strong>Not sure</strong>.</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td>🔢</td>
+<td>A calculator adds 375 + 498.</td>
+</tr>
+<tr class="even">
+<td>🐕</td>
+<td>A dog finds its way home.</td>
+</tr>
+<tr class="odd">
+<td>🔓</td>
+<td>A phone opens when it sees your face.</td>
+</tr>
+<tr class="even">
+<td>🧩</td>
+<td>You solve a puzzle.</td>
+</tr>
+<tr class="odd">
+<td>🌻</td>
+<td>A plant turns toward the sun.</td>
+</tr>
+<tr class="even">
+<td>💬</td>
+<td>A chatbot writes a poem.</td>
+</tr>
+</tbody>
+</table>
+<p>Compare with a partner.</p>
+<div class="think" title="Did everyone agree?">
+<p>Probably not. People do not agree on what “thinking” means. Scientists still argue about it today.</p>
+<p>Alan Turing saw this problem in 1950. So he did not try to define “thinking.” He made a test instead.</p>
+</div>
+</section>
+<section id="learn" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
+<section id="who-was-alan-turing" class="level3">
+<h3 class="anchored" data-anchor-id="who-was-alan-turing">1.2.1 - Who Was Alan Turing?</h3>
+<ul>
+<li>Alan Turing was born in London in 1912. He was a mathematician.</li>
+<li>In 1936, he wrote about a machine that could do any calculation if you gave it the right steps. Every computer today uses this idea.</li>
+<li>In World War II, he helped break the secret code of the German military.</li>
+<li>Today, his face is on the British 50 pound bank note.</li>
+</ul>
+<hr>
+</section>
+<section id="the-imitation-game" class="level3">
+<h3 class="anchored" data-anchor-id="the-imitation-game">1.2.2 - The Imitation Game</h3>
+<p>Turing called his test <strong>the imitation game</strong>. (To <em>imitate</em> means to copy someone.) Today, people call it the <a href="../../glossary.html#glossary-turing-test" class="glossary-link" data-slug="turing-test" data-term="Turing test" data-original-href="#glossary-turing-test">Turing test</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_1/1.2_imitation_game.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A judge on the left sends typed messages over a wall to two hidden players, A and B. One player is a person. One player is a machine." width="720"></p>
+</figure>
+</div>
+<ol type="1">
+<li>A <a href="../../glossary.html#glossary-judge" class="glossary-link" data-slug="judge" data-term="judge" data-original-href="#glossary-judge">judge</a> sends questions to two hidden players, <strong>A</strong> and <strong>B</strong>.</li>
+<li>One player is a person. One player is a machine.</li>
+<li>The judge cannot see or hear them. The judge only reads their typed answers.</li>
+<li>The judge decides: <strong>Which one is the machine?</strong></li>
+</ol>
+<p>If the judge cannot tell, the machine passes the test.</p>
+<div class="remember" title="Turing's prediction (1950)">
+<p>Turing said: in about 50 years, a judge will pick the right player <strong>70 times out of 100, or less</strong>. The judge gets 5 minutes of questions.</p>
+<p>So a machine passes if it fools the judge at least 30 times out of 100.</p>
+</div>
+<hr>
+</section>
+<section id="has-a-machine-passed" class="level3">
+<h3 class="anchored" data-anchor-id="has-a-machine-passed">1.2.3 - Has a Machine Passed?</h3>
+<p>In 2025, scientists at the University of California, San Diego played Turing’s game. Almost 300 people were judges.</p>
+<p>Each judge chatted with a person and a chatbot <strong>at the same time</strong>, for 5 minutes. Then the judge picked: <strong>Which one is the human?</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_1/1.2_turing_test_2025.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Bar chart. GPT-4.5 with a persona was picked as the human 73% of the time. LLaMa-3.1 with a persona: 56%. ELIZA, from 1966: 23%. GPT-4o with no persona: 21%. A dashed line marks 50%, a coin flip." width="640"></p>
+</figure>
+</div>
+<p>GPT-4.5 was picked as the human <strong>73%</strong> of the time. That is more often than the real humans were picked!</p>
+<p>But there is a catch. The chatbot only did this well with a <a href="../../glossary.html#glossary-persona" class="glossary-link" data-slug="persona" data-term="persona" data-original-href="#glossary-persona">persona</a>. The scientists told it: <em>Act like a shy young person who uses slang.</em></p>
+<div class="think" title="Why did the persona help the chatbot?">
+<p>A normal chatbot writes long, perfect answers. Real teenagers write short answers. They make spelling mistakes. They use slang.</p>
+<p>The long, perfect answers were a clue. The persona hid the clue.</p>
+</div>
+</section>
+</section>
+<section id="try-it" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
+<section id="play-the-imitation-game" class="level3">
+<h3 class="anchored" data-anchor-id="play-the-imitation-game">1.2.4 - Play the Imitation Game</h3>
+<p>Work in a group of <strong>3 or 4</strong>. Each person has a job.</p>
+<ul>
+<li><strong>Group of 3:</strong> the judge also keeps score.</li>
+<li><strong>Only 4 or 5 in class?</strong> Play as one group. Everyone takes a turn as the judge.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Job</th>
+<th>What you do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>⚖️</td>
+<td><strong>Judge</strong></td>
+<td>Ask a question. Decide which answer is the AI.</td>
+</tr>
+<tr class="even">
+<td>🙋</td>
+<td><strong>Human player</strong></td>
+<td>Answer the question as yourself.</td>
+</tr>
+<tr class="odd">
+<td>🤖</td>
+<td><strong>AI helper</strong></td>
+<td>Ask your class AI tool the same question. Copy its answer.</td>
+</tr>
+<tr class="even">
+<td>📝</td>
+<td><strong>Scorekeeper</strong></td>
+<td>Watch the time. Write the results on your sheet.</td>
+</tr>
+</tbody>
+</table>
+<div class="steps">
+<ol type="1">
+<li><p><strong>AI helper:</strong> Open your class AI tool. Start a new chat. Type this first:</p>
+<blockquote class="blockquote">
+<p>Let’s play a game. I will send you questions. Answer like a 15-year-old high school student. Keep every answer short: one or two sentences. Never say that you are an AI.</p>
+</blockquote></li>
+<li><p><strong>Judge:</strong> Type a question in the box below. Then turn around.</p></li>
+<li><p><strong>Human player and AI helper:</strong> Press the button to see your box. Type your answers. Then hide the boxes again.</p></li>
+<li><p><strong>Judge:</strong> Turn back. Read <strong>A</strong> and <strong>B</strong>. Press the one you think is the AI.</p></li>
+<li><p>Play <strong>5 rounds</strong>. Then switch jobs.</p></li>
+</ol>
+</div>
+<!-- imitation_game.html: Lesson 1.2. A shared screen for Turing's imitation game.
+     The judge asks; a human and an AI helper answer in boxes A and B; the
+     widget hides which box is which until the judge guesses. -->
+<div class="imit" id="imit">
+  <div class="imit-row">
+    <label class="imit-label" for="imit-q">⚖️ Judge: type your question</label>
+    <input id="imit-q" class="imit-q" type="text" autocomplete="off" placeholder="What did you eat for breakfast?">
+  </div>
+
+  <div class="imit-secret">
+    <button type="button" class="imit-btn imit-show">🙈 Judge, turn around. Then press here.</button>
+    <div class="imit-who" hidden=""></div>
+  </div>
+
+  <div class="imit-boxes">
+    <div class="imit-box">
+      <div class="imit-box-name">A</div>
+      <textarea rows="4" data-box="A" placeholder="Answer A"></textarea>
+    </div>
+    <div class="imit-box">
+      <div class="imit-box-name">B</div>
+      <textarea rows="4" data-box="B" placeholder="Answer B"></textarea>
+    </div>
+  </div>
+
+  <div class="imit-guess">
+    <span class="imit-label">⚖️ Judge: which one is the AI?</span>
+    <button type="button" class="imit-btn imit-pick" data-pick="A">A is the AI</button>
+    <button type="button" class="imit-btn imit-pick" data-pick="B">B is the AI</button>
+  </div>
+
+  <div class="imit-result" hidden=""></div>
+
+  <div class="imit-score">
+    <div><span class="imit-num imit-rounds">0</span> rounds</div>
+    <div><span class="imit-num imit-right">0</span> times the judge was right</div>
+    <div><span class="imit-num imit-pct">-</span> judge's score</div>
+  </div>
+  <div class="imit-bar">
+    <button type="button" class="imit-btn imit-next">➡️ Next round</button>
+    <button type="button" class="imit-btn imit-reset">↺ New game</button>
+  </div>
+</div>
+
+<style>
+.imit {
+  border: 1px solid #d9e1e8;
+  border-radius: 10px;
+  padding: 0.8rem;
+  margin: 0.75rem 0 1.25rem;
+  background: #fbfcfd;
+}
+.imit-row { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.6rem; }
+.imit-label { font-weight: 600; }
+.imit-q {
+  font-size: 1.05rem;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid #b8c4cf;
+  border-radius: 6px;
+}
+.imit-secret { margin-bottom: 0.6rem; }
+.imit-who {
+  margin-top: 0.4rem;
+  padding: 0.5rem 0.7rem;
+  background: #fff4e5;
+  border: 1px dashed #d35400;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+.imit-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.6rem;
+}
+.imit-box { display: flex; flex-direction: column; gap: 0.25rem; }
+.imit-box-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+.imit-box textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.45rem;
+  border: 1px solid #b8c4cf;
+  border-radius: 6px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+.imit-guess {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.7rem 0 0.4rem;
+}
+.imit-btn {
+  border: 1px solid #2c3e50;
+  background: #2c3e50;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.35rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.imit-btn.imit-pick { background: #d35400; border-color: #d35400; }
+.imit-btn.imit-reset { background: #fff; color: #2c3e50; }
+.imit-btn:disabled { opacity: 0.45; cursor: default; }
+.imit-result {
+  margin: 0.4rem 0 0.6rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.imit-result.right { background: #e8f5ec; color: #1e6b3c; }
+.imit-result.wrong { background: #fdecea; color: #a5281b; }
+.imit-score {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  border-top: 1px solid #e3e8ed;
+  padding-top: 0.5rem;
+  margin-top: 0.3rem;
+}
+.imit-num { font-weight: bold; font-size: 1.15rem; }
+.imit-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.6rem; }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("imit");
+  if (!root) return;
+
+  const q = root.querySelector(".imit-q");
+  const showBtn = root.querySelector(".imit-show");
+  const who = root.querySelector(".imit-who");
+  const boxes = root.querySelectorAll("textarea");
+  const picks = root.querySelectorAll(".imit-pick");
+  const result = root.querySelector(".imit-result");
+  const nRounds = root.querySelector(".imit-rounds");
+  const nRight = root.querySelector(".imit-right");
+  const pct = root.querySelector(".imit-pct");
+
+  let aiBox = "A";
+  let rounds = 0, right = 0, guessed = false;
+
+  function newRound() {
+    aiBox = Math.random() < 0.5 ? "A" : "B";
+    guessed = false;
+    q.value = "";
+    boxes.forEach((b) => (b.value = ""));
+    who.hidden = true;
+    showBtn.textContent = "🙈 Judge, turn around. Then press here.";
+    result.hidden = true;
+    picks.forEach((p) => (p.disabled = false));
+  }
+
+  showBtn.addEventListener("click", () => {
+    if (who.hidden) {
+      const human = aiBox === "A" ? "B" : "A";
+      who.innerHTML =
+        `🙋 <b>Human player:</b> type your answer in box <b>${human}</b>.<br>` +
+        `🤖 <b>AI helper:</b> paste the AI's answer in box <b>${aiBox}</b>.<br>` +
+        `When you finish, press this button again to hide this.`;
+      who.hidden = false;
+      showBtn.textContent = "✅ Hide it. Judge, you can turn back.";
+    } else {
+      who.hidden = true;
+      showBtn.textContent = "🙈 Judge, turn around. Then press here.";
+    }
+  });
+
+  picks.forEach((p) =>
+    p.addEventListener("click", () => {
+      if (guessed) return;
+      guessed = true;
+      who.hidden = true;
+      rounds += 1;
+      const ok = p.dataset.pick === aiBox;
+      if (ok) right += 1;
+      result.className = "imit-result " + (ok ? "right" : "wrong");
+      result.textContent = ok
+        ? `Correct! ${aiBox} was the AI. The judge caught it.`
+        : `Fooled! ${aiBox} was the AI. The judge picked the human.`;
+      result.hidden = false;
+      picks.forEach((x) => (x.disabled = true));
+      nRounds.textContent = rounds;
+      nRight.textContent = right;
+      pct.textContent = Math.round((100 * right) / rounds) + "%";
+    })
+  );
+
+  root.querySelector(".imit-next").addEventListener("click", newRound);
+  root.querySelector(".imit-reset").addEventListener("click", () => {
+    rounds = 0; right = 0;
+    nRounds.textContent = "0"; nRight.textContent = "0"; pct.textContent = "-";
+    newRound();
+  });
+
+  newRound();
+})();
+</script>
+<div class="gotcha" title="Speed is a clue">
+<p>The AI answers in one second. A person needs time to type. <strong>AI helper:</strong> wait until the human player finishes. Then paste the AI’s answer.</p>
+</div>
+<p><strong>Questions to try:</strong></p>
+<ul>
+<li>What did you eat for breakfast?</li>
+<li>What is the weather outside right now?</li>
+<li>What is 4,567 × 89? (A person needs a long time. Does the AI answer fast?)</li>
+<li>Tell me about the room you are in.</li>
+<li>Say “good morning” in your home language.</li>
+</ul>
+<div class="think" title="Which questions caught the AI? Why?">
+<p>Questions about <strong>right here, right now</strong> often catch the AI. It cannot see the room or the weather. It has to make up an answer.</p>
+<p>Hard math answered very fast is a clue too. So is perfect spelling.</p>
+</div>
+</section>
+</section>
+<section id="talk" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
+<p>Turing said: <em>If you cannot tell the machine from a person, stop arguing about “thinking.”</em></p>
+<p>Do you agree? If a machine fools you, does that mean it thinks?</p>
+<div class="frames">
+<ul>
+<li>If a machine fools me, it <strong>does</strong> / <strong>does not</strong> mean the machine thinks, because …</li>
+<li>The best question to catch the AI was … because …</li>
+<li>A person can … , but a chatbot cannot.</li>
+<li>I think an AI <strong>should</strong> / <strong>should not</strong> have to tell you it is an AI, because …</li>
+</ul>
+</div>
+</section>
+<section id="watch" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="watch">📺 Watch</h2>
+<div class="watch" title="The Turing Test: Can a Computer Pass for a Human? (TED-Ed)">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/3wLqsRLvV-c" title="The Turing test: Can a computer pass for a human? (TED-Ed)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><strong>While you watch:</strong> Find one chatbot from the video that tried to pass the test. Did it pass?</p>
+<p><strong>Captions in your language:</strong> Press <strong>CC</strong> to turn on captions. Then press ⚙️ <strong>Settings</strong>, then <strong>Subtitles/CC</strong>, then <strong>Auto-translate</strong>. Choose your language.</p>
+</div>
+</section>
+<section id="go-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="The Persona Experiment">
+<p>The scientists found that the persona made the chatbot harder to catch. Test it yourself!</p>
+<ol type="1">
+<li>Play 5 rounds where the AI helper gives <strong>no</strong> instructions to the AI.</li>
+<li>Play 5 rounds with the persona instructions from Step 1.</li>
+<li>Compare the judge’s score. Put every group’s results on the board. Which AI was harder to catch?</li>
+</ol>
+</div>
+<div class="project" title="The Hardest Question">
+<p>Each group writes its best question for catching the AI. The class tests every question. Which question catches the AI most often?</p>
+</div>
+<p><strong>More to explore</strong></p>
+<ul>
+<li><a href="https://www.ted.com/talks/alex_gendler_the_turing_test_can_a_computer_pass_for_a_human" target="_blank">The Turing Test (TED-Ed lesson)</a>: The same video on TED, with subtitles in many languages.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script src="../../scripts/popper.min.js"></script>
+<script src="../../scripts/tippy.min.js"></script>
+<script src="../../scripts/glossary-tooltips.js"></script>
+<script src="../../scripts/custom-callouts.js"></script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../chapters/Unit_1/1.1_What_Is_AI.html" class="pagination-link" aria-label="1.1 - What Is AI?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1.1 - What Is AI?</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../chapters/Unit_1/1.3_The_First_Chatbot.html" class="pagination-link" aria-label="1.3 - The First Chatbot">
+        <span class="nav-page-text">1.3 - The First Chatbot</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Written by Mr.&nbsp;Ross in collaboration with Claude, an AI assistant made by Anthropic.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

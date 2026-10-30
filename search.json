@@ -44,7 +44,7 @@
     "href": "index.html#the-units",
     "title": "AI and You",
     "section": "🗺️ The Units",
-    "text": "🗺️ The Units\n\n\n\nUnit\nLessons\nWhat we do\n\n\n\n\n1: Where AI Came From\n6\nWhat is AI? The story of AI from the 1950s to ChatGPT.\n\n\n2: Brains and Neural Networks\n8\nHow brain cells work, and how computers copy the idea.\n\n\n3: Using AI Well\n9\nUse AI for writing, research, translation, math, and art. Finish a real project.\n\n\n4: When AI Gets It Wrong\n4\nCatch AI when it is wrong, biased, or fake.\n\n\n5: AI in the Real World\n4\nPrivacy, scams, jobs, and the news.\n\n\n6: AI and Our Future\n6\nAI art, AI friends, hidden costs, rules, and possible futures.\n\n\n\nThe Course Map lists every lesson.",
+    "text": "🗺️ The Units\n\n\n\nUnit\nLessons\nWhat we do\n\n\n\n\n1: Where AI Came From\n6\nWhat is AI? The story of AI from the 1950s to ChatGPT.\n\n\n2: Brains and Neural Networks\n9\nHow brain cells work, and how computers copy the idea.\n\n\n3: Using AI Well\n9\nUse AI for writing, research, translation, math, and art. Finish a real project.\n\n\n4: When AI Gets It Wrong\n4\nCatch AI when it is wrong, biased, or fake.\n\n\n5: AI in the Real World\n4\nPrivacy, scams, jobs, and the news.\n\n\n6: AI and Our Future\n6\nAI art, AI friends, hidden costs, rules, and possible futures.\n\n\n\nThe Course Map lists every lesson.",
     "crumbs": [
       "Welcome to AI and You"
     ]
@@ -54,7 +54,7 @@
     "href": "index.html#how-each-lesson-works",
     "title": "AI and You",
     "section": "🧩 How Each Lesson Works",
-    "text": "🧩 How Each Lesson Works\nEvery lesson is 40 minutes, and every lesson includes a hands-on activity.\n\n\n\n\n\n\n\n\n\nPart\nWhat you do\n\n\n\n\n🔥\nWarm Up\nA quick question or game to start thinking.\n\n\n👥\nLearn Together\nNew ideas with pictures and examples.\n\n\n🛠️\nTry It\nUse a demo on the page, a real AI tool, or do an activity.\n\n\n💬\nTalk About It\nTalk with a partner about a hard question.\n\n\n📺\nWatch\nA short video. Turn on captions in your language.\n\n\n🚀\nGo Further\nMore to try on a second day, or on your own.\n\n\n\nEach lesson has a printable sheet to write on in class.\nThe demos on these pages work in any web browser. You do not need an account, and what you type stays on your computer.\n\nThis book was written by Mr. Ross in collaboration with Claude, an AI assistant made by Anthropic.",
+    "text": "🧩 How Each Lesson Works\nEvery lesson is 40 minutes, and every lesson includes a hands-on activity.\n\n\n\n\n\n\n\n\n\nPart\nWhat you do\n\n\n\n\n🔥\nWarm Up\nA quick question or game to start thinking.\n\n\n👥\nLearn Together\nNew ideas with pictures and examples.\n\n\n🛠️\nTry It\nUse a demo on the page, a real AI tool, or do an activity.\n\n\n💬\nTalk About It\nTalk with a partner about a hard question.\n\n\n📺\nWatch\nA short video. Turn on captions in your language.\n\n\n🚀\nGo Further\nMore to try on a second day, or on your own.\n\n\n\nEach lesson has a printable sheet to write on in class.\nThe demos on these pages work in any web browser. You do not need an account, and what you type stays on your computer.",
     "crumbs": [
       "Welcome to AI and You"
     ]
@@ -74,7 +74,7 @@
     "href": "course-map.html#unit-1-where-ai-came-from",
     "title": "Course Map",
     "section": "Unit 1: Where AI Came From",
-    "text": "Unit 1: Where AI Came From\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n1.1\nWhat Is AI?\nSort things into AI and not AI. Write a rule for “cat.” Play Quick, Draw!\n\n\n1.2\nCan a Machine Think? (1950)\nPlay Turing’s imitation game. Catch the AI hiding among your classmates.\n\n\n1.3\nThe First Chatbot (1966)\nChat with ELIZA. Read its rules, then add your own.\n\n\n1.4\nRules Win at Games (1956 to 1997)\nPlay a tic-tac-toe bot. Turn its rules off one at a time until you can beat it.\n\n\n1.5\nData Changes Everything (2009 to 2016)\nLabel pictures like the ImageNet workers did. Find where people disagree.\n\n\n1.6\nTransformers and ChatGPT (2017 to today)\nFind what “it” means in a sentence. Build a sentence one vote at a time. Finish the class timeline.",
+    "text": "Unit 1: Where AI Came From\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n1.1\nWhat Is AI?\nSort things into AI and not AI. Write a rule for “cat.” Play Quick, Draw!\n\n\n1.2\nCan a Machine Think? (1950)\nPlay Turing’s imitation game. Catch the AI hiding among your classmates.\n\n\n1.3\nThe First Chatbot (1966)\nChat with ELIZA. Read its rules, then add your own. Act out the Chinese Room.\n\n\n1.4\nRules Win at Games (1956 to 1997)\nPlay a tic-tac-toe bot. Turn its rules off one at a time until you can beat it.\n\n\n1.5\nData Changes Everything (2009 to 2016)\nLabel pictures like the ImageNet workers did. Find where people disagree.\n\n\n1.6\nTransformers and ChatGPT (2017 to today)\nFind what “it” means in a sentence. Build a sentence one vote at a time. Finish the class timeline.",
     "crumbs": [
       "Course Map"
     ]
@@ -84,7 +84,7 @@
     "href": "course-map.html#unit-2-brains-and-neural-networks",
     "title": "Course Map",
     "section": "Unit 2: Brains and Neural Networks",
-    "text": "Unit 2: Brains and Neural Networks\n\n\n\n\n\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n2.1\nYour Brain Is Made of Cells\nMeasure your reaction time with a falling ruler. Send a signal around the room.\n\n\n2.2\nHow Brains Learn\nPractice a hard task (writing with your other hand). Graph how you get better.\n\n\n2.3\nThe Artificial Neuron\nBe a neuron: add up signals and decide to fire. Then tune a neuron on screen.\n\n\n2.4\nAct Out a Neural Network\nThe class becomes a network that tells an X from an O.\n\n\n2.5\nWatch a Network Learn\nTrain a network in TensorFlow Playground. Watch the mistakes go down.\n\n\n2.6\nTrain Your Own AI\nTeach Teachable Machine your own hand signs. Then try to fool it.\n\n\n2.7\nHow AI Sees\nTurn a picture into numbers on a grid. Find the edges with a filter.\n\n\n2.8\nHow Chatbots Work\nBuild a tiny chatbot that counts which word comes next. Make it write.",
+    "text": "Unit 2: Brains and Neural Networks\n\n\n\n\n\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n2.1\nSimple Rules, Complex Behavior\nBe a cell in a human Rule 30. Then watch one tiny rule grow into chaos on screen.\n\n\n2.2\nYour Brain Is Made of Cells\nMeasure your reaction time with a falling ruler. Send a signal around the room.\n\n\n2.3\nHow Brains Learn\nPractice a hard task (writing with your other hand). Graph how you get better. Meet Pavlov’s dogs.\n\n\n2.4\nThe Artificial Neuron\nBe a neuron: add up signals and decide to fire. Then tune a neuron on screen.\n\n\n2.5\nTrain a Human Neural Network\nThe class becomes a network, with its weights written on cards. Feed it example cards and fix the weights after every mistake.\n\n\n2.6\nWatch Mr. Ross Build an AI\nMr. Ross trains a neural network on hundreds of real examples while you watch. Then you test it with your own guesses.\n\n\n2.7\nTrain Your Own AI\nTeach Teachable Machine your own hand signs. Then try to fool it.\n\n\n2.8\nHow AI Sees\nTurn a picture into numbers on a grid. Find the edges with a filter.\n\n\n2.9\nHow Chatbots Work\nBuild a tiny chatbot that counts which word comes next. Make it write.",
     "crumbs": [
       "Course Map"
     ]
@@ -104,7 +104,7 @@
     "href": "course-map.html#unit-4-when-ai-gets-it-wrong",
     "title": "Course Map",
     "section": "Unit 4: When AI Gets It Wrong",
-    "text": "Unit 4: When AI Gets It Wrong\n\n\n\n\n\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n4.1\nAI Makes Things Up\nAsk AI about our school and town. Catch what it invents. Make it agree with anything.\n\n\n4.2\nWhere Bias Comes From\nTest “he” and “she” in your language. See how the world draws a shoe.\n\n\n4.3\nReal or Fake?\nGuess which faces are real. Learn why the clues stop working, and what to check instead.\n\n\n4.4\nWhy AI Cheat Detectors Fail\nWatch a detector call human writing “AI.” Find out who it blames most.",
+    "text": "Unit 4: When AI Gets It Wrong\n\n\n\n\n\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n4.1\nAI Makes Things Up\nAsk AI about our school and town. Catch what it invents. Make it agree with anything.\n\n\n4.2\nWhere Bias Comes From\nTest “he” and “she” in your language. Meet Clever Hans, the horse that seemed to do math, and the AI that learned snow instead of wolves.\n\n\n4.3\nReal or Fake?\nGuess which faces are real. Learn why the clues stop working, and what to check instead.\n\n\n4.4\nWhy AI Cheat Detectors Fail\nWatch a detector call human writing “AI.” Find out who it blames most.",
     "crumbs": [
       "Course Map"
     ]
@@ -124,7 +124,7 @@
     "href": "course-map.html#unit-6-ai-and-our-future",
     "title": "Course Map",
     "section": "Unit 6: AI and Our Future",
-    "text": "Unit 6: AI and Our Future\n\n\n\n\n\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n6.1\nCan AI Be Creative?\nVote in a blind art show: human or AI? Then decide who owns AI art.\n\n\n6.2\nAI Friends\nSort what a friend does and what an app is built to do.\n\n\n6.3\nThe Hidden Costs\nEstimate the energy and water behind AI. Meet the people who label data.\n\n\n6.4\nWho Makes the Rules?\nWrite the class rules for AI. Compare them with real laws.\n\n\n6.5\nPossible Futures\nMap the best case, the worst case, and the most likely future. Decide what you can do.\n\n\n6.6\nThe Big Question, Again\nRead your answer from the first day. Answer again with what you know now.",
+    "text": "Unit 6: AI and Our Future\n\n\n\n\n\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n6.1\nCan AI Be Creative?\nVote in a blind art show: human or AI? Then decide who owns AI art.\n\n\n6.2\nAI Friends\nSort what a friend does and what an app is built to do.\n\n\n6.3\nThe Hidden Costs\nEstimate the energy and water behind AI. Meet the people who label data.\n\n\n6.4\nWho Makes the Rules?\nDecide what a self-driving car should do (the trolley problem). Write the class rules for AI. Compare them with real laws.\n\n\n6.5\nPossible Futures\nMap the best case, the worst case, and the most likely future. Meet the paperclip machine. Decide what you can do.\n\n\n6.6\nThe Big Question, Again\nReplace a brain one cell at a time: is it still you? Read your answer from the first day. Answer again with what you know now.",
     "crumbs": [
       "Course Map"
     ]
@@ -156,7 +156,7 @@
     "href": "chapters/Unit_1/index.html#topics-in-this-unit",
     "title": "Introduction",
     "section": "Topics in This Unit",
-    "text": "Topics in This Unit\nWhat Is AI?\nSort things into AI and not AI, try to write a rule for “cat,” and play a drawing game against an AI.",
+    "text": "Topics in This Unit\nWhat Is AI?\nSort things into AI and not AI, try to write a rule for “cat,” and play a drawing game against an AI.\nCan a Machine Think?\nLearn Alan Turing’s question from 1950. Play his imitation game with a real AI.\nThe First Chatbot\nBe ELIZA with paper. Then chat with ELIZA, read its rules, and add your own.\nRules Win at Games\nBig promises, AI winters, and a chess computer. Play a tic-tac-toe bot and turn off its rules.\nData Changes Everything\nFei-Fei Li, ImageNet, and the big win of 2012. Label pictures like the ImageNet workers did.\nTransformers and ChatGPT\nAttention, GPT, and Nobel Prizes for AI. Build a sentence one vote at a time, then finish the class timeline.",
     "crumbs": [
       "Unit 1: Where AI Came From",
       "Introduction"
@@ -237,6 +237,369 @@
     "crumbs": [
       "Unit 1: Where AI Came From",
       "1.1 - What Is AI?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.2_Can_a_Machine_Think.html",
+    "href": "chapters/Unit_1/1.2_Can_a_Machine_Think.html",
+    "title": "1.2 - Can a Machine Think?",
+    "section": "",
+    "text": "🔥 Warm Up\nIn 1950, a scientist named Alan Turing asked a big question: Can a machine think?\nPeople do not agree on what “think” means. So Turing asked a new question that you can test: Can a machine talk so well that you cannot tell it is a machine?\nHe made a game to find out. Today, you play his game with a real AI.\nIs it thinking? Mark each one on your sheet: Yes, No, or Not sure.\nCompare with a partner.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.2 - Can a Machine Think?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#warmup",
+    "href": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#warmup",
+    "title": "1.2 - Can a Machine Think?",
+    "section": "",
+    "text": "🔢\nA calculator adds 375 + 498.\n\n\n🐕\nA dog finds its way home.\n\n\n🔓\nA phone opens when it sees your face.\n\n\n🧩\nYou solve a puzzle.\n\n\n🌻\nA plant turns toward the sun.\n\n\n💬\nA chatbot writes a poem.\n\n\n\n\n\nProbably not. People do not agree on what “thinking” means. Scientists still argue about it today.\nAlan Turing saw this problem in 1950. So he did not try to define “thinking.” He made a test instead.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.2 - Can a Machine Think?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#learn",
+    "href": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#learn",
+    "title": "1.2 - Can a Machine Think?",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n1.2.1 - Who Was Alan Turing?\n\nAlan Turing was born in London in 1912. He was a mathematician.\nIn 1936, he wrote about a machine that could do any calculation if you gave it the right steps. Every computer today uses this idea.\nIn World War II, he helped break the secret code of the German military.\nToday, his face is on the British 50 pound bank note.\n\n\n\n\n1.2.2 - The Imitation Game\nTuring called his test the imitation game. (To imitate means to copy someone.) Today, people call it the Turing test.\n\n\n\n\n\n\nA judge sends questions to two hidden players, A and B.\nOne player is a person. One player is a machine.\nThe judge cannot see or hear them. The judge only reads their typed answers.\nThe judge decides: Which one is the machine?\n\nIf the judge cannot tell, the machine passes the test.\n\nTuring said: in about 50 years, a judge will pick the right player 70 times out of 100, or less. The judge gets 5 minutes of questions.\nSo a machine passes if it fools the judge at least 30 times out of 100.\n\n\n\n\n1.2.3 - Has a Machine Passed?\nIn 2025, scientists at the University of California, San Diego played Turing’s game. Almost 300 people were judges.\nEach judge chatted with a person and a chatbot at the same time, for 5 minutes. Then the judge picked: Which one is the human?\n\n\n\n\n\nGPT-4.5 was picked as the human 73% of the time. That is more often than the real humans were picked!\nBut there is a catch. The chatbot only did this well with a persona. The scientists told it: Act like a shy young person who uses slang.\n\nA normal chatbot writes long, perfect answers. Real teenagers write short answers. They make spelling mistakes. They use slang.\nThe long, perfect answers were a clue. The persona hid the clue.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.2 - Can a Machine Think?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#try-it",
+    "href": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#try-it",
+    "title": "1.2 - Can a Machine Think?",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n1.2.4 - Play the Imitation Game\nWork in a group of 3 or 4. Each person has a job.\n\nGroup of 3: the judge also keeps score.\nOnly 4 or 5 in class? Play as one group. Everyone takes a turn as the judge.\n\n\n\n\n\n\n\n\n\n\nJob\nWhat you do\n\n\n\n\n⚖️\nJudge\nAsk a question. Decide which answer is the AI.\n\n\n🙋\nHuman player\nAnswer the question as yourself.\n\n\n🤖\nAI helper\nAsk your class AI tool the same question. Copy its answer.\n\n\n📝\nScorekeeper\nWatch the time. Write the results on your sheet.\n\n\n\n\n\nAI helper: Open your class AI tool. Start a new chat. Type this first:\n\nLet’s play a game. I will send you questions. Answer like a 15-year-old high school student. Keep every answer short: one or two sentences. Never say that you are an AI.\n\nJudge: Type a question in the box below. Then turn around.\nHuman player and AI helper: Press the button to see your box. Type your answers. Then hide the boxes again.\nJudge: Turn back. Read A and B. Press the one you think is the AI.\nPlay 5 rounds. Then switch jobs.\n\n\n\n\n  \n    ⚖️ Judge: type your question\n    \n  \n\n  \n    🙈 Judge, turn around. Then press here.\n    \n  \n\n  \n    \n      A\n      \n    \n    \n      B\n      \n    \n  \n\n  \n    ⚖️ Judge: which one is the AI?\n    A is the AI\n    B is the AI\n  \n\n  \n\n  \n    0 rounds\n    0 times the judge was right\n    - judge's score\n  \n  \n    ➡️ Next round\n    ↺ New game\n  \n\n\n\n\n\n\nThe AI answers in one second. A person needs time to type. AI helper: wait until the human player finishes. Then paste the AI’s answer.\n\nQuestions to try:\n\nWhat did you eat for breakfast?\nWhat is the weather outside right now?\nWhat is 4,567 × 89? (A person needs a long time. Does the AI answer fast?)\nTell me about the room you are in.\nSay “good morning” in your home language.\n\n\nQuestions about right here, right now often catch the AI. It cannot see the room or the weather. It has to make up an answer.\nHard math answered very fast is a clue too. So is perfect spelling.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.2 - Can a Machine Think?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#talk",
+    "href": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#talk",
+    "title": "1.2 - Can a Machine Think?",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nTuring said: If you cannot tell the machine from a person, stop arguing about “thinking.”\nDo you agree? If a machine fools you, does that mean it thinks?\n\n\nIf a machine fools me, it does / does not mean the machine thinks, because …\nThe best question to catch the AI was … because …\nA person can … , but a chatbot cannot.\nI think an AI should / should not have to tell you it is an AI, because …",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.2 - Can a Machine Think?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#watch",
+    "href": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#watch",
+    "title": "1.2 - Can a Machine Think?",
+    "section": "📺 Watch",
+    "text": "📺 Watch\n\n\nWhile you watch: Find one chatbot from the video that tried to pass the test. Did it pass?\nCaptions in your language: Press CC to turn on captions. Then press ⚙️ Settings, then Subtitles/CC, then Auto-translate. Choose your language.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.2 - Can a Machine Think?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#go-further",
+    "href": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#go-further",
+    "title": "1.2 - Can a Machine Think?",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nThe scientists found that the persona made the chatbot harder to catch. Test it yourself!\n\nPlay 5 rounds where the AI helper gives no instructions to the AI.\nPlay 5 rounds with the persona instructions from Step 1.\nCompare the judge’s score. Put every group’s results on the board. Which AI was harder to catch?\n\n\n\nEach group writes its best question for catching the AI. The class tests every question. Which question catches the AI most often?\n\nMore to explore\n\nThe Turing Test (TED-Ed lesson): The same video on TED, with subtitles in many languages.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.2 - Can a Machine Think?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.3_The_First_Chatbot.html",
+    "href": "chapters/Unit_1/1.3_The_First_Chatbot.html",
+    "title": "1.3 - The First Chatbot",
+    "section": "",
+    "text": "🔥 Warm Up\nIn 1966, people at a university in Massachusetts talked to a computer program named ELIZA. ELIZA acted like a counselor. Some people told it their secrets. Some people believed it understood them.\nELIZA understood nothing. It followed a list of rules that one person wrote.\nToday, you chat with ELIZA, read its rules, and write your own. Then you act out a famous puzzle: a person who answers notes in Chinese without knowing any Chinese.\nWork with a partner (or a group of 3, taking turns). One of you is ELIZA. ELIZA can only answer with the rule card. ELIZA cannot think of anything new!",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.3 - The First Chatbot"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.3_The_First_Chatbot.html#warmup",
+    "href": "chapters/Unit_1/1.3_The_First_Chatbot.html#warmup",
+    "title": "1.3 - The First Chatbot",
+    "section": "",
+    "text": "If your partner says …\nELIZA says …\n\n\n\n\nI feel ___\nWhy do you feel ___?\n\n\nI am ___\nHow long have you been ___?\n\n\nI want ___\nWhy do you want ___?\n\n\na word about family\nTell me more about your family.\n\n\nanything else\nPlease go on.\n\n\n\n\nYour partner tells ELIZA about their day. Talk for 3 turns.\nSwitch jobs.\n\n\nBeing ELIZA is easy. You do not need to understand anything. You only look for the key words and follow the card.\nSometimes ELIZA’s answer sounds caring. Sometimes it sounds strange. ELIZA cannot tell the difference.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.3 - The First Chatbot"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.3_The_First_Chatbot.html#learn",
+    "href": "chapters/Unit_1/1.3_The_First_Chatbot.html#learn",
+    "title": "1.3 - The First Chatbot",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n1.3.1 - The Man Who Made ELIZA\n\nJoseph Weizenbaum was born in Berlin, Germany, in 1923. His family was Jewish.\nIn 1936, his family escaped from the Nazis. They came to the United States.\nHe became a professor at MIT, a university near Boston.\nIn 1966, he shared ELIZA with the world. It was one of the first chatbots ever made.\n\n\n\n\n1.3.2 - How ELIZA Works\nELIZA does not learn. Weizenbaum wrote every rule by hand. Here is how ELIZA answers one sentence:\n\n\n\n\n\n\n\nELIZA looks for key words. It does not know what the words mean.\nIf no rule matches, ELIZA says something that fits anything, like “Please go on.”\nELIZA is a normal program: a person wrote the rules (like the calculator in Lesson 1.1).\n\n\n\n\n\n1.3.3 - People Believed It\nWeizenbaum’s secretary knew that ELIZA was only a program. She watched him build it. But one day, she was chatting with ELIZA. She asked Weizenbaum to leave the room so she could talk to it alone.\nMany people felt that ELIZA understood them. Today, we call this the ELIZA effect.\nWeizenbaum was shocked. He became worried about computers. Later he wrote that some jobs should not be given to computers, even if a computer can do them.\n\nJudges picked ELIZA as the human 23% of the time. A program from 1966 with no learning still fooled some people!",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.3 - The First Chatbot"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.3_The_First_Chatbot.html#try-it",
+    "href": "chapters/Unit_1/1.3_The_First_Chatbot.html#try-it",
+    "title": "1.3 - The First Chatbot",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n1.3.4 - Chat with ELIZA, Then Change Its Rules\n\n\nChat with ELIZA for 2 minutes.\nCheck the box Show which rule ELIZA used. Chat some more. Which rules does ELIZA use most?\nBreak ELIZA. Write something that makes ELIZA give a strange answer.\nOpen ELIZA’s rules. Add a new rule. Test it! (Example: when someone says i like *, ELIZA says Why do you like *?)\nAdd a rule in your home language. Does ELIZA answer you now?\n\n\n\n\n  \n  \n    \n    Send\n  \n   Show which rule ELIZA used\n\n  \n    📜 ELIZA's rules (open to read them and add your own)\n    ELIZA checks the rules from the top. It uses the first rule that matches.\n      A * means \"the rest of the sentence.\" Put | between replies to give ELIZA a choice.\n      Put / between words that mean the same thing, like mom/mother.\n    \n      When someone says: \n      ELIZA says: \n      ➕ Add my rule to the top\n    \n    \n    ↺ Put back ELIZA's first rules\n  \n\n\n\n\n\n\nDo not tell ELIZA anything private. It is a game. (Nothing you type here leaves your computer.)\nIf you need to talk about something real, talk to a person: a teacher, the school counselor, or your family.\n\n\nNobody wrote rules in your language. ELIZA can only do what its rules say. A rule-based program knows nothing that a person did not write down.\n\n\n\n1.3.5 - The Chinese Room\n\nA philosopher named John Searle asked people to imagine this:\n\n\n\n\n\n\nA person sits in a closed room. They do not know any Chinese.\nNotes in Chinese come in through a slot.\nThe person has a rule book. It says: “If you see these shapes, send back those shapes.”\nThe person finds the shapes and copies the reply. They pass it out.\nOutside, people who know Chinese read the replies. The replies make sense! They think someone in the room knows Chinese.\n\nDoes anyone in the room understand Chinese?\n\nAct it out. Work in a group of 2 to 4: one person in the room, the rest outside. Each group needs one rule book and one set of note cards. (Only 4 in class? Be one group, and take turns going in the room.)\n\n\nOne person is in the room. Sit behind a folder or a book so the others cannot see you. Take the rule book.\nEveryone else is outside. Share the note cards. Fold back the English part.\nPass one note into the room. The person in the room finds the same shapes in the rule book and copies the reply on the back. Pass it out.\nOutside: check the reply with the English on your card. Does it make sense?\nDo all 6 notes. Then switch: a new person goes in the room.\n\n\n\nYou cannot be in the room, because you already know what the notes say! Be the person outside who checks the replies.\n\n\nNote 6 asks: “Can you speak Chinese?” The room answered: “Yes, I can speak Chinese.”\nBut the person in the room does not know any Chinese. The answer is perfect, and it is not true.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.3 - The First Chatbot"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.3_The_First_Chatbot.html#talk",
+    "href": "chapters/Unit_1/1.3_The_First_Chatbot.html#talk",
+    "title": "1.3 - The First Chatbot",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nSearle said: the person in the room does not understand Chinese. They only follow rules. A computer is the same. It follows rules, so it does not understand anything.\nOther people disagree. They say: maybe the person does not understand, but the whole room (the person plus the book) does.\nWhat do you think?\n\n\nThe person in the room does / does not understand Chinese, because …\nThe whole room does / does not understand Chinese, because …\nELIZA is like the Chinese Room because …\nToday’s chatbots are like / not like the Chinese Room, because …",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.3 - The First Chatbot"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.3_The_First_Chatbot.html#go-further",
+    "href": "chapters/Unit_1/1.3_The_First_Chatbot.html#go-further",
+    "title": "1.3 - The First Chatbot",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nWith your group, write 10 new rules for a different job: a school helper, a soccer fan, or a food expert. Add them to ELIZA.\nThen let another group chat with your ELIZA. How many turns until it says something strange?\n\n\nType the same sentence to ELIZA and to your class AI tool. Try: I feel nervous about my test.\nCompare the two answers. Which one sounds like it understands? Does either one really understand? Write your reasons on your sheet.\n\nMore to explore\n\nELIZA Terminal: Chat with a version of ELIZA that works like the 1966 program. It looks like an old computer screen.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.3 - The First Chatbot"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.4_Rules_Win_at_Games.html",
+    "href": "chapters/Unit_1/1.4_Rules_Win_at_Games.html",
+    "title": "1.4 - Rules Win at Games",
+    "section": "",
+    "text": "🔥 Warm Up\nIn 1958, a newspaper wrote about a new computer. It said the computer would soon “walk, talk, see, write, reproduce itself and be conscious of its existence.”\nDid that happen? Not in 1958. Not for a long time.\nFor about 40 years, scientists tried to build AI out of rules. Rules did not work for seeing or talking. But rules did work for one thing: games. Today, you play a game against a bot made only of rules. Then you break it.\nLong ago, people made big promises about AI. Read each one. Did it come true by the time they said? Mark your sheet.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.4 - Rules Win at Games"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.4_Rules_Win_at_Games.html#warmup",
+    "href": "chapters/Unit_1/1.4_Rules_Win_at_Games.html#warmup",
+    "title": "1.4 - Rules Win at Games",
+    "section": "",
+    "text": "Year\nWho said it\nThe promise\n\n\n\n\nA\n1958\nA newspaper\nA new computer will soon walk, talk, see, write, make copies of itself, and know that it exists.\n\n\nB\n1958\nTwo scientists\nWithin 10 years, a computer will be the world chess champion.\n\n\nC\n1965\nHerbert Simon\nWithin 20 years, machines will be able to do any work a person can do.\n\n\nD\n1970\nMarvin Minsky\nIn 3 to 8 years, we will have a machine as smart as an average person.\n\n\n\n\nNone of them came true by the time they said.\nPromise B came true later. A computer beat the world chess champion in 1997. That is 39 years later, not 10.\nPromises C and D did not come true by the 1980s. Today, some people say AI is getting close to them. Other people strongly disagree. You will think about this in Unit 6.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.4 - Rules Win at Games"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.4_Rules_Win_at_Games.html#learn",
+    "href": "chapters/Unit_1/1.4_Rules_Win_at_Games.html#learn",
+    "title": "1.4 - Rules Win at Games",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n1.4.1 - A New Name, Big Dreams\nIn 1955, four scientists wrote a plan for a summer meeting at Dartmouth College. In the plan, they used a new name: artificial intelligence. The meeting was in 1956. AI had a name.\nThe scientists had big dreams. They thought smart machines were only a few years away. Governments and companies gave them a lot of money.\n\n\n\n1.4.2 - AI Winters\nProgress was much slower than the promises. So the money stopped. This happened two times.\nPeople call these times AI winters. (In winter, plants stop growing. In an AI winter, AI research stopped growing.)\n\n\n\n\n\nIn the 1980s, companies paid for AI built from rules. Experts wrote thousands of rules for jobs like checking orders or finding problems in machines. These programs were expensive. They broke when something new happened. Then came the second winter.\n\nThe promises in the Warm Up were hype: big promises, more than the facts showed. Hype brings money and attention. When the promises fail, people stop trusting the field.\nPeople make big promises about AI today too. When you hear one, ask: Who says this? What do they get if I believe it?\n\n\n\n\n1.4.3 - Rules Can Win at Games\nA game is a small world. It has clear rules. Every move is on the board. Rules can work well in a small world.\n\nIn May 1997, IBM’s computer Deep Blue played the world chess champion, Garry Kasparov. Deep Blue won, \\(3\\frac{1}{2}\\) to \\(2\\frac{1}{2}\\).\n\nPeople wrote Deep Blue’s rules for judging a chess position.\nThen it checked about 200 million positions every second.\nDeep Blue did not learn like the drawing AI in Lesson 1.1. It used rules and speed.\n\n\n\nDeep Blue could beat the best chess player in the world. But its rules could not tell a cat from a dog. Rules that work in a small world do not work in the big, messy real world.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.4 - Rules Win at Games"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.4_Rules_Win_at_Games.html#try-it",
+    "href": "chapters/Unit_1/1.4_Rules_Win_at_Games.html#try-it",
+    "title": "1.4 - Rules Win at Games",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n1.4.4 - Beat the Rule Bot\nThis bot plays tic-tac-toe. It has 8 rules. It checks them in order and uses the first one it can.\n\n\nPlay 3 games with all the rules on. Can you beat the bot?\nTurn off one rule. Play again. Can you beat it now?\nTry different rules. Find the rules the bot needs most. Write them on your sheet.\nLook at the orange box after each move. Which rule did the bot use?\n\n\n\n\n  \n    \n    \n      You are X. You go first.\n      \n      \n        🙂 You won: 0\n        🤖 Bot won: 0\n        🤝 Tie: 0\n      \n      \n        ↺ New game\n         Bot goes first\n      \n    \n  \n  \n    🤖 The bot's rules. It uses the first rule that it can use. Uncheck a rule to turn it off.\n    \n    If no rule works: pick any empty square.\n  \n\n\n\n\n\n\nNo. With all 8 rules, the bot never loses. The best you can do is a tie. A computer played every possible game against it to check.\nSome rules matter more than others. Turn off Block and the bot does not stop you from winning. But turn off Side and nothing changes, because the bot almost never needs it.\n\n\nNo one knows. People tried for years and could not write them. A cat can be any color, any size, in any position, in any light. There are too many cases.\nThat is why AI changed. In the next lesson, you will see what happened when scientists stopped writing rules and started collecting examples.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.4 - Rules Win at Games"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.4_Rules_Win_at_Games.html#talk",
+    "href": "chapters/Unit_1/1.4_Rules_Win_at_Games.html#talk",
+    "title": "1.4 - Rules Win at Games",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nDeep Blue beat the best chess player in the world. Is Deep Blue smart?\n\n\nI think Deep Blue is / is not smart, because …\nThe most important rule for the bot was … because …\nRules work for games, but not for … , because …\nPeople make big promises about AI because …",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.4 - Rules Win at Games"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.4_Rules_Win_at_Games.html#go-further",
+    "href": "chapters/Unit_1/1.4_Rules_Win_at_Games.html#go-further",
+    "title": "1.4 - Rules Win at Games",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nPlay tic-tac-toe on paper with a partner. One of you is the bot. The bot must follow the 8 rules on your sheet, in order. The bot cannot think! Can the human win? Switch jobs.\n\n\nWrite one promise about AI for 10 years from now. Use the form: “By 2036, AI will …” Mr. Ross keeps the promises. Will you be right, or will it be hype?\n\n\nWrite rules for a rock, paper, scissors bot. Then play against a partner who knows your rules. Can a bot that follows rules ever win at this game? Why or why not?",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.4 - Rules Win at Games"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.5_Data_Changes_Everything.html",
+    "href": "chapters/Unit_1/1.5_Data_Changes_Everything.html",
+    "title": "1.5 - Data Changes Everything",
+    "section": "",
+    "text": "🔥 Warm Up\nHow did you learn what a dog is? Nobody gave you a rule. You saw many dogs: big dogs, small dogs, dogs in pictures, dogs on the street.\nIn 2006, a young scientist named Fei-Fei Li had an idea. Maybe computers need the same thing: not rules, but millions of examples.\nToday, you do the job that thousands of people did for her project: you label pictures. And you find out that people do not always agree.\nThink about something you learned to recognize as a child: a dog, a car, your mother’s voice, the letter A.\nTell a partner.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.5 - Data Changes Everything"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.5_Data_Changes_Everything.html#warmup",
+    "href": "chapters/Unit_1/1.5_Data_Changes_Everything.html#warmup",
+    "title": "1.5 - Data Changes Everything",
+    "section": "",
+    "text": "Did someone give you a rule? Or did you see many examples?\nAbout how many examples do you think you saw?\n\n\n\nA lot! Fei-Fei Li says: think of a child’s eyes as a camera that takes about 5 pictures every second. By age 3, the child has seen hundreds of millions of pictures. Children learn from examples, not rules.\nFei-Fei Li thought: computers have rules, but they do not have enough examples.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.5 - Data Changes Everything"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.5_Data_Changes_Everything.html#learn",
+    "href": "chapters/Unit_1/1.5_Data_Changes_Everything.html#learn",
+    "title": "1.5 - Data Changes Everything",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n1.5.1 - Fei-Fei Li\n\nFei-Fei Li was born in Beijing, China, in 1976.\nAt 16, she moved to New Jersey with her mother to join her father.\nHer family ran a dry-cleaning shop. She worked there on weekends in high school and in college.\nShe studied physics at Princeton University. Then she became an AI scientist.\n\n\n\n\n1.5.2 - ImageNet\nIn 2006, Fei-Fei Li started a project called ImageNet. She wanted a giant dataset: pictures of everything in the world, each with a label.\n\n\n\n\n\nThe pictures came from the internet. But the internet does not say what is in each picture. People had to look and decide.\nFrom 2008 to 2010, 49,000 people did this work online. Each person saw a word, like chair, and a group of pictures. They clicked every picture that showed a chair.\nImageNet was first shown to the world in 2009. It was the biggest set of labeled pictures anyone had made.\n\n\n\n1.5.3 - The Big Win in 2012\nEvery year, scientists entered a contest. Their programs looked at ImageNet pictures and named what was in them.\n\n\n\n\n\nIn 2012, a team from Toronto used a neural network. (You will learn how neural networks work in Unit 2.) Their mistakes dropped from about 26% to 15%. Nobody had seen a jump that big.\nThey trained their network on two GPUs, chips made for video games. A GPU can do thousands of small math problems at the same time.\nBy 2015, the best AI made fewer mistakes than a person on this test!\n\n\nLots of data (like ImageNet)\nNeural networks that learn from the data\nFast chips (GPUs) to do the math\n\nAI did not get better because people wrote better rules. It got better because of examples.\n\n\nGo is a board game from China. It is much harder for computers than chess. In 2016, AlphaGo beat Lee Sedol, one of the best Go players in the world, 4 games to 1.\nAlphaGo first learned from 160,000 games played by people. Then it played millions of games against itself. In game 2, it made a move that surprised the experts. People still talk about move 37.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.5 - Data Changes Everything"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.5_Data_Changes_Everything.html#try-it",
+    "href": "chapters/Unit_1/1.5_Data_Changes_Everything.html#try-it",
+    "title": "1.5 - Data Changes Everything",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n1.5.4 - Be the Labelers\nDo the job of the ImageNet workers.\n\n\nPick a round: chair, sandwich, or car.\nWork alone first. Click every picture that shows the word. Do not talk!\nPress I’m done. Write your picture numbers on your sheet.\nCompare with a partner (or a group of 3). Which pictures did you disagree on?\nDo all 3 rounds.\n\n\n\n\n  \n  \n  \n  \n    ✅ I'm done. Show my labels.\n    ↺ Clear\n  \n  \n\n\n\n\n\nClass vote. Mr. Ross picks the hardest picture. Everyone votes. How many said yes? How many said no?\n\nThere is no right answer! People decide. And different people decide differently.\nImageNet had this problem too. So the workers got instructions, and several people labeled each picture. If most people agreed, the label stayed.\n\n\nIf the labelers said a hot dog is a sandwich, the AI will say it too. The AI does not know what a sandwich really is. It only knows what people labeled.\nWhat if all the labelers came from one country? You will think about this in Unit 4.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.5 - Data Changes Everything"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.5_Data_Changes_Everything.html#talk",
+    "href": "chapters/Unit_1/1.5_Data_Changes_Everything.html#talk",
+    "title": "1.5 - Data Changes Everything",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\n49,000 people labeled ImageNet. Most people do not know their names. The scientists became famous.\n\n\nThe people who labeled the data should / should not get credit, because …\nPeople disagreed about picture … because …\nIf the labelers all came from one country, the AI might …\nThe most important part of the new recipe is … because …",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.5 - Data Changes Everything"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.5_Data_Changes_Everything.html#watch",
+    "href": "chapters/Unit_1/1.5_Data_Changes_Everything.html#watch",
+    "title": "1.5 - Data Changes Everything",
+    "section": "📺 Watch",
+    "text": "📺 Watch\n\n\nThe talk is 18 minutes. In class, we watch the first part.\nWhile you watch: Fei-Fei Li compares computers to children. What do children do that computers could not?\nCaptions in your language: Press CC to turn on captions. Then press ⚙️ Settings, then Subtitles/CC, then Auto-translate. Choose your language.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.5 - Data Changes Everything"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.5_Data_Changes_Everything.html#go-further",
+    "href": "chapters/Unit_1/1.5_Data_Changes_Everything.html#go-further",
+    "title": "1.5 - Data Changes Everything",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nWhy do GPUs help? Try it with your class.\n\nMr. Ross writes 24 easy addition problems.\nOne student solves all 24 alone. Time it.\nEveryone else shares the next 24 problems. Each person does a few, all at the same time. Time it.\nWhich was faster? A normal computer chip is like the one fast student. A GPU is like the whole class.\n\n(Only 4 in class? One student against a team of 3 still works.)\n\n\nWrite a rule for sandwich that ends the argument. Test it on all 12 pictures. Does your rule work for every picture? Does everyone in your group agree with it?\n\n\nGoogle DeepMind made a film about the AlphaGo match. Watch the part about move 37 and how Lee Sedol felt.\nAlphaGo, the full film (YouTube)\n\nMore to explore\n\nQuick, Draw! The Data: Pick a word. Look at how thousands of people drew it. Would you label every drawing the same way?",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.5 - Data Changes Everything"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html",
+    "href": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html",
+    "title": "1.6 - Transformers and ChatGPT",
+    "section": "",
+    "text": "🔥 Warm Up\nOn November 30, 2022, a company called OpenAI shared a chatbot named ChatGPT. In about two months, around 100 million people used it. At that time, no app had ever grown that fast.\nChatGPT came from an idea that Google scientists shared in 2017. The idea is called attention. You use it every time you read.\nToday, you see how attention works. You build a sentence the way a chatbot does: one word at a time. Then you finish the class timeline, from 1950 to today.\nRead these two sentences. What does “it” mean in each one? Write your answers on your sheet.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.6 - Transformers and ChatGPT"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#warmup",
+    "href": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#warmup",
+    "title": "1.6 - Transformers and ChatGPT",
+    "section": "",
+    "text": "The animal didn’t cross the street because it was too tired.\nThe animal didn’t cross the street because it was too wide.\n\n\n\nIn sentence 1, “it” means the animal. Animals get tired. Streets do not.\nIn sentence 2, “it” means the street. Streets can be wide. Animals are not “too wide” to cross.\nOnly one word changed. To decide, you looked back at other words in the sentence. You paid attention to the right words.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.6 - Transformers and ChatGPT"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#learn",
+    "href": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#learn",
+    "title": "1.6 - Transformers and ChatGPT",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n1.6.1 - Attention (2017)\nFor a long time, AI read one word at a time. It had trouble remembering the start of a long sentence. In 2017, scientists at Google shared a new kind of neural network. They called it the transformer.\nA transformer looks at every word at the same time. For each word, it decides which other words matter most. This is called attention. The scientists’ paper had a famous title: Attention Is All You Need.\n\n\n\n\n\n\n\n\n1.6.2 - GPT and ChatGPT\n\n\n\n\n\nA GPT is a large language model. It learned by playing one game, billions of times: predict the next word (like the phone keyboard in Lesson 1.1). When it answers you, it predicts one word, then the next, then the next.\n\nThere are many chatbots built this way: ChatGPT, Gemini, Claude, Copilot, Llama, and more. Most AI tools made for schools are built on top of models like these.\n\n\n\n\n1.6.3 - AI Wins Nobel Prizes (2024)\nThe Nobel Prize is one of the biggest prizes in science. In 2024, two Nobel Prizes went to AI.\n\nPhysics: John Hopfield and Geoffrey Hinton, for early discoveries that made neural networks possible.\nChemistry: Demis Hassabis and John Jumper, for AlphaFold. It is an AI that predicts the shape of proteins (the tiny machines inside your body). They shared the prize with David Baker, who designs new proteins.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.6 - Transformers and ChatGPT"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#try-it",
+    "href": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#try-it",
+    "title": "1.6 - Transformers and ChatGPT",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n1.6.4 - See the Attention\nClick the word that “it” means. Then change the last word. Watch which words light up.\n\n\n  \n  What does \"it\" mean? Click the word you think. Then change the last word and try again.\n  \n  \n  \n  This shows the idea. A real transformer gives a number to every pair of words, and it does this many times at once.\n\n\n\n\n\n\n\n\n1.6.5 - Be the Chatbot: Next Word, by Vote\nA chatbot writes one word at a time. It picks a word that is likely to come next. Now the class does the same thing.\n\n\nMr. Ross writes the start of a sentence on the board: After school, my friends and I …\nEveryone writes one next word on a small paper. Do not talk!\nMr. Ross counts the words. The word with the most votes goes on the board.\nDo it again for the next word. Keep going until the sentence ends (about 8 words).\nNow give the same start to your class AI tool: “Finish this sentence: After school, my friends and I”. Compare its sentence with the class sentence.\n\n\n\nWith only 4 or 5 people, many words get 1 vote. Break a tie by rolling a die, or ask everyone to write two words each.\n\n\nUsually it is ordinary. The most common word wins every time, so the sentence uses common words.\nChatbots have the same problem. So they do not always pick the top word. Sometimes they pick the second or third word, on purpose, to make the writing more interesting.\n\n\n\n1.6.6 - Finish the Class Timeline\nPut every card from Unit 1 on the wall, in order. Is anything missing? With a partner, pick one card and explain it to the class in 2 sentences.\n\n\n\nYear\nWhat happened\n\n\n\n\n1950\nAlan Turing asks: Can a machine think?\n\n\n1956\nAI gets its name at Dartmouth College.\n\n\n1966\nELIZA, one of the first chatbots.\n\n\n1980\nThe Chinese Room.\n\n\n1997\nDeep Blue beats the world chess champion.\n\n\n2009\nImageNet: 14 million labeled pictures.\n\n\n2012\nA neural network wins the ImageNet contest.\n\n\n2016\nAlphaGo beats Lee Sedol at Go.\n\n\n2017\nTransformers and attention.\n\n\n2022\nChatGPT.\n\n\n2024\nNobel Prizes for AI.\n\n\n2025\nA chatbot passes the Turing test.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.6 - Transformers and ChatGPT"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#talk",
+    "href": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#talk",
+    "title": "1.6 - Transformers and ChatGPT",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nChatGPT learned from text that people wrote: books, websites, news, and more. Most of those writers were never asked.\n\n\nWriters should / should not be asked before AI learns from their words, because …\nThe most important moment on our timeline is … because …\nIn 10 years, I think AI will … , because …",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.6 - Transformers and ChatGPT"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#watch",
+    "href": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#watch",
+    "title": "1.6 - Transformers and ChatGPT",
+    "section": "📺 Watch",
+    "text": "📺 Watch\n\n\nWhile you watch: How does a chatbot decide which word comes next?\nCaptions in your language: Press CC to turn on captions. Then press ⚙️ Settings, then Subtitles/CC, then Auto-translate. Choose your language.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.6 - Transformers and ChatGPT"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#go-further",
+    "href": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#go-further",
+    "title": "1.6 - Transformers and ChatGPT",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nWrite your own tricky “it” sentence, where one word changes what “it” means. Ask your class AI tool: “In this sentence, what does ‘it’ mean?” Does it get it right? Try your sentence in your home language too.\n\n\nWith a partner, make a poster about one person from Unit 1: Alan Turing, Joseph Weizenbaum, John Searle, Fei-Fei Li, Geoffrey Hinton, or Demis Hassabis. Where were they from? What did they do? Hang it next to their card on the timeline.",
+    "crumbs": [
+      "Unit 1: Where AI Came From",
+      "1.6 - Transformers and ChatGPT"
     ]
   },
   {
@@ -354,7 +717,7 @@
     "href": "glossary.html",
     "title": "Glossary",
     "section": "",
-    "text": "artificial intelligence (AI)\nA computer program that does things that usually need human thinking, like seeing, talking, translating, or making choices. Most AI today learns from examples.\n\nExample:\nFace unlock on a phone, a translation app, and a chatbot all use AI.\n\nSee Also: machine learning, computer program\n\n\n\nchatbot\nAn AI program that you talk to with words. You type or say something, and it answers.\n\nExample:\nChatGPT, Gemini, and Claude are chatbots.\n\nSee Also: artificial intelligence, prediction\n\n\n\ncomputer program\nA list of steps that a computer follows. Apps and games are computer programs.\nSee Also: rule\n\n\n\ndata\nInformation, like pictures, words, numbers, or sounds. An AI learns from data.\n\nExample:\nThe Quick, Draw! AI learned from data: about 50 million drawings.\n\nSee Also: machine learning\n\n\n\nmachine learning\nA way to make AI. People do not write the rules. They give the computer many examples, and the computer finds the patterns by itself.\nSee Also: data, pattern, rule\n\n\n\npattern\nSomething that is the same, or repeats, in many examples.\n\nExample:\nIn most drawings of a cat, the ears are two triangles on top of the head. That is a pattern.\n\n\n\n\nprediction\nA best guess about something you do not know yet. A prediction can be wrong.\n\nExample:\nA phone keyboard makes a prediction about your next word.\n\n\n\n\nrule\nAn exact instruction that a computer follows: “If this happens, do that.” In a normal computer program, a person writes the rules.\n\nExample:\nAn alarm clock follows one rule: “If the time is 7:00, ring.”\n\nSee Also: computer program, machine learning",
+    "text": "AI winter\nA time when people stopped giving money to AI research, because AI did not do what people promised. There were AI winters in the 1970s and around 1990.\nSee Also: hype\n\n\n\nartificial intelligence (AI)\nA computer program that does things that usually need human thinking, like seeing, talking, translating, or making choices. Most AI today learns from examples.\n\nExample:\nFace unlock on a phone, a translation app, and a chatbot all use AI.\n\nSee Also: machine learning, computer program\n\n\n\nattention\nIn a transformer, the way the AI looks at all the other words to decide which ones matter most for each word.\n\nExample:\nIn “The animal didn’t cross the street because it was too tired,” attention connects “it” to “animal.”\n\nSee Also: transformer\n\n\n\nchatbot\nAn AI program that you talk to with words. You type or say something, and it answers.\n\nExample:\nChatGPT, Gemini, and Claude are chatbots.\n\nSee Also: artificial intelligence, prediction\n\n\n\ncomputer program\nA list of steps that a computer follows. Apps and games are computer programs.\nSee Also: rule\n\n\n\ndata\nInformation, like pictures, words, numbers, or sounds. An AI learns from data.\n\nExample:\nThe Quick, Draw! AI learned from data: about 50 million drawings.\n\nSee Also: machine learning\n\n\n\ndataset\nA big collection of examples that an AI learns from, like pictures with labels.\n\nExample:\nImageNet is a dataset of 14 million labeled pictures.\n\nSee Also: data, label\n\n\n\nDeep Blue\nA chess computer made by IBM. In 1997, it beat the world chess champion, Garry Kasparov. It used rules that people wrote, and it checked about 200 million chess positions every second.\nSee Also: rule\n\n\n\nELIZA effect\nWhen people feel that a computer understands them, but it does not. It is named after ELIZA, a chatbot from 1966.\n\nExample:\nELIZA only followed rules, but some people told it their secrets.\n\nSee Also: chatbot\n\n\n\nGPU\nA computer chip first made for video games. It can do thousands of small math problems at the same time, so it is very good for training neural networks. GPU means “graphics processing unit.”\nSee Also: neural network\n\n\n\nhype\nBig promises and excitement, more than the facts show.\n\nExample:\nIn 1970, a scientist said that a machine as smart as a person was 3 to 8 years away. That was hype.\n\nSee Also: AI winter\n\n\n\njudge\nIn the Turing test, the person who asks the questions and decides which player is the machine.\nSee Also: Turing test\n\n\n\nkey word\nA word that a program looks for to decide what to do.\n\nExample:\nWhen you type “I feel,” ELIZA finds the key words “I feel” and uses its rule for them.\n\nSee Also: rule\n\n\n\nlabel\nThe right answer that a person attaches to an example, like “cat” on a picture of a cat. An AI learns from examples and their labels.\n\nExample:\nIn ImageNet, people from 167 countries labeled 14 million pictures.\n\nSee Also: dataset\n\n\n\nlarge language model\nA transformer trained on a huge amount of text to predict the next word. Chatbots like ChatGPT are built on large language models. People often call them LLMs.\nSee Also: transformer, prediction, chatbot\n\n\n\nmachine learning\nA way to make AI. People do not write the rules. They give the computer many examples, and the computer finds the patterns by itself.\nSee Also: data, pattern, rule\n\n\n\nneural network\nA kind of AI made of many small parts that work a little like brain cells. Each part does a tiny bit of math. A neural network learns from examples.\nSee Also: machine learning, GPU\n\n\n\npattern\nSomething that is the same, or repeats, in many examples.\n\nExample:\nIn most drawings of a cat, the ears are two triangles on top of the head. That is a pattern.\n\n\n\n\npersona\nA character that someone pretends to be. You can tell an AI to use a persona, like “Act like a 15-year-old student.”\n\nExample:\nIn a 2025 Turing test, a chatbot with a persona fooled judges much more often than the same chatbot without one.\n\nSee Also: Turing test\n\n\n\nprediction\nA best guess about something you do not know yet. A prediction can be wrong.\n\nExample:\nA phone keyboard makes a prediction about your next word.\n\n\n\n\nrule\nAn exact instruction that a computer follows: “If this happens, do that.” In a normal computer program, a person writes the rules.\n\nExample:\nAn alarm clock follows one rule: “If the time is 7:00, ring.”\n\nSee Also: computer program, machine learning\n\n\n\ntransformer\nA kind of neural network, first shared by Google scientists in 2017. It uses attention to connect the words in a sentence. It is the T in GPT.\nSee Also: attention, neural network, large language model\n\n\n\nTuring test\nA game Alan Turing described in 1950. He called it the imitation game. A judge chats in writing with a person and a machine. If the judge cannot tell which one is the machine, the machine passes.\nSee Also: judge, chatbot\n\n\n\nunderstand\nTo know what something means, not only what it looks like. Whether AI can understand is a question people still argue about.\n\nExample:\nIn the Chinese Room, the person copies correct replies in Chinese, but they do not understand Chinese.\n\nSee Also: ELIZA effect",
     "crumbs": [
       "Glossary"
     ]
