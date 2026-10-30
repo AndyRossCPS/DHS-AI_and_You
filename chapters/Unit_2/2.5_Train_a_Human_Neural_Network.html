@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2.5 - Train a Human Neural Network – AI and You</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../chapters/Unit_2/2.6_Watch_Mr_Ross_Build_an_AI.html" rel="next">
+<link href="../../chapters/Unit_2/2.4_The_Artificial_Neuron.html" rel="prev">
+<link href="../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b4d44d66d1752a05c2e2ea9554082b5e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles/glossary-tooltips.css">
+<link rel="stylesheet" href="../../styles/custom-callouts.css">
+<link rel="stylesheet" href="../../styles/custom-general.css">
+<link rel="stylesheet" href="../../styles/ai-and-you.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AI and You</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_2/index.html">Unit 2: Brains and Neural Networks</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html">2.5 - Train a Human Neural Network</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to AI and You</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Map</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 1: Where AI Came From</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.1_What_Is_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 - What Is AI?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.2_Can_a_Machine_Think.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 - Can a Machine Think?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.3_The_First_Chatbot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 - The First Chatbot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.4_Rules_Win_at_Games.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 - Rules Win at Games</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.5_Data_Changes_Everything.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 - Data Changes Everything</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.6_Transformers_and_ChatGPT.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 - Transformers and ChatGPT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unit 2: Brains and Neural Networks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.1_Simple_Rules_Complex_Behavior.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 - Simple Rules, Complex Behavior</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.2_Your_Brain_Is_Made_of_Cells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 - Your Brain Is Made of Cells</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.3_How_Brains_Learn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 - How Brains Learn</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.4_The_Artificial_Neuron.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 - The Artificial Neuron</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2.5 - Train a Human Neural Network</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.6_Watch_Mr_Ross_Build_an_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 - Watch Mr.&nbsp;Ross Build an AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.7_Train_Your_Own_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.7 - Train Your Own AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.8_How_AI_Sees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.8 - How AI Sees</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.9_How_Chatbots_Work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.9 - How Chatbots Work</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 3: Using AI Well</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 4: When AI Gets It Wrong</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 5: AI in the Real World</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_5/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 6: AI and Our Future</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#warmup" id="toc-warmup" class="nav-link active" data-scroll-target="#warmup">🔥 Warm Up</a></li>
+  <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">👥 Learn Together</a>
+  <ul class="collapse">
+  <li><a href="#the-class-neuron" id="toc-the-class-neuron" class="nav-link" data-scroll-target="#the-class-neuron">2.5.1 - The Class Neuron</a></li>
+  <li><a href="#the-fix-rule" id="toc-the-fix-rule" class="nav-link" data-scroll-target="#the-fix-rule">2.5.2 - The Fix Rule</a></li>
+  </ul></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
+  <ul class="collapse">
+  <li><a href="#train-the-class-neuron" id="toc-train-the-class-neuron" class="nav-link" data-scroll-target="#train-the-class-neuron">2.5.3 - Train the Class Neuron</a></li>
+  <li><a href="#check-our-math" id="toc-check-our-math" class="nav-link" data-scroll-target="#check-our-math">2.5.4 - Check Our Math</a></li>
+  </ul></li>
+  <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
+  <li><a href="#watch" id="toc-watch" class="nav-link" data-scroll-target="#watch">📺 Watch</a></li>
+  <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_2/index.html">Unit 2: Brains and Neural Networks</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html">2.5 - Train a Human Neural Network</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">2.5 - Train a Human Neural Network</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In Lesson 2.4, <strong>you</strong> chose the weights. Real AI does not work that way.</p>
+<p>A real neural network starts with bad weights. It looks at an example and makes a guess. If the guess is wrong, it <strong>fixes its weights a little</strong>. Then it looks at the next example. After many examples, the weights are good. Nobody chose them. The network learned them.</p>
+<p>Today, the class is a neuron that learns. You will start it with the <strong>wrong idea</strong> on purpose, and watch it fix itself.</p>
+<div class="agenda">
+<p><strong>Today’s Plan</strong> (40 minutes)</p>
+<ul>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Fighter or psychic? <span class="time">5 min</span></li>
+<li><span class="icon">👥</span> <strong>Learn Together</strong> The fix rule <span class="time">8 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Train the class neuron <span class="time">20 min</span></li>
+<li><span class="icon">💬</span> <strong>Talk About It</strong> Was it wrong? <span class="time">7 min</span></li>
+</ul>
+</div>
+<div class="objectives">
+<ul class="task-list">
+<li><label><input type="checkbox">I can calculate what the class neuron says for a card.</label></li>
+<li><label><input type="checkbox">I can use the fix rule to change the weights after a mistake.</label></li>
+<li><label><input type="checkbox">I can explain how a neuron learns from its mistakes.</label></li>
+<li><label><input type="checkbox">I can explain why a neuron trained on a few examples still makes mistakes.</label></li>
+</ul>
+</div>
+<div class="vocab">
+<div class="word-cards">
+<ul>
+<li><span class="icon">🏋️</span> <a href="../../glossary.html#glossary-training" class="glossary-link" data-original-href="#glossary-training" data-slug="training" data-term="training">training</a>: showing an AI many examples so it can fix its weights</li>
+<li><span class="icon">🧪</span> <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-original-href="#glossary-test-data" data-slug="test-data" data-term="test data">test data</a>: new examples the AI never trained on, used to check what it learned</li>
+<li><span class="icon">➕</span> <a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-original-href="#glossary-bias-number" data-slug="bias-number" data-term="bias">bias</a>: in a neuron, an extra number that is always added to the total</li>
+<li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-weight" class="glossary-link" data-original-href="#glossary-weight" data-slug="weight" data-term="weight">weight</a>: a number that says how much an input matters</li>
+</ul>
+</div>
+</div>
+<div class="guided-notes-link">
+<p><a href="../../handouts/Unit_2/2.5_Train_a_Human_Neural_Network.pdf" target="_blank">Printable lesson sheet</a> - the sheet you write on today.</p>
+</div>
+<div class="guided-notes-link">
+<p><a href="../../handouts/Unit_2/2.5_Pokemon_Cards.pdf" target="_blank">Pokémon cards</a>: print one set for each team.</p>
+</div>
+<section id="warmup" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="warmup">🔥 Warm Up</h2>
+<p><strong>Pokémon</strong> are creatures from a video game. Every Pokémon has a <strong>type</strong>.</p>
+<ul>
+<li><strong>Fighting</strong> Pokémon punch and kick. They have high <strong>Attack</strong>.</li>
+<li><strong>Psychic</strong> Pokémon use the power of their minds. They have high <strong>Special Attack</strong>.</li>
+</ul>
+<p>Look at these two cards. What type is each one? Tell a partner why.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Attack</th>
+<th style="text-align: center;">Special Attack</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Hitmonchan</strong></td>
+<td style="text-align: center;">★★★★☆ (4)</td>
+<td style="text-align: center;">★☆☆☆☆ (1)</td>
+</tr>
+<tr class="even">
+<td><strong>Gardevoir</strong></td>
+<td style="text-align: center;">★★☆☆☆ (2)</td>
+<td style="text-align: center;">★★★★☆ (4)</td>
+</tr>
+</tbody>
+</table>
+<div class="think" title="Answers">
+<p>Hitmonchan is <strong>Fighting</strong>: lots of Attack. Gardevoir is <strong>Psychic</strong>: lots of Special Attack.</p>
+<p>You used a rule in your head: <em>compare the two numbers.</em> Can a neuron learn that rule from examples, without being told?</p>
+</div>
+</section>
+<section id="learn" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
+<section id="the-class-neuron" class="level3">
+<h3 class="anchored" data-anchor-id="the-class-neuron">2.5.1 - The Class Neuron</h3>
+<p>The neuron has two inputs and three numbers it can change:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Inputs (from the card)</th>
+<th>The neuron’s numbers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A</strong> = Attack stars (1 to 5)</td>
+<td><strong>Attack weight</strong></td>
+</tr>
+<tr class="even">
+<td><strong>S</strong> = Special Attack stars (1 to 5)</td>
+<td><strong>Special weight</strong></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><strong><a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-original-href="#glossary-bias-number" data-slug="bias-number" data-term="bias">bias</a></strong> (always added)</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[\text{total} = (A \times \text{Attack weight}) + (S \times \text{Special weight}) + \text{bias}\]</span></p>
+<ul>
+<li>If the total is <strong>more than 0</strong>, the neuron says <strong>FIGHTING</strong>.</li>
+<li>If the total is <strong>0 or less</strong>, the neuron says <strong>PSYCHIC</strong>.</li>
+</ul>
+<p>(The bias does the same job as the threshold in Lesson 2.4.)</p>
+<p>We start the neuron <strong>backwards</strong>:</p>
+<div class="remember" title="Starting weights">
+<p>Attack weight <span class="math inline">\(= -1\)</span> <span class="math inline">\(\qquad\)</span> Special weight <span class="math inline">\(= +1\)</span> <span class="math inline">\(\qquad\)</span> Bias <span class="math inline">\(= 0\)</span></p>
+<p>This neuron thinks that strong punchers are psychic! It is wrong on purpose. Watch it learn.</p>
+</div>
+<hr>
+</section>
+<section id="the-fix-rule" class="level3">
+<h3 class="anchored" data-anchor-id="the-fix-rule">2.5.2 - The Fix Rule</h3>
+<p>After each card, check the answer. Then follow the fix rule.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>What happened</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>✅ The neuron was <strong>right</strong></td>
+<td>Change nothing.</td>
+</tr>
+<tr class="even">
+<td>❌ It said <strong>PSYCHIC</strong>, but the card is <strong>FIGHTING</strong></td>
+<td><strong>ADD</strong>: Attack weight + A, Special weight + S, bias + 1</td>
+</tr>
+<tr class="odd">
+<td>❌ It said <strong>FIGHTING</strong>, but the card is <strong>PSYCHIC</strong></td>
+<td><strong>SUBTRACT</strong>: Attack weight − A, Special weight − S, bias − 1</td>
+</tr>
+</tbody>
+</table>
+<div class="real-world" title="Example: card T1, Machop">
+<p>Machop has <strong>A = 3</strong> and <strong>S = 1</strong>.</p>
+<ol type="1">
+<li>Total <span class="math inline">\(= (3 \times -1) + (1 \times 1) + 0 = -3 + 1 + 0 = -2\)</span></li>
+<li><span class="math inline">\(-2\)</span> is not more than 0, so the neuron says <strong>PSYCHIC</strong>.</li>
+<li>Flip the card: Machop is <strong>FIGHTING</strong>. Wrong!</li>
+<li>It said PSYCHIC but the card is FIGHTING, so <strong>ADD</strong>:
+<ul>
+<li>Attack weight: <span class="math inline">\(-1 + 3 = 2\)</span></li>
+<li>Special weight: <span class="math inline">\(1 + 1 = 2\)</span></li>
+<li>Bias: <span class="math inline">\(0 + 1 = 1\)</span></li>
+</ul></li>
+</ol>
+</div>
+</section>
+</section>
+<section id="try-it" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
+<section id="train-the-class-neuron" class="level3">
+<h3 class="anchored" data-anchor-id="train-the-class-neuron">2.5.3 - Train the Class Neuron</h3>
+<p>Each person has a job.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Job</th>
+<th>What you do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>🃏</td>
+<td><strong>Card dealer</strong></td>
+<td>Read the card’s name and stars out loud. Keep the type hidden.</td>
+</tr>
+<tr class="even">
+<td>⚖️</td>
+<td><strong>Weight keepers</strong></td>
+<td>Each one holds one number (Attack weight, Special weight, or bias) on a whiteboard or paper. Change it after a mistake.</td>
+</tr>
+<tr class="odd">
+<td>🧠</td>
+<td><strong>The neuron</strong></td>
+<td>Calculate the total out loud. Say FIGHTING or PSYCHIC.</td>
+</tr>
+<tr class="even">
+<td>✅</td>
+<td><strong>Checker</strong></td>
+<td>Flip the card. Say “right” or “wrong.” If wrong, say ADD or SUBTRACT.</td>
+</tr>
+<tr class="odd">
+<td>📊</td>
+<td><strong>Scorekeeper</strong></td>
+<td>Count the mistakes in each pass. Write them on the board.</td>
+</tr>
+</tbody>
+</table>
+<div class="gotcha" title="Class size">
+<p><strong>4 students:</strong> the dealer is also the checker, and one weight keeper holds all 3 numbers. <strong>10 or more:</strong> make <strong>two teams</strong> with two sets of cards. Both teams start with the same weights. Which team finishes first? Do they end with the same weights?</p>
+</div>
+<div class="steps">
+<ol type="1">
+<li>Write the starting weights on the board: <span class="math inline">\(-1\)</span>, <span class="math inline">\(+1\)</span>, <span class="math inline">\(0\)</span>.</li>
+<li>Go through the training cards <strong>in order</strong>: T1, T2, … T10. For each card: neuron, checker, fix rule.</li>
+<li>Everyone writes each step on the sheet.</li>
+<li>After T10, the scorekeeper writes the number of mistakes. That was <strong>pass 1</strong>.</li>
+<li>Do <strong>pass 2</strong> with the same cards. Keep going until a whole pass has <strong>0 mistakes</strong>.</li>
+<li>Now use the <strong>test cards</strong>, X1 to X6. <strong>Do not fix the weights on a test!</strong> Just record what the neuron says.</li>
+</ol>
+</div>
+</section>
+<section id="check-our-math" class="level3">
+<h3 class="anchored" data-anchor-id="check-our-math">2.5.4 - Check Our Math</h3>
+<p>This is the same neuron, the same cards, and the same fix rule. Use it to check your class’s work, one card at a time.</p>
+<p>The picture shows every training card. The black line is the neuron’s line. The neuron calls the cards on one side FIGHTING. It calls the cards on the other side PSYCHIC. Watch the line move when the neuron makes a mistake.</p>
+<!-- neuron_trainer.html: Lesson 2.5. The class's Fighting-or-Psychic neuron,
+     step by step, to check the class's math. Same deck, same order, same
+     starting weights and fix rule as the printed cards. The plot shows the
+     neuron's decision line. Data: Mr. Ross's Pokédex CSV (stars = stat / 30,
+     rounded, from 1 to 5). -->
+<div class="nt" id="nt">
+  <div class="nt-top">
+    <div class="nt-left">
+      <div class="nt-weights">
+        <div><span>Attack weight</span><b class="nt-wa">-1</b></div>
+        <div><span>Special weight</span><b class="nt-ws">1</b></div>
+        <div><span>Bias</span><b class="nt-b">0</b></div>
+      </div>
+      <div class="nt-card" aria-live="polite"></div>
+      <div class="nt-bar">
+        <button type="button" class="nt-btn nt-step">▶ Next card</button>
+        <button type="button" class="nt-btn nt-plain nt-pass">⏩ Finish this pass</button>
+        <button type="button" class="nt-btn nt-plain nt-reset">↺ Start over</button>
+      </div>
+      <div class="nt-log"></div>
+    </div>
+    <div class="nt-right">
+      <canvas class="nt-plot" width="420" height="420" aria-label="Plot of the cards and the neuron's decision line"></canvas>
+      <div class="nt-key"><span class="f">■</span> Fighting card &nbsp; <span class="p">●</span> Psychic card &nbsp; <span class="l">—</span> the neuron's line</div>
+    </div>
+  </div>
+  <div class="nt-bottom">
+    <button type="button" class="nt-btn nt-plain nt-test">🧪 Test the 6 new cards</button>
+    <button type="button" class="nt-btn nt-plain nt-all">📊 Test on all 140 Fighting and Psychic Pokémon</button>
+    <div class="nt-res"></div>
+  </div>
+</div>
+
+<style>
+.nt { border: 1px solid #d9e1e8; border-radius: 10px; padding: 0.8rem; margin: 0.75rem 0 1.25rem; background: #fbfcfd; }
+.nt-top { display: flex; flex-wrap: wrap; gap: 1rem; }
+.nt-left { flex: 1 1 280px; display: flex; flex-direction: column; gap: 0.5rem; }
+.nt-right { flex: 0 1 360px; }
+.nt-weights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+.nt-weights div { background: #fff; border: 2px solid #d35400; border-radius: 8px; text-align: center; padding: 0.3rem; }
+.nt-weights span { display: block; font-size: 0.8rem; color: #555; }
+.nt-weights b { font-size: 1.5rem; color: #d35400; }
+.nt-card { min-height: 7.5em; background: #fff; border: 1px solid #d9e1e8; border-radius: 8px; padding: 0.5rem 0.7rem; line-height: 1.55; }
+.nt-card .ok { color: #1e8449; font-weight: bold; }
+.nt-card .no { color: #c0392b; font-weight: bold; }
+.nt-bar, .nt-bottom { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.nt-bottom { margin-top: 0.7rem; border-top: 1px solid #e3e8ed; padding-top: 0.6rem; }
+.nt-btn { border: 1px solid #2c3e50; background: #2c3e50; color: #fff; border-radius: 6px; padding: 0.3rem 0.8rem; font-weight: 600; cursor: pointer; }
+.nt-btn.nt-plain { background: #fff; color: #2c3e50; }
+.nt-log { font-size: 0.9rem; color: #333; }
+.nt-plot { width: 100%; height: auto; background: #fff; border: 1px solid #e3e8ed; border-radius: 8px; display: block; }
+.nt-key { font-size: 0.85rem; margin-top: 0.3rem; }
+.nt-key .f { color: #d35400; } .nt-key .p { color: #7d3c98; } .nt-key .l { color: #2c3e50; font-weight: bold; }
+.nt-res { flex-basis: 100%; line-height: 1.6; }
+.nt-res table { border-collapse: collapse; margin-top: 0.3rem; }
+.nt-res td, .nt-res th { border: 1px solid #d9e1e8; padding: 0.15rem 0.5rem; text-align: center; }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("nt");
+  if (!root) return;
+  // name, attack stars, special attack stars, F or P (second type in note)
+  const DECK = [
+    ["Machop",3,1,"F"],["Abra",1,4,"P"],["Machamp",4,2,"F"],["Espeon",2,4,"P"],["Hitmonlee",4,1,"F"],
+    ["Kirlia",1,2,"P"],["Conkeldurr",5,2,"F"],["Alakazam",2,5,"P"],["Makuhita",2,1,"F"],["Mr. Mime",2,3,"P"]];
+  const TEST = [
+    ["Primeape",4,2,"F",""],["Mewtwo",4,5,"P",""],["Hypno",2,2,"P",""],
+    ["Gallade",4,2,"P","Psychic and Fighting"],["Lucario",4,4,"F","Fighting and Steel"],["Medicham",2,2,"F","Fighting and Psychic"]];
+  const ALL = [["mankey",3,1,"F"],["primeape",4,2,"F"],["abra",1,4,"P"],["kadabra",1,4,"P"],["alakazam",2,5,"P"],["machop",3,1,"F"],["machoke",3,2,"F"],["machamp",4,2,"F"],["drowzee",2,1,"P"],["hypno",2,2,"P"],["hitmonlee",4,1,"F"],["hitmonchan",4,1,"F"],["mr-mime",2,3,"P"],["mewtwo",4,5,"P"],["mew",3,3,"P"],["natu",2,2,"P"],["xatu",3,3,"P"],["espeon",2,4,"P"],["unown",2,2,"P"],["wobbuffet",1,1,"P"],["tyrogue",1,1,"F"],["hitmontop",3,1,"F"],["lugia",3,3,"P"],["celebi",3,3,"P"],["ralts",1,2,"P"],["kirlia",1,2,"P"],["gardevoir",2,4,"P"],["makuhita",2,1,"F"],["hariyama",4,1,"F"],["meditite",1,1,"F"],["medicham",2,2,"F"],["spoink",1,2,"P"],["grumpig",2,3,"P"],["chimecho",2,3,"P"],["wynaut",1,1,"P"],["deoxys-normal",5,5,"P"],["chingling",1,2,"P"],["mime-jr",1,2,"P"],["riolu",2,1,"F"],["lucario",4,4,"F"],["gallade",4,2,"P"],["uxie",3,3,"P"],["mesprit",4,4,"P"],["azelf",4,4,"P"],["cresselia",2,3,"P"],["victini",3,3,"P"],["munna",1,2,"P"],["musharna",2,4,"P"],["woobat",2,2,"P"],["swoobat",2,3,"P"],["timburr",3,1,"F"],["gurdurr",4,1,"F"],["conkeldurr",5,2,"F"],["throh",3,1,"F"],["sawk",4,1,"F"],["sigilyph",2,3,"P"],["gothita",1,2,"P"],["gothorita",2,3,"P"],["gothitelle",2,3,"P"],["solosis",1,4,"P"],["duosion",1,4,"P"],["reuniclus",2,4,"P"],["elgyem",2,3,"P"],["beheeyem",3,4,"P"],["mienfoo",3,2,"F"],["mienshao",4,3,"F"],["pancham",3,2,"F"],["pangoro",4,2,"F"],["espurr",2,2,"P"],["meowstic-male",2,3,"P"],["hawlucha",3,2,"F"],["hoopa",4,5,"P"],["crabrawler",3,1,"F"],["crabominable",4,2,"F"],["passimian",4,1,"F"],["tapu-lele",3,4,"P"],["cosmog",1,1,"P"],["cosmoem",1,1,"P"],["solgaleo",5,4,"P"],["lunala",4,5,"P"],["necrozma",4,4,"P"],["marshadow",4,3,"F"],["clobbopus",2,2,"F"],["grapploct",4,2,"F"],["hatenna",1,2,"P"],["hattrem",1,3,"P"],["hatterene",3,5,"P"],["sirfetchd",5,2,"F"],["falinks",3,2,"F"],["indeedee-male",2,4,"P"],["zamazenta",4,3,"F"],["kubfu",3,2,"F"],["urshifu-single-strike",4,2,"F"],["calyrex",3,3,"P"],["sneasler",4,1,"F"],["flittle",1,2,"P"],["espathra",2,3,"P"],["annihilape",4,2,"F"],["iron-hands",5,2,"F"],["koraidon",5,3,"F"],["deoxys-attack",5,5,"P"],["deoxys-defense",2,2,"P"],["deoxys-speed",3,3,"P"],["meowstic-female",2,3,"P"],["alakazam-mega",2,5,"P"],["mewtwo-mega-x",5,5,"P"],["mewtwo-mega-y",5,5,"P"],["gardevoir-mega",3,5,"P"],["medicham-mega",3,3,"F"],["lucario-mega",5,5,"F"],["gallade-mega",5,2,"P"],["hoopa-unbound",5,5,"P"],["oricorio-pau",2,3,"P"],["necrozma-dusk",5,4,"P"],["necrozma-dawn",4,5,"P"],["necrozma-ultra",5,5,"P"],["ponyta-galar",3,2,"P"],["rapidash-galar",3,3,"P"],["slowpoke-galar",2,1,"P"],["farfetchd-galar",3,2,"F"],["articuno-galar",3,4,"P"],["zapdos-galar",4,3,"F"],["indeedee-female",2,3,"P"],["zamazenta-crowned",4,3,"F"],["urshifu-rapid-strike",4,2,"F"],["calyrex-ice",5,3,"P"],["calyrex-shadow",3,5,"P"],["machamp-gmax",4,2,"F"],["hatterene-gmax",3,5,"P"],["urshifu-single-strike-gmax",4,2,"F"],["urshifu-rapid-strike-gmax",4,2,"F"],["sneasel-hisui",3,1,"F"],["braviary-hisui",3,4,"P"],["tauros-paldea-combat-breed",4,1,"F"],["tauros-paldea-blaze-breed",4,1,"F"],["tauros-paldea-aqua-breed",4,1,"F"],["koraidon-limited-build",5,3,"F"],["koraidon-sprinting-build",5,3,"F"],["koraidon-swimming-build",5,3,"F"],["koraidon-gliding-build",5,3,"F"]];
+  const START = [-1, 1, 0];
+  let w, i, pass, mistakes, history;
+  const NAME = { F: "FIGHTING", P: "PSYCHIC" };
+
+  const card = root.querySelector(".nt-card"), log = root.querySelector(".nt-log"), res = root.querySelector(".nt-res");
+  const cv = root.querySelector(".nt-plot"), cx = cv.getContext("2d");
+  const total = (a, s) => a * w[0] + s * w[1] + w[2];
+  const says = (a, s) => (total(a, s) > 0 ? "F" : "P");
+
+  function reset() { w = START.slice(); i = 0; pass = 1; mistakes = 0; history = []; card.innerHTML = "Press <b>Next card</b> to start pass 1."; log.textContent = ""; res.innerHTML = ""; draw(); show(); }
+  function show() {
+    root.querySelector(".nt-wa").textContent = w[0];
+    root.querySelector(".nt-ws").textContent = w[1];
+    root.querySelector(".nt-b").textContent = w[2];
+  }
+  function step() {
+    if (pass > 1 && i === 0 && history.length && history[history.length - 1] === 0) {
+      card.innerHTML = "The last pass had <b>0 mistakes</b>. The neuron has learned! Now test it on new cards."; return false;
+    }
+    const [n, a, s, t] = DECK[i];
+    const tot = total(a, s), g = says(a, s), ok = g === t;
+    const fmt = (v) => (v < 0 ? "(" + v + ")" : v);
+    let html = `<b>Pass ${pass}, card ${i + 1}: ${n}</b><br>Attack ${a}, Special ${s}<br>` +
+      `Total = ${a} × ${fmt(w[0])} + ${s} × ${fmt(w[1])} + ${fmt(w[2])} = <b>${tot}</b>` +
+      ` → says <b>${NAME[g]}</b>. Really: ${NAME[t]}. `;
+    if (ok) html += '<span class="ok">Right! No change.</span>';
+    else {
+      const y = t === "F" ? 1 : -1;
+      w = [w[0] + y * a, w[1] + y * s, w[2] + y];
+      mistakes++;
+      html += `<span class="no">Wrong! ${y > 0 ? "ADD" : "SUBTRACT"}:</span> new weights ${w[0]}, ${w[1]}, bias ${w[2]}.`;
+    }
+    card.innerHTML = html;
+    i++;
+    if (i === DECK.length) {
+      history.push(mistakes);
+      log.textContent = history.map((m, k) => `Pass ${k + 1}: ${m} mistake${m === 1 ? "" : "s"}`).join(" · ");
+      i = 0; pass++; mistakes = 0;
+    }
+    show(); draw();
+    return true;
+  }
+  function draw() {
+    const W = cv.width, H = cv.height, pad = 46;
+    const X = (a) => pad + ((a - 0.5) / 5) * (W - pad - 14), Y = (s) => H - pad - ((s - 0.5) / 5) * (H - pad - 14);
+    cx.clearRect(0, 0, W, H);
+    // shade the two sides
+    const img = cx.createImageData(W, H);
+    for (let py = 0; py < H; py++) for (let px = 0; px < W; px++) {
+      const a = 0.5 + ((px - pad) / (W - pad - 14)) * 5, s = 0.5 + ((H - pad - py) / (H - pad - 14)) * 5;
+      if (a < 0.5 || a > 5.5 || s < 0.5 || s > 5.5) continue;
+      const f = total(a, s) > 0, k = 4 * (py * W + px);
+      img.data[k] = f ? 252 : 241; img.data[k + 1] = f ? 228 : 228; img.data[k + 2] = f ? 211 : 246; img.data[k + 3] = 255;
+    }
+    cx.putImageData(img, 0, 0);
+    cx.strokeStyle = "#d9e1e8"; cx.lineWidth = 1;
+    for (let v = 1; v <= 5; v++) {
+      cx.beginPath(); cx.moveTo(X(v), Y(0.5)); cx.lineTo(X(v), Y(5.5)); cx.stroke();
+      cx.beginPath(); cx.moveTo(X(0.5), Y(v)); cx.lineTo(X(5.5), Y(v)); cx.stroke();
+    }
+    cx.fillStyle = "#2c3e50"; cx.font = "14px sans-serif"; cx.textAlign = "center";
+    for (let v = 1; v <= 5; v++) { cx.fillText(v, X(v), H - pad + 18); cx.fillText(v, pad - 16, Y(v) + 5); }
+    cx.fillText("Attack stars", (X(0.5) + X(5.5)) / 2, H - 8);
+    cx.save(); cx.translate(12, (Y(0.5) + Y(5.5)) / 2); cx.rotate(-Math.PI / 2); cx.fillText("Special Attack stars", 0, 0); cx.restore();
+    cx.font = "bold 13px sans-serif";
+    cx.fillStyle = "#b9550b"; cx.fillText("says FIGHTING", X(4.6), Y(0.75));
+    cx.fillStyle = "#6c3483"; cx.fillText("says PSYCHIC", X(1.4), Y(5.3));
+    // the line where total = 0
+    if (w[1] !== 0 || w[0] !== 0) {
+      cx.strokeStyle = "#2c3e50"; cx.lineWidth = 3; cx.beginPath();
+      if (w[1] !== 0) { const s0 = -(w[0] * 0.5 + w[2]) / w[1], s1 = -(w[0] * 5.5 + w[2]) / w[1]; cx.moveTo(X(0.5), Y(s0)); cx.lineTo(X(5.5), Y(s1)); }
+      else { const a0 = -w[2] / w[0]; cx.moveTo(X(a0), Y(0.5)); cx.lineTo(X(a0), Y(5.5)); }
+      cx.stroke();
+    }
+    // cards
+    DECK.forEach(([n, a, s, t], k) => {
+      const x = X(a), y = Y(s);
+      cx.fillStyle = t === "F" ? "#d35400" : "#7d3c98";
+      if (t === "F") cx.fillRect(x - 7, y - 7, 14, 14); else { cx.beginPath(); cx.arc(x, y, 8, 0, 2 * Math.PI); cx.fill(); }
+      cx.fillStyle = "#2c3e50"; cx.font = "11px sans-serif"; cx.textAlign = "left"; cx.fillText(n, x + 10, y - 6); cx.textAlign = "center";
+    });
+  }
+  root.querySelector(".nt-step").addEventListener("click", step);
+  root.querySelector(".nt-pass").addEventListener("click", () => { const p = pass; while (pass === p && step()) {} });
+  root.querySelector(".nt-reset").addEventListener("click", reset);
+  root.querySelector(".nt-test").addEventListener("click", () => {
+    res.innerHTML = "<b>Test cards</b> (no fixing on a test!)<table><tr><th>Card</th><th>Attack</th><th>Special</th><th>Total</th><th>Says</th><th>Really</th></tr>" +
+      TEST.map(([n, a, s, t, note]) => `<tr><td>${n}</td><td>${a}</td><td>${s}</td><td>${total(a, s)}</td><td>${NAME[says(a, s)]}</td><td>${note || NAME[t]}</td></tr>`).join("") + "</table>";
+  });
+  root.querySelector(".nt-all").addEventListener("click", () => {
+    const right = ALL.filter(([n, a, s, t]) => says(a, s) === t).length;
+    const most = Math.max(ALL.filter((r) => r[3] === "F").length, ALL.filter((r) => r[3] === "P").length);
+    res.innerHTML = `With these weights, the neuron gets <b>${right} of ${ALL.length}</b> right (${Math.round((100 * right) / ALL.length)}%).<br>` +
+      `Always guessing the most common type would get ${most} of ${ALL.length} (${Math.round((100 * most) / ALL.length)}%).`;
+  });
+  reset();
+})();
+</script>
+<div class="think" title="What happened on the test cards?">
+<p>The neuron got <strong>Primeape</strong>, <strong>Mewtwo</strong>, and <strong>Hypno</strong> right.</p>
+<p>Then look at the last three:</p>
+<ul>
+<li><strong>Gallade</strong> is Psychic <strong>and</strong> Fighting. The neuron said Fighting.</li>
+<li><strong>Lucario</strong> is a Fighting type with very high Special Attack. The neuron said Psychic.</li>
+<li><strong>Medicham</strong> is Fighting <strong>and</strong> Psychic. The neuron said Psychic.</li>
+</ul>
+<p>The neuron only knows two numbers. It never saw a Pokémon with two types. It did its best with what it learned.</p>
+</div>
+<div class="think" title="The neuron's whole rule is one line. Can you find it?">
+<p>At the end, the weights are <strong>3</strong>, <strong>−4</strong>, and <strong>0</strong>. So the total is <span class="math inline">\(3A - 4S\)</span>. The neuron says FIGHTING when <span class="math inline">\(3A - 4S &gt; 0\)</span>, which means <span class="math inline">\(3A &gt; 4S\)</span>.</p>
+<p>That is a line on the graph! The neuron learned: <em>if Attack is a lot bigger than Special Attack, it is a fighter.</em> Nobody told it that rule.</p>
+</div>
+</section>
+</section>
+<section id="talk" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
+<p>The neuron said Gallade is a Fighting type. Gallade is Psychic <strong>and</strong> Fighting. Was the neuron wrong, or was the question wrong?</p>
+<div class="frames">
+<ul>
+<li>The neuron <strong>was</strong> / <strong>was not</strong> wrong about Gallade, because …</li>
+<li>The neuron learned the rule … without anyone telling it.</li>
+<li>To do better, the neuron needs to know …</li>
+<li>A real AI that makes decisions about <strong>people</strong> with only two numbers would be a problem because …</li>
+</ul>
+</div>
+</section>
+<section id="watch" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="watch">📺 Watch</h2>
+<div class="watch" title="How Neural Networks Work (Code.org)">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/JrXazCEACVo" title="How Neural Networks Work (Code.org)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><strong>While you watch:</strong> What happens to the weights when the network makes a mistake?</p>
+<p><strong>Captions in your language:</strong> Press <strong>CC</strong>, then ⚙️ <strong>Settings</strong>, then <strong>Subtitles/CC</strong>, then <strong>Auto-translate</strong>.</p>
+</div>
+</section>
+<section id="go-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="The Team Race">
+<p>Two teams train the neuron at the same time with the same cards. Team 1 starts with the backwards weights. Team 2 starts with all weights at 0. Who needs fewer mistakes? Do they end with the same weights? Do both get the test cards right?</p>
+</div>
+<div class="project" title="Shuffle the Cards">
+<p>Train again, but shuffle the training cards first. Do you end with the same weights? (Use <strong>Check Our Math</strong> to test your answer.)</p>
+</div>
+<div class="project" title="Make Your Own Deck">
+<p>Pick two groups that two numbers can tell apart. For example: basketball players and soccer players (height and weight), or fruits and vegetables (sweet and crunchy, from 1 to 5). Make 10 cards. Train the class neuron on your deck.</p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script src="../../scripts/popper.min.js"></script>
+<script src="../../scripts/tippy.min.js"></script>
+<script src="../../scripts/glossary-tooltips.js"></script>
+<script src="../../scripts/custom-callouts.js"></script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../chapters/Unit_2/2.4_The_Artificial_Neuron.html" class="pagination-link" aria-label="2.4 - The Artificial Neuron">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2.4 - The Artificial Neuron</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../chapters/Unit_2/2.6_Watch_Mr_Ross_Build_an_AI.html" class="pagination-link" aria-label="2.6 - Watch Mr. Ross Build an AI">
+        <span class="nav-page-text">2.6 - Watch Mr.&nbsp;Ross Build an AI</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Written by Mr.&nbsp;Ross in collaboration with Claude, an AI assistant made by Anthropic.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

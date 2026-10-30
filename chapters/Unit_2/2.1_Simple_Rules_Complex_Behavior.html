@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2.1 - Simple Rules, Complex Behavior – AI and You</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../chapters/Unit_2/2.2_Your_Brain_Is_Made_of_Cells.html" rel="next">
+<link href="../../chapters/Unit_2/index.html" rel="prev">
+<link href="../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b4d44d66d1752a05c2e2ea9554082b5e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles/glossary-tooltips.css">
+<link rel="stylesheet" href="../../styles/custom-callouts.css">
+<link rel="stylesheet" href="../../styles/custom-general.css">
+<link rel="stylesheet" href="../../styles/ai-and-you.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AI and You</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_2/index.html">Unit 2: Brains and Neural Networks</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_2/2.1_Simple_Rules_Complex_Behavior.html">2.1 - Simple Rules, Complex Behavior</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to AI and You</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Map</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 1: Where AI Came From</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.1_What_Is_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 - What Is AI?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.2_Can_a_Machine_Think.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 - Can a Machine Think?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.3_The_First_Chatbot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 - The First Chatbot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.4_Rules_Win_at_Games.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 - Rules Win at Games</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.5_Data_Changes_Everything.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 - Data Changes Everything</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.6_Transformers_and_ChatGPT.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 - Transformers and ChatGPT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unit 2: Brains and Neural Networks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.1_Simple_Rules_Complex_Behavior.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2.1 - Simple Rules, Complex Behavior</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.2_Your_Brain_Is_Made_of_Cells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 - Your Brain Is Made of Cells</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.3_How_Brains_Learn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 - How Brains Learn</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.4_The_Artificial_Neuron.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 - The Artificial Neuron</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 - Train a Human Neural Network</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.6_Watch_Mr_Ross_Build_an_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 - Watch Mr.&nbsp;Ross Build an AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.7_Train_Your_Own_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.7 - Train Your Own AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.8_How_AI_Sees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.8 - How AI Sees</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.9_How_Chatbots_Work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.9 - How Chatbots Work</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 3: Using AI Well</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 4: When AI Gets It Wrong</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 5: AI in the Real World</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_5/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 6: AI and Our Future</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#warmup" id="toc-warmup" class="nav-link active" data-scroll-target="#warmup">🔥 Warm Up</a></li>
+  <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">👥 Learn Together</a>
+  <ul class="collapse">
+  <li><a href="#a-question-from-mr.-rosss-old-job" id="toc-a-question-from-mr.-rosss-old-job" class="nav-link" data-scroll-target="#a-question-from-mr.-rosss-old-job">2.1.1 - A Question from Mr.&nbsp;Ross’s Old Job</a></li>
+  <li><a href="#one-row-one-rule" id="toc-one-row-one-rule" class="nav-link" data-scroll-target="#one-row-one-rule">2.1.2 - One Row, One Rule</a></li>
+  <li><a href="#rule-30" id="toc-rule-30" class="nav-link" data-scroll-target="#rule-30">2.1.3 - Rule 30</a></li>
+  </ul></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
+  <ul class="collapse">
+  <li><a href="#be-rule-30" id="toc-be-rule-30" class="nav-link" data-scroll-target="#be-rule-30">2.1.4 - Be Rule 30</a></li>
+  <li><a href="#explore-the-rules-on-screen" id="toc-explore-the-rules-on-screen" class="nav-link" data-scroll-target="#explore-the-rules-on-screen">2.1.5 - Explore the Rules on Screen</a></li>
+  </ul></li>
+  <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
+  <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_2/index.html">Unit 2: Brains and Neural Networks</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_2/2.1_Simple_Rules_Complex_Behavior.html">2.1 - Simple Rules, Complex Behavior</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">2.1 - Simple Rules, Complex Behavior</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In Unit 1, rules failed. Nobody could write rules for “cat.”</p>
+<p>But rules have a surprise. A <strong>very simple</strong> rule can make something <strong>very complicated</strong>. Nobody plans it. It just happens.</p>
+<p>Your brain works a little like this. Each brain cell follows simple rules. About 86 billion of them together make <strong>you</strong>. Today, you become the cells.</p>
+<div class="agenda">
+<p><strong>Today’s Plan</strong> (40 minutes)</p>
+<ul>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Make a wave <span class="time">5 min</span></li>
+<li><span class="icon">👥</span> <strong>Learn Together</strong> One row, one rule <span class="time">9 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Be Rule 30, then explore <span class="time">19 min</span></li>
+<li><span class="icon">💬</span> <strong>Talk About It</strong> Can simple make smart? <span class="time">7 min</span></li>
+</ul>
+</div>
+<div class="objectives">
+<ul class="task-list">
+<li><label><input type="checkbox">I can follow a rule card to make the next row of cells.</label></li>
+<li><label><input type="checkbox">I can explain how simple rules can make complicated patterns.</label></li>
+<li><label><input type="checkbox">I can explain what emergence means.</label></li>
+<li><label><input type="checkbox">I can connect simple rules to brain cells.</label></li>
+</ul>
+</div>
+<div class="vocab">
+<div class="word-cards">
+<ul>
+<li><span class="icon">🔲</span> <a href="../../glossary.html#glossary-cellular-automaton" class="glossary-link" data-term="cellular automaton" data-slug="cellular-automaton" data-original-href="#glossary-cellular-automaton">cellular automaton</a>: a row or grid of cells that change color by following a rule</li>
+<li><span class="icon">🌊</span> <a href="../../glossary.html#glossary-emergence" class="glossary-link" data-term="emergence" data-slug="emergence" data-original-href="#glossary-emergence">emergence</a>: when many simple parts together make something complicated that no one planned</li>
+<li><span class="icon">🎲</span> <a href="../../glossary.html#glossary-random" class="glossary-link" data-term="random" data-slug="random" data-original-href="#glossary-random">random</a>: with no pattern, so you cannot guess what comes next</li>
+<li><span class="icon">📏</span> <a href="../../glossary.html#glossary-rule" class="glossary-link" data-term="rule" data-slug="rule" data-original-href="#glossary-rule">rule</a>: an exact instruction, like “If this happens, do that.”</li>
+</ul>
+</div>
+</div>
+<div class="guided-notes-link">
+<p><a href="../../handouts/Unit_2/2.1_Simple_Rules_Complex_Behavior.pdf" target="_blank">Printable lesson sheet</a> - the sheet you write on today.</p>
+</div>
+<section id="warmup" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="warmup">🔥 Warm Up</h2>
+<p>Everyone stands in a line (or sits in a row). Everyone follows <strong>one rule</strong>:</p>
+<blockquote class="blockquote">
+<p>When the person on your left raises their hands, raise your hands. Put them down after one second.</p>
+</blockquote>
+<p>Mr.&nbsp;Ross starts it at one end. Watch what happens. Then try it again, faster.</p>
+<div class="think" title="Who was in charge of the wave?">
+<p>Nobody! Each person only watched one neighbor. But together, you made a wave that moved down the line.</p>
+<p>When many simple parts make something bigger that nobody planned, we call it <strong><a href="../../glossary.html#glossary-emergence" class="glossary-link" data-term="emergence" data-slug="emergence" data-original-href="#glossary-emergence">emergence</a></strong>.</p>
+</div>
+</section>
+<section id="learn" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
+<section id="a-question-from-mr.-rosss-old-job" class="level3">
+<h3 class="anchored" data-anchor-id="a-question-from-mr.-rosss-old-job">2.1.1 - A Question from Mr.&nbsp;Ross’s Old Job</h3>
+<p>Before he was a teacher, Mr.&nbsp;Ross worked at <strong>Wolfram Research</strong>, the company that makes the math program <em>Mathematica</em>. The company’s founder, <strong>Stephen Wolfram</strong>, spent years on one question:</p>
+<blockquote class="blockquote">
+<p>How can very simple rules make very complicated things?</p>
+</blockquote>
+<hr>
+</section>
+<section id="one-row-one-rule" class="level3">
+<h3 class="anchored" data-anchor-id="one-row-one-rule">2.1.2 - One Row, One Rule</h3>
+<p>Picture a row of squares. Each square is black or white. Every square looks at <strong>itself</strong> and its <strong>two neighbors</strong>. Then the rule card says what color it will be in the next row.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_2/2.1_rule30_card.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Rule 30 card. Eight patterns of three squares. Under each, the color of the middle square in the next row. Black, black, black gives white. Black, black, white gives white. Black, white, black gives white. Black, white, white gives black. White, black, black gives black. White, black, white gives black. White, white, black gives black. White, white, white gives white." width="700"></p>
+</figure>
+</div>
+<p>There are only 8 possible patterns of 3 squares. So a rule card has 8 answers. This card is called <strong>Rule 30</strong>. A world like this is called a <a href="../../glossary.html#glossary-cellular-automaton" class="glossary-link" data-term="cellular automaton" data-slug="cellular-automaton" data-original-href="#glossary-cellular-automaton">cellular automaton</a>.</p>
+<p>Different cards make very different pictures. All four of these start with <strong>one black square</strong>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_2/2.1_rules_gallery.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Four pictures. Rule 4: a single straight line that never changes. Rule 90: a neat triangle pattern. Rule 30: a triangle full of messy chaos. Rule 110: a complex pattern that grows on one side." width="760"></p>
+</figure>
+</div>
+<hr>
+</section>
+<section id="rule-30" class="level3">
+<h3 class="anchored" data-anchor-id="rule-30">2.1.3 - Rule 30</h3>
+<p>Stephen Wolfram studied Rule 30 in 1983. Here it is after 80 rows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_2/2.1_rule30_big.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Rule 30 after 80 rows: a large triangle. The left side has stripes. The middle and right look random, with small white triangles of many sizes." width="640"></p>
+</figure>
+</div>
+<p>The rule is tiny. But the middle of the picture looks <strong><a href="../../glossary.html#glossary-random" class="glossary-link" data-term="random" data-slug="random" data-original-href="#glossary-random">random</a></strong>. Even Wolfram cannot say what row 1,000 will look like. The only way to know is to make all 999 rows before it.</p>
+<div class="real-world" title="Rule 30 in the real world">
+<ul>
+<li><strong>Random numbers.</strong> <em>Mathematica</em> used Rule 30 to make random numbers.</li>
+<li><strong>A sea snail.</strong> A cone snail called <em>Conus textile</em> has a pattern on its shell that looks like Rule 30.</li>
+<li><strong>A train station.</strong> Cambridge North station in England has Rule 30 patterns on its walls.</li>
+</ul>
+</div>
+<div class="remember" title="The big idea">
+<p>Simple rules can make behavior that is <strong>just as complicated</strong> as anything else. Wolfram calls this the <strong>Principle of Computational Equivalence</strong>. He thinks a row of cells, the weather, and a brain can all be equally complicated. Not every scientist agrees.</p>
+<p>This matters for AI. A neural network is made of tiny parts that follow simple rules. So is your brain.</p>
+</div>
+</section>
+</section>
+<section id="try-it" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
+<section id="be-rule-30" class="level3">
+<h3 class="anchored" data-anchor-id="be-rule-30">2.1.4 - Be Rule 30</h3>
+<p>The class becomes a row of cells.</p>
+<div class="steps">
+<ol type="1">
+<li>Each <strong>cell</strong> gets a paper that is black on one side and white on the other. Stand in a row. (Small class? Put 15 papers in a row on the desks. Each person is in charge of 3 or 4 of them.)</li>
+<li>Start with <strong>only the middle cell black</strong>. Everyone else shows white.</li>
+<li><strong>Each cell:</strong> look at your left neighbor, yourself, and your right neighbor. Find the same 3 colors on the Rule 30 card. (The ends of the row have a white neighbor outside.)</li>
+<li>The <strong>caller</strong> says “Ready … Go!” Everyone shows their new color <strong>at the same time</strong>.</li>
+<li>The <strong>recorder</strong> colors the new row on the board. Everyone colors it on their sheet too.</li>
+<li>Do at least 6 rows. Then finish 10 rows on your sheet with a partner.</li>
+</ol>
+</div>
+<div class="gotcha" title="Everyone changes at the same time">
+<p>Decide your new color, but wait for “Go!” If you change early, your neighbors will see the wrong color.</p>
+</div>
+</section>
+<section id="explore-the-rules-on-screen" class="level3">
+<h3 class="anchored" data-anchor-id="explore-the-rules-on-screen">2.1.5 - Explore the Rules on Screen</h3>
+<div class="steps">
+<ol type="1">
+<li>Press <strong>Draw it</strong> for Rule 30. Does it match your sheet?</li>
+<li>Try the other rules: 90, 110, 4, 184, 150. Which one makes chaos? Which one makes a neat pattern?</li>
+<li><strong>Make your own rule.</strong> Click the answer squares on the rule card. What is your rule’s number?</li>
+<li>Switch to <strong>The Game of Life</strong>. Add a <strong>glider</strong> and press <strong>Run</strong>. What does the glider do?</li>
+</ol>
+</div>
+<!-- simple_rules.html: Lesson 2.1. Two kinds of simple-rule worlds.
+     One row: any of the 256 rules; click the rule card to make your own.
+     Game of Life: click cells, then press Run. -->
+<div class="sr" id="sr">
+  <div class="sr-tabs">
+    <button type="button" class="sr-tab" data-tab="row" aria-pressed="true">One row of cells</button>
+    <button type="button" class="sr-tab" data-tab="life" aria-pressed="false">The Game of Life</button>
+  </div>
+
+  <div class="sr-pane" data-pane="row">
+    <div class="sr-bar">
+      <label>Rule number <input type="number" class="sr-rule" min="0" max="255" value="30"></label>
+      <span class="sr-presets">Try:
+        <button type="button" data-rule="30">30</button>
+        <button type="button" data-rule="90">90</button>
+        <button type="button" data-rule="110">110</button>
+        <button type="button" data-rule="4">4</button>
+        <button type="button" data-rule="184">184</button>
+        <button type="button" data-rule="150">150</button>
+      </span>
+    </div>
+    <div class="sr-card" aria-label="Rule card. Click an answer square to change it."></div>
+    <div class="sr-bar">
+      <label><input type="radio" name="sr-start" value="one" checked=""> Start: one black cell</label>
+      <label><input type="radio" name="sr-start" value="random"> Start: random</label>
+      <button type="button" class="sr-btn sr-draw">▶ Draw it</button>
+    </div>
+    <canvas class="sr-canvas" width="801" height="400"></canvas>
+  </div>
+
+  <div class="sr-pane" data-pane="life" hidden="">
+    <p class="sr-life-rules">
+      <b>The rules.</b> Every cell looks at its 8 neighbors.
+      ⬛ A black cell with <b>2 or 3</b> black neighbors stays black. Otherwise it dies (turns white).
+      ⬜ A white cell with <b>exactly 3</b> black neighbors is born (turns black).
+    </p>
+    <div class="sr-bar">
+      <button type="button" class="sr-btn sr-run">▶ Run</button>
+      <button type="button" class="sr-btn sr-plain sr-step">Step</button>
+      <button type="button" class="sr-btn sr-plain sr-clear">Clear</button>
+      <span class="sr-presets">Add:
+        <button type="button" data-shape="glider">glider</button>
+        <button type="button" data-shape="blinker">blinker</button>
+        <button type="button" data-shape="rpent">R-pentomino</button>
+        <button type="button" data-shape="random">random</button>
+      </span>
+      <span class="sr-gen">Step 0</span>
+    </div>
+    <canvas class="sr-life" width="800" height="440"></canvas>
+    <p class="sr-hint">Click a square to make it black or white.</p>
+  </div>
+</div>
+
+<style>
+.sr { border: 1px solid #d9e1e8; border-radius: 10px; padding: 0.8rem; margin: 0.75rem 0 1.25rem; background: #fbfcfd; }
+.sr-tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+.sr-tab { border: 1px solid #b8c4cf; background: #fff; border-radius: 999px; padding: 0.25rem 0.85rem; font-weight: 600; cursor: pointer; }
+.sr-tab[aria-pressed="true"] { background: #2c3e50; color: #fff; border-color: #2c3e50; }
+.sr-bar { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; margin: 0.4rem 0; }
+.sr-rule { width: 4.5em; font-size: 1rem; padding: 0.15rem 0.3rem; }
+.sr-presets button { border: 1px solid #b8c4cf; background: #fff; border-radius: 6px; padding: 0.1rem 0.5rem; cursor: pointer; margin-left: 0.15rem; }
+.sr-btn { border: 1px solid #2c3e50; background: #2c3e50; color: #fff; border-radius: 6px; padding: 0.3rem 0.8rem; font-weight: 600; cursor: pointer; }
+.sr-btn.sr-plain { background: #fff; color: #2c3e50; }
+.sr-card { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0.5rem 0; }
+.sr-pat { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }
+.sr-three { display: flex; }
+.sr-three span, .sr-out { width: 18px; height: 18px; border: 1px solid #2c3e50; display: inline-block; }
+.sr-three span.on { background: #2c3e50; }
+.sr-out { cursor: pointer; border-width: 2px; }
+.sr-out.on { background: #2c3e50; }
+.sr-arrow { font-size: 0.8rem; line-height: 1; color: #555; }
+.sr-canvas, .sr-life { width: 100%; height: auto; border: 1px solid #e3e8ed; background: #fff; image-rendering: pixelated; display: block; }
+.sr-life { cursor: pointer; }
+.sr-life-rules { margin: 0 0 0.4rem; line-height: 1.5; }
+.sr-gen { font-weight: 600; color: #555; }
+.sr-hint { font-size: 0.85rem; color: #555; margin: 0.3rem 0 0; }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("sr");
+  if (!root) return;
+
+  // ---------- tabs ----------
+  root.querySelectorAll(".sr-tab").forEach((t) => t.addEventListener("click", () => {
+    root.querySelectorAll(".sr-tab").forEach((x) => x.setAttribute("aria-pressed", x === t));
+    root.querySelectorAll(".sr-pane").forEach((p) => (p.hidden = p.dataset.pane !== t.dataset.tab));
+    if (t.dataset.tab !== "life") stop();
+  }));
+
+  // ---------- one row: elementary cellular automaton ----------
+  const ruleIn = root.querySelector(".sr-rule");
+  const card = root.querySelector(".sr-card");
+  const cv = root.querySelector(".sr-canvas");
+  const cx = cv.getContext("2d");
+  const W = 161, H = 80, CELL = 5;
+  cv.width = W * CELL; cv.height = H * CELL;
+  const PATS = [7, 6, 5, 4, 3, 2, 1, 0];
+  let rule = 30;
+
+  function drawCard() {
+    card.innerHTML = "";
+    PATS.forEach((p) => {
+      const d = document.createElement("div"); d.className = "sr-pat";
+      const three = document.createElement("div"); three.className = "sr-three";
+      [4, 2, 1].forEach((bit) => { const s = document.createElement("span"); if (p & bit) s.className = "on"; three.appendChild(s); });
+      const arrow = document.createElement("div"); arrow.className = "sr-arrow"; arrow.textContent = "↓";
+      const out = document.createElement("button"); out.type = "button";
+      out.className = "sr-out" + ((rule >> p) & 1 ? " on" : "");
+      out.setAttribute("aria-label", "answer for pattern " + p.toString(2).padStart(3, "0"));
+      out.addEventListener("click", () => { rule ^= 1 << p; ruleIn.value = rule; drawCard(); drawRows(); });
+      d.append(three, arrow, out); card.appendChild(d);
+    });
+  }
+  function drawRows() {
+    const random = root.querySelector('input[name="sr-start"]:checked').value === "random";
+    let row = new Array(W).fill(0);
+    if (random) row = row.map(() => (Math.random() < 0.5 ? 1 : 0)); else row[Math.floor(W / 2)] = 1;
+    cx.fillStyle = "#fff"; cx.fillRect(0, 0, cv.width, cv.height);
+    cx.fillStyle = "#2c3e50";
+    for (let y = 0; y < H; y++) {
+      row.forEach((v, x) => { if (v) cx.fillRect(x * CELL, y * CELL, CELL, CELL); });
+      row = row.map((_, i) => (rule >> (4 * (row[i - 1] || 0) + 2 * row[i] + (row[i + 1] || 0))) & 1);
+    }
+  }
+  ruleIn.addEventListener("change", () => {
+    rule = Math.max(0, Math.min(255, parseInt(ruleIn.value, 10) || 0)); ruleIn.value = rule; drawCard(); drawRows();
+  });
+  root.querySelectorAll("[data-rule]").forEach((b) => b.addEventListener("click", () => {
+    rule = +b.dataset.rule; ruleIn.value = rule; drawCard(); drawRows();
+  }));
+  root.querySelectorAll('input[name="sr-start"]').forEach((r) => r.addEventListener("change", drawRows));
+  root.querySelector(".sr-draw").addEventListener("click", drawRows);
+  drawCard(); drawRows();
+
+  // ---------- the Game of Life ----------
+  const lv = root.querySelector(".sr-life");
+  const lx = lv.getContext("2d");
+  const CW = 50, CH = 28, LC = 16;
+  lv.width = CW * LC; lv.height = CH * LC;
+  let g = Array.from({ length: CH }, () => new Array(CW).fill(0));
+  let gen = 0, timer = null;
+  const genEl = root.querySelector(".sr-gen");
+  const runBtn = root.querySelector(".sr-run");
+
+  function drawLife() {
+    lx.fillStyle = "#fff"; lx.fillRect(0, 0, lv.width, lv.height);
+    lx.strokeStyle = "#e6ebef"; lx.lineWidth = 1;
+    for (let x = 0; x <= CW; x++) { lx.beginPath(); lx.moveTo(x * LC + 0.5, 0); lx.lineTo(x * LC + 0.5, lv.height); lx.stroke(); }
+    for (let y = 0; y <= CH; y++) { lx.beginPath(); lx.moveTo(0, y * LC + 0.5); lx.lineTo(lv.width, y * LC + 0.5); lx.stroke(); }
+    lx.fillStyle = "#2c3e50";
+    g.forEach((row, y) => row.forEach((v, x) => { if (v) lx.fillRect(x * LC + 1, y * LC + 1, LC - 1, LC - 1); }));
+    genEl.textContent = "Step " + gen;
+  }
+  function step() {
+    const n = g.map((row, y) => row.map((v, x) => {
+      let c = 0;
+      for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) {
+        if (!dx && !dy) continue;
+        const yy = (y + dy + CH) % CH, xx = (x + dx + CW) % CW;
+        c += g[yy][xx];
+      }
+      return v ? (c === 2 || c === 3 ? 1 : 0) : (c === 3 ? 1 : 0);
+    }));
+    g = n; gen++; drawLife();
+  }
+  function stop() { if (timer) { clearInterval(timer); timer = null; runBtn.textContent = "▶ Run"; } }
+  runBtn.addEventListener("click", () => {
+    if (timer) stop(); else { timer = setInterval(step, 140); runBtn.textContent = "⏸ Stop"; }
+  });
+  root.querySelector(".sr-step").addEventListener("click", () => { stop(); step(); });
+  root.querySelector(".sr-clear").addEventListener("click", () => { stop(); g = g.map((r) => r.map(() => 0)); gen = 0; drawLife(); });
+  const SHAPES = {
+    glider: [[0, 1], [1, 2], [2, 0], [2, 1], [2, 2]],
+    blinker: [[0, 0], [0, 1], [0, 2]],
+    rpent: [[0, 1], [0, 2], [1, 0], [1, 1], [2, 1]],
+  };
+  root.querySelectorAll("[data-shape]").forEach((b) => b.addEventListener("click", () => {
+    if (b.dataset.shape === "random") { g = g.map((r) => r.map(() => (Math.random() < 0.25 ? 1 : 0))); gen = 0; drawLife(); return; }
+    const ox = 4 + Math.floor(Math.random() * (CW - 12)), oy = 3 + Math.floor(Math.random() * (CH - 9));
+    SHAPES[b.dataset.shape].forEach(([y, x]) => (g[oy + y][ox + x] = 1));
+    drawLife();
+  }));
+  lv.addEventListener("click", (e) => {
+    const r = lv.getBoundingClientRect();
+    const x = Math.floor(((e.clientX - r.left) / r.width) * CW);
+    const y = Math.floor(((e.clientY - r.top) / r.height) * CH);
+    if (x >= 0 && x < CW && y >= 0 && y < CH) { g[y][x] ^= 1; drawLife(); }
+  });
+  drawLife();
+})();
+</script>
+<div class="think" title="The glider moves across the screen. But does any cell move?">
+<p>No! Each cell stays in its place. It only turns black or white. The “glider” is a <strong>pattern</strong> that moves, like the wave in the Warm Up.</p>
+</div>
+</section>
+</section>
+<section id="talk" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
+<p>A brain cell follows simple rules. A part of a neural network follows simple rules. Can simple parts make something smart?</p>
+<div class="frames">
+<ul>
+<li>I think simple rules <strong>can</strong> / <strong>cannot</strong> make something smart, because …</li>
+<li>The wave and Rule 30 are alike because …</li>
+<li>A brain <strong>is</strong> / <strong>is not</strong> just simple rules, because …</li>
+</ul>
+</div>
+</section>
+<section id="go-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="Life Challenge">
+<p>In the Game of Life, try to build:</p>
+<ol type="1">
+<li>A pattern that <strong>never changes</strong>.</li>
+<li>A pattern that <strong>blinks</strong> back and forth forever.</li>
+<li>A pattern that <strong>moves</strong>, like the glider.</li>
+</ol>
+<p>Draw your best pattern on grid paper. Can a partner guess what it will do?</p>
+</div>
+<div class="project" title="Rule 30 with Cups">
+<p>Make Rule 30 on a table with paper cups: cup up is white, cup down is black. Make 6 rows. Take a photo of your table.</p>
+</div>
+<div class="watch" title="Inventing the Game of Life (Numberphile)">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/R9Plq-D1gEk" title="Inventing Game of Life (John Conway, Numberphile)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>John Conway, the mathematician who made the Game of Life in 1970, tells how he invented it.</p>
+<p><strong>Captions in your language:</strong> Press <strong>CC</strong>, then ⚙️ <strong>Settings</strong>, then <strong>Subtitles/CC</strong>, then <strong>Auto-translate</strong>.</p>
+</div>
+<p><strong>More to explore</strong></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Conus_textile" target="_blank">Conus textile (Wikipedia)</a>: See photos of the snail shell. Does it look like Rule 30?</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script src="../../scripts/popper.min.js"></script>
+<script src="../../scripts/tippy.min.js"></script>
+<script src="../../scripts/glossary-tooltips.js"></script>
+<script src="../../scripts/custom-callouts.js"></script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../chapters/Unit_2/index.html" class="pagination-link" aria-label="Introduction">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../chapters/Unit_2/2.2_Your_Brain_Is_Made_of_Cells.html" class="pagination-link" aria-label="2.2 - Your Brain Is Made of Cells">
+        <span class="nav-page-text">2.2 - Your Brain Is Made of Cells</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Written by Mr.&nbsp;Ross in collaboration with Claude, an AI assistant made by Anthropic.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

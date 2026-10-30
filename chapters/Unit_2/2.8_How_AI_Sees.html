@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2.8 - How AI Sees – AI and You</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../chapters/Unit_2/2.9_How_Chatbots_Work.html" rel="next">
+<link href="../../chapters/Unit_2/2.7_Train_Your_Own_AI.html" rel="prev">
+<link href="../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b4d44d66d1752a05c2e2ea9554082b5e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles/glossary-tooltips.css">
+<link rel="stylesheet" href="../../styles/custom-callouts.css">
+<link rel="stylesheet" href="../../styles/custom-general.css">
+<link rel="stylesheet" href="../../styles/ai-and-you.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AI and You</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_2/index.html">Unit 2: Brains and Neural Networks</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_2/2.8_How_AI_Sees.html">2.8 - How AI Sees</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to AI and You</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Map</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 1: Where AI Came From</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.1_What_Is_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 - What Is AI?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.2_Can_a_Machine_Think.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 - Can a Machine Think?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.3_The_First_Chatbot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 - The First Chatbot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.4_Rules_Win_at_Games.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 - Rules Win at Games</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.5_Data_Changes_Everything.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 - Data Changes Everything</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.6_Transformers_and_ChatGPT.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 - Transformers and ChatGPT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unit 2: Brains and Neural Networks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.1_Simple_Rules_Complex_Behavior.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 - Simple Rules, Complex Behavior</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.2_Your_Brain_Is_Made_of_Cells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 - Your Brain Is Made of Cells</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.3_How_Brains_Learn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 - How Brains Learn</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.4_The_Artificial_Neuron.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 - The Artificial Neuron</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 - Train a Human Neural Network</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.6_Watch_Mr_Ross_Build_an_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 - Watch Mr.&nbsp;Ross Build an AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.7_Train_Your_Own_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.7 - Train Your Own AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.8_How_AI_Sees.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2.8 - How AI Sees</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.9_How_Chatbots_Work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.9 - How Chatbots Work</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 3: Using AI Well</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 4: When AI Gets It Wrong</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 5: AI in the Real World</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_5/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 6: AI and Our Future</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#warmup" id="toc-warmup" class="nav-link active" data-scroll-target="#warmup">🔥 Warm Up</a></li>
+  <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">👥 Learn Together</a>
+  <ul class="collapse">
+  <li><a href="#pixels-are-numbers" id="toc-pixels-are-numbers" class="nav-link" data-scroll-target="#pixels-are-numbers">2.8.1 - Pixels Are Numbers</a></li>
+  <li><a href="#finding-edges-with-a-filter" id="toc-finding-edges-with-a-filter" class="nav-link" data-scroll-target="#finding-edges-with-a-filter">2.8.2 - Finding Edges with a Filter</a></li>
+  <li><a href="#layers" id="toc-layers" class="nav-link" data-scroll-target="#layers">2.8.3 - Layers</a></li>
+  </ul></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
+  <ul class="collapse">
+  <li><a href="#find-the-edges" id="toc-find-the-edges" class="nav-link" data-scroll-target="#find-the-edges">2.8.4 - Find the Edges</a></li>
+  </ul></li>
+  <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
+  <li><a href="#watch" id="toc-watch" class="nav-link" data-scroll-target="#watch">📺 Watch</a></li>
+  <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_2/index.html">Unit 2: Brains and Neural Networks</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_2/2.8_How_AI_Sees.html">2.8 - How AI Sees</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">2.8 - How AI Sees</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>To you, a photo is a face, a dog, or a street. To a computer, a photo is a <strong>grid of numbers</strong>. Nothing else.</p>
+<p>So how does a self-driving car find a person in the street? How does your phone find your face? It does math on the numbers, layer by layer, like the neurons you built.</p>
+<div class="agenda">
+<p><strong>Today’s Plan</strong> (40 minutes)</p>
+<ul>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Color by number <span class="time">8 min</span></li>
+<li><span class="icon">👥</span> <strong>Learn Together</strong> Pixels, filters, and layers <span class="time">10 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Find the edges <span class="time">14 min</span></li>
+<li><span class="icon">💬</span> <strong>Talk About It</strong> What could a car miss? <span class="time">8 min</span></li>
+</ul>
+</div>
+<div class="objectives">
+<ul class="task-list">
+<li><label><input type="checkbox">I can explain how a computer stores a picture as numbers.</label></li>
+<li><label><input type="checkbox">I can use a filter to find edges, by hand and on screen.</label></li>
+<li><label><input type="checkbox">I can explain how layers in a network build from edges to objects.</label></li>
+<li><label><input type="checkbox">I can name ways computer vision is used, and what could go wrong.</label></li>
+</ul>
+</div>
+<div class="vocab">
+<div class="word-cards">
+<ul>
+<li><span class="icon">🟦</span> <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-slug="pixel" data-original-href="#glossary-pixel" data-term="pixel">pixel</a>: one tiny square of a picture. It is stored as a number.</li>
+<li><span class="icon">🔍</span> <a href="../../glossary.html#glossary-filter" class="glossary-link" data-slug="filter" data-original-href="#glossary-filter" data-term="filter">filter</a>: a small grid of numbers that slides over a picture to find something, like edges</li>
+<li><span class="icon">📐</span> <a href="../../glossary.html#glossary-edge" class="glossary-link" data-slug="edge" data-original-href="#glossary-edge" data-term="edge">edge</a>: a place where a picture changes fast from dark to light</li>
+<li><span class="icon">👁️</span> <a href="../../glossary.html#glossary-computer-vision" class="glossary-link" data-slug="computer-vision" data-original-href="#glossary-computer-vision" data-term="computer vision">computer vision</a>: AI that finds things in pictures and video</li>
+</ul>
+</div>
+</div>
+<div class="guided-notes-link">
+<p><a href="../../handouts/Unit_2/2.8_How_AI_Sees.pdf" target="_blank">Printable lesson sheet</a> - the sheet you write on today.</p>
+</div>
+<section id="warmup" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="warmup">🔥 Warm Up</h2>
+<p>Your sheet has a grid of numbers. Color every square with a <strong>1</strong>. Leave every <strong>0</strong> white. What is the picture?</p>
+<div class="think" title="What did you just do?">
+<p>You turned numbers into a picture. A computer screen does the same thing millions of times a second.</p>
+<p>A camera does the opposite. It turns a picture into numbers.</p>
+</div>
+</section>
+<section id="learn" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
+<section id="pixels-are-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="pixels-are-numbers">2.8.1 - Pixels Are Numbers</h3>
+<p>Zoom in on any photo and you see tiny squares. Each square is a <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-slug="pixel" data-original-href="#glossary-pixel" data-term="pixel">pixel</a>.</p>
+<ul>
+<li>In a black-and-white picture, each pixel is one number: <strong>0</strong> is black, <strong>255</strong> is white, and the numbers between are grays.</li>
+<li>In a color picture, each pixel is <strong>three</strong> numbers: how much red, green, and blue.</li>
+<li>A phone photo can have about <strong>12 million</strong> pixels. That is about 36 million numbers!</li>
+</ul>
+<hr>
+</section>
+<section id="finding-edges-with-a-filter" class="level3">
+<h3 class="anchored" data-anchor-id="finding-edges-with-a-filter">2.8.2 - Finding Edges with a Filter</h3>
+<p>Where does a picture change fast from dark to light? That is an <a href="../../glossary.html#glossary-edge" class="glossary-link" data-slug="edge" data-original-href="#glossary-edge" data-term="edge">edge</a>. Edges show where things begin and end.</p>
+<p>A <a href="../../glossary.html#glossary-filter" class="glossary-link" data-slug="filter" data-original-href="#glossary-filter" data-term="filter">filter</a> is a small 3 by 3 grid of numbers. It slides over the picture, one square at a time. At each square:</p>
+<ol type="1">
+<li><strong>Multiply</strong> the 9 picture numbers by the 9 filter numbers.</li>
+<li><strong>Add</strong> them up.</li>
+</ol>
+<p>That is the same <strong>multiply and add</strong> as the neuron in Lesson 2.4! If the answer is big, there is an edge here. If the answer is 0, the picture is the same on both sides: no edge.</p>
+<hr>
+</section>
+<section id="layers" class="level3">
+<h3 class="anchored" data-anchor-id="layers">2.8.3 - Layers</h3>
+<p>A vision network has many layers of neurons. Each layer builds on the one before.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_2/2.8_layers.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Five steps from left to right. Pixels, which are numbers. Layer 1 finds edges. Layer 2 finds shapes like circles and corners. Layer 3 finds parts like an ear, an eye, and whiskers. The last layer decides: cat." width="740"></p>
+</figure>
+</div>
+<p>Nobody tells the network to look for edges or ears. It learns its own filters during training, from millions of labeled pictures (like ImageNet in Lesson 1.5).</p>
+<div class="real-world" title="Computer vision is everywhere">
+<ul>
+<li><strong>Self-driving cars</strong> find lanes, signs, other cars, and people.</li>
+<li><strong>Phones</strong> find your face to unlock.</li>
+<li><strong>Doctors</strong> use it to look for problems in X-rays.</li>
+<li><strong>Farms</strong> use it to find sick plants.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="try-it" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
+<section id="find-the-edges" class="level3">
+<h3 class="anchored" data-anchor-id="find-the-edges">2.8.4 - Find the Edges</h3>
+<div class="steps">
+<ol type="1">
+<li>Choose the <strong>house</strong>. Turn on <strong>show the numbers</strong>. Find a 0 and a 255.</li>
+<li>The filter is <strong>find up-and-down edges</strong>. Look at the right side. Where is it bright?</li>
+<li>Click a bright square on the right. Read the math. Then click a dark one.</li>
+<li>Change the filter to <strong>find side-to-side edges</strong>. What changes?</li>
+<li>Draw your own picture with the pen. Which filter finds its edges best?</li>
+<li>Do the edge problem on your sheet <strong>by hand</strong>.</li>
+</ol>
+</div>
+<!-- pixels_filters.html: Lesson 2.8. A picture is a grid of numbers
+     (0 = black, 255 = white). A 3x3 filter slides over it: multiply, add.
+     Big answers mark edges. Click an output square to see the math. -->
+<div class="pf" id="pf">
+  <div class="pf-bar">
+    <span class="pf-label">Picture:</span>
+    <button type="button" data-pic="house">house</button>
+    <button type="button" data-pic="heart">heart</button>
+    <button type="button" data-pic="letter">letter A</button>
+    <button type="button" data-pic="blank">blank</button>
+    <span class="pf-label">Pen:</span>
+    <button type="button" data-pen="0" class="pen on">⬛ 0</button>
+    <button type="button" data-pen="128" class="pen">▩ 128</button>
+    <button type="button" data-pen="255" class="pen">⬜ 255</button>
+    <label><input type="checkbox" class="pf-nums"> show the numbers</label>
+  </div>
+  <div class="pf-bar">
+    <span class="pf-label">Filter:</span>
+    <select class="pf-filter">
+      <option value="v">find up-and-down edges</option>
+      <option value="h">find side-to-side edges</option>
+      <option value="all">find all edges</option>
+      <option value="blur">blur</option>
+    </select>
+    <span class="pf-kernel"></span>
+  </div>
+  <div class="pf-grids">
+    <div><div class="pf-h">The picture (what the computer stores)</div><canvas class="pf-in" width="384" height="384"></canvas></div>
+    <div><div class="pf-h">After the filter (bright = big answer)</div><canvas class="pf-out" width="384" height="384"></canvas></div>
+  </div>
+  <div class="pf-explain">Click a square in the picture to change it. Click a square on the right to see the math.</div>
+</div>
+
+<style>
+.pf { border: 1px solid #d9e1e8; border-radius: 10px; padding: 0.8rem; margin: 0.75rem 0 1.25rem; background: #fbfcfd; }
+.pf-bar { display: flex; flex-wrap: wrap; gap: 0.35rem 0.6rem; align-items: center; margin-bottom: 0.45rem; }
+.pf-bar button { border: 1px solid #b8c4cf; background: #fff; border-radius: 6px; padding: 0.1rem 0.55rem; cursor: pointer; }
+.pf-bar button.pen.on { background: #2c3e50; color: #fff; border-color: #2c3e50; }
+.pf-label { font-weight: bold; }
+.pf-kernel { font-family: ui-monospace, monospace; font-size: 0.85rem; background: #fff; border: 1px solid #e3e8ed; border-radius: 4px; padding: 0.1rem 0.4rem; white-space: pre; display: inline-block; line-height: 1.2; }
+.pf-grids { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.pf-grids > div { flex: 1 1 260px; max-width: 384px; }
+.pf-h { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.2rem; }
+.pf-grids canvas { width: 100%; height: auto; border: 1px solid #2c3e50; display: block; cursor: pointer; touch-action: none; image-rendering: pixelated; }
+.pf-explain { margin-top: 0.6rem; background: #fff; border-left: 4px solid #d35400; padding: 0.4rem 0.6rem; border-radius: 4px; line-height: 1.5; min-height: 3em; }
+.pf-explain table { border-collapse: collapse; display: inline-table; margin: 0.2rem 0.6rem 0.2rem 0; vertical-align: middle; }
+.pf-explain td { border: 1px solid #ccc; padding: 0 0.35rem; text-align: center; font-size: 0.85rem; }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("pf");
+  if (!root) return;
+  const N = 16, C = 24;
+  const PICS = {
+    house: ["................","................",".......##.......","......####......",".....######.....","....########....","...##########...","..############..","...##########...","...##......##...","...##..##..##...","...##..##..##...","...##..##..##...","...##########...","................","................"],
+    heart: ["................","................","...###....###...","..#####..#####..",".##############.",".##############.",".##############.","..############..","...##########...","....########....",".....######.....","......####......",".......##.......","................","................","................"],
+    letter: ["................",".......##.......","......####......","......####......",".....##..##.....",".....##..##.....","....##....##....","....##....##....","...##########...","...##########...","..##........##..","..##........##..",".##..........##.",".##..........##.","................","................"],
+  };
+  const FILTERS = {
+    v: [[-1, 0, 1], [-1, 0, 1], [-1, 0, 1]],
+    h: [[-1, -1, -1], [0, 0, 0], [1, 1, 1]],
+    all: [[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]],
+    blur: [[1, 1, 1], [1, 1, 1], [1, 1, 1]],
+  };
+  let img = [], pen = 0, sel = null;
+  const inC = root.querySelector(".pf-in"), ix = inC.getContext("2d");
+  const outC = root.querySelector(".pf-out"), ox = outC.getContext("2d");
+  const fSel = root.querySelector(".pf-filter"), nums = root.querySelector(".pf-nums");
+  const explain = root.querySelector(".pf-explain");
+
+  function load(name) {
+    img = name === "blank" ? Array.from({ length: N }, () => new Array(N).fill(255))
+      : PICS[name].map((row) => [...row].map((c) => (c === "#" ? 0 : 255)));
+    sel = null; draw();
+  }
+  const px = (y, x) => (y < 0 || x < 0 || y >= N || x >= N ? 255 : img[y][x]);  // outside: white
+  function apply(y, x) {
+    const K = FILTERS[fSel.value]; let s = 0;
+    for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) s += K[dy + 1][dx + 1] * px(y + dy, x + dx);
+    return fSel.value === "blur" ? Math.round(s / 9) : s;
+  }
+  function drawGrid(ctx, val, label) {
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+      const v = val(y, x);
+      ctx.fillStyle = `rgb(${v},${v},${v})`; ctx.fillRect(x * C, y * C, C, C);
+      if (nums.checked) {
+        ctx.fillStyle = v < 128 ? "#fff" : "#000"; ctx.font = "9px sans-serif"; ctx.textAlign = "center";
+        ctx.fillText(label(y, x), x * C + C / 2, y * C + C / 2 + 3);
+      }
+    }
+    ctx.strokeStyle = "rgba(120,140,160,0.35)"; ctx.lineWidth = 1;
+    for (let k = 0; k <= N; k++) { ctx.beginPath(); ctx.moveTo(k * C + 0.5, 0); ctx.lineTo(k * C + 0.5, N * C); ctx.stroke(); ctx.beginPath(); ctx.moveTo(0, k * C + 0.5); ctx.lineTo(N * C, k * C + 0.5); ctx.stroke(); }
+  }
+  function draw() {
+    const K = FILTERS[fSel.value];
+    root.querySelector(".pf-kernel").textContent = K.map((r) => r.map((v) => String(v).padStart(3)).join(" ")).join("\n");
+    drawGrid(ix, (y, x) => img[y][x], (y, x) => img[y][x]);
+    const out = img.map((row, y) => row.map((_, x) => apply(y, x)));
+    const blur = fSel.value === "blur";
+    const max = Math.max(1, ...out.flat().map(Math.abs));
+    drawGrid(ox, (y, x) => (blur ? out[y][x] : Math.round((255 * Math.abs(out[y][x])) / max)), (y, x) => out[y][x]);
+    if (sel) {
+      [[ix, sel], [ox, sel]].forEach(([ctx, [y, x]], k) => {
+        ctx.strokeStyle = "#d35400"; ctx.lineWidth = 3;
+        if (k === 0) ctx.strokeRect((x - 1) * C, (y - 1) * C, 3 * C, 3 * C); else ctx.strokeRect(x * C, y * C, C, C);
+      });
+    }
+  }
+  function cell(e, cv) {
+    const r = cv.getBoundingClientRect();
+    return [Math.floor(((e.clientY - r.top) / r.height) * N), Math.floor(((e.clientX - r.left) / r.width) * N)];
+  }
+  let painting = false;
+  inC.addEventListener("pointerdown", (e) => { painting = true; inC.setPointerCapture(e.pointerId); const [y, x] = cell(e, inC); if (img[y]) { img[y][x] = pen; draw(); } });
+  inC.addEventListener("pointermove", (e) => { if (!painting) return; const [y, x] = cell(e, inC); if (img[y] && img[y][x] !== undefined) { img[y][x] = pen; draw(); } });
+  inC.addEventListener("pointerup", () => (painting = false));
+  outC.addEventListener("click", (e) => {
+    const [y, x] = cell(e, outC); if (!img[y]) return;
+    sel = [y, x]; draw();
+    const K = FILTERS[fSel.value];
+    const patch = [-1, 0, 1].map((dy) => [-1, 0, 1].map((dx) => px(y + dy, x + dx)));
+    const terms = []; for (let a = 0; a < 3; a++) for (let b = 0; b < 3; b++) if (K[a][b]) terms.push(`${K[a][b] < 0 ? "(" + K[a][b] + ")" : K[a][b]}×${patch[a][b]}`);
+    const tbl = (m) => `<table>${m.map((r) => `<tr>${r.map((v) => `<td>${v}</td>`).join("")}</tr>`).join("")}</table>`;
+    explain.innerHTML = `The 9 numbers around this square ${tbl(patch)} times the filter ${tbl(K)} ` +
+      `<br>${terms.join(" + ")} = <b>${fSel.value === "blur" ? apply(y, x) * 9 : apply(y, x)}</b>` +
+      (fSel.value === "blur" ? `, divided by 9 = <b>${apply(y, x)}</b>` : "") +
+      (fSel.value !== "blur" ? (Math.abs(apply(y, x)) > 0 ? " → <b>an edge!</b>" : " → no edge here") : "");
+  });
+  root.querySelectorAll("[data-pic]").forEach((b) => b.addEventListener("click", () => load(b.dataset.pic)));
+  root.querySelectorAll("[data-pen]").forEach((b) => b.addEventListener("click", () => {
+    pen = +b.dataset.pen; root.querySelectorAll(".pen").forEach((x) => x.classList.toggle("on", x === b));
+  }));
+  fSel.addEventListener("change", draw);
+  nums.addEventListener("change", draw);
+  load("house");
+})();
+</script>
+<div class="think" title="Why are the walls bright with one filter, and the bottom of the house bright with the other?">
+<p>The <strong>up-and-down</strong> filter compares the left side with the right side. It finds edges that go up and down, like walls.</p>
+<p>The <strong>side-to-side</strong> filter compares the top with the bottom. It finds edges that go across, like the bottom of the house.</p>
+<p>A real network has many filters like these, and it learns them by itself.</p>
+</div>
+</section>
+</section>
+<section id="talk" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
+<p>A self-driving car sees only numbers. What if it sees something it never saw in training: a person in a costume, snow on a stop sign, or a kangaroo?</p>
+<div class="frames">
+<ul>
+<li>A computer sees … , but I see …</li>
+<li>A self-driving car could make a mistake when … , because …</li>
+<li>Computer vision is helpful when … , and dangerous when …</li>
+</ul>
+</div>
+</section>
+<section id="watch" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="watch">📺 Watch</h2>
+<div class="watch" title="How Computer Vision Works (Code.org)">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/2hXG8v8p0KM" title="How Computer Vision Works (Code.org)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><strong>While you watch:</strong> What does a computer see when it looks at a picture?</p>
+<p><strong>Captions in your language:</strong> Press <strong>CC</strong>, then ⚙️ <strong>Settings</strong>, then <strong>Subtitles/CC</strong>, then <strong>Auto-translate</strong>.</p>
+</div>
+</section>
+<section id="go-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="Send a Secret Picture">
+<p>Draw a 10 by 10 picture on grid paper. Write it as numbers (0 and 1) on another paper. Give only the numbers to a partner. Can they draw your picture? This is how pictures travel over the internet.</p>
+</div>
+<div class="project" title="Make a Blur">
+<p>Choose the <strong>blur</strong> filter. Click a square and read the math. Why does blur add all 9 numbers and divide by 9? (Hint: what is the mean of 9 numbers?)</p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script src="../../scripts/popper.min.js"></script>
+<script src="../../scripts/tippy.min.js"></script>
+<script src="../../scripts/glossary-tooltips.js"></script>
+<script src="../../scripts/custom-callouts.js"></script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../chapters/Unit_2/2.7_Train_Your_Own_AI.html" class="pagination-link" aria-label="2.7 - Train Your Own AI">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2.7 - Train Your Own AI</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../chapters/Unit_2/2.9_How_Chatbots_Work.html" class="pagination-link" aria-label="2.9 - How Chatbots Work">
+        <span class="nav-page-text">2.9 - How Chatbots Work</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Written by Mr.&nbsp;Ross in collaboration with Claude, an AI assistant made by Anthropic.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
