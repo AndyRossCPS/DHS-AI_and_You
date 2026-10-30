@@ -442,6 +442,47 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Explore More</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Where AI Came From</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Brains and Neural Networks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Using AI Well</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: When AI Gets It Wrong</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
@@ -463,12 +504,10 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#rules-and-predictions" id="toc-rules-and-predictions" class="nav-link" data-scroll-target="#rules-and-predictions">3.6.1 - Rules and Predictions</a></li>
   <li><a href="#three-ways-to-check" id="toc-three-ways-to-check" class="nav-link" data-scroll-target="#three-ways-to-check">3.6.2 - Three Ways to Check</a></li>
-  <li><a href="#hints-not-answers" id="toc-hints-not-answers" class="nav-link" data-scroll-target="#hints-not-answers">3.6.3 - Hints, Not Answers</a></li>
   </ul></li>
   <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
   <ul class="collapse">
-  <li><a href="#test-the-chatbot" id="toc-test-the-chatbot" class="nav-link" data-scroll-target="#test-the-chatbot">3.6.4 - Test the Chatbot</a></li>
-  <li><a href="#the-hint-challenge" id="toc-the-hint-challenge" class="nav-link" data-scroll-target="#the-hint-challenge">3.6.5 - The Hint Challenge</a></li>
+  <li><a href="#test-the-chatbot" id="toc-test-the-chatbot" class="nav-link" data-scroll-target="#test-the-chatbot">3.6.3 - Test the Chatbot</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
   <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
@@ -498,13 +537,13 @@ window.Quarto = {
 
 
 <p>A calculator from 1975 can do <span class="math inline">\(3847 \times 29\)</span> and get it right every time. Some of the most powerful AI in the world can solve very hard math contest problems. And yet a chatbot can still get a long multiplication problem <strong>wrong</strong>, and sound completely sure.</p>
-<p>How can that be? And how should you use AI in math class? You want it to help you learn, not do the learning for you.</p>
+<p>How can that be? Today you find out, and you test it yourself.</p>
 <div class="agenda">
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
 <ul>
-<li><span class="icon">🔥</span> <strong>Warm Up</strong> Catch the mistake <span class="time">5 min</span></li>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Catch the mistake <span class="time">7 min</span></li>
 <li><span class="icon">👥</span> <strong>Learn Together</strong> Rules and predictions <span class="time">9 min</span></li>
-<li><span class="icon">🛠️</span> <strong>Try It</strong> Test the chatbot, then get a hint <span class="time">20 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Test the chatbot <span class="time">18 min</span></li>
 <li><span class="icon">💬</span> <strong>Talk About It</strong> Help or shortcut? <span class="time">6 min</span></li>
 </ul>
 </div>
@@ -512,17 +551,15 @@ window.Quarto = {
 <ul class="task-list">
 <li><label><input type="checkbox">I can explain why a calculator is always right on arithmetic, but a chatbot is not.</label></li>
 <li><label><input type="checkbox">I can check an AI answer with a calculator, an estimate, or by plugging it in.</label></li>
-<li><label><input type="checkbox">I can ask AI for a hint instead of the answer.</label></li>
 <li><label><input type="checkbox">I can find a wrong step in a solution.</label></li>
 </ul>
 </div>
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">💡</span> <a href="../../glossary.html#glossary-hint" class="glossary-link" data-term="hint" data-slug="hint" data-original-href="#glossary-hint">hint</a>: a small help that shows you the next step, but not the answer</li>
-<li><span class="icon">📏</span> <a href="../../glossary.html#glossary-estimate" class="glossary-link" data-term="estimate" data-slug="estimate" data-original-href="#glossary-estimate">estimate</a>: a quick answer that is close, but not exact. Use it to check.</li>
-<li><span class="icon">🧩</span> <a href="../../glossary.html#glossary-token" class="glossary-link" data-term="token" data-slug="token" data-original-href="#glossary-token">token</a>: a word or a piece of a word that a chatbot reads and writes</li>
-<li><span class="icon">📜</span> <a href="../../glossary.html#glossary-rule" class="glossary-link" data-term="rule" data-slug="rule" data-original-href="#glossary-rule">rule</a>: an exact step that a computer follows every time</li>
+<li><span class="icon">📏</span> <a href="../../glossary.html#glossary-estimate" class="glossary-link" data-original-href="#glossary-estimate" data-term="estimate" data-slug="estimate">estimate</a>: a quick answer that is close, but not exact. Use it to check.</li>
+<li><span class="icon">🧩</span> <a href="../../glossary.html#glossary-token" class="glossary-link" data-original-href="#glossary-token" data-term="token" data-slug="token">token</a>: a word or a piece of a word that a chatbot reads and writes</li>
+<li><span class="icon">📜</span> <a href="../../glossary.html#glossary-rule" class="glossary-link" data-original-href="#glossary-rule" data-term="rule" data-slug="rule">rule</a>: an exact step that a computer follows every time</li>
 </ul>
 </div>
 </div>
@@ -570,8 +607,8 @@ window.Quarto = {
 </figure>
 </div>
 <ul>
-<li>A <strong>calculator</strong> follows the <a href="../../glossary.html#glossary-rule" class="glossary-link" data-term="rule" data-slug="rule" data-original-href="#glossary-rule">rule</a> for multiplying. It does the same steps every time.</li>
-<li>A <strong>chatbot</strong> predicts the answer, one <a href="../../glossary.html#glossary-token" class="glossary-link" data-term="token" data-slug="token" data-original-href="#glossary-token">token</a> at a time, like words. On small problems, its guesses are almost always right. On long problems, one bad guess makes the whole answer wrong.</li>
+<li>A <strong>calculator</strong> follows the <a href="../../glossary.html#glossary-rule" class="glossary-link" data-original-href="#glossary-rule" data-term="rule" data-slug="rule">rule</a> for multiplying. It does the same steps every time.</li>
+<li>A <strong>chatbot</strong> predicts the answer, one <a href="../../glossary.html#glossary-token" class="glossary-link" data-original-href="#glossary-token" data-term="token" data-slug="token">token</a> at a time, like words. On small problems, its guesses are almost always right. On long problems, one bad guess makes the whole answer wrong.</li>
 </ul>
 <p>This picture shows the idea. Real chatbots split numbers into pieces in different ways.</p>
 <div class="note" title="Right now (fall 2026)">
@@ -613,22 +650,12 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<hr>
-</section>
-<section id="hints-not-answers" class="level3">
-<h3 class="anchored" data-anchor-id="hints-not-answers">3.6.3 - Hints, Not Answers</h3>
-<p>If AI does your homework, you did not learn it. Then the test comes, and the AI is not there.</p>
-<p>Ask for a <a href="../../glossary.html#glossary-hint" class="glossary-link" data-term="hint" data-slug="hint" data-original-href="#glossary-hint">hint</a> instead:</p>
-<div class="prompt-example">
-<p><span class="p-context">I am learning to solve equations.</span> <span class="p-format">Do not give me the answer.</span> <span class="p-task">Give me one hint for the first step of <span class="math inline">\(2x - 7 = 11\)</span>.</span> <span class="p-format">Then wait for me to try.</span></p>
-</div>
-<p>You can also ask AI to check your work: “Here are my steps. Tell me which step is wrong, but do not fix it.”</p>
 </section>
 </section>
 <section id="try-it" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
 <section id="test-the-chatbot" class="level3">
-<h3 class="anchored" data-anchor-id="test-the-chatbot">3.6.4 - Test the Chatbot</h3>
+<h3 class="anchored" data-anchor-id="test-the-chatbot">3.6.3 - Test the Chatbot</h3>
 <p>Work with a partner.</p>
 <div class="steps">
 <ol type="1">
@@ -667,16 +694,6 @@ window.Quarto = {
 <div class="gotcha" title="It might get them all right">
 <p>That is a good result too! Write it down. Your class AI tool may use a calculator behind the scenes. Try asking: “Did you use a calculator for that?” Then check its answer to <strong>that</strong> question.</p>
 </div>
-</section>
-<section id="the-hint-challenge" class="level3">
-<h3 class="anchored" data-anchor-id="the-hint-challenge">3.6.5 - The Hint Challenge</h3>
-<div class="steps">
-<ol type="1">
-<li>Use the hint prompt from 3.6.3 to solve <span class="math inline">\(2x - 7 = 11\)</span>. Do not let the AI give you the answer.</li>
-<li>Write each hint and each of your steps on your sheet.</li>
-<li>Check your answer by plugging it in.</li>
-</ol>
-</div>
 <div class="gotcha" title="Class size">
 <p><strong>Small class:</strong> everyone tests the chatbot, then the class makes one chart together. <strong>Big class:</strong> each pair tests only 2 of the 4 problems, but asks each one 3 times in new chats. Does the AI give the same answer every time?</p>
 </div>
@@ -696,14 +713,26 @@ window.Quarto = {
 </section>
 <section id="go-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
-<div class="project" title="Explain It in My Language">
-<p>Choose a math idea from your math class. Ask the AI to explain it in your home language, with one example. Is the math right? Is the language right? Teach it to a partner.</p>
+<div class="project" title="Day 2: The Hint Challenge">
+<p>If AI does your homework, you did not learn it. Then the test comes, and the AI is not there. So ask for a <a href="../../glossary.html#glossary-hint" class="glossary-link" data-original-href="#glossary-hint" data-term="hint" data-slug="hint">hint</a> instead:</p>
+<blockquote class="blockquote">
+<p>I am learning to solve equations. Do not give me the answer. Give me one hint for the first step of <span class="math inline">\(2x - 7 = 11\)</span>. Then wait for me to try.</p>
+</blockquote>
+<ol type="1">
+<li>Use this prompt. Do not let the AI give you the answer.</li>
+<li>Write each hint and each of your steps on your sheet.</li>
+<li>Check your answer by plugging it in.</li>
+</ol>
+<p>You can also ask AI to check your work: “Here are my steps. Tell me which step is wrong, but do not fix it.”</p>
 </div>
 <div class="project" title="Same Problem, Three Times">
 <p>Ask the very big problem in 3 new chats. Did you get the same answer each time? Why could a chatbot give different answers to the same question? (Hint: Lesson 2.9.)</p>
 </div>
 <div class="project" title="Word Problem Trap">
 <p>Ask: “A farmer has 15 cows. All but 8 run away. How many are left?” Is the AI right? (The answer is 8.) Write your own trick word problem and test it.</p>
+</div>
+<div class="explore-link">
+<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-3.html#explore-3-6">why numbers are hard for chatbots, and math in your language</a>. For students who want to learn more on their own.</p>
 </div>
 
 

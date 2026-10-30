@@ -442,6 +442,47 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Explore More</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Where AI Came From</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Brains and Neural Networks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Using AI Well</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: When AI Gets It Wrong</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
@@ -467,7 +508,6 @@ window.Quarto = {
   <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
   <ul class="collapse">
   <li><a href="#train-the-class-neuron" id="toc-train-the-class-neuron" class="nav-link" data-scroll-target="#train-the-class-neuron">2.5.3 - Train the Class Neuron</a></li>
-  <li><a href="#check-our-math" id="toc-check-our-math" class="nav-link" data-scroll-target="#check-our-math">2.5.4 - Check Our Math</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
   <li><a href="#watch" id="toc-watch" class="nav-link" data-scroll-target="#watch">📺 Watch</a></li>
@@ -520,10 +560,10 @@ window.Quarto = {
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🏋️</span> <a href="../../glossary.html#glossary-training" class="glossary-link" data-slug="training" data-original-href="#glossary-training" data-term="training">training</a>: showing an AI many examples so it can fix its weights</li>
-<li><span class="icon">🧪</span> <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-slug="test-data" data-original-href="#glossary-test-data" data-term="test data">test data</a>: new examples the AI never trained on, used to check what it learned</li>
-<li><span class="icon">➕</span> <a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-slug="bias-number" data-original-href="#glossary-bias-number" data-term="bias">bias</a>: in a neuron, an extra number that is always added to the total</li>
-<li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-weight" class="glossary-link" data-slug="weight" data-original-href="#glossary-weight" data-term="weight">weight</a>: a number that says how much an input matters</li>
+<li><span class="icon">🏋️</span> <a href="../../glossary.html#glossary-training" class="glossary-link" data-original-href="#glossary-training" data-slug="training" data-term="training">training</a>: showing an AI many examples so it can fix its weights</li>
+<li><span class="icon">🧪</span> <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-original-href="#glossary-test-data" data-slug="test-data" data-term="test data">test data</a>: new examples the AI never trained on, used to check what it learned</li>
+<li><span class="icon">➕</span> <a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-original-href="#glossary-bias-number" data-slug="bias-number" data-term="bias">bias</a>: in a neuron, an extra number that is always added to the total</li>
+<li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-weight" class="glossary-link" data-original-href="#glossary-weight" data-slug="weight" data-term="weight">weight</a>: a number that says how much an input matters</li>
 </ul>
 </div>
 </div>
@@ -590,7 +630,7 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td></td>
-<td><strong><a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-slug="bias-number" data-original-href="#glossary-bias-number" data-term="bias">bias</a></strong> (always added)</td>
+<td><strong><a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-original-href="#glossary-bias-number" data-slug="bias-number" data-term="bias">bias</a></strong> (always added)</td>
 </tr>
 </tbody>
 </table>
@@ -711,11 +751,49 @@ window.Quarto = {
 <li>Now use the <strong>test cards</strong>, X1 to X6. <strong>Do not fix the weights on a test!</strong> Just record what the neuron says.</li>
 </ol>
 </div>
+<div class="think" title="What happened on the test cards?">
+<p>The neuron got <strong>Primeape</strong>, <strong>Mewtwo</strong>, and <strong>Hypno</strong> right.</p>
+<p>Then look at the last three:</p>
+<ul>
+<li><strong>Gallade</strong> is Psychic <strong>and</strong> Fighting. The neuron said Fighting.</li>
+<li><strong>Lucario</strong> is a Fighting type with very high Special Attack. The neuron said Psychic.</li>
+<li><strong>Medicham</strong> is Fighting <strong>and</strong> Psychic. The neuron said Psychic.</li>
+</ul>
+<p>The neuron only knows two numbers. It never saw a Pokémon with two types. It did its best with what it learned.</p>
+</div>
 </section>
-<section id="check-our-math" class="level3">
-<h3 class="anchored" data-anchor-id="check-our-math">2.5.4 - Check Our Math</h3>
-<p>This is the same neuron, the same cards, and the same fix rule. Use it to check your class’s work, one card at a time.</p>
-<p>The picture shows every training card. The black line is the neuron’s line. The neuron calls the cards on one side FIGHTING. It calls the cards on the other side PSYCHIC. Watch the line move when the neuron makes a mistake.</p>
+</section>
+<section id="talk" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
+<p>The neuron said Gallade is a Fighting type. Gallade is Psychic <strong>and</strong> Fighting. Was the neuron wrong, or was the question wrong?</p>
+<div class="frames">
+<ul>
+<li>The neuron <strong>was</strong> / <strong>was not</strong> wrong about Gallade, because …</li>
+<li>The neuron learned the rule … without anyone telling it.</li>
+<li>To do better, the neuron needs to know …</li>
+<li>A real AI that makes decisions about <strong>people</strong> with only two numbers would be a problem because …</li>
+</ul>
+</div>
+</section>
+<section id="watch" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="watch">📺 Watch</h2>
+<div class="watch" title="How Neural Networks Work (Code.org)">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/JrXazCEACVo" title="How Neural Networks Work (Code.org)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><strong>While you watch:</strong> What happens to the weights when the network makes a mistake?</p>
+<p><strong>Captions in your language:</strong> Press <strong>CC</strong>, then ⚙️ <strong>Settings</strong>, then <strong>Subtitles/CC</strong>, then <strong>Auto-translate</strong>.</p>
+</div>
+</section>
+<section id="go-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="Day 2: Check Our Math, and Find the Line">
+<p>This tool has the same neuron, the same cards, and the same fix rule. Work with a partner.</p>
+<ol type="1">
+<li>Step through the training cards, one at a time. Do the weights match your class’s work?</li>
+<li>The picture shows every training card. The black line is the neuron’s line. The neuron calls the cards on one side FIGHTING. It calls the cards on the other side PSYCHIC. Watch the line move when the neuron makes a mistake.</li>
+<li>Press <strong>Test on all 140 Fighting and Psychic Pokémon</strong>. How many does the neuron get right?</li>
+<li>On your sheet, draw the neuron’s line on the graph.</li>
+</ol>
+</div>
 <!-- neuron_trainer.html: Lesson 2.5. The class's Fighting-or-Psychic neuron,
      step by step, to check the class's math. Same deck, same order, same
      starting weights and fix rule as the printed cards. The plot shows the
@@ -884,52 +962,18 @@ window.Quarto = {
   reset();
 })();
 </script>
-<div class="think" title="What happened on the test cards?">
-<p>The neuron got <strong>Primeape</strong>, <strong>Mewtwo</strong>, and <strong>Hypno</strong> right.</p>
-<p>Then look at the last three:</p>
-<ul>
-<li><strong>Gallade</strong> is Psychic <strong>and</strong> Fighting. The neuron said Fighting.</li>
-<li><strong>Lucario</strong> is a Fighting type with very high Special Attack. The neuron said Psychic.</li>
-<li><strong>Medicham</strong> is Fighting <strong>and</strong> Psychic. The neuron said Psychic.</li>
-</ul>
-<p>The neuron only knows two numbers. It never saw a Pokémon with two types. It did its best with what it learned.</p>
-</div>
 <div class="think" title="The neuron's whole rule is one line. Can you find it?">
 <p>At the end, the weights are <strong>3</strong>, <strong>−4</strong>, and <strong>0</strong>. So the total is <span class="math inline">\(3A - 4S\)</span>. The neuron says FIGHTING when <span class="math inline">\(3A - 4S &gt; 0\)</span>, which means <span class="math inline">\(3A &gt; 4S\)</span>.</p>
 <p>That is a line on the graph! The neuron learned: <em>if Attack is a lot bigger than Special Attack, it is a fighter.</em> Nobody told it that rule.</p>
 </div>
-</section>
-</section>
-<section id="talk" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
-<p>The neuron said Gallade is a Fighting type. Gallade is Psychic <strong>and</strong> Fighting. Was the neuron wrong, or was the question wrong?</p>
-<div class="frames">
-<ul>
-<li>The neuron <strong>was</strong> / <strong>was not</strong> wrong about Gallade, because …</li>
-<li>The neuron learned the rule … without anyone telling it.</li>
-<li>To do better, the neuron needs to know …</li>
-<li>A real AI that makes decisions about <strong>people</strong> with only two numbers would be a problem because …</li>
-</ul>
-</div>
-</section>
-<section id="watch" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="watch">📺 Watch</h2>
-<div class="watch" title="How Neural Networks Work (Code.org)">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/JrXazCEACVo" title="How Neural Networks Work (Code.org)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p><strong>While you watch:</strong> What happens to the weights when the network makes a mistake?</p>
-<p><strong>Captions in your language:</strong> Press <strong>CC</strong>, then ⚙️ <strong>Settings</strong>, then <strong>Subtitles/CC</strong>, then <strong>Auto-translate</strong>.</p>
-</div>
-</section>
-<section id="go-further" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
 <div class="project" title="The Team Race">
 <p>Two teams train the neuron at the same time with the same cards. Team 1 starts with the backwards weights. Team 2 starts with all weights at 0. Who needs fewer mistakes? Do they end with the same weights? Do both get the test cards right?</p>
 </div>
-<div class="project" title="Shuffle the Cards">
-<p>Train again, but shuffle the training cards first. Do you end with the same weights? (Use <strong>Check Our Math</strong> to test your answer.)</p>
-</div>
 <div class="project" title="Make Your Own Deck">
 <p>Pick two groups that two numbers can tell apart. For example: basketball players and soccer players (height and weight), or fruits and vegetables (sweet and crunchy, from 1 to 5). Make 10 cards. Train the class neuron on your deck.</p>
+</div>
+<div class="explore-link">
+<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-2.html#explore-2-5">why the fix rule works, and shuffling the cards</a>. For students who want to learn more on their own.</p>
 </div>
 
 

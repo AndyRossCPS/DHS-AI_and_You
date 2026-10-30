@@ -413,6 +413,47 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Explore More</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Where AI Came From</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Brains and Neural Networks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Using AI Well</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: When AI Gets It Wrong</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
@@ -432,14 +473,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#warmup" id="toc-warmup" class="nav-link active" data-scroll-target="#warmup">🔥 Warm Up</a></li>
   <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">👥 Learn Together</a>
   <ul class="collapse">
-  <li><a href="#the-man-who-made-eliza" id="toc-the-man-who-made-eliza" class="nav-link" data-scroll-target="#the-man-who-made-eliza">1.3.1 - The Man Who Made ELIZA</a></li>
-  <li><a href="#how-eliza-works" id="toc-how-eliza-works" class="nav-link" data-scroll-target="#how-eliza-works">1.3.2 - How ELIZA Works</a></li>
-  <li><a href="#people-believed-it" id="toc-people-believed-it" class="nav-link" data-scroll-target="#people-believed-it">1.3.3 - People Believed It</a></li>
+  <li><a href="#how-eliza-works" id="toc-how-eliza-works" class="nav-link" data-scroll-target="#how-eliza-works">1.3.1 - How ELIZA Works</a></li>
+  <li><a href="#people-believed-it" id="toc-people-believed-it" class="nav-link" data-scroll-target="#people-believed-it">1.3.2 - People Believed It</a></li>
   </ul></li>
   <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
   <ul class="collapse">
-  <li><a href="#chat-with-eliza-then-change-its-rules" id="toc-chat-with-eliza-then-change-its-rules" class="nav-link" data-scroll-target="#chat-with-eliza-then-change-its-rules">1.3.4 - Chat with ELIZA, Then Change Its Rules</a></li>
-  <li><a href="#the-chinese-room" id="toc-the-chinese-room" class="nav-link" data-scroll-target="#the-chinese-room">1.3.5 - The Chinese Room</a></li>
+  <li><a href="#the-chinese-room" id="toc-the-chinese-room" class="nav-link" data-scroll-target="#the-chinese-room">1.3.3 - The Chinese Room</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
   <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
@@ -469,15 +508,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>In 1966, people at a university in Massachusetts talked to a computer program named <strong>ELIZA</strong>. ELIZA acted like a counselor. Some people told it their secrets. Some people believed it understood them.</p>
-<p>ELIZA understood nothing. It followed a list of <a href="../../glossary.html#glossary-rule" class="glossary-link" data-term="rules" data-original-href="#glossary-rule" data-slug="rule">rules</a> that one person wrote.</p>
-<p>Today, you chat with ELIZA, read its rules, and write your own. Then you act out a famous puzzle: a person who answers notes in a language they do not know.</p>
+<p>ELIZA understood nothing. It followed a list of <a href="../../glossary.html#glossary-rule" class="glossary-link" data-original-href="#glossary-rule" data-term="rules" data-slug="rule">rules</a> that one person wrote.</p>
+<p>Today, you play ELIZA yourself and see how it works. Then you act out a famous puzzle: a person who answers notes in a language they do not know.</p>
 <div class="agenda">
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
 <ul>
-<li><span class="icon">🔥</span> <strong>Warm Up</strong> Be ELIZA <span class="time">5 min</span></li>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Be ELIZA <span class="time">7 min</span></li>
 <li><span class="icon">👥</span> <strong>Learn Together</strong> How ELIZA works <span class="time">8 min</span></li>
-<li><span class="icon">🛠️</span> <strong>Try It</strong> Change ELIZA’s rules <span class="time">10 min</span></li>
-<li><span class="icon">🧪</span> <strong>Famous Experiment</strong> The Klingon Room <span class="time">10 min</span></li>
+<li><span class="icon">🧪</span> <strong>Try It</strong> The Klingon Room <span class="time">18 min</span></li>
 <li><span class="icon">💬</span> <strong>Talk About It</strong> Does it understand? <span class="time">7 min</span></li>
 </ul>
 </div>
@@ -485,17 +523,16 @@ ul.task-list li input[type="checkbox"] {
 <ul class="task-list">
 <li><label><input type="checkbox">I can explain how ELIZA used key words and rules to answer.</label></li>
 <li><label><input type="checkbox">I can explain the ELIZA effect.</label></li>
-<li><label><input type="checkbox">I can add a rule to a chatbot and test it.</label></li>
-<li><label><input type="checkbox">I can act out the Chinese Room and explain the question it asks.</label></li>
+<li><label><input type="checkbox">I can act out the Chinese Room (as the Klingon Room) and explain the question it asks.</label></li>
 </ul>
 </div>
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🔑</span> <a href="../../glossary.html#glossary-key-word" class="glossary-link" data-term="key word" data-original-href="#glossary-key-word" data-slug="key-word">key word</a>: a word that a program looks for to decide what to do</li>
-<li><span class="icon">📏</span> <a href="../../glossary.html#glossary-rule" class="glossary-link" data-term="rule" data-original-href="#glossary-rule" data-slug="rule">rule</a>: an exact instruction, like “If this happens, do that.”</li>
-<li><span class="icon">🪞</span> <a href="../../glossary.html#glossary-eliza-effect" class="glossary-link" data-term="ELIZA effect" data-original-href="#glossary-eliza-effect" data-slug="eliza-effect">ELIZA effect</a>: when people feel that a computer understands them, but it does not</li>
-<li><span class="icon">💡</span> <a href="../../glossary.html#glossary-understand" class="glossary-link" data-term="understand" data-original-href="#glossary-understand" data-slug="understand">understand</a>: to know what something means, not only what it looks like</li>
+<li><span class="icon">🔑</span> <a href="../../glossary.html#glossary-key-word" class="glossary-link" data-original-href="#glossary-key-word" data-term="key word" data-slug="key-word">key word</a>: a word that a program looks for to decide what to do</li>
+<li><span class="icon">📏</span> <a href="../../glossary.html#glossary-rule" class="glossary-link" data-original-href="#glossary-rule" data-term="rule" data-slug="rule">rule</a>: an exact instruction, like “If this happens, do that.”</li>
+<li><span class="icon">🪞</span> <a href="../../glossary.html#glossary-eliza-effect" class="glossary-link" data-original-href="#glossary-eliza-effect" data-term="ELIZA effect" data-slug="eliza-effect">ELIZA effect</a>: when people feel that a computer understands them, but it does not</li>
+<li><span class="icon">💡</span> <a href="../../glossary.html#glossary-understand" class="glossary-link" data-original-href="#glossary-understand" data-term="understand" data-slug="understand">understand</a>: to know what something means, not only what it looks like</li>
 </ul>
 </div>
 </div>
@@ -549,19 +586,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="learn" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
-<section id="the-man-who-made-eliza" class="level3">
-<h3 class="anchored" data-anchor-id="the-man-who-made-eliza">1.3.1 - The Man Who Made ELIZA</h3>
-<ul>
-<li><strong>Joseph Weizenbaum</strong> was born in Berlin, Germany, in 1923. His family was Jewish.</li>
-<li>In 1936, his family escaped from the Nazis. They came to the United States.</li>
-<li>He became a professor at <strong>MIT</strong>, a university near Boston.</li>
-<li>In 1966, he shared ELIZA with the world. It was one of the first chatbots ever made.</li>
-</ul>
-<hr>
-</section>
 <section id="how-eliza-works" class="level3">
-<h3 class="anchored" data-anchor-id="how-eliza-works">1.3.2 - How ELIZA Works</h3>
-<p>ELIZA does not learn. Weizenbaum wrote every rule by hand. Here is how ELIZA answers one sentence:</p>
+<h3 class="anchored" data-anchor-id="how-eliza-works">1.3.1 - How ELIZA Works</h3>
+<p>ELIZA was made in 1966 by <strong>Joseph Weizenbaum</strong>, a professor at MIT. ELIZA does not learn. Weizenbaum wrote every rule by hand. Here is how ELIZA answers one sentence:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../images/Unit_1/1.3_eliza_steps.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="You type: I feel sad about my brother. Step 1: find the key words, I feel. Step 2: copy the rest, sad about my brother. Step 3: swap words, my becomes your. Step 4: fill in the reply. ELIZA says: Why do you feel sad about your brother?" width="620"></p>
@@ -569,7 +596,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="remember">
 <ul>
-<li>ELIZA looks for <a href="../../glossary.html#glossary-key-word" class="glossary-link" data-term="key words" data-original-href="#glossary-key-word" data-slug="key-word">key words</a>. It does not know what the words mean.</li>
+<li>ELIZA looks for <a href="../../glossary.html#glossary-key-word" class="glossary-link" data-original-href="#glossary-key-word" data-term="key words" data-slug="key-word">key words</a>. It does not know what the words mean.</li>
 <li>If no rule matches, ELIZA says something that fits anything, like “Please go on.”</li>
 <li>ELIZA is a <strong>normal program</strong>: a person wrote the rules (like the calculator in Lesson 1.1).</li>
 </ul>
@@ -577,26 +604,72 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 <section id="people-believed-it" class="level3">
-<h3 class="anchored" data-anchor-id="people-believed-it">1.3.3 - People Believed It</h3>
+<h3 class="anchored" data-anchor-id="people-believed-it">1.3.2 - People Believed It</h3>
 <p>Weizenbaum’s secretary knew that ELIZA was only a program. She watched him build it. But one day, she was chatting with ELIZA. She asked Weizenbaum to leave the room so she could talk to it alone.</p>
-<p>Many people felt that ELIZA understood them. Today, we call this the <strong><a href="../../glossary.html#glossary-eliza-effect" class="glossary-link" data-term="ELIZA effect" data-original-href="#glossary-eliza-effect" data-slug="eliza-effect">ELIZA effect</a></strong>.</p>
-<p>Weizenbaum was shocked. He became worried about computers. Later he wrote that some jobs should not be given to computers, <strong>even if a computer can do them</strong>.</p>
-<div class="think" title="Remember the Turing test from Lesson 1.2. How did ELIZA do in 2025?">
-<p>Judges picked ELIZA as the human <strong>23%</strong> of the time. A program from 1966 with no learning still fooled some people!</p>
-</div>
+<p>Many people felt that ELIZA understood them. Today, we call this the <strong><a href="../../glossary.html#glossary-eliza-effect" class="glossary-link" data-original-href="#glossary-eliza-effect" data-term="ELIZA effect" data-slug="eliza-effect">ELIZA effect</a></strong>.</p>
 </section>
 </section>
 <section id="try-it" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
-<section id="chat-with-eliza-then-change-its-rules" class="level3">
-<h3 class="anchored" data-anchor-id="chat-with-eliza-then-change-its-rules">1.3.4 - Chat with ELIZA, Then Change Its Rules</h3>
+<section id="the-chinese-room" class="level3">
+<h3 class="anchored" data-anchor-id="the-chinese-room">1.3.3 - The Chinese Room</h3>
+<div class="experiment" title="The Chinese Room (John Searle, 1980)">
+<p>A philosopher named <strong>John Searle</strong> asked people to imagine this:</p>
+<ul>
+<li>A person sits in a closed room. They do <strong>not</strong> know the language of the notes.</li>
+<li>Notes come in through a slot.</li>
+<li>The person has a <strong>rule book</strong>. It says: <em>“If you see these shapes, send back those shapes.”</em></li>
+<li>The person finds the shapes and copies the reply. They pass it out.</li>
+<li>Outside, people who know the language read the replies. The replies make sense! They think someone in the room knows the language.</li>
+</ul>
+<p><strong>Does anyone in the room understand the language?</strong></p>
+</div>
+<p><strong>Act it out: the Klingon Room.</strong> Searle imagined notes in Chinese, a language he could not read. We will use <strong>Klingon</strong>. It is a language made up for the <em>Star Trek</em> TV shows and movies. (Some fans really speak it!)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_1/1.3_klingon_room.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A person who knows Klingon passes a note into a closed room. Inside, a person who does not know Klingon looks in a rule book and passes a reply in Klingon back out." width="560"></p>
+</figure>
+</div>
+<p>Work in a group of <strong>2 to 4</strong>: one person in the room, the rest outside. Each group needs one rule book and one set of note cards. (Only 4 in class? Be one group, and take turns going in the room.)</p>
 <div class="steps">
 <ol type="1">
-<li>Chat with ELIZA for 2 minutes.</li>
+<li>One person is <strong>in the room</strong>. Sit behind a folder or a book so the others cannot see you. Take the rule book.</li>
+<li>Everyone else is <strong>outside</strong>. Share the note cards. Fold back the English part.</li>
+<li>Pass one note into the room. The person in the room finds the note that looks <strong>exactly</strong> the same in the rule book. They copy the reply on the back. Pass it out.</li>
+<li>Outside: check the reply with the English on your card. Does it make sense?</li>
+<li>Do all 6 notes. Then switch: a new person goes in the room.</li>
+</ol>
+</div>
+<div class="think" title="Look at the note that asks, &quot;Do you speak Klingon?&quot; What did the room say?">
+<p>The room answered: <em>“Yes. I am learning Klingon.”</em></p>
+<p>But the person in the room does not know any Klingon. The answer sounds right, and it is <strong>not true</strong>.</p>
+<p>Now look at the note about the bathroom. The room said: <em>“I don’t understand.”</em> That one is true! But the room only said it because a rule told it to.</p>
+</div>
+</section>
+</section>
+<section id="talk" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
+<p>Searle said: the person in the room does not understand the language. They only follow rules. <strong>A computer is the same.</strong> It follows rules, so it does not understand anything.</p>
+<p>Other people disagree. They say: maybe the person does not understand, but the <strong>whole room</strong> (the person plus the book) does.</p>
+<p>What do you think?</p>
+<div class="frames">
+<ul>
+<li>The person in the room <strong>does</strong> / <strong>does not</strong> understand Klingon, because …</li>
+<li>The whole room <strong>does</strong> / <strong>does not</strong> understand Klingon, because …</li>
+<li>ELIZA is like the Klingon Room because …</li>
+<li>Today’s chatbots are <strong>like</strong> / <strong>not like</strong> the Klingon Room, because …</li>
+</ul>
+</div>
+</section>
+<section id="go-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="Day 2: Chat with ELIZA, Then Change Its Rules">
+<ol type="1">
+<li>Chat with ELIZA below for 2 minutes.</li>
 <li>Check the box <strong>Show which rule ELIZA used</strong>. Chat some more. Which rules does ELIZA use most?</li>
 <li><strong>Break ELIZA.</strong> Write something that makes ELIZA give a strange answer.</li>
 <li>Open <strong>ELIZA’s rules</strong>. Add a new rule. Test it! (Example: when someone says <code>i like *</code>, ELIZA says <code>Why do you like *?</code>)</li>
-<li>Add a rule in your <strong>home language</strong>. Does ELIZA answer you now?</li>
+<li>Add a rule in your <strong>home language</strong>. Does ELIZA answer you now? Why did ELIZA not understand your language before?</li>
 </ol>
 </div>
 <!-- eliza.html: Lesson 1.3. A small ELIZA whose rules students can read,
@@ -845,74 +918,17 @@ ul.task-list li input[type="checkbox"] {
 <p>Do not tell ELIZA anything private. It is a game. (Nothing you type here leaves your computer.)</p>
 <p>If you need to talk about something real, talk to a person: a teacher, the school counselor, or your family.</p>
 </div>
-<div class="think" title="Your rule in your home language worked. Why did ELIZA not understand your language before?">
-<p>Nobody wrote rules in your language. ELIZA can only do what its rules say. A rule-based program knows <strong>nothing</strong> that a person did not write down.</p>
-</div>
-</section>
-<section id="the-chinese-room" class="level3">
-<h3 class="anchored" data-anchor-id="the-chinese-room">1.3.5 - The Chinese Room</h3>
-<div class="experiment" title="The Chinese Room (John Searle, 1980)">
-<p>A philosopher named <strong>John Searle</strong> asked people to imagine this:</p>
-<ul>
-<li>A person sits in a closed room. They do <strong>not</strong> know the language of the notes.</li>
-<li>Notes come in through a slot.</li>
-<li>The person has a <strong>rule book</strong>. It says: <em>“If you see these shapes, send back those shapes.”</em></li>
-<li>The person finds the shapes and copies the reply. They pass it out.</li>
-<li>Outside, people who know the language read the replies. The replies make sense! They think someone in the room knows the language.</li>
-</ul>
-<p><strong>Does anyone in the room understand the language?</strong></p>
-</div>
-<p><strong>Act it out: the Klingon Room.</strong> Searle imagined notes in Chinese, a language he could not read. We will use <strong>Klingon</strong>. It is a language made up for the <em>Star Trek</em> TV shows and movies. (Some fans really speak it!)</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../images/Unit_1/1.3_klingon_room.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A person who knows Klingon passes a note into a closed room. Inside, a person who does not know Klingon looks in a rule book and passes a reply in Klingon back out." width="560"></p>
-</figure>
-</div>
-<p>Work in a group of <strong>2 to 4</strong>: one person in the room, the rest outside. Each group needs one rule book and one set of note cards. (Only 4 in class? Be one group, and take turns going in the room.)</p>
-<div class="steps">
-<ol type="1">
-<li>One person is <strong>in the room</strong>. Sit behind a folder or a book so the others cannot see you. Take the rule book.</li>
-<li>Everyone else is <strong>outside</strong>. Share the note cards. Fold back the English part.</li>
-<li>Pass one note into the room. The person in the room finds the note that looks <strong>exactly</strong> the same in the rule book. They copy the reply on the back. Pass it out.</li>
-<li>Outside: check the reply with the English on your card. Does it make sense?</li>
-<li>Do all 6 notes. Then switch: a new person goes in the room.</li>
-</ol>
-</div>
-<div class="think" title="Look at the note that asks, &quot;Do you speak Klingon?&quot; What did the room say?">
-<p>The room answered: <em>“Yes. I am learning Klingon.”</em></p>
-<p>But the person in the room does not know any Klingon. The answer sounds right, and it is <strong>not true</strong>.</p>
-<p>Now look at the note about the bathroom. The room said: <em>“I don’t understand.”</em> That one is true! But the room only said it because a rule told it to.</p>
-</div>
-</section>
-</section>
-<section id="talk" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
-<p>Searle said: the person in the room does not understand the language. They only follow rules. <strong>A computer is the same.</strong> It follows rules, so it does not understand anything.</p>
-<p>Other people disagree. They say: maybe the person does not understand, but the <strong>whole room</strong> (the person plus the book) does.</p>
-<p>What do you think?</p>
-<div class="frames">
-<ul>
-<li>The person in the room <strong>does</strong> / <strong>does not</strong> understand Klingon, because …</li>
-<li>The whole room <strong>does</strong> / <strong>does not</strong> understand Klingon, because …</li>
-<li>ELIZA is like the Klingon Room because …</li>
-<li>Today’s chatbots are <strong>like</strong> / <strong>not like</strong> the Klingon Room, because …</li>
-</ul>
-</div>
-</section>
-<section id="go-further" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
 <div class="project" title="Build a Better ELIZA">
 <p>With your group, write 10 new rules for a different job: a <strong>school helper</strong>, a <strong>soccer fan</strong>, or a <strong>food expert</strong>. Add them to ELIZA.</p>
 <p>Then let another group chat with your ELIZA. How many turns until it says something strange?</p>
 </div>
 <div class="project" title="ELIZA vs. Today's Chatbot">
 <p>Type the same sentence to ELIZA and to your class AI tool. Try: <em>I feel nervous about my test.</em></p>
-<p>Compare the two answers. Which one sounds like it understands? Does either one really understand? Write your reasons on your sheet.</p>
+<p>Compare the two answers. Which one sounds like it understands? Does either one really understand?</p>
 </div>
-<p><strong>More to explore</strong></p>
-<ul>
-<li><a href="https://www.masswerk.at/elizabot/eliza.html" target="_blank">ELIZA Terminal</a>: Chat with a version of ELIZA that works like the 1966 program. It looks like an old computer screen.</li>
-</ul>
+<div class="explore-link">
+<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-1.html#explore-1-3">the man who made ELIZA, and why he worried</a>. For students who want to learn more on their own.</p>
+</div>
 
 
 </section>

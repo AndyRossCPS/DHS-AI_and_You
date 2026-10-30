@@ -413,6 +413,47 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Explore More</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Where AI Came From</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Brains and Neural Networks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Using AI Well</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: When AI Gets It Wrong</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
@@ -434,13 +475,10 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#from-noise-to-picture" id="toc-from-noise-to-picture" class="nav-link" data-scroll-target="#from-noise-to-picture">3.7.1 - From Noise to Picture</a></li>
   <li><a href="#why-every-picture-is-different" id="toc-why-every-picture-is-different" class="nav-link" data-scroll-target="#why-every-picture-is-different">3.7.2 - Why Every Picture Is Different</a></li>
-  <li><a href="#picture-prompts" id="toc-picture-prompts" class="nav-link" data-scroll-target="#picture-prompts">3.7.3 - Picture Prompts</a></li>
-  <li><a href="#what-image-generators-get-wrong" id="toc-what-image-generators-get-wrong" class="nav-link" data-scroll-target="#what-image-generators-get-wrong">3.7.4 - What Image Generators Get Wrong</a></li>
   </ul></li>
   <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
   <ul class="collapse">
-  <li><a href="#watch-noise-become-a-picture" id="toc-watch-noise-become-a-picture" class="nav-link" data-scroll-target="#watch-noise-become-a-picture">3.7.5 - Watch Noise Become a Picture</a></li>
-  <li><a href="#write-picture-prompts" id="toc-write-picture-prompts" class="nav-link" data-scroll-target="#write-picture-prompts">3.7.6 - Write Picture Prompts</a></li>
+  <li><a href="#watch-noise-become-a-picture" id="toc-watch-noise-become-a-picture" class="nav-link" data-scroll-target="#watch-noise-become-a-picture">3.7.3 - Watch Noise Become a Picture</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
   <li><a href="#watch" id="toc-watch" class="nav-link" data-scroll-target="#watch">📺 Watch</a></li>
@@ -475,9 +513,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="agenda">
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
 <ul>
-<li><span class="icon">🔥</span> <strong>Warm Up</strong> Find the picture in the static <span class="time">4 min</span></li>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Find the picture in the static <span class="time">6 min</span></li>
 <li><span class="icon">👥</span> <strong>Learn Together</strong> From noise to picture <span class="time">10 min</span></li>
-<li><span class="icon">🛠️</span> <strong>Try It</strong> Remove the noise, then write picture prompts <span class="time">20 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Watch noise become a picture <span class="time">18 min</span></li>
 <li><span class="icon">💬</span> <strong>Talk About It</strong> Is it art? <span class="time">6 min</span></li>
 </ul>
 </div>
@@ -485,8 +523,7 @@ ul.task-list li input[type="checkbox"] {
 <ul class="task-list">
 <li><label><input type="checkbox">I can explain how an image generator turns noise into a picture.</label></li>
 <li><label><input type="checkbox">I can explain why the same prompt makes a different picture each time.</label></li>
-<li><label><input type="checkbox">I can write a picture prompt with a subject, a place, and a style.</label></li>
-<li><label><input type="checkbox">I can name things image generators often get wrong.</label></li>
+<li><label><input type="checkbox">I can say who should get credit for an AI picture, and why.</label></li>
 </ul>
 </div>
 <div class="vocab">
@@ -495,7 +532,6 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="icon">🖼️</span> <a href="../../glossary.html#glossary-image-generator" class="glossary-link" data-original-href="#glossary-image-generator" data-slug="image-generator" data-term="image generator">image generator</a>: an AI that makes a new picture from words</li>
 <li><span class="icon">📺</span> <a href="../../glossary.html#glossary-noise" class="glossary-link" data-original-href="#glossary-noise" data-slug="noise" data-term="noise">noise</a>: random dots with no picture in them, like TV static</li>
 <li><span class="icon">🌫️</span> <a href="../../glossary.html#glossary-diffusion" class="glossary-link" data-original-href="#glossary-diffusion" data-slug="diffusion" data-term="diffusion">diffusion</a>: making a picture by removing noise a little at a time</li>
-<li><span class="icon">🎨</span> <a href="../../glossary.html#glossary-style" class="glossary-link" data-original-href="#glossary-style" data-slug="style" data-term="style">style</a>: the way a picture looks: a photo, a cartoon, a painting</li>
 </ul>
 </div>
 </div>
@@ -530,66 +566,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="why-every-picture-is-different" class="level3">
 <h3 class="anchored" data-anchor-id="why-every-picture-is-different">3.7.2 - Why Every Picture Is Different</h3>
 <p>Every time you press the button, the AI starts from <strong>new</strong> random noise. So the same prompt makes a different picture each time. (Like the chatbot that picks by chance, in Lesson 2.9.)</p>
-<hr>
-</section>
-<section id="picture-prompts" class="level3">
-<h3 class="anchored" data-anchor-id="picture-prompts">3.7.3 - Picture Prompts</h3>
-<p>A good picture prompt says what you want to <strong>see</strong>:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Part</th>
-<th>Question</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Subject</strong></td>
-<td>What is in the picture?</td>
-<td>a small orange cat</td>
-</tr>
-<tr class="even">
-<td><strong>Action</strong></td>
-<td>What is it doing?</td>
-<td>reading a book</td>
-</tr>
-<tr class="odd">
-<td><strong>Place</strong></td>
-<td>Where is it? When?</td>
-<td>in a library at night</td>
-</tr>
-<tr class="even">
-<td><strong>Style</strong></td>
-<td>What should it look like?</td>
-<td>watercolor painting</td>
-</tr>
-<tr class="odd">
-<td><strong>Details</strong></td>
-<td>Colors? Light?</td>
-<td>warm yellow light</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="what-image-generators-get-wrong" class="level3">
-<h3 class="anchored" data-anchor-id="what-image-generators-get-wrong">3.7.4 - What Image Generators Get Wrong</h3>
-<ul>
-<li><strong>Counting:</strong> “exactly 7 apples” may give 6 or 9.</li>
-<li><strong>Words in the picture:</strong> letters on signs and shirts can be wrong.</li>
-<li><strong>What is most common:</strong> ask for “a doctor” or “a teacher.” The AI shows what it saw most in its training pictures. Who does it leave out? (You will study this in Lesson 4.2.)</li>
-</ul>
-<div class="note" title="Right now (fall 2026)">
-<p>Image generators improved fast. The tools from 2022 often drew hands with six fingers and could not write words. The newest tools are much better at both. Exact counting and small details are still hard.</p>
-<p>Some of the newest image tools work in a different way, but many still use diffusion.</p>
-</div>
 </section>
 </section>
 <section id="try-it" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
 <section id="watch-noise-become-a-picture" class="level3">
-<h3 class="anchored" data-anchor-id="watch-noise-become-a-picture">3.7.5 - Watch Noise Become a Picture</h3>
+<h3 class="anchored" data-anchor-id="watch-noise-become-a-picture">3.7.3 - Watch Noise Become a Picture</h3>
+<p>Work with a partner. (In a big class, groups of 3 share one computer.)</p>
 <div class="steps">
 <ol type="1">
 <li>Choose words. Press <strong>Remove some noise</strong> one step at a time. At which step can you guess the picture?</li>
@@ -726,21 +709,6 @@ ul.task-list li input[type="checkbox"] {
 })();
 </script>
 <p>This shows the idea, but it cheats. This demo already has the finished picture (an emoji), and it mixes the noise away. A real image generator does not have the picture. Its neural network has to <strong>guess</strong> what to remove, using what it learned from millions of pictures.</p>
-</section>
-<section id="write-picture-prompts" class="level3">
-<h3 class="anchored" data-anchor-id="write-picture-prompts">3.7.6 - Write Picture Prompts</h3>
-<p>Most school AI tools do not make pictures. So you write the prompts, and Mr.&nbsp;Ross makes the pictures on the projector. Work with a partner, or in a group of 3.</p>
-<div class="steps">
-<ol type="1">
-<li>Write a picture prompt on your sheet. Use all 5 parts from 3.7.3.</li>
-<li>Give it to Mr.&nbsp;Ross. He makes the picture <strong>two times</strong> with the same prompt. How are the two pictures different?</li>
-<li>Change only the <strong>style</strong>. He makes it again. What changed?</li>
-<li>Find one mistake in a picture. Write it down.</li>
-</ol>
-</div>
-<div class="gotcha" title="Class size">
-<p><strong>Small class:</strong> every pair gets 3 pictures: the prompt twice, then a new style. <strong>Big class:</strong> play “Describe It.” One student from each team sees a secret picture. The team writes a prompt from the description. Mr.&nbsp;Ross makes each team’s picture. Whose is closest to the secret picture?</p>
-</div>
 <div class="gotcha" title="Never make pictures of real people">
 <p>Do not make AI pictures of classmates, teachers, or anyone real. A fake picture of a real person can hurt them, even as a joke. (More in Lesson 4.3.)</p>
 </div>
@@ -768,15 +736,61 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="go-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
-<p>These projects need a tool that makes pictures. Give your prompts to Mr.&nbsp;Ross, or try them at home with a tool you are allowed to use.</p>
-<div class="project" title="One Subject, Five Styles">
-<p>Choose one subject, like “a bus at our school.” Write 5 prompts for it in 5 styles: photo, cartoon, pixel art, oil painting, and a style from your home country. Make a poster of the 5 pictures.</p>
+<div class="project" title="Day 2: Write Picture Prompts">
+<p>Most school AI tools do not make pictures. So you write the prompts, and Mr.&nbsp;Ross makes the pictures on the projector. Work with a partner, or in a group of 3.</p>
+<p>A good picture prompt says what you want to <strong>see</strong>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Part</th>
+<th>Question</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Subject</strong></td>
+<td>What is in the picture?</td>
+<td>a small orange cat</td>
+</tr>
+<tr class="even">
+<td><strong>Action</strong></td>
+<td>What is it doing?</td>
+<td>reading a book</td>
+</tr>
+<tr class="odd">
+<td><strong>Place</strong></td>
+<td>Where is it? When?</td>
+<td>in a library at night</td>
+</tr>
+<tr class="even">
+<td><strong>Style</strong></td>
+<td>What should it look like?</td>
+<td>watercolor painting</td>
+</tr>
+<tr class="odd">
+<td><strong>Details</strong></td>
+<td>Colors? Light?</td>
+<td>warm yellow light</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>Write a picture prompt on your sheet. Use all 5 parts.</li>
+<li>Give it to Mr.&nbsp;Ross. He makes the picture <strong>two times</strong> with the same prompt. How are the two pictures different?</li>
+<li>Change only the <a href="../../glossary.html#glossary-style" class="glossary-link" data-original-href="#glossary-style" data-slug="style" data-term="style">style</a>. He makes it again. What changed?</li>
+<li>Find one mistake in a picture. Write it down.</li>
+</ol>
+<p><strong>Small class:</strong> every pair gets 3 pictures. <strong>Big class:</strong> play “Describe It.” One student from each team sees a secret picture. The team writes a prompt from the description. Mr.&nbsp;Ross makes each team’s picture. Whose is closest?</p>
 </div>
-<div class="project" title="The Counting Test">
-<p>Write prompts for “exactly 3 red balls,” then 5, then 7, then 12. Count each picture. When does the AI start to get it wrong?</p>
+<div class="project" title="One Subject, Five Styles">
+<p>Choose one subject, like “a bus at our school.” Write 5 prompts for it in 5 styles: photo, cartoon, pixel art, oil painting, and a style from your home country. Give them to Mr.&nbsp;Ross. Make a poster of the 5 pictures.</p>
 </div>
 <div class="project" title="Who Does It Show?">
-<p>Write prompts for “a doctor,” “a nurse,” “a scientist,” and “a basketball player.” Make each one 4 times. Count who the AI shows: men or women, young or old, skin colors. What do you notice? Bring your results to Lesson 4.2.</p>
+<p>Write prompts for “a doctor,” “a nurse,” “a scientist,” and “a basketball player.” Mr.&nbsp;Ross makes each one 4 times. Count who the AI shows: men or women, young or old, skin colors. What do you notice? Bring your results to Lesson 4.2.</p>
+</div>
+<div class="explore-link">
+<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-3.html#explore-3-7">what image generators get wrong, and the counting test</a>. For students who want to learn more on their own.</p>
 </div>
 
 

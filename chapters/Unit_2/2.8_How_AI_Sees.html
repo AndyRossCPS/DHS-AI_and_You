@@ -413,6 +413,47 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Explore More</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Where AI Came From</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Brains and Neural Networks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Using AI Well</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: When AI Gets It Wrong</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
@@ -434,11 +475,10 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#pixels-are-numbers" id="toc-pixels-are-numbers" class="nav-link" data-scroll-target="#pixels-are-numbers">2.8.1 - Pixels Are Numbers</a></li>
   <li><a href="#finding-edges-with-a-filter" id="toc-finding-edges-with-a-filter" class="nav-link" data-scroll-target="#finding-edges-with-a-filter">2.8.2 - Finding Edges with a Filter</a></li>
-  <li><a href="#layers" id="toc-layers" class="nav-link" data-scroll-target="#layers">2.8.3 - Layers</a></li>
   </ul></li>
   <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
   <ul class="collapse">
-  <li><a href="#find-the-edges" id="toc-find-the-edges" class="nav-link" data-scroll-target="#find-the-edges">2.8.4 - Find the Edges</a></li>
+  <li><a href="#find-the-edges" id="toc-find-the-edges" class="nav-link" data-scroll-target="#find-the-edges">2.8.3 - Find the Edges</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
   <li><a href="#watch" id="toc-watch" class="nav-link" data-scroll-target="#watch">📺 Watch</a></li>
@@ -469,12 +509,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>To you, a photo is a face, a dog, or a street. To a computer, a photo is a <strong>grid of numbers</strong>. Nothing else.</p>
-<p>So how does a self-driving car find a person in the street? How does your phone find your face? It does math on the numbers, layer by layer, like the neurons you built.</p>
+<p>So how does a self-driving car find a person in the street? How does your phone find your face? It does math on the numbers: multiply and add, like the neurons you built.</p>
 <div class="agenda">
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
 <ul>
 <li><span class="icon">🔥</span> <strong>Warm Up</strong> Color by number <span class="time">8 min</span></li>
-<li><span class="icon">👥</span> <strong>Learn Together</strong> Pixels, filters, and layers <span class="time">10 min</span></li>
+<li><span class="icon">👥</span> <strong>Learn Together</strong> Pixels and filters <span class="time">10 min</span></li>
 <li><span class="icon">🛠️</span> <strong>Try It</strong> Find the edges <span class="time">14 min</span></li>
 <li><span class="icon">💬</span> <strong>Talk About It</strong> What could a car miss? <span class="time">8 min</span></li>
 </ul>
@@ -482,18 +522,17 @@ ul.task-list li input[type="checkbox"] {
 <div class="objectives">
 <ul class="task-list">
 <li><label><input type="checkbox">I can explain how a computer stores a picture as numbers.</label></li>
-<li><label><input type="checkbox">I can use a filter to find edges, by hand and on screen.</label></li>
-<li><label><input type="checkbox">I can explain how layers in a network build from edges to objects.</label></li>
+<li><label><input type="checkbox">I can use a filter to find edges in a picture.</label></li>
 <li><label><input type="checkbox">I can name ways computer vision is used, and what could go wrong.</label></li>
 </ul>
 </div>
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🟦</span> <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-slug="pixel" data-term="pixel" data-original-href="#glossary-pixel">pixel</a>: one tiny square of a picture. It is stored as a number.</li>
-<li><span class="icon">🔍</span> <a href="../../glossary.html#glossary-filter" class="glossary-link" data-slug="filter" data-term="filter" data-original-href="#glossary-filter">filter</a>: a small grid of numbers that slides over a picture to find something, like edges</li>
-<li><span class="icon">📐</span> <a href="../../glossary.html#glossary-edge" class="glossary-link" data-slug="edge" data-term="edge" data-original-href="#glossary-edge">edge</a>: a place where a picture changes fast from dark to light</li>
-<li><span class="icon">👁️</span> <a href="../../glossary.html#glossary-computer-vision" class="glossary-link" data-slug="computer-vision" data-term="computer vision" data-original-href="#glossary-computer-vision">computer vision</a>: AI that finds things in pictures and video</li>
+<li><span class="icon">🟦</span> <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-term="pixel" data-slug="pixel" data-original-href="#glossary-pixel">pixel</a>: one tiny square of a picture. It is stored as a number.</li>
+<li><span class="icon">🔍</span> <a href="../../glossary.html#glossary-filter" class="glossary-link" data-term="filter" data-slug="filter" data-original-href="#glossary-filter">filter</a>: a small grid of numbers that slides over a picture to find something, like edges</li>
+<li><span class="icon">📐</span> <a href="../../glossary.html#glossary-edge" class="glossary-link" data-term="edge" data-slug="edge" data-original-href="#glossary-edge">edge</a>: a place where a picture changes fast from dark to light</li>
+<li><span class="icon">👁️</span> <a href="../../glossary.html#glossary-computer-vision" class="glossary-link" data-term="computer vision" data-slug="computer-vision" data-original-href="#glossary-computer-vision">computer vision</a>: AI that finds things in pictures and video</li>
 </ul>
 </div>
 </div>
@@ -512,7 +551,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
 <section id="pixels-are-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="pixels-are-numbers">2.8.1 - Pixels Are Numbers</h3>
-<p>Zoom in on any photo and you see tiny squares. Each square is a <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-slug="pixel" data-term="pixel" data-original-href="#glossary-pixel">pixel</a>.</p>
+<p>Zoom in on any photo and you see tiny squares. Each square is a <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-term="pixel" data-slug="pixel" data-original-href="#glossary-pixel">pixel</a>.</p>
 <ul>
 <li>In a black-and-white picture, each pixel is one number: <strong>0</strong> is black, <strong>255</strong> is white, and the numbers between are grays.</li>
 <li>In a color picture, each pixel is <strong>three</strong> numbers: how much red, green, and blue.</li>
@@ -522,24 +561,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="finding-edges-with-a-filter" class="level3">
 <h3 class="anchored" data-anchor-id="finding-edges-with-a-filter">2.8.2 - Finding Edges with a Filter</h3>
-<p>Where does a picture change fast from dark to light? That is an <a href="../../glossary.html#glossary-edge" class="glossary-link" data-slug="edge" data-term="edge" data-original-href="#glossary-edge">edge</a>. Edges show where things begin and end.</p>
-<p>A <a href="../../glossary.html#glossary-filter" class="glossary-link" data-slug="filter" data-term="filter" data-original-href="#glossary-filter">filter</a> is a small 3 by 3 grid of numbers. It slides over the picture, one square at a time. At each square:</p>
+<p>Where does a picture change fast from dark to light? That is an <a href="../../glossary.html#glossary-edge" class="glossary-link" data-term="edge" data-slug="edge" data-original-href="#glossary-edge">edge</a>. Edges show where things begin and end.</p>
+<p>A <a href="../../glossary.html#glossary-filter" class="glossary-link" data-term="filter" data-slug="filter" data-original-href="#glossary-filter">filter</a> is a small 3 by 3 grid of numbers. It slides over the picture, one square at a time. At each square:</p>
 <ol type="1">
 <li><strong>Multiply</strong> the 9 picture numbers by the 9 filter numbers.</li>
 <li><strong>Add</strong> them up.</li>
 </ol>
 <p>That is the same <strong>multiply and add</strong> as the neuron in Lesson 2.4! If the answer is big, there is an edge here. If the answer is 0, the picture is the same on both sides: no edge.</p>
 <hr>
-</section>
-<section id="layers" class="level3">
-<h3 class="anchored" data-anchor-id="layers">2.8.3 - Layers</h3>
-<p>A vision network has many layers of neurons. Each layer builds on the one before.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../images/Unit_2/2.8_layers.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Five steps from left to right. Pixels, which are numbers. Layer 1 finds edges. Layer 2 finds shapes like circles and corners. Layer 3 finds parts like an ear, an eye, and whiskers. The last layer decides: cat." width="740"></p>
-</figure>
-</div>
-<p>Nobody tells the network to look for edges or ears. It learns its own filters during training, from millions of labeled pictures (like ImageNet in Lesson 1.5).</p>
 <div class="real-world" title="Computer vision is everywhere">
 <ul>
 <li><strong>Self-driving cars</strong> find lanes, signs, other cars, and people.</li>
@@ -553,7 +582,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="try-it" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
 <section id="find-the-edges" class="level3">
-<h3 class="anchored" data-anchor-id="find-the-edges">2.8.4 - Find the Edges</h3>
+<h3 class="anchored" data-anchor-id="find-the-edges">2.8.3 - Find the Edges</h3>
 <div class="steps">
 <ol type="1">
 <li>Choose the <strong>house</strong>. Turn on <strong>show the numbers</strong>. Find a 0 and a 255.</li>
@@ -561,7 +590,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Click a bright square on the right. Read the math. Then click a dark one.</li>
 <li>Change the filter to <strong>find side-to-side edges</strong>. What changes?</li>
 <li>Draw your own picture with the pen. Which filter finds its edges best?</li>
-<li>Do the edge problem on your sheet <strong>by hand</strong>.</li>
 </ol>
 </div>
 <!-- pixels_filters.html: Lesson 2.8. A picture is a grid of numbers
@@ -705,7 +733,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="think" title="Why are the walls bright with one filter, and the bottom of the house bright with the other?">
 <p>The <strong>up-and-down</strong> filter compares the left side with the right side. It finds edges that go up and down, like walls.</p>
 <p>The <strong>side-to-side</strong> filter compares the top with the bottom. It finds edges that go across, like the bottom of the house.</p>
-<p>A real network has many filters like these, and it learns them by itself.</p>
+<p>A real network has many filters like these, and it learns them by itself. (See Explore More to find out how.)</p>
 </div>
 </section>
 </section>
@@ -730,11 +758,23 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="go-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="Day 2: Find the Edge by Hand">
+<p>Do the edge problem on your sheet, with a partner. A tiny picture has dark squares (0) on the left and bright squares (9) on the right.</p>
+<ol type="1">
+<li>Put the up-and-down filter over the first 3 columns. Multiply each pair of numbers. Add all 9.</li>
+<li>Move the filter one column to the right. Do it again. Do all 4 places.</li>
+<li>Where are the big answers? Why there?</li>
+<li>Check one answer with the tool in 2.8.3: turn on <strong>show the numbers</strong> and click a square.</li>
+</ol>
+</div>
 <div class="project" title="Send a Secret Picture">
 <p>Draw a 10 by 10 picture on grid paper. Write it as numbers (0 and 1) on another paper. Give only the numbers to a partner. Can they draw your picture? This is how pictures travel over the internet.</p>
 </div>
 <div class="project" title="Make a Blur">
 <p>Choose the <strong>blur</strong> filter. Click a square and read the math. Why does blur add all 9 numbers and divide by 9? (Hint: what is the mean of 9 numbers?)</p>
+</div>
+<div class="explore-link">
+<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-2.html#explore-2-8">layers: from edges to a cat</a>. For students who want to learn more on their own.</p>
 </div>
 
 

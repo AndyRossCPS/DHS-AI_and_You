@@ -442,6 +442,47 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Explore More</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Where AI Came From</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Brains and Neural Networks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Using AI Well</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: When AI Gets It Wrong</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
@@ -466,7 +507,6 @@ window.Quarto = {
   <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
   <ul class="collapse">
   <li><a href="#be-a-neuron" id="toc-be-a-neuron" class="nav-link" data-scroll-target="#be-a-neuron">2.4.2 - Be a Neuron</a></li>
-  <li><a href="#build-a-neuron-that-sees" id="toc-build-a-neuron-that-sees" class="nav-link" data-scroll-target="#build-a-neuron-that-sees">2.4.3 - Build a Neuron That Sees</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
   <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
@@ -497,31 +537,30 @@ window.Quarto = {
 
 <p>A real neuron takes in signals, adds them up, and fires if the total is big enough.</p>
 <p>In 1943, two scientists, Warren McCulloch and Walter Pitts, wrote this idea as <strong>math</strong>. In 1958, Frank Rosenblatt built a machine from it. It was called the <strong>perceptron</strong>. (Remember the newspaper story from Lesson 1.4?)</p>
-<p>That simple idea is the building block of every neural network today. Today, you become one, and then you build one that can tell an X from an O.</p>
+<p>That simple idea is the building block of every neural network today. Today, the class becomes one.</p>
 <div class="agenda">
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
 <ul>
-<li><span class="icon">🔥</span> <strong>Warm Up</strong> Should I go? <span class="time">6 min</span></li>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Should I go? <span class="time">7 min</span></li>
 <li><span class="icon">👥</span> <strong>Learn Together</strong> Multiply, add, compare <span class="time">10 min</span></li>
-<li><span class="icon">🛠️</span> <strong>Try It</strong> Be a neuron, then build one <span class="time">18 min</span></li>
-<li><span class="icon">💬</span> <strong>Talk About It</strong> Who picks the weights? <span class="time">6 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Be a neuron <span class="time">16 min</span></li>
+<li><span class="icon">💬</span> <strong>Talk About It</strong> Who picks the weights? <span class="time">7 min</span></li>
 </ul>
 </div>
 <div class="objectives">
 <ul class="task-list">
 <li><label><input type="checkbox">I can explain inputs, weights, and a threshold.</label></li>
 <li><label><input type="checkbox">I can calculate what an artificial neuron decides.</label></li>
-<li><label><input type="checkbox">I can choose weights that make a neuron tell an X from an O.</label></li>
 <li><label><input type="checkbox">I can compare an artificial neuron with a real neuron.</label></li>
 </ul>
 </div>
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">📥</span> <a href="../../glossary.html#glossary-input" class="glossary-link" data-term="input" data-original-href="#glossary-input" data-slug="input">input</a>: a number that goes into a neuron</li>
-<li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-weight" class="glossary-link" data-term="weight" data-original-href="#glossary-weight" data-slug="weight">weight</a>: a number that says how much an input matters</li>
-<li><span class="icon">🚦</span> <a href="../../glossary.html#glossary-threshold" class="glossary-link" data-term="threshold" data-original-href="#glossary-threshold" data-slug="threshold">threshold</a>: the number the total must pass for the neuron to fire</li>
-<li><span class="icon">🔵</span> <a href="../../glossary.html#glossary-perceptron" class="glossary-link" data-term="perceptron" data-original-href="#glossary-perceptron" data-slug="perceptron">perceptron</a>: the first artificial neuron that could learn (1958)</li>
+<li><span class="icon">📥</span> <a href="../../glossary.html#glossary-input" class="glossary-link" data-slug="input" data-term="input" data-original-href="#glossary-input">input</a>: a number that goes into a neuron</li>
+<li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-weight" class="glossary-link" data-slug="weight" data-term="weight" data-original-href="#glossary-weight">weight</a>: a number that says how much an input matters</li>
+<li><span class="icon">🚦</span> <a href="../../glossary.html#glossary-threshold" class="glossary-link" data-slug="threshold" data-term="threshold" data-original-href="#glossary-threshold">threshold</a>: the number the total must pass for the neuron to fire</li>
+<li><span class="icon">🔵</span> <a href="../../glossary.html#glossary-perceptron" class="glossary-link" data-slug="perceptron" data-term="perceptron" data-original-href="#glossary-perceptron">perceptron</a>: the first artificial neuron that could learn (1958)</li>
 </ul>
 </div>
 </div>
@@ -583,9 +622,9 @@ window.Quarto = {
 </figure>
 </div>
 <ol type="1">
-<li><strong>Multiply</strong> each <a href="../../glossary.html#glossary-input" class="glossary-link" data-term="input" data-original-href="#glossary-input" data-slug="input">input</a> by its <a href="../../glossary.html#glossary-weight" class="glossary-link" data-term="weight" data-original-href="#glossary-weight" data-slug="weight">weight</a>.</li>
+<li><strong>Multiply</strong> each <a href="../../glossary.html#glossary-input" class="glossary-link" data-slug="input" data-term="input" data-original-href="#glossary-input">input</a> by its <a href="../../glossary.html#glossary-weight" class="glossary-link" data-slug="weight" data-term="weight" data-original-href="#glossary-weight">weight</a>.</li>
 <li><strong>Add</strong> them up.</li>
-<li><strong>Compare</strong> the total with the <a href="../../glossary.html#glossary-threshold" class="glossary-link" data-term="threshold" data-original-href="#glossary-threshold" data-slug="threshold">threshold</a>. If the total is big enough, the neuron fires: <strong>YES</strong>. If not: <strong>NO</strong>.</li>
+<li><strong>Compare</strong> the total with the <a href="../../glossary.html#glossary-threshold" class="glossary-link" data-slug="threshold" data-term="threshold" data-original-href="#glossary-threshold">threshold</a>. If the total is big enough, the neuron fires: <strong>YES</strong>. If not: <strong>NO</strong>.</li>
 </ol>
 <p><span class="math display">\[\text{total} = (\text{input}_1 \times \text{weight}_1) + (\text{input}_2 \times \text{weight}_2) + (\text{input}_3 \times \text{weight}_3)\]</span></p>
 <p>A weight can be <strong>negative</strong>. A negative weight says: <em>this input makes me LESS likely to fire.</em></p>
@@ -641,10 +680,22 @@ window.Quarto = {
 <p><strong>4 students:</strong> one neuron and three inputs. <strong>More students:</strong> make two or three neurons. Then connect them: the neurons’ answers become the inputs for one more neuron. That is a <strong>network</strong>!</p>
 </div>
 </section>
-<section id="build-a-neuron-that-sees" class="level3">
-<h3 class="anchored" data-anchor-id="build-a-neuron-that-sees">2.4.3 - Build a Neuron That Sees</h3>
-<p>This neuron looks at a 3 by 3 picture. Each square is an input: <strong>1</strong> if it is black, <strong>0</strong> if it is white. Each square has its own <strong>weight</strong>. The neuron says <strong>X</strong> if the total is more than the threshold. Otherwise it says <strong>O</strong>.</p>
-<div class="steps">
+</section>
+<section id="talk" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
+<p>Today, <strong>you</strong> chose every weight. But ChatGPT has billions of weights. Nobody can choose them by hand.</p>
+<div class="frames">
+<ul>
+<li>An artificial neuron is like a real neuron because …</li>
+<li>An artificial neuron is different from a real neuron because …</li>
+<li>I think an AI with billions of weights gets them by …</li>
+</ul>
+</div>
+</section>
+<section id="go-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="Day 2: Build a Neuron That Sees">
+<p>This neuron looks at a 3 by 3 picture. Each square is an input: <strong>1</strong> if it is black, <strong>0</strong> if it is white. Each square has its own <strong>weight</strong>. The neuron says <strong>X</strong> if the total is more than the threshold. Otherwise it says <strong>O</strong>. Work with a partner.</p>
 <ol type="1">
 <li>Draw an X. All the weights are 0. What does the neuron say? Why?</li>
 <li>Change the weights with <strong>+</strong> and <strong>−</strong>. Try to get <strong>6 out of 6</strong> right on the test pictures.</li>
@@ -788,26 +839,14 @@ window.Quarto = {
 <div class="think" title="Look at your weights. Do they make a picture?">
 <p>They often do! Squares that are <strong>only black in an X</strong> (like the center) get <strong>positive</strong> weights. Squares that are <strong>only black in an O</strong> (like the sides) get <strong>negative</strong> weights. The weights are a picture of what the neuron is looking for.</p>
 </div>
-</section>
-</section>
-<section id="talk" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
-<p>Today, <strong>you</strong> chose every weight. But ChatGPT has billions of weights. Nobody can choose them by hand.</p>
-<div class="frames">
-<ul>
-<li>An artificial neuron is like a real neuron because …</li>
-<li>An artificial neuron is different from a real neuron because …</li>
-<li>I think an AI with billions of weights gets them by …</li>
-</ul>
-</div>
-</section>
-<section id="go-further" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
 <div class="project" title="My Decision Neuron">
 <p>Make a neuron for a decision in your life: what to eat, what to watch, whether to go out. Pick 4 inputs and give each a weight. Test it on 5 days from last week. Does it decide what you really did?</p>
 </div>
 <div class="project" title="A Neuron for a Letter">
 <p>Make the picture bigger in your head: 5 by 5 squares. On grid paper, choose weights that tell a <strong>T</strong> from an <strong>L</strong>. Test your weights on a partner’s T and L.</p>
+</div>
+<div class="explore-link">
+<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-2.html#explore-2-4">the first neuron machine, and the problem one neuron cannot solve</a>. For students who want to learn more on their own.</p>
 </div>
 
 

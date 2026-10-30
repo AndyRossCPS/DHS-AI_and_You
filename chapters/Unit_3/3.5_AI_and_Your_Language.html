@@ -413,6 +413,47 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Explore More</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Where AI Came From</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Brains and Neural Networks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Using AI Well</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: When AI Gets It Wrong</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
@@ -433,12 +474,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">👥 Learn Together</a>
   <ul class="collapse">
   <li><a href="#how-ai-learned-to-translate" id="toc-how-ai-learned-to-translate" class="nav-link" data-scroll-target="#how-ai-learned-to-translate">3.5.1 - How AI Learned to Translate</a></li>
-  <li><a href="#why-some-languages-are-harder" id="toc-why-some-languages-are-harder" class="nav-link" data-scroll-target="#why-some-languages-are-harder">3.5.2 - Why Some Languages Are Harder</a></li>
-  <li><a href="#back-translation" id="toc-back-translation" class="nav-link" data-scroll-target="#back-translation">3.5.3 - Back Translation</a></li>
+  <li><a href="#hard-in-every-language" id="toc-hard-in-every-language" class="nav-link" data-scroll-target="#hard-in-every-language">3.5.2 - Hard in Every Language</a></li>
   </ul></li>
   <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
   <ul class="collapse">
-  <li><a href="#grade-the-ai" id="toc-grade-the-ai" class="nav-link" data-scroll-target="#grade-the-ai">3.5.4 - Grade the AI</a></li>
+  <li><a href="#grade-the-ai" id="toc-grade-the-ai" class="nav-link" data-scroll-target="#grade-the-ai">3.5.3 - Grade the AI</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
   <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
@@ -473,15 +513,14 @@ ul.task-list li input[type="checkbox"] {
 <div class="agenda">
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
 <ul>
-<li><span class="icon">🔥</span> <strong>Warm Up</strong> How many languages are in this room? <span class="time">5 min</span></li>
-<li><span class="icon">👥</span> <strong>Learn Together</strong> How AI learned to translate <span class="time">9 min</span></li>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> How many languages are in this room? <span class="time">6 min</span></li>
+<li><span class="icon">👥</span> <strong>Learn Together</strong> Why some languages are harder <span class="time">8 min</span></li>
 <li><span class="icon">🛠️</span> <strong>Try It</strong> Grade the AI <span class="time">20 min</span></li>
 <li><span class="icon">💬</span> <strong>Talk About It</strong> When do you need a person? <span class="time">6 min</span></li>
 </ul>
 </div>
 <div class="objectives">
 <ul class="task-list">
-<li><label><input type="checkbox">I can explain how AI learned to translate.</label></li>
 <li><label><input type="checkbox">I can explain why AI translates some languages better than others.</label></li>
 <li><label><input type="checkbox">I can test a translation with back translation.</label></li>
 <li><label><input type="checkbox">I can grade an AI translation in a language I know.</label></li>
@@ -490,10 +529,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🌍</span> <a href="../../glossary.html#glossary-translate" class="glossary-link" data-term="translate" data-original-href="#glossary-translate" data-slug="translate">translate</a>: to change words from one language to another, with the same meaning</li>
-<li><span class="icon">🔄</span> <a href="../../glossary.html#glossary-back-translation" class="glossary-link" data-term="back translation" data-original-href="#glossary-back-translation" data-slug="back-translation">back translation</a>: translating a translation back to the first language, to check it</li>
-<li><span class="icon">📉</span> <a href="../../glossary.html#glossary-low-resource-language" class="glossary-link" data-term="low-resource language" data-original-href="#glossary-low-resource-language" data-slug="low-resource-language">low-resource language</a>: a language with not much writing online for AI to learn from</li>
-<li><span class="icon">🗂️</span> <a href="../../glossary.html#glossary-dataset" class="glossary-link" data-term="dataset" data-original-href="#glossary-dataset" data-slug="dataset">dataset</a>: a big collection of examples that an AI learns from</li>
+<li><span class="icon">🌍</span> <a href="../../glossary.html#glossary-translate" class="glossary-link" data-slug="translate" data-term="translate" data-original-href="#glossary-translate">translate</a>: to change words from one language to another, with the same meaning</li>
+<li><span class="icon">🔄</span> <a href="../../glossary.html#glossary-back-translation" class="glossary-link" data-slug="back-translation" data-term="back translation" data-original-href="#glossary-back-translation">back translation</a>: translating a translation back to the first language, to check it</li>
+<li><span class="icon">📉</span> <a href="../../glossary.html#glossary-low-resource-language" class="glossary-link" data-slug="low-resource-language" data-term="low-resource language" data-original-href="#glossary-low-resource-language">low-resource language</a>: a language with not much writing online for AI to learn from</li>
 </ul>
 </div>
 </div>
@@ -513,45 +551,30 @@ ul.task-list li input[type="checkbox"] {
 <section id="how-ai-learned-to-translate" class="level3">
 <h3 class="anchored" data-anchor-id="how-ai-learned-to-translate">3.5.1 - How AI Learned to Translate</h3>
 <p>People did not write rules for every language. The AI learned from <strong>examples</strong>: millions of texts that exist in two languages. A website in English and Spanish. A report from the United Nations in six languages. A book and its translation.</p>
-<p>From the examples, the AI learned which words and sentences match. This is the same idea you saw in Unit 2: learn from examples, not rules.</p>
-<div class="real-world" title="The transformer started with translation">
-<p>The transformer (Lesson 1.6) was invented in 2017 to translate. Its first test was English to German and English to French. Later, people used the same idea to build chatbots.</p>
-</div>
-<hr>
-</section>
-<section id="why-some-languages-are-harder" class="level3">
-<h3 class="anchored" data-anchor-id="why-some-languages-are-harder">3.5.2 - Why Some Languages Are Harder</h3>
-<p>An AI is only as good as its training examples. Some languages have a lot of writing online. Some have very little. A language with little writing for AI to learn from is called a <a href="../../glossary.html#glossary-low-resource-language" class="glossary-link" data-term="low-resource language" data-original-href="#glossary-low-resource-language" data-slug="low-resource-language">low-resource language</a>. AI makes more mistakes in these languages.</p>
+<p>An AI is only as good as its training examples. Some languages have a lot of writing online. Some have very little. A language with little writing for AI to learn from is called a <a href="../../glossary.html#glossary-low-resource-language" class="glossary-link" data-slug="low-resource-language" data-term="low-resource language" data-original-href="#glossary-low-resource-language">low-resource language</a>. AI makes more mistakes in these languages.</p>
 <div class="note" title="Right now (fall 2026)">
 <p>About <strong>half</strong> of all websites are in English. Spanish, German, Japanese, and French are next, with about 5% each. Many languages are on less than 1 in 1,000 websites. (Source: W3Techs, October 2026.)</p>
 <p>Google Translate works with almost <strong>250</strong> languages. Your class AI tool may work with fewer.</p>
 </div>
-<p>Some things are hard in <strong>every</strong> language:</p>
+<hr>
+</section>
+<section id="hard-in-every-language" class="level3">
+<h3 class="anchored" data-anchor-id="hard-in-every-language">3.5.2 - Hard in Every Language</h3>
 <ul>
 <li><strong>Idioms:</strong> “It’s raining cats and dogs” means it is raining very hard. A word-by-word translation makes no sense.</li>
 <li><strong>Words with two meanings:</strong> “a break” can be a rest, or a time when someone is less strict with you.</li>
-<li><strong>Polite and friendly forms:</strong> many languages have two ways to say “you.” AI may pick the wrong one.</li>
-<li><strong>Names:</strong> AI may translate a name that should stay the same.</li>
 </ul>
-<hr>
-</section>
-<section id="back-translation" class="level3">
-<h3 class="anchored" data-anchor-id="back-translation">3.5.3 - Back Translation</h3>
-<p>To check a translation, translate it <strong>back</strong>:</p>
-<blockquote class="blockquote">
-<p>English → your language → English again</p>
-</blockquote>
-<p>If the meaning changed, something went wrong. This is <a href="../../glossary.html#glossary-back-translation" class="glossary-link" data-term="back translation" data-original-href="#glossary-back-translation" data-slug="back-translation">back translation</a>. It is a good test, but it is not perfect. The best test is a person who speaks the language. That is you.</p>
+<p>To check a translation, translate it <strong>back</strong>: English → your language → English again. If the meaning changed, something went wrong. This is <a href="../../glossary.html#glossary-back-translation" class="glossary-link" data-slug="back-translation" data-term="back translation" data-original-href="#glossary-back-translation">back translation</a>. It is a good test, but the best test is a person who speaks the language. That is you.</p>
 </section>
 </section>
 <section id="try-it" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
 <section id="grade-the-ai" class="level3">
-<h3 class="anchored" data-anchor-id="grade-the-ai">3.5.4 - Grade the AI</h3>
+<h3 class="anchored" data-anchor-id="grade-the-ai">3.5.3 - Grade the AI</h3>
 <p>Work with a partner who speaks the same language, if you can. If you speak only English, work with a partner who speaks another language. You write; they grade.</p>
 <div class="steps">
 <ol type="1">
-<li>Translate each sentence on your sheet into your language. Use <a href="https://translate.google.com" target="_blank">Google Translate</a> <strong>and</strong> your class AI tool.</li>
+<li>Translate each sentence below into your language with <a href="https://translate.google.com" target="_blank">Google Translate</a>.</li>
 <li>Grade each translation: <strong>3</strong> = right and sounds natural, <strong>2</strong> = I understand it, but it sounds strange, <strong>1</strong> = wrong.</li>
 <li>Choose one translation. Back-translate it into English. Did the meaning change?</li>
 <li>Add your scores to the class chart on the board.</li>
@@ -582,14 +605,21 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="go-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="Day 2: Compare Two Tools">
+<ol type="1">
+<li>Translate the same 5 sentences with your <strong>class AI tool</strong>.</li>
+<li>Grade each one: 3, 2, or 1.</li>
+<li>Compare with your Google Translate grades. Which tool is better for your language? Is it better for every sentence?</li>
+</ol>
+</div>
 <div class="project" title="The Class Dictionary of AI Mistakes">
 <p>Collect words and sentences the AI got wrong in each language. Write the wrong translation, the right one, and why the AI made the mistake. Share it with the ELL teachers.</p>
 </div>
-<div class="project" title="Different Alphabets">
-<p>Many languages use a different alphabet: Arabic, Nepali, Russian, Burmese, Tigrinya. Test the AI with a sentence written in that alphabet. Then test it with the same sentence written in English letters. Which works better?</p>
-</div>
 <div class="project" title="Speak It">
 <p>Google Translate can listen and speak. Say a sentence in your language. Does it understand you? Does it understand your partner? Does it work better for some voices?</p>
+</div>
+<div class="explore-link">
+<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-3.html#explore-3-5">how translation led to chatbots, and more hard cases</a>. For students who want to learn more on their own.</p>
 </div>
 
 
