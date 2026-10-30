@@ -353,6 +353,30 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/4.1_AI_Makes_Things_Up.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.1 - AI Makes Things Up</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/4.2_Where_Bias_Comes_From.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.2 - Where Bias Comes From</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/4.3_Real_or_Fake.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.3 - Real or Fake?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/4.4_Why_AI_Cheat_Detectors_Fail.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.4 - Why AI Cheat Detectors Fail</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -468,10 +492,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🖼️</span> <a href="../../glossary.html#glossary-image-generator" class="glossary-link" data-original-href="#glossary-image-generator" data-term="image generator" data-slug="image-generator">image generator</a>: an AI that makes a new picture from words</li>
-<li><span class="icon">📺</span> <a href="../../glossary.html#glossary-noise" class="glossary-link" data-original-href="#glossary-noise" data-term="noise" data-slug="noise">noise</a>: random dots with no picture in them, like TV static</li>
-<li><span class="icon">🌫️</span> <a href="../../glossary.html#glossary-diffusion" class="glossary-link" data-original-href="#glossary-diffusion" data-term="diffusion" data-slug="diffusion">diffusion</a>: making a picture by removing noise a little at a time</li>
-<li><span class="icon">🎨</span> <a href="../../glossary.html#glossary-style" class="glossary-link" data-original-href="#glossary-style" data-term="style" data-slug="style">style</a>: the way a picture looks: a photo, a cartoon, a painting</li>
+<li><span class="icon">🖼️</span> <a href="../../glossary.html#glossary-image-generator" class="glossary-link" data-original-href="#glossary-image-generator" data-slug="image-generator" data-term="image generator">image generator</a>: an AI that makes a new picture from words</li>
+<li><span class="icon">📺</span> <a href="../../glossary.html#glossary-noise" class="glossary-link" data-original-href="#glossary-noise" data-slug="noise" data-term="noise">noise</a>: random dots with no picture in them, like TV static</li>
+<li><span class="icon">🌫️</span> <a href="../../glossary.html#glossary-diffusion" class="glossary-link" data-original-href="#glossary-diffusion" data-slug="diffusion" data-term="diffusion">diffusion</a>: making a picture by removing noise a little at a time</li>
+<li><span class="icon">🎨</span> <a href="../../glossary.html#glossary-style" class="glossary-link" data-original-href="#glossary-style" data-slug="style" data-term="style">style</a>: the way a picture looks: a photo, a cartoon, a painting</li>
 </ul>
 </div>
 </div>
@@ -482,7 +506,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="unnumbered anchored" data-anchor-id="warmup">🔥 Warm Up</h2>
 <p>Look at the first three squares on your sheet. Cover the last one. At which step can you guess the picture? Write your guess.</p>
 <div class="think" title="When could you see it?">
-<p>At step 0, there is no picture at all. It is only <a href="../../glossary.html#glossary-noise" class="glossary-link" data-original-href="#glossary-noise" data-term="noise" data-slug="noise">noise</a>. At step 3, maybe you see a dark shape. At step 6, most people can see it. The details come last.</p>
+<p>At step 0, there is no picture at all. It is only <a href="../../glossary.html#glossary-noise" class="glossary-link" data-original-href="#glossary-noise" data-slug="noise" data-term="noise">noise</a>. At step 3, maybe you see a dark shape. At step 6, most people can see it. The details come last.</p>
 <p>An image generator works the same way, but it does not know the picture ahead of time. It has to guess it.</p>
 </div>
 </section>
@@ -495,9 +519,9 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="../../images/Unit_3/3.7_noise_steps.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Four 16 by 16 grids. Words: a heart. Step 0 is random gray squares. Step 3 is still mostly noise. At step 6 a dark heart shape shows through the noise. Step 10 is a clean black heart." width="620"></p>
 </figure>
 </div>
-<p>An <a href="../../glossary.html#glossary-image-generator" class="glossary-link" data-original-href="#glossary-image-generator" data-term="image generator" data-slug="image-generator">image generator</a> learns in two parts.</p>
+<p>An <a href="../../glossary.html#glossary-image-generator" class="glossary-link" data-original-href="#glossary-image-generator" data-slug="image-generator" data-term="image generator">image generator</a> learns in two parts.</p>
 <p><strong>Training.</strong> People collect millions of pictures, each with words that describe it. The computer adds noise to each picture, a little at a time, until only noise is left. A neural network practices guessing: <em>which part of this is noise?</em> It practices millions of times.</p>
-<p><strong>Making a picture.</strong> Now you type words. The AI starts with pure noise. The network guesses which part is noise, and removes a little of it. It does this again and again, often 20 to 50 times. Your words guide every guess. This is called <a href="../../glossary.html#glossary-diffusion" class="glossary-link" data-original-href="#glossary-diffusion" data-term="diffusion" data-slug="diffusion">diffusion</a>.</p>
+<p><strong>Making a picture.</strong> Now you type words. The AI starts with pure noise. The network guesses which part is noise, and removes a little of it. It does this again and again, often 20 to 50 times. Your words guide every guess. This is called <a href="../../glossary.html#glossary-diffusion" class="glossary-link" data-original-href="#glossary-diffusion" data-slug="diffusion" data-term="diffusion">diffusion</a>.</p>
 <div class="remember">
 <p>The AI does not copy a picture or glue pieces together. It starts from noise and removes it, step by step, guided by what it learned from millions of pictures.</p>
 </div>
@@ -705,17 +729,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="write-picture-prompts" class="level3">
 <h3 class="anchored" data-anchor-id="write-picture-prompts">3.7.6 - Write Picture Prompts</h3>
-<p>Work with a partner, or in a group of 3.</p>
+<p>Most school AI tools do not make pictures. So you write the prompts, and Mr.&nbsp;Ross makes the pictures on the projector. Work with a partner, or in a group of 3.</p>
 <div class="steps">
 <ol type="1">
 <li>Write a picture prompt on your sheet. Use all 5 parts from 3.7.3.</li>
-<li>Make the picture with your class AI tool. Make it a <strong>second</strong> time with the same prompt. How are the two pictures different?</li>
-<li>Change only the <strong>style</strong>. Make it again. What changed?</li>
+<li>Give it to Mr.&nbsp;Ross. He makes the picture <strong>two times</strong> with the same prompt. How are the two pictures different?</li>
+<li>Change only the <strong>style</strong>. He makes it again. What changed?</li>
 <li>Find one mistake in a picture. Write it down.</li>
 </ol>
 </div>
-<div class="gotcha" title="No picture tool?">
-<p>If your class AI tool cannot make pictures, Mr.&nbsp;Ross makes them on the projector. Each pair gives him one prompt. <strong>Big class:</strong> play “Describe It.” One student from each team sees a secret picture. The team writes a prompt from the description. Whose AI picture is closest?</p>
+<div class="gotcha" title="Class size">
+<p><strong>Small class:</strong> every pair gets 3 pictures: the prompt twice, then a new style. <strong>Big class:</strong> play “Describe It.” One student from each team sees a secret picture. The team writes a prompt from the description. Mr.&nbsp;Ross makes each team’s picture. Whose is closest to the secret picture?</p>
 </div>
 <div class="gotcha" title="Never make pictures of real people">
 <p>Do not make AI pictures of classmates, teachers, or anyone real. A fake picture of a real person can hurt them, even as a joke. (More in Lesson 4.3.)</p>
@@ -744,14 +768,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="go-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<p>These projects need a tool that makes pictures. Give your prompts to Mr.&nbsp;Ross, or try them at home with a tool you are allowed to use.</p>
 <div class="project" title="One Subject, Five Styles">
-<p>Choose one subject, like “a bus at our school.” Make it in 5 styles: photo, cartoon, pixel art, oil painting, and a style from your home country. Make a poster of the 5 pictures.</p>
+<p>Choose one subject, like “a bus at our school.” Write 5 prompts for it in 5 styles: photo, cartoon, pixel art, oil painting, and a style from your home country. Make a poster of the 5 pictures.</p>
 </div>
 <div class="project" title="The Counting Test">
-<p>Ask for “exactly 3 red balls,” then 5, then 7, then 12. Count each picture. When does the AI start to get it wrong?</p>
+<p>Write prompts for “exactly 3 red balls,” then 5, then 7, then 12. Count each picture. When does the AI start to get it wrong?</p>
 </div>
 <div class="project" title="Who Does It Show?">
-<p>Ask for “a doctor,” “a nurse,” “a scientist,” and “a basketball player.” Make each one 4 times. Count who the AI shows: men or women, young or old, skin colors. What do you notice? Bring your results to Lesson 4.2.</p>
+<p>Write prompts for “a doctor,” “a nurse,” “a scientist,” and “a basketball player.” Make each one 4 times. Count who the AI shows: men or women, young or old, skin colors. What do you notice? Bring your results to Lesson 4.2.</p>
 </div>
 
 
