@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3.7 - Making Pictures with AI – AI and You</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html" rel="next">
+<link href="../../chapters/Unit_3/3.6_AI_and_Math.html" rel="prev">
+<link href="../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b4d44d66d1752a05c2e2ea9554082b5e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles/glossary-tooltips.css">
+<link rel="stylesheet" href="../../styles/custom-callouts.css">
+<link rel="stylesheet" href="../../styles/custom-general.css">
+<link rel="stylesheet" href="../../styles/ai-and-you.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AI and You</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_3/index.html">Unit 3: Using AI Well</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_3/3.7_Making_Pictures_with_AI.html">3.7 - Making Pictures with AI</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to AI and You</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Map</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 1: Where AI Came From</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.1_What_Is_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 - What Is AI?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.2_Can_a_Machine_Think.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 - Can a Machine Think?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.3_The_First_Chatbot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 - The First Chatbot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.4_Rules_Win_at_Games.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 - Rules Win at Games</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.5_Data_Changes_Everything.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 - Data Changes Everything</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.6_Transformers_and_ChatGPT.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 - Transformers and ChatGPT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 2: Brains and Neural Networks</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.1_Simple_Rules_Complex_Behavior.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 - Simple Rules, Complex Behavior</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.2_Your_Brain_Is_Made_of_Cells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 - Your Brain Is Made of Cells</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.3_How_Brains_Learn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 - How Brains Learn</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.4_The_Artificial_Neuron.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 - The Artificial Neuron</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 - Train a Human Neural Network</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.6_Watch_Mr_Ross_Build_an_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 - Watch Mr.&nbsp;Ross Build an AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.7_Train_Your_Own_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.7 - Train Your Own AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.8_How_AI_Sees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.8 - How AI Sees</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.9_How_Chatbots_Work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.9 - How Chatbots Work</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unit 3: Using AI Well</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.1_Asking_Good_Questions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.1 - Asking Good Questions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.2_Keep_Talking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.2 - Keep Talking</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.3_Writing_with_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.3 - Writing with AI, Not by AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.4_Research_and_Checking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.4 - Research and Checking</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.5_AI_and_Your_Language.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.5 - AI and Your Language</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.6_AI_and_Math.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.6 - AI and Math</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.7_Making_Pictures_with_AI.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">3.7 - Making Pictures with AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.8 - Project: Solve a Real Problem</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.9_Project_Feedback_and_Share.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.9 - Project: Feedback and Share</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 4: When AI Gets It Wrong</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 5: AI in the Real World</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_5/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 6: AI and Our Future</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#warmup" id="toc-warmup" class="nav-link active" data-scroll-target="#warmup">🔥 Warm Up</a></li>
+  <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">👥 Learn Together</a>
+  <ul class="collapse">
+  <li><a href="#from-noise-to-picture" id="toc-from-noise-to-picture" class="nav-link" data-scroll-target="#from-noise-to-picture">3.7.1 - From Noise to Picture</a></li>
+  <li><a href="#why-every-picture-is-different" id="toc-why-every-picture-is-different" class="nav-link" data-scroll-target="#why-every-picture-is-different">3.7.2 - Why Every Picture Is Different</a></li>
+  <li><a href="#picture-prompts" id="toc-picture-prompts" class="nav-link" data-scroll-target="#picture-prompts">3.7.3 - Picture Prompts</a></li>
+  <li><a href="#what-image-generators-get-wrong" id="toc-what-image-generators-get-wrong" class="nav-link" data-scroll-target="#what-image-generators-get-wrong">3.7.4 - What Image Generators Get Wrong</a></li>
+  </ul></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
+  <ul class="collapse">
+  <li><a href="#watch-noise-become-a-picture" id="toc-watch-noise-become-a-picture" class="nav-link" data-scroll-target="#watch-noise-become-a-picture">3.7.5 - Watch Noise Become a Picture</a></li>
+  <li><a href="#write-picture-prompts" id="toc-write-picture-prompts" class="nav-link" data-scroll-target="#write-picture-prompts">3.7.6 - Write Picture Prompts</a></li>
+  </ul></li>
+  <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
+  <li><a href="#watch" id="toc-watch" class="nav-link" data-scroll-target="#watch">📺 Watch</a></li>
+  <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_3/index.html">Unit 3: Using AI Well</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_3/3.7_Making_Pictures_with_AI.html">3.7 - Making Pictures with AI</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">3.7 - Making Pictures with AI</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Type “an orange cat reading a book in a library, watercolor.” Wait a few seconds. A picture appears. Nobody drew it. It did not exist before.</p>
+<p>How? The AI starts with <strong>static</strong>, like an old TV with no signal. Then it removes a little static at a time, again and again, until a picture is left.</p>
+<div class="agenda">
+<p><strong>Today’s Plan</strong> (40 minutes)</p>
+<ul>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Find the picture in the static <span class="time">4 min</span></li>
+<li><span class="icon">👥</span> <strong>Learn Together</strong> From noise to picture <span class="time">10 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Remove the noise, then write picture prompts <span class="time">20 min</span></li>
+<li><span class="icon">💬</span> <strong>Talk About It</strong> Is it art? <span class="time">6 min</span></li>
+</ul>
+</div>
+<div class="objectives">
+<ul class="task-list">
+<li><label><input type="checkbox">I can explain how an image generator turns noise into a picture.</label></li>
+<li><label><input type="checkbox">I can explain why the same prompt makes a different picture each time.</label></li>
+<li><label><input type="checkbox">I can write a picture prompt with a subject, a place, and a style.</label></li>
+<li><label><input type="checkbox">I can name things image generators often get wrong.</label></li>
+</ul>
+</div>
+<div class="vocab">
+<div class="word-cards">
+<ul>
+<li><span class="icon">🖼️</span> <a href="../../glossary.html#glossary-image-generator" class="glossary-link" data-original-href="#glossary-image-generator" data-term="image generator" data-slug="image-generator">image generator</a>: an AI that makes a new picture from words</li>
+<li><span class="icon">📺</span> <a href="../../glossary.html#glossary-noise" class="glossary-link" data-original-href="#glossary-noise" data-term="noise" data-slug="noise">noise</a>: random dots with no picture in them, like TV static</li>
+<li><span class="icon">🌫️</span> <a href="../../glossary.html#glossary-diffusion" class="glossary-link" data-original-href="#glossary-diffusion" data-term="diffusion" data-slug="diffusion">diffusion</a>: making a picture by removing noise a little at a time</li>
+<li><span class="icon">🎨</span> <a href="../../glossary.html#glossary-style" class="glossary-link" data-original-href="#glossary-style" data-term="style" data-slug="style">style</a>: the way a picture looks: a photo, a cartoon, a painting</li>
+</ul>
+</div>
+</div>
+<div class="guided-notes-link">
+<p><a href="../../handouts/Unit_3/3.7_Making_Pictures_with_AI.pdf" target="_blank">Printable lesson sheet</a> - the sheet you write on today.</p>
+</div>
+<section id="warmup" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="warmup">🔥 Warm Up</h2>
+<p>Look at the first three squares on your sheet. Cover the last one. At which step can you guess the picture? Write your guess.</p>
+<div class="think" title="When could you see it?">
+<p>At step 0, there is no picture at all. It is only <a href="../../glossary.html#glossary-noise" class="glossary-link" data-original-href="#glossary-noise" data-term="noise" data-slug="noise">noise</a>. At step 3, maybe you see a dark shape. At step 6, most people can see it. The details come last.</p>
+<p>An image generator works the same way, but it does not know the picture ahead of time. It has to guess it.</p>
+</div>
+</section>
+<section id="learn" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
+<section id="from-noise-to-picture" class="level3">
+<h3 class="anchored" data-anchor-id="from-noise-to-picture">3.7.1 - From Noise to Picture</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_3/3.7_noise_steps.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Four 16 by 16 grids. Words: a heart. Step 0 is random gray squares. Step 3 is still mostly noise. At step 6 a dark heart shape shows through the noise. Step 10 is a clean black heart." width="620"></p>
+</figure>
+</div>
+<p>An <a href="../../glossary.html#glossary-image-generator" class="glossary-link" data-original-href="#glossary-image-generator" data-term="image generator" data-slug="image-generator">image generator</a> learns in two parts.</p>
+<p><strong>Training.</strong> People collect millions of pictures, each with words that describe it. The computer adds noise to each picture, a little at a time, until only noise is left. A neural network practices guessing: <em>which part of this is noise?</em> It practices millions of times.</p>
+<p><strong>Making a picture.</strong> Now you type words. The AI starts with pure noise. The network guesses which part is noise, and removes a little of it. It does this again and again, often 20 to 50 times. Your words guide every guess. This is called <a href="../../glossary.html#glossary-diffusion" class="glossary-link" data-original-href="#glossary-diffusion" data-term="diffusion" data-slug="diffusion">diffusion</a>.</p>
+<div class="remember">
+<p>The AI does not copy a picture or glue pieces together. It starts from noise and removes it, step by step, guided by what it learned from millions of pictures.</p>
+</div>
+<hr>
+</section>
+<section id="why-every-picture-is-different" class="level3">
+<h3 class="anchored" data-anchor-id="why-every-picture-is-different">3.7.2 - Why Every Picture Is Different</h3>
+<p>Every time you press the button, the AI starts from <strong>new</strong> random noise. So the same prompt makes a different picture each time. (Like the chatbot that picks by chance, in Lesson 2.9.)</p>
+<hr>
+</section>
+<section id="picture-prompts" class="level3">
+<h3 class="anchored" data-anchor-id="picture-prompts">3.7.3 - Picture Prompts</h3>
+<p>A good picture prompt says what you want to <strong>see</strong>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Part</th>
+<th>Question</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Subject</strong></td>
+<td>What is in the picture?</td>
+<td>a small orange cat</td>
+</tr>
+<tr class="even">
+<td><strong>Action</strong></td>
+<td>What is it doing?</td>
+<td>reading a book</td>
+</tr>
+<tr class="odd">
+<td><strong>Place</strong></td>
+<td>Where is it? When?</td>
+<td>in a library at night</td>
+</tr>
+<tr class="even">
+<td><strong>Style</strong></td>
+<td>What should it look like?</td>
+<td>watercolor painting</td>
+</tr>
+<tr class="odd">
+<td><strong>Details</strong></td>
+<td>Colors? Light?</td>
+<td>warm yellow light</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="what-image-generators-get-wrong" class="level3">
+<h3 class="anchored" data-anchor-id="what-image-generators-get-wrong">3.7.4 - What Image Generators Get Wrong</h3>
+<ul>
+<li><strong>Counting:</strong> “exactly 7 apples” may give 6 or 9.</li>
+<li><strong>Words in the picture:</strong> letters on signs and shirts can be wrong.</li>
+<li><strong>What is most common:</strong> ask for “a doctor” or “a teacher.” The AI shows what it saw most in its training pictures. Who does it leave out? (You will study this in Lesson 4.2.)</li>
+</ul>
+<div class="note" title="Right now (fall 2026)">
+<p>Image generators improved fast. The tools from 2022 often drew hands with six fingers and could not write words. The newest tools are much better at both. Exact counting and small details are still hard.</p>
+<p>Some of the newest image tools work in a different way, but many still use diffusion.</p>
+</div>
+</section>
+</section>
+<section id="try-it" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
+<section id="watch-noise-become-a-picture" class="level3">
+<h3 class="anchored" data-anchor-id="watch-noise-become-a-picture">3.7.5 - Watch Noise Become a Picture</h3>
+<div class="steps">
+<ol type="1">
+<li>Choose words. Press <strong>Remove some noise</strong> one step at a time. At which step can you guess the picture?</li>
+<li>Press <strong>New noise</strong> with the <strong>same</strong> words. Play it. What changed? What stayed the same?</li>
+<li>Keep the noise. Choose <strong>new words</strong>. Play it. What changed?</li>
+</ol>
+</div>
+<!-- noise_to_picture.html: Lesson 3.7. The idea of a diffusion image
+     generator: start from noise, remove a little at a time, guided by words.
+     This demo cheats: it already has the finished picture (an emoji). -->
+<div class="np" id="np">
+  <div class="np-bar">
+    <span class="np-label">Your words:</span>
+    <span class="np-words"></span>
+  </div>
+  <div class="np-bar">
+    <span class="np-label">Noise:</span>
+    <button type="button" class="np-btn np-plain np-seed">🎲 New noise</button>
+    <span class="np-seedtxt"></span>
+  </div>
+  <div class="np-main">
+    <canvas class="np-canvas" width="64" height="64" aria-label="The picture"></canvas>
+    <div class="np-side">
+      <div class="np-step"></div>
+      <div class="np-bar">
+        <button type="button" class="np-btn np-one">➡️ Remove some noise</button>
+        <button type="button" class="np-btn np-plain np-play">▶️ Play</button>
+        <button type="button" class="np-btn np-plain np-reset">↺ Back to noise</button>
+      </div>
+      <div class="np-msg"></div>
+    </div>
+  </div>
+  <div class="np-strip"></div>
+</div>
+
+<style>
+.np { border: 1px solid #d9e1e8; border-radius: 10px; padding: 0.8rem; margin: 0.75rem 0 1.25rem; background: #fbfcfd; }
+.np-bar { display: flex; flex-wrap: wrap; gap: 0.35rem 0.6rem; align-items: center; margin: 0.35rem 0; }
+.np-label { font-weight: bold; }
+.np-words button { border: 1px solid #b8c4cf; background: #fff; border-radius: 999px; padding: 0.1rem 0.7rem; cursor: pointer; margin: 0.1rem; }
+.np-words button.on { background: #2c3e50; color: #fff; border-color: #2c3e50; }
+.np-btn { border: 1px solid #2c3e50; background: #2c3e50; color: #fff; border-radius: 6px; padding: 0.3rem 0.8rem; font-weight: 600; cursor: pointer; }
+.np-btn.np-plain { background: #fff; color: #2c3e50; }
+.np-seedtxt { color: #555; font-size: 0.9rem; }
+.np-main { display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: flex-start; margin-top: 0.4rem; }
+.np-canvas { width: 256px; max-width: 100%; height: auto; image-rendering: pixelated; border: 1px solid #2c3e50; border-radius: 6px; }
+.np-side { flex: 1 1 220px; }
+.np-step { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.3rem; }
+.np-msg { margin-top: 0.4rem; line-height: 1.5; }
+.np-strip { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 0.7rem; }
+.np-strip canvas { width: 44px; height: 44px; image-rendering: pixelated; border: 1px solid #ccd5dd; border-radius: 3px; }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("np");
+  if (!root) return;
+  const W = 64, STEPS = 10;
+  const WORDS = [["a cat", "🐱"], ["a house", "🏠"], ["a sunflower", "🌻"], ["a car", "🚗"], ["a rocket", "🚀"], ["a pizza", "🍕"]];
+  const BGS = ["#bfe3ff", "#ffe8b0", "#d8f5c8", "#f5d0e6", "#e3dcff", "#fff3c4"];
+  const cv = root.querySelector(".np-canvas"), cx = cv.getContext("2d");
+  const strip = root.querySelector(".np-strip"), stepTxt = root.querySelector(".np-step"), msg = root.querySelector(".np-msg");
+  let word = 0, seed = 1, step = 0, noise = null, target = null, timer = null;
+
+  function rng(a) { return () => { a |= 0; a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  function makeNoise() {
+    const r = rng(seed * 9973), n = new Float32Array(W * W * 3);
+    for (let i = 0; i < n.length; i += 2) {  // Box-Muller: two normal numbers at a time
+      const u = Math.max(r(), 1e-9), v = r(), m = Math.sqrt(-2 * Math.log(u));
+      n[i] = m * Math.cos(2 * Math.PI * v); if (i + 1 < n.length) n[i + 1] = m * Math.sin(2 * Math.PI * v);
+    }
+    return n;
+  }
+  function makeTarget() {
+    // The "finished picture": the emoji, moved and sized a little by the noise seed,
+    // so new noise gives a new version of the same thing.
+    const r = rng(seed * 31 + 7), off = document.createElement("canvas"); off.width = off.height = W;
+    const o = off.getContext("2d");
+    o.fillStyle = BGS[Math.floor(r() * BGS.length)]; o.fillRect(0, 0, W, W);
+    const size = 38 + Math.floor(r() * 12), dx = Math.floor(r() * 13) - 6, dy = Math.floor(r() * 13) - 6;
+    o.textAlign = "center"; o.textBaseline = "middle"; o.font = `${size}px "Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif`;
+    o.fillText(WORDS[word][1], W / 2 + dx, W / 2 + dy + 2);
+    let d = o.getImageData(0, 0, W, W).data;
+    const bg = [d[0], d[1], d[2]]; let diff = 0;
+    for (let i = 0; i < d.length; i += 4) diff += Math.abs(d[i] - bg[0]) + Math.abs(d[i + 1] - bg[1]) + Math.abs(d[i + 2] - bg[2]);
+    if (diff < 2000) {  // no emoji font: write the word instead
+      o.fillStyle = "#2c3e50"; o.font = "bold 13px sans-serif"; o.fillText(WORDS[word][0], W / 2, W / 2);
+      d = o.getImageData(0, 0, W, W).data;
+    }
+    const t = new Float32Array(W * W * 3);
+    for (let p = 0, q = 0; p < d.length; p += 4, q += 3) { t[q] = d[p] / 127.5 - 1; t[q + 1] = d[p + 1] / 127.5 - 1; t[q + 2] = d[p + 2] / 127.5 - 1; }
+    return t;
+  }
+  const signal = (k) => Math.sin((Math.PI / 2) * (k / STEPS)) ** 2;  // how much picture is left at step k
+  function frame(k) {
+    const a = Math.sqrt(signal(k)), b = Math.sqrt(1 - signal(k)), img = cx.createImageData(W, W);
+    for (let p = 0, q = 0; q < target.length; p += 4, q += 3) {
+      for (let c = 0; c < 3; c++) img.data[p + c] = Math.max(0, Math.min(255, (a * target[q + c] + b * noise[q + c] + 1) * 127.5));
+      img.data[p + 3] = 255;
+    }
+    return img;
+  }
+  function draw() {
+    cx.putImageData(frame(step), 0, 0);
+    stepTxt.textContent = `Step ${step} of ${STEPS}`;
+    const s = strip.children[step]; if (s) s.getContext("2d").putImageData(frame(step), 0, 0);
+    msg.innerHTML = step === 0 ? `Pure noise. Nothing is there yet. The words are "<b>${WORDS[word][0]}</b>."`
+      : step < STEPS / 2 ? "Colors and blobs. Can you guess the picture yet?"
+      : step < STEPS ? "Now you can see shapes. The details come last."
+      : `Done: ${WORDS[word][0]}! Try <b>New noise</b> with the same words, or new words with the same noise.`;
+    root.dataset.step = step;
+  }
+  function reset() {
+    clearInterval(timer); timer = null; step = 0; noise = makeNoise(); target = makeTarget();
+    root.querySelector(".np-seedtxt").textContent = `noise number ${seed}`;
+    strip.innerHTML = "";
+    for (let k = 0; k <= STEPS; k++) { const c = document.createElement("canvas"); c.width = c.height = W; strip.appendChild(c); }
+    draw();
+  }
+  function one() { if (step < STEPS) { step++; draw(); } else { clearInterval(timer); timer = null; } }
+
+  const wbox = root.querySelector(".np-words");
+  WORDS.forEach(([w], i) => {
+    const b = document.createElement("button"); b.type = "button"; b.textContent = w;
+    b.addEventListener("click", () => { word = i; wbox.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); reset(); });
+    wbox.appendChild(b);
+  });
+  wbox.firstChild.classList.add("on");
+  root.querySelector(".np-seed").addEventListener("click", () => { seed = 1 + Math.floor(Math.random() * 9999); reset(); });
+  root.querySelector(".np-one").addEventListener("click", one);
+  root.querySelector(".np-play").addEventListener("click", () => { if (step >= STEPS) reset(); clearInterval(timer); timer = setInterval(one, 450); });
+  root.querySelector(".np-reset").addEventListener("click", reset);
+  reset();
+})();
+</script>
+<p>This shows the idea, but it cheats. This demo already has the finished picture (an emoji), and it mixes the noise away. A real image generator does not have the picture. Its neural network has to <strong>guess</strong> what to remove, using what it learned from millions of pictures.</p>
+</section>
+<section id="write-picture-prompts" class="level3">
+<h3 class="anchored" data-anchor-id="write-picture-prompts">3.7.6 - Write Picture Prompts</h3>
+<p>Work with a partner, or in a group of 3.</p>
+<div class="steps">
+<ol type="1">
+<li>Write a picture prompt on your sheet. Use all 5 parts from 3.7.3.</li>
+<li>Make the picture with your class AI tool. Make it a <strong>second</strong> time with the same prompt. How are the two pictures different?</li>
+<li>Change only the <strong>style</strong>. Make it again. What changed?</li>
+<li>Find one mistake in a picture. Write it down.</li>
+</ol>
+</div>
+<div class="gotcha" title="No picture tool?">
+<p>If your class AI tool cannot make pictures, Mr.&nbsp;Ross makes them on the projector. Each pair gives him one prompt. <strong>Big class:</strong> play “Describe It.” One student from each team sees a secret picture. The team writes a prompt from the description. Whose AI picture is closest?</p>
+</div>
+<div class="gotcha" title="Never make pictures of real people">
+<p>Do not make AI pictures of classmates, teachers, or anyone real. A fake picture of a real person can hurt them, even as a joke. (More in Lesson 4.3.)</p>
+</div>
+</section>
+</section>
+<section id="talk" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
+<p>Is a picture made by AI <strong>art</strong>? Who should get the credit: the person who wrote the prompt, the company that made the AI, or the artists whose pictures trained it?</p>
+<div class="frames">
+<ul>
+<li>The noise turned into a picture when …</li>
+<li>The same prompt made different pictures because …</li>
+<li>An AI picture (is / is not) art, because …</li>
+<li>The credit should go to … , because …</li>
+</ul>
+</div>
+</section>
+<section id="watch" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="watch">📺 Watch</h2>
+<div class="watch" title="Does AI Have Creativity and Imagination? (Code.org)">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/X994dDnmRmY" title="Does AI Have Creativity and Imagination? (Code.org)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><strong>While you watch:</strong> What does the AI learn from, before it can make a picture?</p>
+<p><strong>Captions in your language:</strong> Press <strong>CC</strong>, then ⚙️ <strong>Settings</strong>, then <strong>Subtitles/CC</strong>, then <strong>Auto-translate</strong>.</p>
+</div>
+</section>
+<section id="go-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="One Subject, Five Styles">
+<p>Choose one subject, like “a bus at our school.” Make it in 5 styles: photo, cartoon, pixel art, oil painting, and a style from your home country. Make a poster of the 5 pictures.</p>
+</div>
+<div class="project" title="The Counting Test">
+<p>Ask for “exactly 3 red balls,” then 5, then 7, then 12. Count each picture. When does the AI start to get it wrong?</p>
+</div>
+<div class="project" title="Who Does It Show?">
+<p>Ask for “a doctor,” “a nurse,” “a scientist,” and “a basketball player.” Make each one 4 times. Count who the AI shows: men or women, young or old, skin colors. What do you notice? Bring your results to Lesson 4.2.</p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script src="../../scripts/popper.min.js"></script>
+<script src="../../scripts/tippy.min.js"></script>
+<script src="../../scripts/glossary-tooltips.js"></script>
+<script src="../../scripts/custom-callouts.js"></script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../chapters/Unit_3/3.6_AI_and_Math.html" class="pagination-link" aria-label="3.6 - AI and Math">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">3.6 - AI and Math</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html" class="pagination-link" aria-label="3.8 - Project: Solve a Real Problem">
+        <span class="nav-page-text">3.8 - Project: Solve a Real Problem</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Written by Mr.&nbsp;Ross in collaboration with Claude, an AI assistant made by Anthropic.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

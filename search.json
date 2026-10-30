@@ -94,7 +94,7 @@
     "href": "course-map.html#unit-3-using-ai-well",
     "title": "Course Map",
     "section": "Unit 3: Using AI Well",
-    "text": "Unit 3: Using AI Well\n\n\n\n\n\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n3.1\nAsking Good Questions\nMake weak prompts better. Compare the answers side by side.\n\n\n3.2\nKeep Talking\nFix a bad answer with follow-up questions.\n\n\n3.3\nWriting with AI, Not by AI\nGet feedback on your own paragraph. Decide which advice to keep.\n\n\n3.4\nResearch and Checking\nAsk AI a research question. Check every fact against a real source.\n\n\n3.5\nAI and Your Language\nTranslate there and back again. You are the expert who grades the AI.\n\n\n3.6\nAI and Math\nAsk for hints, not answers. Catch an AI math mistake with a calculator.\n\n\n3.7\nMaking Pictures with AI\nWatch noise turn into a picture. Write picture prompts and compare.\n\n\n3.8\nProject: Solve a Real Problem\nPick a problem in your life. Plan how AI could help.\n\n\n3.9\nProject: Feedback and Share\nGive and get feedback. Make it better. Show your project.",
+    "text": "Unit 3: Using AI Well\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n3.1\nAsking Good Questions\nMake weak prompts better. Compare the answers side by side.\n\n\n3.2\nKeep Talking\nFix a bad answer with follow-up questions.\n\n\n3.3\nWriting with AI, Not by AI\nGet feedback on your own paragraph. Decide which advice to keep.\n\n\n3.4\nResearch and Checking\nAsk AI a research question. Check every fact against a real source.\n\n\n3.5\nAI and Your Language\nTranslate there and back again. You are the expert who grades the AI.\n\n\n3.6\nAI and Math\nAsk for hints, not answers. Catch an AI math mistake with a calculator.\n\n\n3.7\nMaking Pictures with AI\nWatch noise turn into a picture. Write picture prompts and compare.\n\n\n3.8\nProject: Solve a Real Problem\nPick a problem in your life. Plan how AI could help.\n\n\n3.9\nProject: Feedback and Share\nGive and get feedback. Make it better. Show your project.",
     "crumbs": [
       "Course Map"
     ]
@@ -1263,6 +1263,633 @@
     ]
   },
   {
+    "objectID": "chapters/Unit_3/index.html#topics-in-this-unit",
+    "href": "chapters/Unit_3/index.html#topics-in-this-unit",
+    "title": "Introduction",
+    "section": "Topics in This Unit",
+    "text": "Topics in This Unit\nAsking Good Questions\nThe three parts of a good prompt: task, context, and format.\nKeep Talking\nFollow-up questions turn a bad answer into a useful one.\nWriting with AI, Not by AI\nThe AI use ladder, feedback you control, and an honest AI note.\nResearch and Checking\nWhy chatbots make things up, and how fact-checkers check.\nAI and Your Language\nYou are the expert: grade AI translations in your language.\nAI and Math\nRules and predictions, three ways to check, and hints instead of answers.\nMaking Pictures with AI\nFrom noise to picture: how image generators work.\nProject: Solve a Real Problem\nPlan and start a project that uses AI to help in your life.\nProject: Feedback and Share\nGive and get feedback, make it better, and share it.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.1_Asking_Good_Questions.html",
+    "href": "chapters/Unit_3/3.1_Asking_Good_Questions.html",
+    "title": "3.1 - Asking Good Questions",
+    "section": "",
+    "text": "🔥 Warm Up\nTwo students ask a chatbot for help with the same speech.\nMaria types: “Tell me about dogs.” She gets a long page about the history of dogs, dog breeds, and dog food. She cannot use most of it.\nKofi types: “I am in 10th grade. I am writing a 1-minute speech about why dogs make good pets. Give me 3 reasons, with one short example each. Use simple words.” He gets exactly what he needs. Same chatbot. Different question.\nEach person below typed a short question. Guess what they really wanted. Write it on your sheet.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.1 - Asking Good Questions"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.1_Asking_Good_Questions.html#warmup",
+    "href": "chapters/Unit_3/3.1_Asking_Good_Questions.html#warmup",
+    "title": "3.1 - Asking Good Questions",
+    "section": "",
+    "text": "“Help with my essay.” (Tomás has an essay about his home country due tomorrow. He needs a good first sentence.)\n“Explain volcanoes.” (Amina is in 6th grade. She has a test on Friday. She reads English slowly.)\n“Give me a recipe.” (Lin has rice, eggs, and onions. She has 20 minutes.)\n\n\nYou know Tomás, Amina, and Lin. The chatbot does not. It only has the words they typed. Everything else, it has to guess.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.1 - Asking Good Questions"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.1_Asking_Good_Questions.html#learn",
+    "href": "chapters/Unit_3/3.1_Asking_Good_Questions.html#learn",
+    "title": "3.1 - Asking Good Questions",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n3.1.1 - What Is a Prompt?\nA prompt is what you type to tell an AI what you want. It can be a question, a job, or both.\nRemember Lesson 1.6: a chatbot predicts the next word, again and again. It uses every word you typed to make its prediction. Short prompt: it predicts an answer for an average person. Clear prompt: it predicts an answer for you.\n\n\n\n3.1.2 - The Three Parts of a Good Prompt\nHere is Kofi’s prompt again, in color:\n\nI am in 10th grade. Give me 3 reasons why dogs make good pets, with one short example each. This is for a 1-minute speech. Use simple words.\n\n\n\n\n\n\n\n\n\nPart\nThe question it answers\nKofi’s prompt\n\n\n\n\nTask\nWhat do you want the AI to do?\nGive 3 reasons dogs make good pets\n\n\nContext\nWho are you? What is it for?\n10th grade, a 1-minute speech\n\n\nFormat\nWhat should the answer look like?\n3 reasons, one example each, simple words\n\n\n\n\nTask, context, format. You do not need all three every time. But when an answer is not useful, one of them is usually missing.\n\n\nMost chatbots can read and write many languages. You can write your prompt in your home language. You can also ask for the answer in English and your language, side by side.\n\n\n\n\n3.1.3 - Keep Your Private Information Private\n\nAn AI tool may save what you type. A person at the company may read it. So never type:\n\nyour full name, address, or phone number\npasswords\nprivate facts about another person\n\nFor context, “I am in high school” is enough. The AI does not need to know which high school.\n\n\nOur school uses an AI tool for students. Mr. Ross will show you which one. In this book, it is called your class AI tool.\nMany popular chatbots have age rules. ChatGPT says users must be at least 13, and users under 18 need a parent’s permission. Claude.ai says users must be 18. Use the tool your school gives you.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.1 - Asking Good Questions"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.1_Asking_Good_Questions.html#try-it",
+    "href": "chapters/Unit_3/3.1_Asking_Good_Questions.html#try-it",
+    "title": "3.1 - Asking Good Questions",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n3.1.4 - Fix a Weak Prompt\nWork with a partner, or in a group of 3. (In a class of 4, make two pairs.)\n\n\nChoose a weak prompt in the prompt builder below.\nCopy it into your class AI tool. Save the answer.\nNow make it better. Add a task, context, and format. Click the round buttons for ideas.\nPress Copy my prompt. Paste it into your class AI tool in a new chat.\nCompare the two answers on your sheet. Which one could you really use?\n\n\n\n\n  \n    Start from a weak prompt:\n    \n      (choose one)\n      Tell me about dogs.\n      Help with my essay.\n      Explain volcanoes.\n      Make a study plan.\n      Give me a recipe.\n    \n  \n\n  \n    1. Task: What do you want the AI to do?\n    \n    \n      ExplainGive me 3 ideas forMake a quiz aboutHelp me plan\n    \n  \n  \n    2. Context: Who are you? What is it for? What do you already know?\n    \n    \n      I am in high school.I am learning English.This is for a short speech.I already know\n    \n  \n  \n    3. Format: What should the answer look like?\n    \n    \n      Use simple words.Make it a list of 5.Keep it under 100 words.Make a table.Answer in my language:\n    \n  \n\n  Your prompt\n  \n  \n    📋 Copy my prompt\n    ↺ Clear\n    \n  \n  \n\n\n\n\n\n\nSplit into two teams. Mr. Ross puts one weak prompt on the projector. Each team writes a better prompt in 3 minutes. Mr. Ross tries both on the projector. The class votes: which answer is more useful? Then switch to a new weak prompt.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.1 - Asking Good Questions"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.1_Asking_Good_Questions.html#talk",
+    "href": "chapters/Unit_3/3.1_Asking_Good_Questions.html#talk",
+    "title": "3.1 - Asking Good Questions",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nSome people get much better help from AI, just because they know how to ask. Is that fair? Who could be left behind?\n\n\nA good prompt is like … because …\nThe second answer was better because I added …\nIt is (fair / not fair) that some people get better answers, because …\nPeople who could be left behind are … , because …",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.1 - Asking Good Questions"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.1_Asking_Good_Questions.html#go-further",
+    "href": "chapters/Unit_3/3.1_Asking_Good_Questions.html#go-further",
+    "title": "3.1 - Asking Good Questions",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nWrite the same good prompt in English and in your home language. Ask both in new chats. Are the answers the same? Is one better? Show the class.\n\n\nAs a class, choose the 5 best prompts you wrote today. Make a poster with each one in color: task, context, format. Hang it by the computers.\n\n\nA fourth trick: show the AI an example of what you want. Try: “Write 3 quiz questions about volcanoes. Here is one example: What comes out of a volcano? (a) lava (b) water (c) sand.” Does an example make the answer better?",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.1 - Asking Good Questions"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.2_Keep_Talking.html",
+    "href": "chapters/Unit_3/3.2_Keep_Talking.html",
+    "title": "3.2 - Keep Talking",
+    "section": "",
+    "text": "🔥 Warm Up\nWhen you ask a teacher a question and you do not understand the answer, you do not walk away. You say, “Can you say that another way?” or “Can you show me an example?”\nYou can do the same with a chatbot. The first answer is only a first try. The second and third answers are often much better.\nToday you learn the follow-up questions that turn a bad answer into a useful one.\nA student asked a chatbot, “What is photosynthesis?” Here is an answer like the one they got:\nOn your sheet, circle 3 hard words. What would you say to the chatbot next?",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.2 - Keep Talking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.2_Keep_Talking.html#warmup",
+    "href": "chapters/Unit_3/3.2_Keep_Talking.html#warmup",
+    "title": "3.2 - Keep Talking",
+    "section": "",
+    "text": "Photosynthesis is the biochemical process by which photoautotrophic organisms convert electromagnetic radiation into chemical energy, synthesizing glucose from carbon dioxide and water while releasing molecular oxygen as a byproduct.\n\n\n\nThe student typed: “Explain it in simple words. I am in high school and I am learning English. Use 3 short sentences.”\nThe new answer: Plants make their own food. They use sunlight, water, and air. They give off oxygen, the gas we breathe.\nSame facts. Now the student can use them.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.2 - Keep Talking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.2_Keep_Talking.html#learn",
+    "href": "chapters/Unit_3/3.2_Keep_Talking.html#learn",
+    "title": "3.2 - Keep Talking",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n3.2.1 - The Chat Is the Prompt\nWhen you send a new message, the chatbot does not read only your new message. It reads the whole chat again, from the top. Then it predicts its answer.\n\n\n\n\n\nSo your follow-up question works because the old messages are still part of the prompt. The words a chatbot can read at one time are called its context window. A very long chat can be too big for it. Then the chatbot may lose the oldest part.\n\nA new chat starts over. The chatbot cannot see your old chat. If you need the context, type it again.\n\n\n\n\n3.2.2 - Follow-Up Moves\n\n\n\n\n\n\n\n\nMove\nSay this\nUse it when the answer is …\n\n\n\n\nSimpler\n“Explain it in simple words.”\ntoo hard to read\n\n\nShorter\n“Say it in 3 sentences.”\ntoo long\n\n\nExample\n“Give me an example.”\ntoo general\n\n\nWhy?\n“Why? Show me the steps.”\nhard to believe\n\n\nFix it\n“That is not what I meant. I meant …”\nabout the wrong thing\n\n\nNew shape\n“Make it a table.” or “Make it a list.”\nhard to use\n\n\nLanguage\n“Say it in English and in Arabic.”\nhard to understand in English\n\n\n\n\n\n\n3.2.3 - Careful When You Push Back\nTry telling a chatbot, “Are you sure? I think that is wrong.” Many chatbots will say sorry and change the answer. They sometimes do this even when the first answer was right.\nA chatbot predicts what comes next in the chat. After “I think that is wrong,” an answer that agrees with you is a likely next answer. So when you need to know if something is true, do not ask the chatbot if it is sure. Check a real source. (You will do this in Lesson 3.4, and test it more in Unit 4.)\n\nSome AI tools now have a memory feature. They save facts about you from one chat to the next. If your class AI tool has one, Mr. Ross will show you where it is. Do not let it save private information.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.2 - Keep Talking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.2_Keep_Talking.html#try-it",
+    "href": "chapters/Unit_3/3.2_Keep_Talking.html#try-it",
+    "title": "3.2 - Keep Talking",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n3.2.4 - The Follow-Up Challenge\nWork with a partner, or in a group of 3.\n\n\nChoose a hard topic from another class: photosynthesis, the water cycle, slope, the U.S. Constitution, or your own idea.\nAsk your class AI tool: “What is …?” Read the answer.\nOn your sheet, give the answer a score from 1 to 5. (1 = I cannot use this. 5 = I can use this today.)\nUse one follow-up move. Score the new answer.\nDo it 2 more times, with different moves. Which move helped the most?\n\n\n\nSmall class (4 or 5): work as one group. Each person chooses the next follow-up move. Big class: two teams get the same topic and 3 follow-ups each. Read both final answers aloud. Which team got the more useful answer?\n\n\n\n3.2.5 - The New Chat Test\n\n\nIn the same chat, ask: “What topic did I ask about?” What does it say?\nOpen a new chat. Ask the same question. What does it say now?\nWrite what happened on your sheet. Use the picture in 3.2.1 to explain why.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.2 - Keep Talking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.2_Keep_Talking.html#talk",
+    "href": "chapters/Unit_3/3.2_Keep_Talking.html#talk",
+    "title": "3.2 - Keep Talking",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nImagine a chatbot that always agrees with you. If you say the Earth is flat, it says, “Good point!” Is that helpful or dangerous? Who could it hurt?\n\n\nThe follow-up move that helped me most was … , because …\nA chatbot remembers the chat because …\nA chatbot that always agrees with me is (helpful / dangerous) because …\nTo know if an answer is true, I should …",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.2 - Keep Talking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.2_Keep_Talking.html#go-further",
+    "href": "chapters/Unit_3/3.2_Keep_Talking.html#go-further",
+    "title": "3.2 - Keep Talking",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nType: “You are a job interviewer at a grocery store. Ask me one question at a time. Wait for my answer. After each answer, give me one tip.” Keep talking for 5 questions. What was the best tip? (Do not use your real name or address.)\n\n\nType: “Quiz me on the water cycle. Ask one question at a time. Tell me if I am right before the next question.” How is this different from just reading the answer?\n\n\nMake a set of cards with the follow-up moves from 3.2.2, in your home language. Test each one with your class AI tool. Do they work as well as in English?",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.2 - Keep Talking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.3_Writing_with_AI.html",
+    "href": "chapters/Unit_3/3.3_Writing_with_AI.html",
+    "title": "3.3 - Writing with AI, Not by AI",
+    "section": "",
+    "text": "🔥 Warm Up\nTwo students get the same job: write a paragraph about a place that matters to them.\nAhmed types, “Write a paragraph about a place that matters to me.” In 5 seconds, he has a nice paragraph about a quiet park where he likes to think. He has never been to that park.\nSara writes about her grandmother’s kitchen: the smell of bread, the radio, the blue door. Then she asks the AI, “What is one thing I could make clearer?” She fixes two sentences. Who wrote something true? Who got better at writing?\nRead the story at the top again. Answer on your sheet:",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.3 - Writing with AI, Not by AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.3_Writing_with_AI.html#warmup",
+    "href": "chapters/Unit_3/3.3_Writing_with_AI.html#warmup",
+    "title": "3.3 - Writing with AI, Not by AI",
+    "section": "",
+    "text": "Whose paragraph is true?\nWho practiced writing?\nDid both of them use AI?\n\n\nWhen you write, you decide what you mean. You choose the words. You put ideas in order. That is how you get better at thinking.\nIf the AI writes it, the AI got the practice. You did not.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.3 - Writing with AI, Not by AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.3_Writing_with_AI.html#learn",
+    "href": "chapters/Unit_3/3.3_Writing_with_AI.html#learn",
+    "title": "3.3 - Writing with AI, Not by AI",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n3.3.1 - The AI Use Ladder\nThere are many ways to use AI for writing. Each step up the ladder, the AI does more of the work.\n\n\n\n\n\nEach assignment should say which step is OK. If it does not say, ask your teacher before you use AI.\n\nUsing AI on a step that is not allowed, and turning the work in as your own, is plagiarism. It is the same as copying from a friend.\n\n\n\n\n3.3.2 - Ask for Feedback, Not a New Paragraph\nIf you ask, “Make my paragraph better,” the AI will often write a new paragraph. Then it is not yours anymore. Ask for feedback instead:\n\nDo not rewrite my paragraph. I am in high school and I am learning English. Tell me 2 things that are good and 2 things I could make better. Use simple words. Here is my paragraph: …\n\n\n\n\n3.3.3 - You Are the Boss of Your Writing\nAI advice is not always right. Some advice will make your writing sound like everyone else’s. For each piece of advice, you decide:\n\n\n\n\n\n\n\nDecision\nWhen\n\n\n\n\n✅ Keep it\nIt makes your meaning clearer.\n\n\n✏️ Change it\nThe idea is good, but you want to say it your way.\n\n\n❌ Skip it\nIt is wrong, or it changes what you meant.\n\n\n\nYour voice is the way you say things. A paragraph about your grandmother’s kitchen should sound like you, not like a chatbot.\n\n\n\n3.3.4 - Say How You Used AI\nAt the end of your work, write an AI note. It is short and honest:\n\nAI note: I wrote this paragraph myself. I used my class AI tool for feedback. I kept 1 idea: I added the smell of the bread. I skipped 1 idea, because it changed what I meant.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.3 - Writing with AI, Not by AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.3_Writing_with_AI.html#try-it",
+    "href": "chapters/Unit_3/3.3_Writing_with_AI.html#try-it",
+    "title": "3.3 - Writing with AI, Not by AI",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n3.3.5 - Write, Ask, Decide\nWork with a partner. (If there is an odd number, make one group of 3.)\n\n\nWrite 5 sentences about a place that matters to you. You can plan in your home language first.\nRead your paragraph to your partner. Your partner says one thing they liked.\nCopy the feedback prompt from 3.3.2 into your class AI tool. Add your paragraph at the end.\nOn your sheet, write each piece of advice. Mark it Keep, Change, or Skip. Write why.\nrevise: write your new paragraph.\nWrite your AI note.\n\n\n\nWrite about a place, not an address. Use first names only, or words like “my grandmother.”",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.3 - Writing with AI, Not by AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.3_Writing_with_AI.html#talk",
+    "href": "chapters/Unit_3/3.3_Writing_with_AI.html#talk",
+    "title": "3.3 - Writing with AI, Not by AI",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nWhen is using AI for writing OK, and when is it cheating? If AI can write well, why should people still learn to write?\n\n\nUsing AI is OK when … , and it is cheating when …\nI kept the advice to … because …\nI skipped the advice to … because …\nPeople should still learn to write because …",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.3 - Writing with AI, Not by AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.3_Writing_with_AI.html#go-further",
+    "href": "chapters/Unit_3/3.3_Writing_with_AI.html#go-further",
+    "title": "3.3 - Writing with AI, Not by AI",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nAsk the AI to write 5 sentences about a place that matters to it. Give your paragraph and the AI’s paragraph to a partner, with no names. Can they tell which is which? How?\n\n\nAs a class, decide which step of the ladder is OK for different jobs: a journal, a science report, a job application, a text to a friend. Make a poster.\n\n\nWrite 5 sentences in your home language. Ask for feedback in that language. Is the feedback as good as in English? How do you know?",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.3 - Writing with AI, Not by AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.4_Research_and_Checking.html",
+    "href": "chapters/Unit_3/3.4_Research_and_Checking.html",
+    "title": "3.4 - Research and Checking",
+    "section": "",
+    "text": "🔥 Warm Up\nIn 2023, two lawyers in New York had to write a report for a court. One of them asked ChatGPT to find old court cases that agreed with them.\nChatGPT gave him six cases. Each one had a name, a date, and quotes. None of the six cases were real. The judge fined the lawyers and their law firm $5,000.\nThe lawyer said he did not know a chatbot could make things up. Today you learn to check, so this never happens to you.\nTwo of these court cases are real. One was made up by ChatGPT for the lawyers in 2023. Which one is made up? How could you find out?",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.4 - Research and Checking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.4_Research_and_Checking.html#warmup",
+    "href": "chapters/Unit_3/3.4_Research_and_Checking.html#warmup",
+    "title": "3.4 - Research and Checking",
+    "section": "",
+    "text": "Brown v. Board of Education (1954)\nVarghese v. China Southern Airlines (2019)\nMiranda v. Arizona (1966)\n\n\nNumber 2 is made up. It was one of the six fake cases. It looks just like a real case name: two names, “v.”, and a year. That is why it fooled the lawyer.\nTo find out, you could search for it. The real cases are on many trusted websites. The fake one shows up only in news stories about the fake cases.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.4 - Research and Checking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.4_Research_and_Checking.html#learn",
+    "href": "chapters/Unit_3/3.4_Research_and_Checking.html#learn",
+    "title": "3.4 - Research and Checking",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n3.4.1 - Why a Chatbot Makes Things Up\nA chatbot predicts likely words. It does not look up each fact in a book. A fake court case has the same shape as a real one, so the fake words look very likely.\nWhen AI writes something false as if it were true, it is called a hallucination. The chatbot does not know it is wrong. It sounds just as sure as when it is right. (You will study this more in Lesson 4.1.)\n\nMany chatbots can now search the web and show links. That helps, but it does not fix the problem. The link may not say what the chatbot says. Some school AI tools cannot search the web at all. Ask Mr. Ross what yours can do.\n\n\n\n\n3.4.2 - Lateral Reading\nProfessional fact-checkers do not read one page carefully from top to bottom. They open new tabs and see what other sources say. This is called lateral reading. (“Lateral” means “to the side.”)\n\n\nChoose one fact.\nOpen a new tab. Search for the fact.\nFind it in 2 trusted sources that agree.\nMark it: ✅ found in 2 sources, ❌ wrong, or ❓ cannot find.\n\n\n\n\n\n3.4.3 - Trusted Sources\n\n\n\n\n\n\n\n\nUsually trusted\nUse with care\nBe careful\n\n\n\n\ngovernment websites (.gov)\nWikipedia: a good start, then check the links at the bottom\nsocial media posts\n\n\nencyclopedias, like Britannica\na blog by one person\na website that sells something\n\n\nbig news organizations\na video on YouTube or TikTok\na chatbot answer with no source\n\n\nmuseums and universities (.edu)",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.4 - Research and Checking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.4_Research_and_Checking.html#try-it",
+    "href": "chapters/Unit_3/3.4_Research_and_Checking.html#try-it",
+    "title": "3.4 - Research and Checking",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n3.4.4 - Check the Chatbot\nOur school is named after Frederick Douglass. Let’s check what a chatbot says about him. Work with a partner, or in a group of 3.\n\n\nAsk your class AI tool: “Tell me 5 facts about Frederick Douglass. Give a source for each fact.”\nWrite the 5 facts on your sheet.\nChoose 3 facts. Check each one with lateral reading. Mark ✅, ❌, or ❓.\nCheck the sources the AI gave. Is each one real? Does the page say the fact?\nWrite one fact you learned that the chatbot did not tell you.\n\n\n\nSmall class (4 or 5): work as one group. Each person checks a different fact. Big class: make it a race between teams. A team gets 1 point for each fact checked in 2 sources. A team loses 2 points for a check that is wrong. Speed is good. Being right is better.\n\n\nDid the chatbot get everything right? Try a harder topic: the history of your home country, your favorite athlete, or our town. A chatbot makes more mistakes on topics with less writing about them online.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.4 - Research and Checking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.4_Research_and_Checking.html#talk",
+    "href": "chapters/Unit_3/3.4_Research_and_Checking.html#talk",
+    "title": "3.4 - Research and Checking",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nAI can make things up, and it sounds sure when it does. Should students use AI for research at all? If yes, how?\n\n\nThe chatbot got … right, and it got … wrong.\nA source I trust is … because …\nStudents (should / should not) use AI for research, because …\nBefore I use a fact from AI, I will …",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.4 - Research and Checking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.4_Research_and_Checking.html#watch",
+    "href": "chapters/Unit_3/3.4_Research_and_Checking.html#watch",
+    "title": "3.4 - Research and Checking",
+    "section": "📺 Watch",
+    "text": "📺 Watch\n\n\nWhile you watch: What do fact-checkers do that most people do not?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.4 - Research and Checking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.4_Research_and_Checking.html#go-further",
+    "href": "chapters/Unit_3/3.4_Research_and_Checking.html#go-further",
+    "title": "3.4 - Research and Checking",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nFind a surprising claim that many people are sharing online. Use lateral reading to check it. Is it true, false, or missing important facts? Present what you found in 1 minute.\n\n\nAsk your class AI tool for 5 sources about a topic, with links. Check every link. How many are real? How many say what the AI said? Make a chart for the class.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.4 - Research and Checking"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.5_AI_and_Your_Language.html",
+    "href": "chapters/Unit_3/3.5_AI_and_Your_Language.html",
+    "title": "3.5 - AI and Your Language",
+    "section": "",
+    "text": "🔥 Warm Up\nAbout 14 languages are spoken at our school. AI can translate many of them. It is very good at some languages and weak at others.\nHow good is it at your language? The people who made the AI cannot tell you. They do not speak it. You do.\nToday, you are the expert. You grade the AI.\nOn your sheet, write “Good morning! How are you?” in every language you know.\nThen share. Mr. Ross makes a list on the board of every language in the room. How many are there?",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.5 - AI and Your Language"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.5_AI_and_Your_Language.html#warmup",
+    "href": "chapters/Unit_3/3.5_AI_and_Your_Language.html#warmup",
+    "title": "3.5 - AI and Your Language",
+    "section": "",
+    "text": "If you speak only English, you are still the expert on English. Today, pair up with someone who speaks another language. You will learn some of it.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.5 - AI and Your Language"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.5_AI_and_Your_Language.html#learn",
+    "href": "chapters/Unit_3/3.5_AI_and_Your_Language.html#learn",
+    "title": "3.5 - AI and Your Language",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n3.5.1 - How AI Learned to Translate\nPeople did not write rules for every language. The AI learned from examples: millions of texts that exist in two languages. A website in English and Spanish. A report from the United Nations in six languages. A book and its translation.\nFrom the examples, the AI learned which words and sentences match. This is the same idea you saw in Unit 2: learn from examples, not rules.\n\nThe transformer (Lesson 1.6) was invented in 2017 to translate. Its first test was English to German and English to French. Later, people used the same idea to build chatbots.\n\n\n\n\n3.5.2 - Why Some Languages Are Harder\nAn AI is only as good as its training examples. Some languages have a lot of writing online. Some have very little. A language with little writing for AI to learn from is called a low-resource language. AI makes more mistakes in these languages.\n\nAbout half of all websites are in English. Spanish, German, Japanese, and French are next, with about 5% each. Many languages are on less than 1 in 1,000 websites. (Source: W3Techs, October 2026.)\nGoogle Translate works with almost 250 languages. Your class AI tool may work with fewer.\n\nSome things are hard in every language:\n\nIdioms: “It’s raining cats and dogs” means it is raining very hard. A word-by-word translation makes no sense.\nWords with two meanings: “a break” can be a rest, or a time when someone is less strict with you.\nPolite and friendly forms: many languages have two ways to say “you.” AI may pick the wrong one.\nNames: AI may translate a name that should stay the same.\n\n\n\n\n3.5.3 - Back Translation\nTo check a translation, translate it back:\n\nEnglish → your language → English again\n\nIf the meaning changed, something went wrong. This is back translation. It is a good test, but it is not perfect. The best test is a person who speaks the language. That is you.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.5 - AI and Your Language"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.5_AI_and_Your_Language.html#try-it",
+    "href": "chapters/Unit_3/3.5_AI_and_Your_Language.html#try-it",
+    "title": "3.5 - AI and Your Language",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n3.5.4 - Grade the AI\nWork with a partner who speaks the same language, if you can. If you speak only English, work with a partner who speaks another language. You write; they grade.\n\n\nTranslate each sentence on your sheet into your language. Use Google Translate and your class AI tool.\nGrade each translation: 3 = right and sounds natural, 2 = I understand it, but it sounds strange, 1 = wrong.\nChoose one translation. Back-translate it into English. Did the meaning change?\nAdd your scores to the class chart on the board.\n\n\nThe sentences:\nA. The library opens at 8 o’clock. B. Please bring your permission slip by Friday. C. It’s raining cats and dogs. D. My teacher gave me a break. E. A sentence you would really need to say. (At the doctor? At a store?)\n\nGoogle Translate and your class AI tool send your words to a company’s computers. Do not type private information, like a letter from a doctor or your address.\n\n\nSmall class: each student tests their own language. Then everyone looks at the class chart together. Big class: students who share a language make a team. Each team makes a poster: the AI’s best and worst translation.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.5 - AI and Your Language"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.5_AI_and_Your_Language.html#talk",
+    "href": "chapters/Unit_3/3.5_AI_and_Your_Language.html#talk",
+    "title": "3.5 - AI and Your Language",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nLook at the class chart. Which language did AI do best? Worst? Why?\nShould a hospital or a court use AI to translate? When do you need a human translator?\n\n\nAI did best in … , maybe because …\nAI made a mistake in my language when …\nA hospital (should / should not) use AI translation, because …\nA human translator is needed when …",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.5 - AI and Your Language"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.5_AI_and_Your_Language.html#go-further",
+    "href": "chapters/Unit_3/3.5_AI_and_Your_Language.html#go-further",
+    "title": "3.5 - AI and Your Language",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nCollect words and sentences the AI got wrong in each language. Write the wrong translation, the right one, and why the AI made the mistake. Share it with the ELL teachers.\n\n\nMany languages use a different alphabet: Arabic, Nepali, Russian, Burmese, Tigrinya. Test the AI with a sentence written in that alphabet. Then test it with the same sentence written in English letters. Which works better?\n\n\nGoogle Translate can listen and speak. Say a sentence in your language. Does it understand you? Does it understand your partner? Does it work better for some voices?",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.5 - AI and Your Language"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.6_AI_and_Math.html",
+    "href": "chapters/Unit_3/3.6_AI_and_Math.html",
+    "title": "3.6 - AI and Math",
+    "section": "",
+    "text": "🔥 Warm Up\nA calculator from 1975 can do \\(3847 \\times 29\\) and get it right every time. Some of the most powerful AI in the world can solve very hard math contest problems. And yet a chatbot can still get a long multiplication problem wrong, and sound completely sure.\nHow can that be? And how should you use AI in math class? You want it to help you learn, not do the learning for you.\nA student asked a chatbot to solve \\(3x + 5 = 20\\). Here are its steps. One step is wrong. Which one?",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.6 - AI and Math"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.6_AI_and_Math.html#warmup",
+    "href": "chapters/Unit_3/3.6_AI_and_Math.html#warmup",
+    "title": "3.6 - AI and Math",
+    "section": "",
+    "text": "Step\nWork\n\n\n\n\n1\n\\(3x + 5 = 20\\)\n\n\n2\n\\(3x = 25\\)\n\n\n3\n\\(x = \\dfrac{25}{3}\\)\n\n\n\n\nStep 2 is wrong. To undo \\(+5\\), you subtract 5 from both sides: \\(3x = 15\\). Then \\(x = 5\\).\nCheck by plugging in: \\(3(5) + 5 = 15 + 5 = 20\\). ✅",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.6 - AI and Math"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.6_AI_and_Math.html#learn",
+    "href": "chapters/Unit_3/3.6_AI_and_Math.html#learn",
+    "title": "3.6 - AI and Math",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n3.6.1 - Rules and Predictions\nRemember Lesson 1.1: some computers follow rules, and some learn from examples.\n\n\n\n\n\n\nA calculator follows the rule for multiplying. It does the same steps every time.\nA chatbot predicts the answer, one token at a time, like words. On small problems, its guesses are almost always right. On long problems, one bad guess makes the whole answer wrong.\n\nThis picture shows the idea. Real chatbots split numbers into pieces in different ways.\n\nIn July 2025, AI from Google DeepMind and OpenAI scored at gold-medal level at the International Mathematical Olympiad. It is a contest for the best high school math students in the world.\nMany AI tools now use a calculator or computer code behind the scenes for arithmetic. Some do not. Even the best ones still make mistakes. Always check.\n\n\n\n\n3.6.2 - Three Ways to Check\n\n\n\n\n\n\n\n\nWay\nHow\nExample: is \\(3847 \\times 29 = 111563\\)?\n\n\n\n\nEstimate\nRound, then do it in your head. Is the answer close?\n\\(4000 \\times 30 = 120000\\). Close! ✅\n\n\nCalculator\nDo it again with a tool that follows rules.\n\\(111563\\) ✅\n\n\nPlug it in\nPut the answer back in the problem. Does it work?\n\\(111563 \\div 29 = 3847\\) ✅\n\n\n\n\n\n\n3.6.3 - Hints, Not Answers\nIf AI does your homework, you did not learn it. Then the test comes, and the AI is not there.\nAsk for a hint instead:\n\nI am learning to solve equations. Do not give me the answer. Give me one hint for the first step of \\(2x - 7 = 11\\). Then wait for me to try.\n\nYou can also ask AI to check your work: “Here are my steps. Tell me which step is wrong, but do not fix it.”",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.6 - AI and Math"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.6_AI_and_Math.html#try-it",
+    "href": "chapters/Unit_3/3.6_AI_and_Math.html#try-it",
+    "title": "3.6 - AI and Math",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n3.6.4 - Test the Chatbot\nWork with a partner.\n\n\nAsk your class AI tool each problem below. Ask for only the answer, with no steps.\nCheck each answer with a calculator.\nMark it ✅ or ❌ on your sheet.\nAdd your results to the class chart. Which problems did the AI get wrong most often?\n\n\n\n\n\nProblem\nSize\n\n\n\n\n\\(23 \\times 47\\)\nsmall\n\n\n\\(3847 \\times 29\\)\nmedium\n\n\n\\(48213 \\times 7956\\)\nbig\n\n\n\\(8374615 \\times 293847\\)\nvery big\n\n\n\n\nThat is a good result too! Write it down. Your class AI tool may use a calculator behind the scenes. Try asking: “Did you use a calculator for that?” Then check its answer to that question.\n\n\n\n3.6.5 - The Hint Challenge\n\n\nUse the hint prompt from 3.6.3 to solve \\(2x - 7 = 11\\). Do not let the AI give you the answer.\nWrite each hint and each of your steps on your sheet.\nCheck your answer by plugging it in.\n\n\n\nSmall class: everyone tests the chatbot, then the class makes one chart together. Big class: each pair tests only 2 of the 4 problems, but asks each one 3 times in new chats. Does the AI give the same answer every time?",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.6 - AI and Math"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.6_AI_and_Math.html#talk",
+    "href": "chapters/Unit_3/3.6_AI_and_Math.html#talk",
+    "title": "3.6 - AI and Math",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nShould students be allowed to use AI on math homework? When does it help you learn, and when does it stop you from learning?\n\n\nThe AI got the … problem (right / wrong), because …\nA calculator is better for arithmetic because …\nAI helps me learn math when …\nAI stops me from learning when …",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.6 - AI and Math"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.6_AI_and_Math.html#go-further",
+    "href": "chapters/Unit_3/3.6_AI_and_Math.html#go-further",
+    "title": "3.6 - AI and Math",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nChoose a math idea from your math class. Ask the AI to explain it in your home language, with one example. Is the math right? Is the language right? Teach it to a partner.\n\n\nAsk the very big problem in 3 new chats. Did you get the same answer each time? Why could a chatbot give different answers to the same question? (Hint: Lesson 2.9.)\n\n\nAsk: “A farmer has 15 cows. All but 8 run away. How many are left?” Is the AI right? (The answer is 8.) Write your own trick word problem and test it.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.6 - AI and Math"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html",
+    "href": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html",
+    "title": "3.7 - Making Pictures with AI",
+    "section": "",
+    "text": "🔥 Warm Up\nType “an orange cat reading a book in a library, watercolor.” Wait a few seconds. A picture appears. Nobody drew it. It did not exist before.\nHow? The AI starts with static, like an old TV with no signal. Then it removes a little static at a time, again and again, until a picture is left.\nLook at the first three squares on your sheet. Cover the last one. At which step can you guess the picture? Write your guess.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.7 - Making Pictures with AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#warmup",
+    "href": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#warmup",
+    "title": "3.7 - Making Pictures with AI",
+    "section": "",
+    "text": "At step 0, there is no picture at all. It is only noise. At step 3, maybe you see a dark shape. At step 6, most people can see it. The details come last.\nAn image generator works the same way, but it does not know the picture ahead of time. It has to guess it.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.7 - Making Pictures with AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#learn",
+    "href": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#learn",
+    "title": "3.7 - Making Pictures with AI",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n3.7.1 - From Noise to Picture\n\n\n\n\n\nAn image generator learns in two parts.\nTraining. People collect millions of pictures, each with words that describe it. The computer adds noise to each picture, a little at a time, until only noise is left. A neural network practices guessing: which part of this is noise? It practices millions of times.\nMaking a picture. Now you type words. The AI starts with pure noise. The network guesses which part is noise, and removes a little of it. It does this again and again, often 20 to 50 times. Your words guide every guess. This is called diffusion.\n\nThe AI does not copy a picture or glue pieces together. It starts from noise and removes it, step by step, guided by what it learned from millions of pictures.\n\n\n\n\n3.7.2 - Why Every Picture Is Different\nEvery time you press the button, the AI starts from new random noise. So the same prompt makes a different picture each time. (Like the chatbot that picks by chance, in Lesson 2.9.)\n\n\n\n3.7.3 - Picture Prompts\nA good picture prompt says what you want to see:\n\n\n\nPart\nQuestion\nExample\n\n\n\n\nSubject\nWhat is in the picture?\na small orange cat\n\n\nAction\nWhat is it doing?\nreading a book\n\n\nPlace\nWhere is it? When?\nin a library at night\n\n\nStyle\nWhat should it look like?\nwatercolor painting\n\n\nDetails\nColors? Light?\nwarm yellow light\n\n\n\n\n\n\n3.7.4 - What Image Generators Get Wrong\n\nCounting: “exactly 7 apples” may give 6 or 9.\nWords in the picture: letters on signs and shirts can be wrong.\nWhat is most common: ask for “a doctor” or “a teacher.” The AI shows what it saw most in its training pictures. Who does it leave out? (You will study this in Lesson 4.2.)\n\n\nImage generators improved fast. The tools from 2022 often drew hands with six fingers and could not write words. The newest tools are much better at both. Exact counting and small details are still hard.\nSome of the newest image tools work in a different way, but many still use diffusion.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.7 - Making Pictures with AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#try-it",
+    "href": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#try-it",
+    "title": "3.7 - Making Pictures with AI",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n3.7.5 - Watch Noise Become a Picture\n\n\nChoose words. Press Remove some noise one step at a time. At which step can you guess the picture?\nPress New noise with the same words. Play it. What changed? What stayed the same?\nKeep the noise. Choose new words. Play it. What changed?\n\n\n\n\n  \n    Your words:\n    \n  \n  \n    Noise:\n    🎲 New noise\n    \n  \n  \n    \n    \n      \n      \n        ➡️ Remove some noise\n        ▶️ Play\n        ↺ Back to noise\n      \n      \n    \n  \n  \n\n\n\n\n\nThis shows the idea, but it cheats. This demo already has the finished picture (an emoji), and it mixes the noise away. A real image generator does not have the picture. Its neural network has to guess what to remove, using what it learned from millions of pictures.\n\n\n3.7.6 - Write Picture Prompts\nWork with a partner, or in a group of 3.\n\n\nWrite a picture prompt on your sheet. Use all 5 parts from 3.7.3.\nMake the picture with your class AI tool. Make it a second time with the same prompt. How are the two pictures different?\nChange only the style. Make it again. What changed?\nFind one mistake in a picture. Write it down.\n\n\n\nIf your class AI tool cannot make pictures, Mr. Ross makes them on the projector. Each pair gives him one prompt. Big class: play “Describe It.” One student from each team sees a secret picture. The team writes a prompt from the description. Whose AI picture is closest?\n\n\nDo not make AI pictures of classmates, teachers, or anyone real. A fake picture of a real person can hurt them, even as a joke. (More in Lesson 4.3.)",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.7 - Making Pictures with AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#talk",
+    "href": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#talk",
+    "title": "3.7 - Making Pictures with AI",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nIs a picture made by AI art? Who should get the credit: the person who wrote the prompt, the company that made the AI, or the artists whose pictures trained it?\n\n\nThe noise turned into a picture when …\nThe same prompt made different pictures because …\nAn AI picture (is / is not) art, because …\nThe credit should go to … , because …",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.7 - Making Pictures with AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#watch",
+    "href": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#watch",
+    "title": "3.7 - Making Pictures with AI",
+    "section": "📺 Watch",
+    "text": "📺 Watch\n\n\nWhile you watch: What does the AI learn from, before it can make a picture?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.7 - Making Pictures with AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#go-further",
+    "href": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#go-further",
+    "title": "3.7 - Making Pictures with AI",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nChoose one subject, like “a bus at our school.” Make it in 5 styles: photo, cartoon, pixel art, oil painting, and a style from your home country. Make a poster of the 5 pictures.\n\n\nAsk for “exactly 3 red balls,” then 5, then 7, then 12. Count each picture. When does the AI start to get it wrong?\n\n\nAsk for “a doctor,” “a nurse,” “a scientist,” and “a basketball player.” Make each one 4 times. Count who the AI shows: men or women, young or old, skin colors. What do you notice? Bring your results to Lesson 4.2.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.7 - Making Pictures with AI"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html",
+    "href": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html",
+    "title": "3.8 - Project: Solve a Real Problem",
+    "section": "",
+    "text": "🔥 Warm Up\nYour mom gets a letter from the school, in English, with a deadline. You want a job at a grocery store, and you need a résumé. You have a biology test next week. You want to sell the bracelets you make.\nThese are real problems. In this unit, you learned to ask good questions, keep talking, get feedback, check facts, test translations, check math, and make pictures. Now put it all together. Use AI to help solve a problem in your life.\nWrite 3 problems in your life or your family’s life. Big or small. Then circle the one you care about most.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.8 - Project: Solve a Real Problem"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html#warmup",
+    "href": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html#warmup",
+    "title": "3.8 - Project: Solve a Real Problem",
+    "section": "",
+    "text": "Reading letters in English. Finding a job. Studying for a test. Planning a meal with what is in the kitchen. Saving money for something. Learning to drive. Planning a birthday party. Helping a younger brother or sister with homework.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.8 - Project: Solve a Real Problem"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html#learn",
+    "href": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html#learn",
+    "title": "3.8 - Project: Solve a Real Problem",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n3.8.1 - Choose a Good Problem\nA good project problem is:\n\nReal: you or your family really have this problem.\nSmall: you can finish it in about 2 class days.\nUseful: you make something you will really use.\n\n\n\n\n\n\n\n\n\nProblem\nYour product\nUnit 3 skills\n\n\n\n\nMy family gets school letters in English.\nA guide to school letters, in your language\nprompts, translation check\n\n\nI want a job.\nA résumé and 5 practice interview answers\nfeedback, follow-up questions\n\n\nI have a test next week.\nA study guide and a practice quiz\nprompts, fact-checking\n\n\nI want to sell what I make.\nA flyer and a price plan\npictures, math check\n\n\nI want to cook for my family.\nA week of meals and a shopping list\nprompts, math check\n\n\n\n\n\n\n3.8.2 - The Plan\nYour plan answers 6 questions. You write it on your sheet.\n\nWhat is the problem?\nWho has the problem?\nWhat will you make? (your product)\nHow will AI help?\nWhat will you check, and how?\nWhat will you do yourself?\n\n\n\n\n3.8.3 - The Rules\n\n\nUse at least 3 skills from Unit 3.\nKeep a prompt log: every prompt you use, and what you did with the answer.\nCheck what the AI tells you. Write how you checked.\nWrite an AI note at the end (Lesson 3.3).\nNo private information in the AI tool: no addresses, phone numbers, or full names.\n\n\n\n\n\n\n\n\n\n\n\n\nGot it\nAlmost\nNot yet\n\n\n\n\nReal problem\nThe product will really help someone.\nIt could help, but it is not finished.\nIt is not a real problem.\n\n\nPrompts\nThe log shows good prompts and follow-ups.\nThe log has some prompts.\nNo log.\n\n\nChecking\nI checked the facts, math, or translation, and fixed mistakes.\nI checked some things.\nI did not check.\n\n\nHonesty\nMy AI note says what the AI did and what I did.\nMy AI note is short.\nNo AI note.\n\n\n\nThis chart is the rubric. It shows how your project is graded.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.8 - Project: Solve a Real Problem"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html#try-it",
+    "href": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html#try-it",
+    "title": "3.8 - Project: Solve a Real Problem",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n3.8.4 - Plan It and Start It\nWork with a partner, or in a group of 3. (In a class of 4, make two pairs.) Choose a problem you both care about.\n\n\nFill in the plan on your sheet.\nShow your plan to Mr. Ross. He signs it.\nWrite your first prompt. Use task, context, and format (Lesson 3.1).\nWrite the prompt in your prompt log. Write what you did with the answer.\nKeep going: follow-up questions, checks, and changes. Log each one.\n\n\n\nFor a résumé, use a fake name and address in the AI tool, like “Student Name, 123 Main Street.” Put your real information in only at the very end, on your own computer.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.8 - Project: Solve a Real Problem"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html#talk",
+    "href": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html#talk",
+    "title": "3.8 - Project: Solve a Real Problem",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nWhat could go wrong if the AI makes a mistake in your project? Who could it hurt? How will you catch it?\n\n\nOur problem is … , and our product is …\nIf the AI makes a mistake, … could happen.\nWe will check … by …\nWe will do … ourselves, because …",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.8 - Project: Solve a Real Problem"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html#go-further",
+    "href": "chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html#go-further",
+    "title": "3.8 - Project: Solve a Real Problem",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nUse the second day to finish your product.\n\nRead your prompt log. What is left to do?\nFinish the product. Keep logging every prompt.\nCheck everything once more: facts, math, translation.\nWrite your AI note.\nBring your product, plan, and prompt log to Lesson 3.9.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.8 - Project: Solve a Real Problem"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html",
+    "href": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html",
+    "title": "3.9 - Project: Feedback and Share",
+    "section": "",
+    "text": "🔥 Warm Up\nNo real project is good the first time. People who write books, build bridges, and make apps all show their work early. They ask, “What is not working?” Then they make it better.\nToday you get feedback from your classmates and from AI. You make your project better. Then you show it.\nWhich feedback helps more? Why?",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.9 - Project: Feedback and Share"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html#warmup",
+    "href": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html#warmup",
+    "title": "3.9 - Project: Feedback and Share",
+    "section": "",
+    "text": "“It’s good.”\n“The price on your flyer is easy to see. The date is very small. Maybe make it bigger?”\n\n\nThe first one is kind, but you cannot do anything with it. The second one is kind, specific (the price, the date), and helpful (make it bigger). You know exactly what to change.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.9 - Project: Feedback and Share"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html#learn",
+    "href": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html#learn",
+    "title": "3.9 - Project: Feedback and Share",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n3.9.1 - Kind, Specific, Helpful\n\n\n\n\n\n\n\nNot helpful\nHelpful\n\n\n\n\n“It’s bad.”\n“I could not find the deadline. Can you put it at the top?”\n\n\n“Nice.”\n“Your study guide has great examples. The quiz needs answers.”\n\n\n“I don’t get it.”\n“I did not know who this is for. Maybe add a title?”\n\n\n\nUse these starters on your notes:\n\n\nI like … because …\nI wonder …\nWhat if you … ?\n\n\n\n\n\n3.9.2 - People and AI Give Different Feedback\n\n\n\n\n\n\n\nFeedback from AI\nFeedback from people\n\n\n\n\nfast, any time\ntakes more time\n\n\ndoes not know you, your family, or our school\nknows you and the people who will use it\n\n\nmay say “Great job!” too easily\ncan tell you if it is really useful\n\n\ngood at spelling and grammar\ngood at “Would I really use this?”\n\n\n\nThe best projects use both.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.9 - Project: Feedback and Share"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html#try-it",
+    "href": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html#try-it",
+    "title": "3.9 - Project: Feedback and Share",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n3.9.3 - Gallery Walk\n\n\nPut your product, plan, and prompt log on your desk.\nWalk to another project. Read it. Leave a sticky note: I like, I wonder, or What if.\nVisit 3 projects. Every project should get at least 3 notes.\nGo back to your project. Read your notes.\n\n\n\nSmall class (4 or 5): sit in a circle. Pass your project to the right. Write a note. Keep passing until everyone has read every project. Big class: 3 rounds of 4 minutes. Mr. Ross says when to move.\n\n\n\n3.9.4 - Make It Better\nWork with your project partner.\n\n\nAsk your class AI tool for feedback too. Use the feedback prompt from Lesson 3.3.\nOn your sheet, compare: what did people say? What did AI say?\nChoose the 2 most useful pieces of feedback. Change your project.\nWrite what you changed in your prompt log.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.9 - Project: Feedback and Share"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html#talk",
+    "href": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html#talk",
+    "title": "3.9 - Project: Feedback and Share",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\n\n3.9.5 - Share Your Project\nEach pair shares for one minute. Use your sheet to plan.\n\n\nOur problem was …\nWe made …\nAI helped us by …\nWe checked … and we found …\nWe did … ourselves.\nAfter feedback, we changed …\n\n\n\nSmall class: everyone shares to the whole class. Big class: share in groups of 3 pairs at the same time. Each group picks one project to share with the whole class.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.9 - Project: Feedback and Share"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html#go-further",
+    "href": "chapters/Unit_3/3.9_Project_Feedback_and_Share.html#go-further",
+    "title": "3.9 - Project: Feedback and Share",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nShare your product with the people it is for: your family, another class, a coach, or the ELL teachers. Ask them: “Is this useful?” What did they say?\n\n\nMake a class poster: one box for each project. In each box: the problem, one great prompt, and one mistake the AI made that you caught.",
+    "crumbs": [
+      "Unit 3: Using AI Well",
+      "3.9 - Project: Feedback and Share"
+    ]
+  },
+  {
     "objectID": "chapters/Unit_4/index.html",
     "href": "chapters/Unit_4/index.html",
     "title": "Introduction",
@@ -1333,7 +1960,7 @@
     "href": "glossary.html",
     "title": "Glossary",
     "section": "",
-    "text": "AI winter\nA time when people stopped giving money to AI research, because AI did not do what people promised. There were AI winters in the 1970s and around 1990.\nSee Also: hype\n\n\n\nartificial intelligence (AI)\nA computer program that does things that usually need human thinking, like seeing, talking, translating, or making choices. Most AI today learns from examples.\n\nExample:\nFace unlock on a phone, a translation app, and a chatbot all use AI.\n\nSee Also: machine learning, computer program\n\n\n\nattention\nIn a transformer, the way the AI looks at all the other words to decide which ones matter most for each word.\n\nExample:\nIn “The animal didn’t cross the street because it was too tired,” attention connects “it” to “animal.”\n\nSee Also: transformer\n\n\n\naxon\nThe long part of a neuron that carries the signal away from the cell body, toward other neurons.\nSee Also: neuron, synapse\n\n\n\nbias (a number in a neuron)\nIn a neuron, an extra number that is always added to the total. It does the same job as a threshold. (The word “bias” has another meaning too: being unfair. See Unit 4.)\n\nExample:\ntotal = (A × Attack weight) + (S × Special weight) + bias\n\nSee Also: weight, threshold\n\n\n\ncellular automaton\nA row or grid of cells. Each cell is a color, like black or white. At each step, every cell changes by following the same rule, which looks only at its neighbors. More than one is called cellular automata.\n\nExample:\nRule 30 and the Game of Life are cellular automata.\n\nSee Also: emergence, rule\n\n\n\nchatbot\nAn AI program that you talk to with words. You type or say something, and it answers.\n\nExample:\nChatGPT, Gemini, and Claude are chatbots.\n\nSee Also: artificial intelligence, prediction\n\n\n\ncomputer program\nA list of steps that a computer follows. Apps and games are computer programs.\nSee Also: rule\n\n\n\ncomputer vision\nAI that finds things in pictures and video, like faces, signs, or people in the street.\nSee Also: pixel, filter\n\n\n\nconditioning\nLearning to connect two things that happen together. Ivan Pavlov’s dogs learned to connect a sound with food, so they drooled when they heard the sound.\nSee Also: synapse\n\n\n\ndata\nInformation, like pictures, words, numbers, or sounds. An AI learns from data.\n\nExample:\nThe Quick, Draw! AI learned from data: about 50 million drawings.\n\nSee Also: machine learning\n\n\n\ndataset\nA big collection of examples that an AI learns from, like pictures with labels.\n\nExample:\nImageNet is a dataset of 14 million labeled pictures.\n\nSee Also: data, label\n\n\n\nDeep Blue\nA chess computer made by IBM. In 1997, it beat the world chess champion, Garry Kasparov. It used rules that people wrote, and it checked about 200 million chess positions every second.\nSee Also: rule\n\n\n\ndendrite\nOne of the short branches of a neuron. Dendrites take in signals from other neurons.\nSee Also: neuron\n\n\n\nedge\nA place in a picture where it changes fast from dark to light. Edges show where things begin and end.\nSee Also: filter\n\n\n\nELIZA effect\nWhen people feel that a computer understands them, but it does not. It is named after ELIZA, a chatbot from 1966.\n\nExample:\nELIZA only followed rules, but some people told it their secrets.\n\nSee Also: chatbot\n\n\n\nemergence\nWhen many simple parts work together and make something bigger and more complicated, which no one planned.\n\nExample:\nA stadium wave: each person only watches a neighbor, but together they make a wave that moves around the stadium.\n\nSee Also: cellular automaton\n\n\n\nfilter\nA small grid of numbers that slides over a picture. At each spot, it multiplies and adds. A filter can find edges or make a picture blurry.\nSee Also: edge, pixel\n\n\n\nGPU\nA computer chip first made for video games. It can do thousands of small math problems at the same time, so it is very good for training neural networks. GPU means “graphics processing unit.”\nSee Also: neural network\n\n\n\nhype\nBig promises and excitement, more than the facts show.\n\nExample:\nIn 1970, a scientist said that a machine as smart as a person was 3 to 8 years away. That was hype.\n\nSee Also: AI winter\n\n\n\ninput\nA number that goes into a neuron or a program. In a picture, each square can be an input: 1 for black, 0 for white.\nSee Also: weight, neuron\n\n\n\njudge\nIn the Turing test, the person who asks the questions and decides which player is the machine.\nSee Also: Turing test\n\n\n\nkey word\nA word that a program looks for to decide what to do.\n\nExample:\nWhen you type “I feel,” ELIZA finds the key words “I feel” and uses its rule for them.\n\nSee Also: rule\n\n\n\nlabel\nThe right answer that a person attaches to an example, like “cat” on a picture of a cat. An AI learns from examples and their labels.\n\nExample:\nIn ImageNet, people from 167 countries labeled 14 million pictures.\n\nSee Also: dataset\n\n\n\nlarge language model\nA transformer trained on a huge amount of text to predict the next word. Chatbots like ChatGPT are built on large language models. People often call them LLMs.\nSee Also: transformer, prediction, chatbot\n\n\n\nlearning curve\nA graph that shows how you get better with practice. The time or the number of mistakes usually drops fast at first, then more slowly.\nSee Also: synapse\n\n\n\nmachine learning\nA way to make AI. People do not write the rules. They give the computer many examples, and the computer finds the patterns by itself.\nSee Also: data, pattern, rule\n\n\n\nneural network\nA kind of AI made of many small parts that work a little like brain cells. Each part does a tiny bit of math. A neural network learns from examples.\nSee Also: machine learning, GPU\n\n\n\nneuron\nA cell that sends signals. Your brain has about 86 billion neurons. A neuron fires (sends a signal) only when the signals coming in add up to enough.\nSee Also: dendrite, axon, synapse, neural network\n\n\n\noverfitting\nWhen an AI memorizes its training examples instead of learning the real pattern. It does very well on the training data but worse on new data.\n\nExample:\nA student who memorizes the answers to one practice test, but cannot solve new problems.\n\nSee Also: training, test data\n\n\n\npattern\nSomething that is the same, or repeats, in many examples.\n\nExample:\nIn most drawings of a cat, the ears are two triangles on top of the head. That is a pattern.\n\n\n\n\nperceptron\nThe first artificial neuron that could learn. Frank Rosenblatt built it in 1958. It multiplies inputs by weights, adds them, and fires if the total passes a threshold.\nSee Also: weight, threshold, neural network\n\n\n\npersona\nA character that someone pretends to be. You can tell an AI to use a persona, like “Act like a 15-year-old student.”\n\nExample:\nIn a 2025 Turing test, a chatbot with a persona fooled judges much more often than the same chatbot without one.\n\nSee Also: Turing test\n\n\n\npixel\nOne tiny square of a picture. A computer stores each pixel as a number. In a black-and-white picture, 0 is black and 255 is white.\nSee Also: computer vision\n\n\n\nprediction\nA best guess about something you do not know yet. A prediction can be wrong.\n\nExample:\nA phone keyboard makes a prediction about your next word.\n\n\n\n\nrandom\nWith no pattern, so you cannot guess what comes next.\n\nExample:\nThe middle of Rule 30 looks random.\n\n\n\n\nrule\nAn exact instruction that a computer follows: “If this happens, do that.” In a normal computer program, a person writes the rules.\n\nExample:\nAn alarm clock follows one rule: “If the time is 7:00, ring.”\n\nSee Also: computer program, machine learning\n\n\n\nsynapse\nThe tiny gap between two neurons. Chemicals carry the signal across it. When you practice, the synapses you use get stronger.\nSee Also: neuron\n\n\n\ntest data\nNew examples that an AI never saw during training. We use them to check what the AI really learned.\n\nExample:\nAfter training on cards T1 to T10, the class neuron was tested on cards X1 to X6, with no fixing.\n\nSee Also: training\n\n\n\nthreshold\nThe number that the total must pass for a neuron to fire.\n\nExample:\nIf the threshold is 4 and the total is 5, the neuron fires.\n\nSee Also: weight\n\n\n\ntoken\nA word or a piece of a word that a chatbot reads and writes. For example, “playing” might be two tokens: “play” and “ing.”\nSee Also: large language model\n\n\n\ntraining\nShowing an AI many examples so it can fix its weights. After each mistake, the weights change a little.\nSee Also: weight, test data\n\n\n\ntransfer learning\nStarting from an AI that already learned something, then teaching it a new job with a few new examples. It is much faster than starting from nothing.\n\nExample:\nTeachable Machine starts from a network that learned from millions of pictures. It only learns the last step from your pictures.\n\nSee Also: training\n\n\n\ntransformer\nA kind of neural network, first shared by Google scientists in 2017. It uses attention to connect the words in a sentence. It is the T in GPT.\nSee Also: attention, neural network, large language model\n\n\n\nTuring test\nA game Alan Turing described in 1950. He called it the imitation game. A judge chats in writing with a person and a machine. If the judge cannot tell which one is the machine, the machine passes.\nSee Also: judge, chatbot\n\n\n\nunderstand\nTo know what something means, not only what it looks like. Whether AI can understand is a question people still argue about.\n\nExample:\nIn the Klingon Room, the person copies correct replies in Klingon, but they do not understand Klingon.\n\nSee Also: ELIZA effect\n\n\n\nweight\nA number that says how much an input matters to a neuron. A big weight means the input matters a lot. A negative weight means the input makes the neuron less likely to fire. When a neural network learns, it changes its weights.\nSee Also: input, threshold, neural network",
+    "text": "AI winter\nA time when people stopped giving money to AI research, because AI did not do what people promised. There were AI winters in the 1970s and around 1990.\nSee Also: hype\n\n\n\nartificial intelligence (AI)\nA computer program that does things that usually need human thinking, like seeing, talking, translating, or making choices. Most AI today learns from examples.\n\nExample:\nFace unlock on a phone, a translation app, and a chatbot all use AI.\n\nSee Also: machine learning, computer program\n\n\n\nattention\nIn a transformer, the way the AI looks at all the other words to decide which ones matter most for each word.\n\nExample:\nIn “The animal didn’t cross the street because it was too tired,” attention connects “it” to “animal.”\n\nSee Also: transformer\n\n\n\naudience\nThe people who will read, see, or use your work.\n\n\n\naxon\nThe long part of a neuron that carries the signal away from the cell body, toward other neurons.\nSee Also: neuron, synapse\n\n\n\nback translation\nTranslating a translation back to the first language, to check it. If the meaning changed, something went wrong.\n\nExample:\nEnglish → Spanish → English again.\n\nSee Also: translate\n\n\n\nbias (a number in a neuron)\nIn a neuron, an extra number that is always added to the total. It does the same job as a threshold. (The word “bias” has another meaning too: being unfair. See Unit 4.)\n\nExample:\ntotal = (A × Attack weight) + (S × Special weight) + bias\n\nSee Also: weight, threshold\n\n\n\ncellular automaton\nA row or grid of cells. Each cell is a color, like black or white. At each step, every cell changes by following the same rule, which looks only at its neighbors. More than one is called cellular automata.\n\nExample:\nRule 30 and the Game of Life are cellular automata.\n\nSee Also: emergence, rule\n\n\n\nchatbot\nAn AI program that you talk to with words. You type or say something, and it answers.\n\nExample:\nChatGPT, Gemini, and Claude are chatbots.\n\nSee Also: artificial intelligence, prediction\n\n\n\ncomputer program\nA list of steps that a computer follows. Apps and games are computer programs.\nSee Also: rule\n\n\n\ncomputer vision\nAI that finds things in pictures and video, like faces, signs, or people in the street.\nSee Also: pixel, filter\n\n\n\nconditioning\nLearning to connect two things that happen together. Ivan Pavlov’s dogs learned to connect a sound with food, so they drooled when they heard the sound.\nSee Also: synapse\n\n\n\ncontext\nThe facts around your question: who you are, what the answer is for, and what you already know. A chatbot cannot guess these, so you tell it.\nSee Also: prompt\n\n\n\ncontext window\nAll the words a chatbot can read at one time. In a chat, it holds your old messages too. That is why a follow-up question works. A new chat starts with an empty context window.\nSee Also: follow-up question, token\n\n\n\ndata\nInformation, like pictures, words, numbers, or sounds. An AI learns from data.\n\nExample:\nThe Quick, Draw! AI learned from data: about 50 million drawings.\n\nSee Also: machine learning\n\n\n\ndataset\nA big collection of examples that an AI learns from, like pictures with labels.\n\nExample:\nImageNet is a dataset of 14 million labeled pictures.\n\nSee Also: data, label\n\n\n\nDeep Blue\nA chess computer made by IBM. In 1997, it beat the world chess champion, Garry Kasparov. It used rules that people wrote, and it checked about 200 million chess positions every second.\nSee Also: rule\n\n\n\ndendrite\nOne of the short branches of a neuron. Dendrites take in signals from other neurons.\nSee Also: neuron\n\n\n\ndiffusion\nA way to make a picture: start with noise, then remove a little noise at a time, again and again, guided by words. A neural network guesses which part is noise.\nSee Also: image generator, noise\n\n\n\ndraft\nA first try at a piece of writing. You will change it to make it better.\nSee Also: revise\n\n\n\nedge\nA place in a picture where it changes fast from dark to light. Edges show where things begin and end.\nSee Also: filter\n\n\n\nELIZA effect\nWhen people feel that a computer understands them, but it does not. It is named after ELIZA, a chatbot from 1966.\n\nExample:\nELIZA only followed rules, but some people told it their secrets.\n\nSee Also: chatbot\n\n\n\nemergence\nWhen many simple parts work together and make something bigger and more complicated, which no one planned.\n\nExample:\nA stadium wave: each person only watches a neighbor, but together they make a wave that moves around the stadium.\n\nSee Also: cellular automaton\n\n\n\nestimate\nA quick answer that is close, but not exact. You can use it to check if an answer makes sense.\n\nExample:\n\\(3847 \\times 29\\) is about \\(4000 \\times 30 = 120000\\).\n\n\n\n\nfact-check\nTo find out if something is true, using good sources.\nSee Also: lateral reading, source\n\n\n\nfeedback\nComments that tell you what is good about your work and what to make better. Good feedback is kind, specific, and helpful.\nSee Also: revise\n\n\n\nfilter\nA small grid of numbers that slides over a picture. At each spot, it multiplies and adds. A filter can find edges or make a picture blurry.\nSee Also: edge, pixel\n\n\n\nfollow-up question\nA question you ask after an answer, to make the answer better. For example: “Explain it in simple words” or “Give me an example.”\nSee Also: context window\n\n\n\nformat\nWhat an answer should look like: a list, a table, 3 sentences, simple words, or a certain language.\nSee Also: prompt\n\n\n\ngallery walk\nWalking around the room to look at everyone’s work and leave feedback notes, like visitors in an art gallery.\nSee Also: feedback\n\n\n\nGPU\nA computer chip first made for video games. It can do thousands of small math problems at the same time, so it is very good for training neural networks. GPU means “graphics processing unit.”\nSee Also: neural network\n\n\n\nhallucination\nWhen AI writes something false as if it were true, like a book or a court case that does not exist. The AI sounds just as sure as when it is right.\nSee Also: fact-check\n\n\n\nhint\nA small help that shows you the next step, but not the answer.\n\n\n\nhype\nBig promises and excitement, more than the facts show.\n\nExample:\nIn 1970, a scientist said that a machine as smart as a person was 3 to 8 years away. That was hype.\n\nSee Also: AI winter\n\n\n\nimage generator\nAn AI that makes a new picture from words. Many image generators use diffusion.\nSee Also: diffusion\n\n\n\ninput\nA number that goes into a neuron or a program. In a picture, each square can be an input: 1 for black, 0 for white.\nSee Also: weight, neuron\n\n\n\njudge\nIn the Turing test, the person who asks the questions and decides which player is the machine.\nSee Also: Turing test\n\n\n\nkey word\nA word that a program looks for to decide what to do.\n\nExample:\nWhen you type “I feel,” ELIZA finds the key words “I feel” and uses its rule for them.\n\nSee Also: rule\n\n\n\nlabel\nThe right answer that a person attaches to an example, like “cat” on a picture of a cat. An AI learns from examples and their labels.\n\nExample:\nIn ImageNet, people from 167 countries labeled 14 million pictures.\n\nSee Also: dataset\n\n\n\nlarge language model\nA transformer trained on a huge amount of text to predict the next word. Chatbots like ChatGPT are built on large language models. People often call them LLMs.\nSee Also: transformer, prediction, chatbot\n\n\n\nlateral reading\nChecking a fact by opening new tabs to see what other sources say, instead of reading only one page. “Lateral” means “to the side.” Professional fact-checkers do this.\nSee Also: fact-check\n\n\n\nlearning curve\nA graph that shows how you get better with practice. The time or the number of mistakes usually drops fast at first, then more slowly.\nSee Also: synapse\n\n\n\nlow-resource language\nA language with not much writing online for AI to learn from. AI usually makes more mistakes in these languages.\nSee Also: dataset\n\n\n\nmachine learning\nA way to make AI. People do not write the rules. They give the computer many examples, and the computer finds the patterns by itself.\nSee Also: data, pattern, rule\n\n\n\nneural network\nA kind of AI made of many small parts that work a little like brain cells. Each part does a tiny bit of math. A neural network learns from examples.\nSee Also: machine learning, GPU\n\n\n\nneuron\nA cell that sends signals. Your brain has about 86 billion neurons. A neuron fires (sends a signal) only when the signals coming in add up to enough.\nSee Also: dendrite, axon, synapse, neural network\n\n\n\nnoise\nRandom dots with no picture in them, like the static on an old TV.\nSee Also: diffusion\n\n\n\noverfitting\nWhen an AI memorizes its training examples instead of learning the real pattern. It does very well on the training data but worse on new data.\n\nExample:\nA student who memorizes the answers to one practice test, but cannot solve new problems.\n\nSee Also: training, test data\n\n\n\npattern\nSomething that is the same, or repeats, in many examples.\n\nExample:\nIn most drawings of a cat, the ears are two triangles on top of the head. That is a pattern.\n\n\n\n\nperceptron\nThe first artificial neuron that could learn. Frank Rosenblatt built it in 1958. It multiplies inputs by weights, adds them, and fires if the total passes a threshold.\nSee Also: weight, threshold, neural network\n\n\n\npersona\nA character that someone pretends to be. You can tell an AI to use a persona, like “Act like a 15-year-old student.”\n\nExample:\nIn a 2025 Turing test, a chatbot with a persona fooled judges much more often than the same chatbot without one.\n\nSee Also: Turing test\n\n\n\npixel\nOne tiny square of a picture. A computer stores each pixel as a number. In a black-and-white picture, 0 is black and 255 is white.\nSee Also: computer vision\n\n\n\nplagiarism\nTurning in someone else’s words or ideas as your own. Turning in AI writing as your own, when the assignment does not allow it, is plagiarism too.\n\n\n\nprediction\nA best guess about something you do not know yet. A prediction can be wrong.\n\nExample:\nA phone keyboard makes a prediction about your next word.\n\n\n\n\nproduct\nThe thing you make in a project, like a flyer, a study guide, or a plan.\n\n\n\nprompt\nWhat you type to tell an AI what you want. A good prompt has a task, context, and a format.\n\nExample:\n“I am in 10th grade. Give me 3 reasons dogs make good pets. Use simple words.”\n\nSee Also: task, context, format\n\n\n\nprompt log\nA list of every prompt you used in a project, and what you did with each answer.\nSee Also: prompt\n\n\n\nrandom\nWith no pattern, so you cannot guess what comes next.\n\nExample:\nThe middle of Rule 30 looks random.\n\n\n\n\nrevise\nTo change your work to make it better, often after feedback.\nSee Also: feedback, draft\n\n\n\nrubric\nA chart that shows how your work will be graded.\n\n\n\nrule\nAn exact instruction that a computer follows: “If this happens, do that.” In a normal computer program, a person writes the rules.\n\nExample:\nAn alarm clock follows one rule: “If the time is 7:00, ring.”\n\nSee Also: computer program, machine learning\n\n\n\nsource\nWhere a fact comes from: a book, a website, a news story, or a person.\nSee Also: fact-check\n\n\n\nstyle\nThe way a picture looks: a photo, a cartoon, a watercolor painting, pixel art.\n\n\n\nsynapse\nThe tiny gap between two neurons. Chemicals carry the signal across it. When you practice, the synapses you use get stronger.\nSee Also: neuron\n\n\n\ntask\nThe job you want the AI to do, like “explain,” “give me 3 ideas,” or “make a quiz.”\nSee Also: prompt\n\n\n\ntest data\nNew examples that an AI never saw during training. We use them to check what the AI really learned.\n\nExample:\nAfter training on cards T1 to T10, the class neuron was tested on cards X1 to X6, with no fixing.\n\nSee Also: training\n\n\n\nthreshold\nThe number that the total must pass for a neuron to fire.\n\nExample:\nIf the threshold is 4 and the total is 5, the neuron fires.\n\nSee Also: weight\n\n\n\ntoken\nA word or a piece of a word that a chatbot reads and writes. For example, “playing” might be two tokens: “play” and “ing.”\nSee Also: large language model\n\n\n\ntraining\nShowing an AI many examples so it can fix its weights. After each mistake, the weights change a little.\nSee Also: weight, test data\n\n\n\ntransfer learning\nStarting from an AI that already learned something, then teaching it a new job with a few new examples. It is much faster than starting from nothing.\n\nExample:\nTeachable Machine starts from a network that learned from millions of pictures. It only learns the last step from your pictures.\n\nSee Also: training\n\n\n\ntransformer\nA kind of neural network, first shared by Google scientists in 2017. It uses attention to connect the words in a sentence. It is the T in GPT.\nSee Also: attention, neural network, large language model\n\n\n\ntranslate\nTo change words from one language to another, with the same meaning.\nSee Also: back translation\n\n\n\nTuring test\nA game Alan Turing described in 1950. He called it the imitation game. A judge chats in writing with a person and a machine. If the judge cannot tell which one is the machine, the machine passes.\nSee Also: judge, chatbot\n\n\n\nunderstand\nTo know what something means, not only what it looks like. Whether AI can understand is a question people still argue about.\n\nExample:\nIn the Klingon Room, the person copies correct replies in Klingon, but they do not understand Klingon.\n\nSee Also: ELIZA effect\n\n\n\nweight\nA number that says how much an input matters to a neuron. A big weight means the input matters a lot. A negative weight means the input makes the neuron less likely to fire. When a neural network learns, it changes its weights.\nSee Also: input, threshold, neural network",
     "crumbs": [
       "Glossary"
     ]
