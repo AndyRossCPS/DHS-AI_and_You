@@ -249,8 +249,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/Unit_2/2.6_Watch_Mr_Ross_Build_an_AI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2.6 - Watch Mr.&nbsp;Ross Build an AI</span></a>
+  <a href="../../chapters/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 - Watch Your Teacher Build an AI</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -626,7 +626,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="aion" id="aion">
   <div class="aion-grid"></div>
   <div class="aion-bar">
-    <button type="button" class="aion-reveal">👀 Show Mr. Ross's answers</button>
+    <button type="button" class="aion-reveal">👀 Show the answers</button>
     <button type="button" class="aion-reset">↺ Start over</button>
   </div>
 </div>
@@ -751,11 +751,11 @@ ul.task-list li input[type="checkbox"] {
   const reveal = root.querySelector(".aion-reveal");
   reveal.addEventListener("click", () => {
     const shown = root.classList.toggle("revealed");
-    reveal.textContent = shown ? "🙈 Hide the answers" : "👀 Show Mr. Ross's answers";
+    reveal.textContent = shown ? "🙈 Hide the answers" : "👀 Show the answers";
   });
   root.querySelector(".aion-reset").addEventListener("click", () => {
     root.classList.remove("revealed");
-    reveal.textContent = "👀 Show Mr. Ross's answers";
+    reveal.textContent = "👀 Show the answers";
     root.querySelectorAll(".aion-choices button").forEach((x) => x.setAttribute("aria-pressed", "false"));
   });
 })();
@@ -870,7 +870,7 @@ ul.task-list li input[type="checkbox"] {
 <li>On your sheet, circle one: <strong>Yes</strong>, <strong>A little</strong>, or <strong>No</strong>.</li>
 <li>Write one reason.</li>
 <li>Tell a partner your answer and your reason.</li>
-<li>Mr.&nbsp;Ross keeps your answer. You will read it again in the last lesson of the class.</li>
+<li>Your teacher keeps your answer. You will read it again in the last lesson of the class.</li>
 </ol>
 </div>
 <div class="frames">
