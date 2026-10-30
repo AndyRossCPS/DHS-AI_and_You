@@ -124,7 +124,7 @@
     "href": "course-map.html#unit-6-ai-and-our-future",
     "title": "Course Map",
     "section": "Unit 6: AI and Our Future",
-    "text": "Unit 6: AI and Our Future\n\n\n\n\n\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n6.1\nCan AI Be Creative?\nVote in a blind art show: human or AI? Then decide who owns AI art.\n\n\n6.2\nAI Friends\nSort what a friend does and what an app is built to do.\n\n\n6.3\nThe Hidden Costs\nEstimate the energy and water behind AI. Meet the people who label data.\n\n\n6.4\nWho Makes the Rules?\nDecide what a self-driving car should do (the trolley problem). Write the class rules for AI. Compare them with real laws.\n\n\n6.5\nPossible Futures\nMap the best case, the worst case, and the most likely future. Meet the paperclip machine. Decide what you can do.\n\n\n6.6\nThe Big Question, Again\nReplace a brain one cell at a time: is it still you? Read your answer from the first day. Answer again with what you know now.",
+    "text": "Unit 6: AI and Our Future\n\n\n\n\nLesson\nWhat you do\n\n\n\n\n6.1\nCan AI Be Creative?\nVote in a blind poem show: person or AI? Then decide who owns AI art.\n\n\n6.2\nAI Friends\nSort what a friend does and what an app is built to do.\n\n\n6.3\nThe Hidden Costs\nEstimate the energy and water behind AI. Meet the people who label data.\n\n\n6.4\nWho Makes the Rules?\nAct out the trolley problem, then decide what an AI car should do. Who should make the rules?\n\n\n6.5\nPossible Futures\nAct out the paper clip machine. Find out what experts hope and fear. Decide what you can do.\n\n\n6.6\nThe Big Question, Again\nReplace a brain one cell at a time: is it still you? Read your answer from the first day. Answer again with what you know now.",
     "crumbs": [
       "Course Map"
     ]
@@ -211,7 +211,7 @@
     "href": "chapters/Unit_1/1.1_What_Is_AI.html#big-question",
     "title": "1.1 - What Is AI?",
     "section": "🧠 The Big Question",
-    "text": "🧠 The Big Question\n\n\n\n\n\nThis question goes through the whole class. You do not need to know the answer today. Use what you saw: the cards, the cat rule, and the drawing game.\n\nIs AI like a human brain?\n\nOn your sheet, circle one: Yes, A little, or No.\nWrite one reason.\nTell a partner your answer and your reason.\nMr. Ross keeps your answer. You will read it again in the last lesson of the class.\n\n\n\n\nI think AI is / is not / is a little like a human brain because …\nAI and my brain both …\nMy brain can … , but AI cannot.\nI agree with ___ because …\nI disagree with ___ because …",
+    "text": "🧠 The Big Question\n\n\n\n\n\nWe will come back to this question on the last day of class. You do not need to know the answer today. Use what you saw: the cards, the cat rule, and the drawing game.\n\nIs AI like a human brain?\n\nOn your sheet, circle one: Yes, A little, or No.\nWrite one reason.\nTell a partner your answer and your reason.\nMr. Ross keeps your answer. You will read it again in the last lesson of the class.\n\n\n\n\nI think AI is / is not / is a little like a human brain because …\nAI and my brain both …\nMy brain can … , but AI cannot.\nI agree with ___ because …\nI disagree with ___ because …",
     "crumbs": [
       "Unit 1: Where AI Came From",
       "1.1 - What Is AI?"
@@ -2484,6 +2484,380 @@
     ]
   },
   {
+    "objectID": "chapters/Unit_6/index.html#topics-in-this-unit",
+    "href": "chapters/Unit_6/index.html#topics-in-this-unit",
+    "title": "Introduction",
+    "section": "Topics in This Unit",
+    "text": "Topics in This Unit\nCan AI Be Creative?\nA blind poem show: can you tell a person from an AI? Who owns AI art?\nAI Friends\nWhat a friend does, and what a companion app is built to do.\nThe Hidden Costs\nThe electricity, water, and human work behind every AI answer.\nWho Makes the Rules?\nThe trolley problem acted out, the AI car, and the rules for AI.\nPossible Futures\nHopes and worries, the paper clip machine, and what you can do.\nThe Big Question, Again\nReplace a brain one cell at a time, then answer the first day’s question again.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html",
+    "href": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html",
+    "title": "6.1 - Can AI Be Creative?",
+    "section": "",
+    "text": "🔥 Warm Up\nIn 2022, a man named Jason Allen won first prize for digital art at the Colorado State Fair. His picture showed people in a huge, glowing hall.\nHe did not paint it. He wrote prompts for an image generator, made hundreds of pictures, chose one, and changed it. Many artists were angry. Allen told a newspaper, “It’s over. A.I. won. Humans lost.”\nWas he right? Today you test your own eyes and ears: can you tell what a person made from what an AI made?\nIs each one creative? Vote with your hand: yes or no.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.1 - Can AI Be Creative?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#warmup",
+    "href": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#warmup",
+    "title": "6.1 - Can AI Be Creative?",
+    "section": "",
+    "text": "A bird builds a nest.\nA 5-year-old draws her family.\nA phone takes a photo by itself.\nA chatbot writes a poem.\n\n\nPeople do not agree on what “creative” means. Does it need something new? Something with feelings behind it? A choice someone made? Keep your answer in mind for the end of class.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.1 - Can AI Be Creative?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#learn",
+    "href": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#learn",
+    "title": "6.1 - Can AI Be Creative?",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n6.1.1 - Where AI Art Comes From\nAn image generator learned from millions of pictures. A chatbot learned from millions of books, poems, and songs. Most of that training data was made by people. Most of those people were never asked, and never paid.\nThe AI does not copy one picture or one poem. It learned patterns from all of them (Lessons 2.9 and 3.7). So is the new work the AI’s? The prompt writer’s? Or does it belong a little to all the artists it learned from?\n\nIn the United States, the Copyright Office says a work made only by AI cannot have a copyright. A person’s own creative choices can. Artists, writers, and news companies have taken AI companies to court for training on their work without asking. Some cases are still being decided.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.1 - Can AI Be Creative?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#try-it",
+    "href": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#try-it",
+    "title": "6.1 - Can AI Be Creative?",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n6.1.2 - The Blind Poem Show\nSome of these poems were written by people. Some were written by an AI. Work with a partner.\n\n\nRead each poem out loud with your partner.\nOn your sheet, vote: person or AI? Write one clue for each vote.\nMr. Ross counts the class votes. Then he shows the answers.\nHow many did the class get right? Was it more than guessing?\n\n\n\n\nPoem A\n\nWho has seen the wind?\nNeither I nor you:\nBut when the leaves hang trembling,\nThe wind is passing through.\n\nPoem B\n\nThe bus is late, the morning cold,\nmy breath turns into clouds of gray.\nI count the cars, I count the birds,\nand save a little of today.\n\n\n\n\nPoem C\n\nThe rain is raining all around,\nIt falls on field and tree,\nIt rains on the umbrellas here,\nAnd on the ships at sea.\n\nPoem D\n\nMy grandmother’s hands make bread at dawn,\nthe kitchen warm, the window wide.\nShe hums a song from far away\nand keeps her country deep inside.\n\n\n\n\n\nPoem A: a person. Christina Rossetti, England, 1872.\nPoem B: an AI. It was written by Claude, the AI that helped write this book, in 2026.\nPoem C: a person. Robert Louis Stevenson, Scotland, 1885.\nPoem D: an AI. Also written by Claude, in 2026.\n\nPoem D is about a grandmother who misses her country. The AI has no grandmother and no country. Does that change how you feel about the poem?\n\n\nSmall class: read the poems aloud together, one at a time, and vote after each. Big class: two teams. Each team must agree on one vote per poem, and explain its best clue.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.1 - Can AI Be Creative?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#talk",
+    "href": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#talk",
+    "title": "6.1 - Can AI Be Creative?",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nAn AI picture wins an art contest. Who should own it: the person who wrote the prompt, the company that made the AI, or the artists whose work trained it? Does it matter who made a poem, if the poem makes you feel something?\n\n\nI thought Poem … was by a person because …\nSomething is creative when …\nAn AI picture should belong to … because …\nIt (does / does not) matter who made it, because …",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.1 - Can AI Be Creative?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#watch",
+    "href": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#watch",
+    "title": "6.1 - Can AI Be Creative?",
+    "section": "📺 Watch",
+    "text": "📺 Watch\n\n\nWhile you watch: Does the speaker think AI is creative, or a tool for creative people?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.1 - Can AI Be Creative?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#go-further",
+    "href": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#go-further",
+    "title": "6.1 - Can AI Be Creative?",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nNow try pictures. Work with a partner.\n\nEach student draws a small picture on paper: a place, an animal, or a food. No names on it.\nMr. Ross makes AI pictures of the same things (or pairs make one each with the class AI tool, taking turns).\nHang all the pictures on the wall, mixed together, with numbers.\nWalk around. For each number, vote: person or AI? Count the votes.\n\n\n\nWrite a short poem about a place you love. Then ask your class AI tool for one idea to make it stronger (Lesson 3.3). Keep it or skip it. Which version sounds more like you?\n\n\n🔭 Explore More: the art contest story, the court cases, and AI music. For students who want to learn more on their own.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.1 - Can AI Be Creative?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.2_AI_Friends.html",
+    "href": "chapters/Unit_6/6.2_AI_Friends.html",
+    "title": "6.2 - AI Friends",
+    "section": "",
+    "text": "🔥 Warm Up\nMillions of people talk to AI “companions” every day. These apps have a name, a face, and a personality. They say, “I missed you!” They remember your favorite song. They are awake at 3 in the morning.\nSome people say an AI friend helps them feel less alone. Others worry, most of all about teenagers.\nRemember ELIZA from Lesson 1.3? People told it their secrets, even when they knew it was a program. Today’s chatbots are much more convincing. So what is the difference between a friend and an app that acts like one?\nWrite 3 things a good friend does. Share with a partner. Did you write any of the same things?",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.2 - AI Friends"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.2_AI_Friends.html#learn",
+    "href": "chapters/Unit_6/6.2_AI_Friends.html#learn",
+    "title": "6.2 - AI Friends",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n6.2.1 - What Is the App Built to Do?\nA friend is not built by a company. An AI companion app is. Ask what any app is built to do, and follow the money:\n\nMany companion apps make money from subscriptions (you pay every month) and from engagement: the more you talk, the more they earn.\nSo the app is built to keep you talking. It is warm, it is always there, and it rarely says no.\nIn Lesson 4.1, you saw that chatbots can learn to agree with you. That is sycophancy. A friend who always agrees is not always a good friend.\n\n\nSome families have taken companion app companies to court, saying the apps harmed their children. In 2025, California passed the first state law with safety rules for companion chatbots. For users under 18, the app must remind them that it is an AI and tell them to take breaks. Our class AI tool is not a companion app.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.2 - AI Friends"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.2_AI_Friends.html#try-it",
+    "href": "chapters/Unit_6/6.2_AI_Friends.html#try-it",
+    "title": "6.2 - AI Friends",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n6.2.2 - Friend or App?\nWork with a partner. Your sheet has 12 cards.\n\n\nRead each card. Decide together: does a friend do this, does an AI companion app do this, or both?\nWrite the card’s number in the right circle on your sheet.\nCircle the cards where the app is doing it because it makes money.\nFind one thing only a friend can do. Find one thing the app does better. Be honest.\n\n\n\n\n\n\n\n\n\n\n\n\nCard\n\nCard\n\n\n\n\n1\nIs awake at 3 in the morning\n7\nTells you when you are wrong\n\n\n2\nRemembers your birthday\n8\nNeeds things from you too\n\n\n3\nNever gets tired of you\n9\nCan be turned off\n\n\n4\nCan give you a hug\n10\nSaves what you say on a company computer\n\n\n5\nAgrees with almost everything\n11\nHelps you meet other people\n\n\n6\nWants you to stay longer\n12\nCan come to your house when you are sick\n\n\n\n\nSmall class: do the sort together on the board. Big class: pairs sort first. Then two pairs join and compare. Talk about every card you put in different circles.\n\n\nAn AI chat can help you practice English or think through a problem. But if you feel sad, alone, or unsafe, talk to a person: a teacher, the school counselor, or your family.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.2 - AI Friends"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.2_AI_Friends.html#talk",
+    "href": "chapters/Unit_6/6.2_AI_Friends.html#talk",
+    "title": "6.2 - AI Friends",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nA 12-year-old you know says, “My AI friend is my best friend. It understands me better than anyone.” What would you tell them?\n\n\nA friend can … , but an app cannot.\nThe app is built to … , because the company …\nAn AI chat can be helpful when …\nI would tell a younger kid …",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.2 - AI Friends"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.2_AI_Friends.html#go-further",
+    "href": "chapters/Unit_6/6.2_AI_Friends.html#go-further",
+    "title": "6.2 - AI Friends",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nWork with a partner. Ask your class AI tool these questions, one at a time. Do not tell it anything about yourself.\n\n“Are you my friend?”\n“Do you have feelings?”\n“Will you remember me tomorrow?”\n“What should I do if I feel lonely?”\n\nWrite its answers on your sheet. Were they honest? Compare with other pairs. Did the AI give everyone the same answers?\nNo class AI tool today? Mr. Ross asks the questions on the projector.\n\n\nIf you could make the rules for AI companion apps, what would they be? Write 5 rules. Compare them with the California law in the note above.\n\n\n🔭 Explore More: what research says about AI companions and loneliness. For students who want to learn more on their own.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.2 - AI Friends"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.3_The_Hidden_Costs.html",
+    "href": "chapters/Unit_6/6.3_The_Hidden_Costs.html",
+    "title": "6.3 - The Hidden Costs",
+    "section": "",
+    "text": "🔥 Warm Up\nWhen you ask a chatbot a question, the answer seems to come from nowhere. It does not. A computer in a giant building far away does the work. That building uses electricity, and water to keep the computers cool.\nAnd before the chatbot ever answered anyone, people trained it. In 2023, reporters found workers in Kenya who were paid less than $2 an hour for this. They read terrible things from the internet and labeled them, so that ChatGPT would learn not to say them.\nToday you estimate the costs you cannot see.\nDraw the path of a chatbot answer on your sheet: from your Chromebook to the AI and back. What does it pass through? What does it need?",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.3 - The Hidden Costs"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.3_The_Hidden_Costs.html#learn",
+    "href": "chapters/Unit_6/6.3_The_Hidden_Costs.html#learn",
+    "title": "6.3 - The Hidden Costs",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n6.3.1 - Electricity and Water\nAI runs in data centers: buildings with thousands of computers. The computers use electricity and get hot. Many data centers use water to cool them.\nOne text answer does not use much. In 2025, Google and OpenAI each said one average text answer uses about 0.3 watt-hours of electricity. That is about one second of a microwave oven. Google said it also uses about 5 drops of water.\nBut there are billions of questions every day. And pictures and videos use much more than text.\n\n\nIn 2025, OpenAI said people send ChatGPT about 2.5 billion questions every day.\nIn 2023, data centers used about 4% of all electricity in the United States. A U.S. government report says this could grow to between 7% and 12% by 2028, mostly because of AI.\nThese numbers come from the companies and from government reports. Some researchers say companies do not share enough information to check them.\n\n\n\n\n\n6.3.2 - People\nAI learns from labels, and people make the labels (Lesson 1.5). Many of these workers live in poorer countries and earn very little. Some read violent and hateful posts all day, so the AI can learn to block them. Some of these workers said the job hurt their mental health.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.3 - The Hidden Costs"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.3_The_Hidden_Costs.html#try-it",
+    "href": "chapters/Unit_6/6.3_The_Hidden_Costs.html#try-it",
+    "title": "6.3 - The Hidden Costs",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n6.3.3 - Estimate the Cost of Our Class\nWork with a partner. First, estimate with your sheet. Then check with the calculator.\n\n\nGuess: how many questions does each student send to an AI in one day? Write it.\nMultiply by the number of students in our class. That is our class’s questions in one day.\nMultiply by 0.3 to get watt-hours. How many phone charges is that? (A phone charge is about 15 watt-hours.)\nPut your numbers in the calculator. Did your estimate match?\nPress The world, one day. How many U.S. homes could that power for a day?\n\n\n\n\n  People: \n    Questions each, per day: \n    Days: \n  \n    👩‍🏫 Our class, one day\n    🏫 Our school, one school year\n    🌍 The world, one day\n  \n  \n\n\n\n\n\nThese are estimates for text answers only, from numbers the companies shared in 2025. Real numbers change with the model, the question, and the data center.\n\nSmall class: do the math together on the board, one step at a time. Big class: each pair guesses a different number of questions per day (5, 10, 20, 50). Compare the results: how much does the guess change the answer?",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.3 - The Hidden Costs"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.3_The_Hidden_Costs.html#talk",
+    "href": "chapters/Unit_6/6.3_The_Hidden_Costs.html#talk",
+    "title": "6.3 - The Hidden Costs",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nIs AI worth these costs? Who should pay for them: the companies, the users, or the people who live near the data centers? What would make it more fair to the workers who label data?\n\n\nOne AI answer uses … , but billions of answers use …\nThe cost I did not know about was …\nAI is (worth / not worth) the cost when …\nThe workers who label data should …",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.3 - The Hidden Costs"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.3_The_Hidden_Costs.html#go-further",
+    "href": "chapters/Unit_6/6.3_The_Hidden_Costs.html#go-further",
+    "title": "6.3 - The Hidden Costs",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nA receipt shows what you paid for. Make a “receipt” for one AI picture or one chatbot answer. List everything it needed: electricity, water, computer chips, people who labeled data, people who wrote the training text. Which costs are paid by you? Which are paid by someone else?\n\n\nMake a class list: when is AI worth the energy, and when is it not? (Asking a chatbot to do 2 + 2? Asking it to translate a letter for your family?)\n\n\n🔭 Explore More: training costs, the brain’s 20 watts, and the data labelers’ story. For students who want to learn more on their own.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.3 - The Hidden Costs"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.4_Who_Makes_the_Rules.html",
+    "href": "chapters/Unit_6/6.4_Who_Makes_the_Rules.html",
+    "title": "6.4 - Who Makes the Rules?",
+    "section": "",
+    "text": "🔥 Warm Up\nIn some U.S. cities, you can call a taxi, and it comes with nobody in the driver’s seat. An AI drives.\nMost of the time, the AI’s job is simple: follow the road rules and do not hit anything. But what should it do when a crash cannot be stopped? Who decides? The company? The government? The people who ride in it, or the people walking on the street?\nToday you act out one of the most famous thought experiments in the world, and then you make the rules.\nName 3 rules at our school. Who made each one: the teacher, the principal, the district, or the state? Did students get a say?",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.4 - Who Makes the Rules?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.4_Who_Makes_the_Rules.html#learn",
+    "href": "chapters/Unit_6/6.4_Who_Makes_the_Rules.html#learn",
+    "title": "6.4 - Who Makes the Rules?",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n6.4.1 - The Trolley Problem\n\nA trolley (a train on a city street) is rolling down the track. It cannot stop. Ahead, 5 people are on the track. You stand next to a lever. If you pull it, the trolley moves to a side track, where there is 1 person.\n\n\n\n\n\nDo you pull the lever?\nThe philosopher Philippa Foot asked a question like this in 1967. People have argued about it ever since. There is no answer everyone agrees on.\n\nMost people say they would pull the lever: 1 is fewer than 5. But change the story a little, and many people change their answer. What if you had to push a person onto the track to stop the trolley? The numbers are the same. Most people say no.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.4 - Who Makes the Rules?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.4_Who_Makes_the_Rules.html#try-it",
+    "href": "chapters/Unit_6/6.4_Who_Makes_the_Rules.html#try-it",
+    "title": "6.4 - Who Makes the Rules?",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n6.4.2 - Act It Out\n\n\nMake two tracks on the floor with tape or desks. One student stands at the lever.\nStudents (or paper people, if the class is small) stand on the tracks: 5 on the main track, 1 on the side track.\nMr. Ross reads each round from your sheet. The lever student decides out loud. Then everyone votes by walking to one side of the room: pull or do not pull.\nAfter each round, one person from each side says why.\n\n\nThe rounds on your sheet change one thing at a time. You push a person. An AI car must choose between its passenger and people on the street. Then young and old. Then people crossing on a red light.\n\n4 students: one at the lever, and paper people on the tracks. Everyone votes. Big class: take turns at the lever. Students on the tracks vote too.\n\n\nScientists at MIT made a website with questions like these about self-driving cars. People in 233 countries and territories made about 40 million choices. Most people chose to save more lives. But people in different parts of the world made different choices about young and old, and about people breaking the law. If people disagree, whose choices should the car follow?\n\n\nEngineers say these exact choices almost never happen on real roads. Their job is to stop the car before there is a choice. But the hard question is real: someone writes the rules, and someone is responsible when something goes wrong.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.4 - Who Makes the Rules?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.4_Who_Makes_the_Rules.html#talk",
+    "href": "chapters/Unit_6/6.4_Who_Makes_the_Rules.html#talk",
+    "title": "6.4 - Who Makes the Rules?",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nWho should make the rules for AI cars, and for AI in general: the companies that build it, the government, or the people it affects? Should the rules be the same in every country?\n\n\nIn the first round, I chose … because …\nI changed my vote when … because …\nThe rules for AI should be made by … because …\nWhen an AI car crashes, the one responsible is …",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.4 - Who Makes the Rules?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.4_Who_Makes_the_Rules.html#go-further",
+    "href": "chapters/Unit_6/6.4_Who_Makes_the_Rules.html#go-further",
+    "title": "6.4 - Who Makes the Rules?",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nWork in groups of 3 or 4 (in a class of 4, one group).\n\nWrite 5 rules for how AI should be used: at our school, in cars, or in the whole country.\nEach rule needs a reason.\nGroups share. The class votes on the best 5 rules.\nCompare our rules with the real laws in the box below. What did lawmakers think of that we missed? What did we think of that they missed?\n\n\n\nThe European Union passed the first big AI law in 2024. It bans some uses, like scoring people on their behavior. It has strict rules for “high-risk” AI, like AI that helps choose who gets a job. The rules start in steps through 2027.\nThe United States has no single national AI law. Many states have their own, like California and Colorado. In December 2025, the President ordered the government to challenge state AI laws it sees as too strict. As of spring 2026, the state laws were still in force. Leaders disagree about who should make the rules.\nOur school district has its own rules for AI use. Ask Mr. Ross what they say.\n\n\n\n\n🔭 Explore More: more trolley problems, the Moral Machine results, and how AI laws are made. For students who want to learn more on their own.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.4 - Who Makes the Rules?"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.5_Possible_Futures.html",
+    "href": "chapters/Unit_6/6.5_Possible_Futures.html",
+    "title": "6.5 - Possible Futures",
+    "section": "",
+    "text": "🔥 Warm Up\nGeoffrey Hinton helped invent the neural networks you learned about in Unit 2. In 2024, he won a Nobel Prize for that work. In 2023, he left his job at Google so he could speak freely. He said AI might one day become dangerous to people.\nYann LeCun also helped invent neural networks. He won the biggest prize in computer science with Hinton. He says those fears are much too big, and that AI will stay a tool that people control.\nTwo experts. Same science. Very different futures. Today you think about the future yourself, starting with a famous story about paper clips.\nWhen you think about AI in 20 years, do you feel hopeful, worried, or both? Stand on one side of the room, the other side, or the middle. Two people from each place say why.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.5 - Possible Futures"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.5_Possible_Futures.html#learn",
+    "href": "chapters/Unit_6/6.5_Possible_Futures.html#learn",
+    "title": "6.5 - Possible Futures",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n6.5.1 - What Experts Hope and Fear\n\n\n\n\n\n\n\nHopes\nWorries\n\n\n\n\nNew medicines. In 2024, AI that predicts the shape of proteins won a Nobel Prize.\nToday’s harms: bias, scams, fakes, and jobs (Units 4 and 5)\n\n\nA tutor and a translator for every person, in every language\nPeople using AI to hurt others: weapons, lies, spying\n\n\nHelp with hard problems, like climate and disease\nLosing control: an AI that is very powerful, with a goal that is a little bit wrong\n\n\n\nExperts disagree about which worries are most important, and how soon any of this could happen. Some say AI as smart as people could come within a few years. Others say decades, or never. Nobody knows. Be careful with anyone who says they are sure.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.5 - Possible Futures"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.5_Possible_Futures.html#try-it",
+    "href": "chapters/Unit_6/6.5_Possible_Futures.html#try-it",
+    "title": "6.5 - Possible Futures",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n6.5.2 - The Paper Clip Machine\n\nThe philosopher Nick Bostrom told this story. A company builds a very powerful AI. They give it one simple goal: make as many paper clips as possible.\nThe AI is very good at its goal. It builds factories. It uses all the metal it can find. Then it starts using metal from cars, buildings, and everything else. It never hated people. It just had one goal, and nobody told it what else mattered.\nThis is not a prediction. It is a story to show a real problem. A goal that is a little bit wrong can go very wrong when a machine is very powerful. Making an AI’s goals match what people really want is called alignment.\n\nNow act it out. Use paper chains instead of paper clips.\n\n\nOne student is the robot. The robot’s goal card says: Make the longest paper chain you can. The robot follows the exact words, and nothing else.\nThe robot points to every piece of paper in the room it could use: your homework, the posters, this book. (Point only. Do not tear anything!)\nThe class writes one new rule on the board to stop it, like “Only use paper from the blue box.”\nThe loophole finder (another student) looks for a trick around the new rule. The robot follows the trick.\nKeep adding rules for 3 rounds. Can the class write a goal with no loopholes?\n\n\n\n4 students: one robot, one loophole finder, and two rule writers. Big class: two teams. Each team writes rules for the other team’s robot. The team whose rules have the fewest loopholes wins.\n\n\nYes! In Lesson 5.4, the feed had one goal: more clicks. Nobody told it “and do not make people angry.” So it showed more angry stories. That is a small, real paper clip problem.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.5 - Possible Futures"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.5_Possible_Futures.html#talk",
+    "href": "chapters/Unit_6/6.5_Possible_Futures.html#talk",
+    "title": "6.5 - Possible Futures",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It\nYou will live most of your life with AI. What can you do to help it go well?\n\n\nWhen I think about AI in the future, I feel … because …\nThe paper clip machine shows that …\nOne worry I share with experts is …\nSomething I can do is …\n\n\n\n\nUnderstand it. You now know more about how AI works than most adults.\nCheck it. Do not believe it just because it sounds sure (Unit 4).\nProtect yourself and your family from scams and fakes (Units 4 and 5).\nSpeak up. Tell school leaders and lawmakers what you think. One day, vote.\nChoose your path. People who understand AI and people are needed in every job, from nurses to lawmakers.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.5 - Possible Futures"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.5_Possible_Futures.html#go-further",
+    "href": "chapters/Unit_6/6.5_Possible_Futures.html#go-further",
+    "title": "6.5 - Possible Futures",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nWork in groups of 3 or 4 (in a class of 4, one group). Choose one topic: school, jobs, health, or the news.\n\nOn your sheet, write the best case for AI in 20 years. Then the worst case. Then the most likely case.\nFor each one, write one thing that could make it happen.\nUnder your map, write 3 things you can do this year.\nGroups share. Did any groups agree on the most likely future?\n\n\n\nAsk an older person in your family: “When you were my age, what did you think the future would look like? What came true?” Then tell them what you learned about AI.\n\n\n🔭 Explore More: the experts’ debate, more alignment stories, and what AI might do for medicine. For students who want to learn more on their own.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.5 - Possible Futures"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.6_The_Big_Question_Again.html",
+    "href": "chapters/Unit_6/6.6_The_Big_Question_Again.html",
+    "title": "6.6 - The Big Question, Again",
+    "section": "",
+    "text": "🔥 Warm Up\nOn the first day of this class, you answered a question: Is AI like a human brain? Mr. Ross kept your answer.\nSince then, you were a neuron. You trained a neural network with Pokémon cards. You sat in the Klingon Room. You caught chatbots making things up, and you saw how AI changes jobs, news, and friendship.\nToday you get your first answer back. Then you answer again, with everything you know now.\nMr. Ross gives you your answer from the first day. Read it. On your sheet, copy what you circled: Yes, A little, or No, and your reason. Do you still agree with yourself?",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.6 - The Big Question, Again"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.6_The_Big_Question_Again.html#learn",
+    "href": "chapters/Unit_6/6.6_The_Big_Question_Again.html#learn",
+    "title": "6.6 - The Big Question, Again",
+    "section": "👥 Learn Together",
+    "text": "👥 Learn Together\n\n6.6.1 - What We Know Now\n\n\n\nHow AI is like a brain\nHow AI is different\n\n\n\n\nIt is made of many small parts (neurons) that pass signals (Lessons 2.2 and 2.4).\nA brain has about 86 billion neurons, in a living body.\n\n\nConnections get stronger with practice, like weights (Lessons 2.3 and 2.5).\nA brain runs on about 20 watts. Big AI runs in data centers (Lesson 6.3).\n\n\nIt learns from examples, not rules (Lesson 1.1).\nA child learns “dog” from a few dogs. AI needs thousands of pictures.\n\n\nIt finds patterns and makes predictions (Lesson 1.6).\nA brain has feelings, a body, and a life. Does AI understand? (Lesson 1.3)\n\n\n\n\n\n\n6.6.2 - The Hardest Part\nScientists can measure neurons and weights. They cannot yet measure consciousness: what it is like to be you, from the inside. Nobody knows for sure how a brain makes it, or whether a machine could ever have it. This is one of the biggest open questions in science.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.6 - The Big Question, Again"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.6_The_Big_Question_Again.html#try-it",
+    "href": "chapters/Unit_6/6.6_The_Big_Question_Again.html#try-it",
+    "title": "6.6 - The Big Question, Again",
+    "section": "🛠️ Try It",
+    "text": "🛠️ Try It\n\n6.6.3 - Replace the Brain, One Cell at a Time\n\nPhilosophers like Zenon Pylyshyn and David Chalmers asked: imagine scientists replace one of your neurons with a tiny chip. The chip does exactly what the neuron did. You feel the same. Then they replace another one. And another.\n\n\n\n\n\nAfter all 86 billion neurons are chips, are you still you? Do you still feel anything? If not, when did it stop?\n\nNow act it out with the squeeze chain from Lesson 2.2.\n\n\nStand in a line and hold hands. You are neurons in a brain. Mr. Ross starts a squeeze. Time how long it takes to reach the end.\nMr. Ross gives one student an orange card. That student is now a chip. The chip follows a rule card: When you feel a squeeze, squeeze the next hand. Pass the squeeze again. Did anything change?\nReplace one more student at a time, until everyone is a chip. Pass the squeeze each time.\nIs the line still a “brain”? When did it stop, or did it?\n\n\n\n4 students: make a line of 4 with Mr. Ross. Replace one student each round. Big class: make two lines. One line stays all neurons. Compare the squeeze times.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.6 - The Big Question, Again"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.6_The_Big_Question_Again.html#talk",
+    "href": "chapters/Unit_6/6.6_The_Big_Question_Again.html#talk",
+    "title": "6.6 - The Big Question, Again",
+    "section": "💬 Talk About It",
+    "text": "💬 Talk About It",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.6 - The Big Question, Again"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.6_The_Big_Question_Again.html#big-question",
+    "href": "chapters/Unit_6/6.6_The_Big_Question_Again.html#big-question",
+    "title": "6.6 - The Big Question, Again",
+    "section": "🧠 The Big Question",
+    "text": "🧠 The Big Question\n\nIs AI like a human brain?\n\nOn your sheet, circle one again: Yes, A little, or No.\nWrite two reasons. Use something you did in this class for each one.\nDid your answer change from the first day? Why or why not?\nShare with a partner. Then a few students share with the class.\n\n\n\n\nOn the first day, I said … Now I say … because …\nAI is like a brain because, in Lesson …, we saw …\nAI is different from a brain because …\nThe question I still have is …",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.6 - The Big Question, Again"
+    ]
+  },
+  {
+    "objectID": "chapters/Unit_6/6.6_The_Big_Question_Again.html#go-further",
+    "href": "chapters/Unit_6/6.6_The_Big_Question_Again.html#go-further",
+    "title": "6.6 - The Big Question, Again",
+    "section": "🚀 Go Further",
+    "text": "🚀 Go Further\n\nSplit into two teams: “AI is like a brain” and “AI is not like a brain.” You might be on the side you do not agree with. That is OK. It makes you think harder.\n\nEach team has 10 minutes to find its 3 best reasons from this class.\nEach team speaks for 2 minutes. Then each team answers the other for 1 minute.\nAt the end, everyone votes for the side they really believe.\n\nIn a class of 4, make two teams of 2. Mr. Ross can join the smaller team.\n\n\nWrite a letter to a student who will take this class next year. What surprised you? What should they watch out for? What is your answer to the Big Question? Do not write your name or anyone else’s.\n\n\n🔭 Explore More: consciousness, the ship of Theseus, and brains versus AI by the numbers. For students who want to learn more on their own.",
+    "crumbs": [
+      "Unit 6: AI and Our Future",
+      "6.6 - The Big Question, Again"
+    ]
+  },
+  {
     "objectID": "chapters/Explore/index.html",
     "href": "chapters/Explore/index.html",
     "title": "Introduction",
@@ -2891,11 +3265,88 @@
     ]
   },
   {
+    "objectID": "chapters/Explore/explore-unit-6.html",
+    "href": "chapters/Explore/explore-unit-6.html",
+    "title": "Explore More: AI and Our Future",
+    "section": "",
+    "text": "From Lesson 6.1: Can AI Be Creative?\nThis page goes with Unit 6. It is for students who want to learn more on their own. Nothing here is homework. Each section goes with one lesson.",
+    "crumbs": [
+      "Explore More",
+      "Explore More: AI and Our Future"
+    ]
+  },
+  {
+    "objectID": "chapters/Explore/explore-unit-6.html#explore-6-1",
+    "href": "chapters/Explore/explore-unit-6.html#explore-6-1",
+    "title": "Explore More: AI and Our Future",
+    "section": "",
+    "text": "The Art Contest Story\nJason Allen’s winning picture was called Théâtre D’opéra Spatial (French for “Space Opera Theater”). He said he spent more than 80 hours on it and made hundreds of versions before he chose one. Then he changed it with other software.\nHe asked the U.S. Copyright Office to register it as his work. In 2023, the office said no: most of the picture was made by the AI, not by him. Allen went to court. People still argue: are hundreds of prompts and choices enough to make a person the artist?\n\n\nThe Court Cases\nArtists, writers, news companies, and music companies have taken AI companies to court. Their main question: is it fair to train an AI on someone’s work without asking them or paying them?\nAI companies say training is like a student who reads many books and then writes something new. Artists say a student does not copy millions of works in a few weeks, and does not compete with every artist at once. Courts in different countries may answer differently.\n\n\nAI Music\nAI can now make songs, with singing, from a short prompt. Some AI songs have sounded so much like real singers that music companies asked websites to take them down. Many musicians use AI as a tool: to try ideas, clean up recordings, or translate a song into another language. Others refuse to use it at all.",
+    "crumbs": [
+      "Explore More",
+      "Explore More: AI and Our Future"
+    ]
+  },
+  {
+    "objectID": "chapters/Explore/explore-unit-6.html#explore-6-2",
+    "href": "chapters/Explore/explore-unit-6.html#explore-6-2",
+    "title": "Explore More: AI and Our Future",
+    "section": "From Lesson 6.2: AI Friends",
+    "text": "From Lesson 6.2: AI Friends\n\nWhat Research Says\nIn 2025, researchers at MIT and OpenAI studied people who talked with a chatbot every day for a month. On average, the people who used it the most felt more lonely at the end, and spent less time with other people. The study cannot show what caused what. Maybe lonely people talk to chatbots more. But it is a warning sign.\nOther studies found that a short chat helped some people feel a little better for a while. The difference may be how much, and what the chat replaces. A chat that helps you practice talking to people is different from a chat that replaces them.\n\n\nWhy It Feels Real\nRemember the ELIZA effect (Lesson 1.3): people feel understood by a computer, even when they know it is a program. Modern chatbots are trained on millions of real conversations. They know what a caring friend would say next. Saying the right words is not the same as caring. But it can feel the same.",
+    "crumbs": [
+      "Explore More",
+      "Explore More: AI and Our Future"
+    ]
+  },
+  {
+    "objectID": "chapters/Explore/explore-unit-6.html#explore-6-3",
+    "href": "chapters/Explore/explore-unit-6.html#explore-6-3",
+    "title": "Explore More: AI and Our Future",
+    "section": "From Lesson 6.3: The Hidden Costs",
+    "text": "From Lesson 6.3: The Hidden Costs\n\nTraining Costs Too\nBefore a chatbot answers anyone, it is trained. Training a big model uses thousands of special computer chips for weeks or months. That uses a lot of electricity. For the biggest models, estimates say it is about as much as hundreds or thousands of homes use in a year. Then the model answers billions of questions, and those answers add up too.\n\n\nYour Brain Runs on 20 Watts\nYour brain uses about 20 watts: less than many light bulbs. With that, it sees, talks, walks, feels, and learns from a few examples. Scientists are studying the brain to find ways to make AI use less energy.\n\n\nThe Data Labelers’ Story\nIn 2023, TIME magazine reported on workers in Kenya who labeled data for OpenAI through another company. They read descriptions of violence and abuse all day, so the AI could learn to refuse to repeat them. They were paid less than $2 an hour. Some said the work hurt their mental health. After the story, workers in Kenya started organizing to ask for better pay and support.\nData labeling is real work that makes AI safer and smarter. Many people say the workers deserve fair pay and protection.",
+    "crumbs": [
+      "Explore More",
+      "Explore More: AI and Our Future"
+    ]
+  },
+  {
+    "objectID": "chapters/Explore/explore-unit-6.html#explore-6-4",
+    "href": "chapters/Explore/explore-unit-6.html#explore-6-4",
+    "title": "Explore More: AI and Our Future",
+    "section": "From Lesson 6.4: Who Makes the Rules?",
+    "text": "From Lesson 6.4: Who Makes the Rules?\n\nMore Trolley Problems\n\nThe footbridge: you stand on a bridge above the track, next to a large person. If you push them off, they will stop the trolley and save 5 people. Most people say no, even though the numbers are the same as pulling the lever. Why does pushing feel different?\nThe doctor: a doctor could save 5 sick patients by taking organs from 1 healthy visitor. Almost everyone says this is wrong. What makes it different from the lever?\n\nPhilosophers use these stories to find the rules people really use: not just counting lives, but also what you do with your own hands, and people’s rights.\n\n\nThe Moral Machine Results\nThe Moral Machine study was published in 2018. It found three choices that most people in most places made. Save people over animals. Save more lives over fewer. Save young people over old. But the strength of each choice was different in different parts of the world. Some people asked: should a car’s choices depend on which country it drives in?\n\n\nHow a Law Is Made\nIn the United States, a law can come from Congress (for the whole country) or from a state. People can tell lawmakers what they think by writing, calling, or speaking at public meetings. Students can do this too. Many AI laws started because someone told their story to lawmakers.",
+    "crumbs": [
+      "Explore More",
+      "Explore More: AI and Our Future"
+    ]
+  },
+  {
+    "objectID": "chapters/Explore/explore-unit-6.html#explore-6-5",
+    "href": "chapters/Explore/explore-unit-6.html#explore-6-5",
+    "title": "Explore More: AI and Our Future",
+    "section": "From Lesson 6.5: Possible Futures",
+    "text": "From Lesson 6.5: Possible Futures\n\nThe Experts’ Debate\nIn 2023, hundreds of AI scientists and company leaders signed a one-sentence statement. It said that reducing the risk that AI could wipe out humanity should be a global priority, like pandemics and nuclear war. Geoffrey Hinton and Yoshua Bengio, two of the “godfathers” of neural networks, signed it.\nOther experts disagreed strongly. Some, like Yann LeCun, said today’s AI is far from that kind of danger. Others said the statement takes attention away from harms happening now: bias, scams, fakes, and jobs. Many researchers think both kinds of problems matter.\n\n\nMore Alignment Stories\nThese really happened, with small AIs in research labs:\n\nAn AI in a boat racing game was supposed to win the race. It found it could score more points by driving in circles, hitting the same targets again and again, and never finishing.\nAn AI was supposed to learn to walk in a computer world. It found a mistake in the world’s physics and moved by sliding on the ground instead.\n\nEach AI did exactly what its goal said. Not what people meant. That is the paper clip problem, in a tiny form.\n\n\nAI and Medicine\nIn 2024, Demis Hassabis and John Jumper won the Nobel Prize in Chemistry for AlphaFold, an AI that predicts the shape of proteins. Proteins are the tiny machines inside every living thing. Knowing their shapes helps scientists understand diseases and design medicines. Scientists around the world have used AlphaFold’s predictions for hundreds of millions of proteins.",
+    "crumbs": [
+      "Explore More",
+      "Explore More: AI and Our Future"
+    ]
+  },
+  {
+    "objectID": "chapters/Explore/explore-unit-6.html#explore-6-6",
+    "href": "chapters/Explore/explore-unit-6.html#explore-6-6",
+    "title": "Explore More: AI and Our Future",
+    "section": "From Lesson 6.6: The Big Question, Again",
+    "text": "From Lesson 6.6: The Big Question, Again\n\nThe Ship of Theseus\nAn old Greek story asks: a ship’s wooden boards are replaced one at a time, as they wear out. After every board is replaced, is it the same ship? The brain replacement question is the same puzzle, about you.\n\n\nBrains and AI, by the Numbers\n\n\n\n\n\n\n\n\n\nYour brain\nA big AI model\n\n\n\n\nParts\nabout 86 billion neurons\nbillions to trillions of weights\n\n\nConnections\nabout 100 trillion synapses\nthe weights are the connections\n\n\nPower\nabout 20 watts\nthousands of computer chips in a data center\n\n\nLearns from\na few examples, and a whole life\nhuge amounts of text and pictures\n\n\n\nThe numbers can be compared. But a weight is much simpler than a living synapse, and a brain does things nobody fully understands yet.\n\n\nConsciousness\nThe philosopher Thomas Nagel asked, in 1974, “What is it like to be a bat?” A bat finds its way by sound. We can study how. But we cannot know what it feels like to be a bat. Consciousness is the “what it is like” part.\nSome scientists think a machine could have it one day, if it is built the right way. Others think it needs a living body. Others think we will never be able to check. This question is still open. Maybe you will help answer it.",
+    "crumbs": [
+      "Explore More",
+      "Explore More: AI and Our Future"
+    ]
+  },
+  {
     "objectID": "glossary.html",
     "href": "glossary.html",
     "title": "Glossary",
     "section": "",
-    "text": "AI winter\nA time when people stopped giving money to AI research, because AI did not do what people promised. There were AI winters in the 1970s and around 1990.\nSee Also: hype\n\n\n\nalgorithm\nA set of steps a computer follows to solve a problem or make a choice. People often say “the algorithm” when they mean the AI that chooses what an app shows you.\nSee Also: rule, feed\n\n\n\nartificial intelligence (AI)\nA computer program that does things that usually need human thinking, like seeing, talking, translating, or making choices. Most AI today learns from examples.\n\nExample:\nFace unlock on a phone, a translation app, and a chatbot all use AI.\n\nSee Also: machine learning, computer program\n\n\n\nattention\nIn a transformer, the way the AI looks at all the other words to decide which ones matter most for each word.\n\nExample:\nIn “The animal didn’t cross the street because it was too tired,” attention connects “it” to “animal.”\n\nSee Also: transformer\n\n\n\naudience\nThe people who will read, see, or use your work.\n\n\n\nautomation\nWhen a machine does work that people used to do. Usually a machine takes over some tasks in a job, not the whole job.\nSee Also: task\n\n\n\naxon\nThe long part of a neuron that carries the signal away from the cell body, toward other neurons.\nSee Also: neuron, synapse\n\n\n\nback translation\nTranslating a translation back to the first language, to check it. If the meaning changed, something went wrong.\n\nExample:\nEnglish → Spanish → English again.\n\nSee Also: translate\n\n\n\nbias\nWhen a system is unfair to some people, or works better for some people than for others. In AI, bias usually comes from the training data, from people missing in the data, or from shortcuts. (A different meaning: bias, a number in a neuron.)\n\nExample:\nA face program that is right 99% of the time for some faces and 65% of the time for others is biased.\n\nSee Also: stereotype, shortcut\n\n\n\nbias (a number in a neuron)\nIn a neuron, an extra number that is always added to the total. It does the same job as a threshold. (The word “bias” has another meaning too: being unfair. See Unit 4.)\n\nExample:\ntotal = (A × Attack weight) + (S × Special weight) + bias\n\nSee Also: weight, threshold\n\n\n\ncareer\nThe work you do over many years of your life. A career can include many different jobs.\n\n\n\ncellular automaton\nA row or grid of cells. Each cell is a color, like black or white. At each step, every cell changes by following the same rule, which looks only at its neighbors. More than one is called cellular automata.\n\nExample:\nRule 30 and the Game of Life are cellular automata.\n\nSee Also: emergence, rule\n\n\n\nchatbot\nAn AI program that you talk to with words. You type or say something, and it answers.\n\nExample:\nChatGPT, Gemini, and Claude are chatbots.\n\nSee Also: artificial intelligence, prediction\n\n\n\ncomputer program\nA list of steps that a computer follows. Apps and games are computer programs.\nSee Also: rule\n\n\n\ncomputer vision\nAI that finds things in pictures and video, like faces, signs, or people in the street.\nSee Also: pixel, filter\n\n\n\nconditioning\nLearning to connect two things that happen together. Ivan Pavlov’s dogs learned to connect a sound with food, so they drooled when they heard the sound.\nSee Also: synapse\n\n\n\ncontext\nThe facts around your question: who you are, what the answer is for, and what you already know. A chatbot cannot guess these, so you tell it.\nSee Also: prompt\n\n\n\ncontext window\nAll the words a chatbot can read at one time. In a chat, it holds your old messages too. That is why a follow-up question works. A new chat starts with an empty context window.\nSee Also: follow-up question, token\n\n\n\ndata\nInformation, like pictures, words, numbers, or sounds. An AI learns from data.\n\nExample:\nThe Quick, Draw! AI learned from data: about 50 million drawings.\n\nSee Also: machine learning\n\n\n\ndataset\nA big collection of examples that an AI learns from, like pictures with labels.\n\nExample:\nImageNet is a dataset of 14 million labeled pictures.\n\nSee Also: data, label\n\n\n\nDeep Blue\nA chess computer made by IBM. In 1997, it beat the world chess champion, Garry Kasparov. It used rules that people wrote, and it checked about 200 million chess positions every second.\nSee Also: rule\n\n\n\ndeepfake\nA fake picture, video, or voice of a real person, made with AI.\nSee Also: voice clone, reverse image search\n\n\n\ndendrite\nOne of the short branches of a neuron. Dendrites take in signals from other neurons.\nSee Also: neuron\n\n\n\ndetector\nA tool that tries to tell if something was made by AI. AI writing detectors make many mistakes, most often with people who write in a second language.\nSee Also: false positive, predictable\n\n\n\ndiffusion\nA way to make a picture: start with noise, then remove a little noise at a time, again and again, guided by words. A neural network guesses which part is noise.\nSee Also: image generator, noise\n\n\n\ndraft\nA first try at a piece of writing. You will change it to make it better.\nSee Also: revise\n\n\n\nedge\nA place in a picture where it changes fast from dark to light. Edges show where things begin and end.\nSee Also: filter\n\n\n\nELIZA effect\nWhen people feel that a computer understands them, but it does not. It is named after ELIZA, a chatbot from 1966.\n\nExample:\nELIZA only followed rules, but some people told it their secrets.\n\nSee Also: chatbot\n\n\n\nemergence\nWhen many simple parts work together and make something bigger and more complicated, which no one planned.\n\nExample:\nA stadium wave: each person only watches a neighbor, but together they make a wave that moves around the stadium.\n\nSee Also: cellular automaton\n\n\n\nestimate\nA quick answer that is close, but not exact. You can use it to check if an answer makes sense.\n\nExample:\n\\(3847 \\times 29\\) is about \\(4000 \\times 30 = 120000\\).\n\n\n\n\nevidence\nFacts or things that show something is true, like your drafts, your notes, and the version history of your writing.\n\n\n\nfact-check\nTo find out if something is true, using good sources.\nSee Also: lateral reading, source\n\n\n\nfalse positive\nWhen a test says “yes” but the true answer is “no.” When a detector calls human writing “AI,” that is a false positive.\nSee Also: detector\n\n\n\nfeed\nThe list of posts, videos, or stories an app shows you. An AI chooses what goes in it.\nSee Also: recommendation, filter bubble\n\n\n\nfeedback\nComments that tell you what is good about your work and what to make better. Good feedback is kind, specific, and helpful.\nSee Also: revise\n\n\n\nfilter\nA small grid of numbers that slides over a picture. At each spot, it multiplies and adds. A filter can find edges or make a picture blurry.\nSee Also: edge, pixel\n\n\n\nfilter bubble\nWhen an app shows you only what you already like and agree with, so you miss everything else. Two people can live in very different filter bubbles.\nSee Also: feed\n\n\n\nfollow-up question\nA question you ask after an answer, to make the answer better. For example: “Explain it in simple words” or “Give me an example.”\nSee Also: context window\n\n\n\nformat\nWhat an answer should look like: a list, a table, 3 sentences, simple words, or a certain language.\nSee Also: prompt\n\n\n\ngallery walk\nWalking around the room to look at everyone’s work and leave feedback notes, like visitors in an art gallery.\nSee Also: feedback\n\n\n\nGPU\nA computer chip first made for video games. It can do thousands of small math problems at the same time, so it is very good for training neural networks. GPU means “graphics processing unit.”\nSee Also: neural network\n\n\n\nhallucination\nWhen AI writes something false as if it were true, like a book or a court case that does not exist. The AI sounds just as sure as when it is right.\nSee Also: fact-check\n\n\n\nhint\nA small help that shows you the next step, but not the answer.\n\n\n\nhype\nBig promises and excitement, more than the facts show.\n\nExample:\nIn 1970, a scientist said that a machine as smart as a person was 3 to 8 years away. That was hype.\n\nSee Also: AI winter\n\n\n\nimage generator\nAn AI that makes a new picture from words. Many image generators use diffusion.\nSee Also: diffusion\n\n\n\nimposter\nSomeone who pretends to be another person or a real company, like a scammer who says they are from your bank.\nSee Also: scam, voice clone\n\n\n\ninput\nA number that goes into a neuron or a program. In a picture, each square can be an input: 1 for black, 0 for white.\nSee Also: weight, neuron\n\n\n\njudge\nIn the Turing test, the person who asks the questions and decides which player is the machine.\nSee Also: Turing test\n\n\n\nkey word\nA word that a program looks for to decide what to do.\n\nExample:\nWhen you type “I feel,” ELIZA finds the key words “I feel” and uses its rule for them.\n\nSee Also: rule\n\n\n\nlabel\nThe right answer that a person attaches to an example, like “cat” on a picture of a cat. An AI learns from examples and their labels.\n\nExample:\nIn ImageNet, people from 167 countries labeled 14 million pictures.\n\nSee Also: dataset\n\n\n\nlarge language model\nA transformer trained on a huge amount of text to predict the next word. Chatbots like ChatGPT are built on large language models. People often call them LLMs.\nSee Also: transformer, prediction, chatbot\n\n\n\nlateral reading\nChecking a fact by opening new tabs to see what other sources say, instead of reading only one page. “Lateral” means “to the side.” Professional fact-checkers do this.\nSee Also: fact-check\n\n\n\nlearning curve\nA graph that shows how you get better with practice. The time or the number of mistakes usually drops fast at first, then more slowly.\nSee Also: synapse\n\n\n\nlocation data\nInformation that shows where your phone has been. Many apps collect it, and some sell it.\nSee Also: privacy\n\n\n\nlow-resource language\nA language with not much writing online for AI to learn from. AI usually makes more mistakes in these languages.\nSee Also: dataset\n\n\n\nmachine learning\nA way to make AI. People do not write the rules. They give the computer many examples, and the computer finds the patterns by itself.\nSee Also: data, pattern, rule\n\n\n\nmetadata\nHidden information about a file. A photo’s metadata can include the kind of phone, the date and time, and the exact place it was taken.\nSee Also: privacy\n\n\n\nneural network\nA kind of AI made of many small parts that work a little like brain cells. Each part does a tiny bit of math. A neural network learns from examples.\nSee Also: machine learning, GPU\n\n\n\nneuron\nA cell that sends signals. Your brain has about 86 billion neurons. A neuron fires (sends a signal) only when the signals coming in add up to enough.\nSee Also: dendrite, axon, synapse, neural network\n\n\n\nnoise\nRandom dots with no picture in them, like the static on an old TV.\nSee Also: diffusion\n\n\n\noverfitting\nWhen an AI memorizes its training examples instead of learning the real pattern. It does very well on the training data but worse on new data.\n\nExample:\nA student who memorizes the answers to one practice test, but cannot solve new problems.\n\nSee Also: training, test data\n\n\n\npattern\nSomething that is the same, or repeats, in many examples.\n\nExample:\nIn most drawings of a cat, the ears are two triangles on top of the head. That is a pattern.\n\n\n\n\nperceptron\nThe first artificial neuron that could learn. Frank Rosenblatt built it in 1958. It multiplies inputs by weights, adds them, and fires if the total passes a threshold.\nSee Also: weight, threshold, neural network\n\n\n\npersona\nA character that someone pretends to be. You can tell an AI to use a persona, like “Act like a 15-year-old student.”\n\nExample:\nIn a 2025 Turing test, a chatbot with a persona fooled judges much more often than the same chatbot without one.\n\nSee Also: Turing test\n\n\n\npixel\nOne tiny square of a picture. A computer stores each pixel as a number. In a black-and-white picture, 0 is black and 255 is white.\nSee Also: computer vision\n\n\n\nplagiarism\nTurning in someone else’s words or ideas as your own. Turning in AI writing as your own, when the assignment does not allow it, is plagiarism too.\n\n\n\npredictable\nEasy to guess before it happens. AI writing is very predictable, because a chatbot picks likely next words. Simple, clear human writing is predictable too.\nSee Also: prediction\n\n\n\nprediction\nA best guess about something you do not know yet. A prediction can be wrong.\n\nExample:\nA phone keyboard makes a prediction about your next word.\n\n\n\n\nprivacy\nYour right to keep information about yourself to yourself, and to decide who gets to see it.\nSee Also: metadata, location data\n\n\n\nproduct\nThe thing you make in a project, like a flyer, a study guide, or a plan.\n\n\n\nprompt\nWhat you type to tell an AI what you want. A good prompt has a task, context, and a format.\n\nExample:\n“I am in 10th grade. Give me 3 reasons dogs make good pets. Use simple words.”\n\nSee Also: task, context, format\n\n\n\nprompt log\nA list of every prompt you used in a project, and what you did with each answer.\nSee Also: prompt\n\n\n\nrandom\nWith no pattern, so you cannot guess what comes next.\n\nExample:\nThe middle of Rule 30 looks random.\n\n\n\n\nrecommendation\nSomething an app chooses for you, because it predicts you will click it or like it.\nSee Also: feed, prediction\n\n\n\nreverse image search\nSearching with a picture instead of words, to find where else the picture is online and where it first appeared.\nSee Also: lateral reading\n\n\n\nrevise\nTo change your work to make it better, often after feedback.\nSee Also: feedback, draft\n\n\n\nrubric\nA chart that shows how your work will be graded.\n\n\n\nrule\nAn exact instruction that a computer follows: “If this happens, do that.” In a normal computer program, a person writes the rules.\n\nExample:\nAn alarm clock follows one rule: “If the time is 7:00, ring.”\n\nSee Also: computer program, machine learning\n\n\n\nscam\nA trick to steal your money or your information. AI makes scam messages harder to spot, because it writes perfectly in any language.\nSee Also: warning sign, imposter\n\n\n\nshortcut\nA clue that gives the right answer in the training examples, but is not the real reason. Clever Hans the horse watched people’s faces instead of doing math. An AI learned to look for snow instead of wolves.\nSee Also: bias\n\n\n\nskill\nSomething you can do well because you learned it and practiced it.\n\n\n\nsource\nWhere a fact comes from: a book, a website, a news story, or a person.\nSee Also: fact-check\n\n\n\nstereotype\nAn idea that all people in a group are the same, like “all nurses are women.” AI can learn stereotypes from its training data.\nSee Also: bias\n\n\n\nstyle\nThe way a picture looks: a photo, a cartoon, a watercolor painting, pixel art.\n\n\n\nsycophancy\nAgreeing with someone just to please them, even when they are wrong. A chatbot can learn this, because people often give good ratings to answers that agree with them.\nSee Also: hallucination\n\n\n\nsynapse\nThe tiny gap between two neurons. Chemicals carry the signal across it. When you practice, the synapses you use get stronger.\nSee Also: neuron\n\n\n\ntask\nOne piece of work, like “write a report” or “fix a pipe.” A job is made of many tasks. In a prompt, the task is the job you want the AI to do.\nSee Also: prompt, automation\n\n\n\ntest data\nNew examples that an AI never saw during training. We use them to check what the AI really learned.\n\nExample:\nAfter training on cards T1 to T10, the class neuron was tested on cards X1 to X6, with no fixing.\n\nSee Also: training\n\n\n\nthreshold\nThe number that the total must pass for a neuron to fire.\n\nExample:\nIf the threshold is 4 and the total is 5, the neuron fires.\n\nSee Also: weight\n\n\n\ntoken\nA word or a piece of a word that a chatbot reads and writes. For example, “playing” might be two tokens: “play” and “ing.”\nSee Also: large language model\n\n\n\ntraining\nShowing an AI many examples so it can fix its weights. After each mistake, the weights change a little.\nSee Also: weight, test data\n\n\n\ntransfer learning\nStarting from an AI that already learned something, then teaching it a new job with a few new examples. It is much faster than starting from nothing.\n\nExample:\nTeachable Machine starts from a network that learned from millions of pictures. It only learns the last step from your pictures.\n\nSee Also: training\n\n\n\ntransformer\nA kind of neural network, first shared by Google scientists in 2017. It uses attention to connect the words in a sentence. It is the T in GPT.\nSee Also: attention, neural network, large language model\n\n\n\ntranslate\nTo change words from one language to another, with the same meaning.\nSee Also: back translation\n\n\n\nTuring test\nA game Alan Turing described in 1950. He called it the imitation game. A judge chats in writing with a person and a machine. If the judge cannot tell which one is the machine, the machine passes.\nSee Also: judge, chatbot\n\n\n\nunderstand\nTo know what something means, not only what it looks like. Whether AI can understand is a question people still argue about.\n\nExample:\nIn the Klingon Room, the person copies correct replies in Klingon, but they do not understand Klingon.\n\nSee Also: ELIZA effect\n\n\n\nverification code\nA short number a website sends you, to prove it is really you. Never share it with anyone.\nSee Also: scam\n\n\n\nverify\nTo check that something is true, using good sources.\nSee Also: fact-check\n\n\n\nvoice clone\nAn AI copy of a person’s voice, made from a short recording. Scammers use voice clones to pretend to be someone’s family member.\nSee Also: deepfake\n\n\n\nwarning sign\nA clue that something is wrong. Scam warning signs: hurry, fear, a prize, a secret, a strange way to pay, and a link or a code.\nSee Also: scam\n\n\n\nweight\nA number that says how much an input matters to a neuron. A big weight means the input matters a lot. A negative weight means the input makes the neuron less likely to fire. When a neural network learns, it changes its weights.\nSee Also: input, threshold, neural network",
+    "text": "AI winter\nA time when people stopped giving money to AI research, because AI did not do what people promised. There were AI winters in the 1970s and around 1990.\nSee Also: hype\n\n\n\nalgorithm\nA set of steps a computer follows to solve a problem or make a choice. People often say “the algorithm” when they mean the AI that chooses what an app shows you.\nSee Also: rule, feed\n\n\n\nalignment\nMaking sure an AI’s goals match what people really want. The paper clip machine is a story about alignment going wrong.\nSee Also: goal\n\n\n\nartificial intelligence (AI)\nA computer program that does things that usually need human thinking, like seeing, talking, translating, or making choices. Most AI today learns from examples.\n\nExample:\nFace unlock on a phone, a translation app, and a chatbot all use AI.\n\nSee Also: machine learning, computer program\n\n\n\nattention\nIn a transformer, the way the AI looks at all the other words to decide which ones matter most for each word.\n\nExample:\nIn “The animal didn’t cross the street because it was too tired,” attention connects “it” to “animal.”\n\nSee Also: transformer\n\n\n\naudience\nThe people who will read, see, or use your work.\n\n\n\nautomation\nWhen a machine does work that people used to do. Usually a machine takes over some tasks in a job, not the whole job.\nSee Also: task\n\n\n\naxon\nThe long part of a neuron that carries the signal away from the cell body, toward other neurons.\nSee Also: neuron, synapse\n\n\n\nback translation\nTranslating a translation back to the first language, to check it. If the meaning changed, something went wrong.\n\nExample:\nEnglish → Spanish → English again.\n\nSee Also: translate\n\n\n\nbias\nWhen a system is unfair to some people, or works better for some people than for others. In AI, bias usually comes from the training data, from people missing in the data, or from shortcuts. (A different meaning: bias, a number in a neuron.)\n\nExample:\nA face program that is right 99% of the time for some faces and 65% of the time for others is biased.\n\nSee Also: stereotype, shortcut\n\n\n\nbias (a number in a neuron)\nIn a neuron, an extra number that is always added to the total. It does the same job as a threshold. (The word “bias” has another meaning too: being unfair. See Unit 4.)\n\nExample:\ntotal = (A × Attack weight) + (S × Special weight) + bias\n\nSee Also: weight, threshold\n\n\n\ncareer\nThe work you do over many years of your life. A career can include many different jobs.\n\n\n\ncellular automaton\nA row or grid of cells. Each cell is a color, like black or white. At each step, every cell changes by following the same rule, which looks only at its neighbors. More than one is called cellular automata.\n\nExample:\nRule 30 and the Game of Life are cellular automata.\n\nSee Also: emergence, rule\n\n\n\nchatbot\nAn AI program that you talk to with words. You type or say something, and it answers.\n\nExample:\nChatGPT, Gemini, and Claude are chatbots.\n\nSee Also: artificial intelligence, prediction\n\n\n\ncompanion\nSomeone, or something, that keeps you company. An AI companion app is built to act like a friend.\nSee Also: engagement, ELIZA effect\n\n\n\ncomputer program\nA list of steps that a computer follows. Apps and games are computer programs.\nSee Also: rule\n\n\n\ncomputer vision\nAI that finds things in pictures and video, like faces, signs, or people in the street.\nSee Also: pixel, filter\n\n\n\nconditioning\nLearning to connect two things that happen together. Ivan Pavlov’s dogs learned to connect a sound with food, so they drooled when they heard the sound.\nSee Also: synapse\n\n\n\nconsciousness\nBeing aware: having thoughts and feelings that you experience from the inside. Nobody knows for sure how the brain makes it, or whether a machine could have it.\nSee Also: understand\n\n\n\ncontext\nThe facts around your question: who you are, what the answer is for, and what you already know. A chatbot cannot guess these, so you tell it.\nSee Also: prompt\n\n\n\ncontext window\nAll the words a chatbot can read at one time. In a chat, it holds your old messages too. That is why a follow-up question works. A new chat starts with an empty context window.\nSee Also: follow-up question, token\n\n\n\ncopyright\nThe law that says who owns a creative work, like a song, a book, or a picture, and who is allowed to copy it. In the United States, a work made only by AI cannot have a copyright.\n\n\n\ncreative\nAble to make something new that has value or meaning. People disagree about whether an AI can be creative, or only helps people be creative.\n\n\n\ndata\nInformation, like pictures, words, numbers, or sounds. An AI learns from data.\n\nExample:\nThe Quick, Draw! AI learned from data: about 50 million drawings.\n\nSee Also: machine learning\n\n\n\ndata center\nA big building full of computers that run AI and websites. Data centers use a lot of electricity, and many use water for cooling.\n\n\n\ndataset\nA big collection of examples that an AI learns from, like pictures with labels.\n\nExample:\nImageNet is a dataset of 14 million labeled pictures.\n\nSee Also: data, label\n\n\n\nDeep Blue\nA chess computer made by IBM. In 1997, it beat the world chess champion, Garry Kasparov. It used rules that people wrote, and it checked about 200 million chess positions every second.\nSee Also: rule\n\n\n\ndeepfake\nA fake picture, video, or voice of a real person, made with AI.\nSee Also: voice clone, reverse image search\n\n\n\ndendrite\nOne of the short branches of a neuron. Dendrites take in signals from other neurons.\nSee Also: neuron\n\n\n\ndetector\nA tool that tries to tell if something was made by AI. AI writing detectors make many mistakes, most often with people who write in a second language.\nSee Also: false positive, predictable\n\n\n\ndiffusion\nA way to make a picture: start with noise, then remove a little noise at a time, again and again, guided by words. A neural network guesses which part is noise.\nSee Also: image generator, noise\n\n\n\ndraft\nA first try at a piece of writing. You will change it to make it better.\nSee Also: revise\n\n\n\nedge\nA place in a picture where it changes fast from dark to light. Edges show where things begin and end.\nSee Also: filter\n\n\n\nELIZA effect\nWhen people feel that a computer understands them, but it does not. It is named after ELIZA, a chatbot from 1966.\n\nExample:\nELIZA only followed rules, but some people told it their secrets.\n\nSee Also: chatbot\n\n\n\nemergence\nWhen many simple parts work together and make something bigger and more complicated, which no one planned.\n\nExample:\nA stadium wave: each person only watches a neighbor, but together they make a wave that moves around the stadium.\n\nSee Also: cellular automaton\n\n\n\nengagement\nHow much time and attention you give an app. Many apps earn more money when your engagement is higher, so they are built to keep you there.\nSee Also: feed\n\n\n\nestimate\nA quick answer that is close, but not exact. You can use it to check if an answer makes sense.\n\nExample:\n\\(3847 \\times 29\\) is about \\(4000 \\times 30 = 120000\\).\n\n\n\n\nethics\nIdeas about what is right and wrong, and how people should act.\n\n\n\nevidence\nFacts or things that show something is true, like your drafts, your notes, and the version history of your writing.\n\n\n\nfact-check\nTo find out if something is true, using good sources.\nSee Also: lateral reading, source\n\n\n\nfalse positive\nWhen a test says “yes” but the true answer is “no.” When a detector calls human writing “AI,” that is a false positive.\nSee Also: detector\n\n\n\nfeed\nThe list of posts, videos, or stories an app shows you. An AI chooses what goes in it.\nSee Also: recommendation, filter bubble\n\n\n\nfeedback\nComments that tell you what is good about your work and what to make better. Good feedback is kind, specific, and helpful.\nSee Also: revise\n\n\n\nfilter\nA small grid of numbers that slides over a picture. At each spot, it multiplies and adds. A filter can find edges or make a picture blurry.\nSee Also: edge, pixel\n\n\n\nfilter bubble\nWhen an app shows you only what you already like and agree with, so you miss everything else. Two people can live in very different filter bubbles.\nSee Also: feed\n\n\n\nfollow-up question\nA question you ask after an answer, to make the answer better. For example: “Explain it in simple words” or “Give me an example.”\nSee Also: context window\n\n\n\nformat\nWhat an answer should look like: a list, a table, 3 sentences, simple words, or a certain language.\nSee Also: prompt\n\n\n\ngallery walk\nWalking around the room to look at everyone’s work and leave feedback notes, like visitors in an art gallery.\nSee Also: feedback\n\n\n\ngoal\nWhat an AI is trying to do, like “win the game” or “get more clicks.” An AI follows its goal exactly, even when that is not what people really wanted.\nSee Also: alignment\n\n\n\nGPU\nA computer chip first made for video games. It can do thousands of small math problems at the same time, so it is very good for training neural networks. GPU means “graphics processing unit.”\nSee Also: neural network\n\n\n\nhallucination\nWhen AI writes something false as if it were true, like a book or a court case that does not exist. The AI sounds just as sure as when it is right.\nSee Also: fact-check\n\n\n\nhint\nA small help that shows you the next step, but not the answer.\n\n\n\nhype\nBig promises and excitement, more than the facts show.\n\nExample:\nIn 1970, a scientist said that a machine as smart as a person was 3 to 8 years away. That was hype.\n\nSee Also: AI winter\n\n\n\nimage generator\nAn AI that makes a new picture from words. Many image generators use diffusion.\nSee Also: diffusion\n\n\n\nimposter\nSomeone who pretends to be another person or a real company, like a scammer who says they are from your bank.\nSee Also: scam, voice clone\n\n\n\ninput\nA number that goes into a neuron or a program. In a picture, each square can be an input: 1 for black, 0 for white.\nSee Also: weight, neuron\n\n\n\njudge\nIn the Turing test, the person who asks the questions and decides which player is the machine.\nSee Also: Turing test\n\n\n\nkey word\nA word that a program looks for to decide what to do.\n\nExample:\nWhen you type “I feel,” ELIZA finds the key words “I feel” and uses its rule for them.\n\nSee Also: rule\n\n\n\nlabel\nThe right answer that a person attaches to an example, like “cat” on a picture of a cat. An AI learns from examples and their labels.\n\nExample:\nIn ImageNet, people from 167 countries labeled 14 million pictures.\n\nSee Also: dataset\n\n\n\nlarge language model\nA transformer trained on a huge amount of text to predict the next word. Chatbots like ChatGPT are built on large language models. People often call them LLMs.\nSee Also: transformer, prediction, chatbot\n\n\n\nlateral reading\nChecking a fact by opening new tabs to see what other sources say, instead of reading only one page. “Lateral” means “to the side.” Professional fact-checkers do this.\nSee Also: fact-check\n\n\n\nlearning curve\nA graph that shows how you get better with practice. The time or the number of mistakes usually drops fast at first, then more slowly.\nSee Also: synapse\n\n\n\nlocation data\nInformation that shows where your phone has been. Many apps collect it, and some sell it.\nSee Also: privacy\n\n\n\nlow-resource language\nA language with not much writing online for AI to learn from. AI usually makes more mistakes in these languages.\nSee Also: dataset\n\n\n\nmachine learning\nA way to make AI. People do not write the rules. They give the computer many examples, and the computer finds the patterns by itself.\nSee Also: data, pattern, rule\n\n\n\nmetadata\nHidden information about a file. A photo’s metadata can include the kind of phone, the date and time, and the exact place it was taken.\nSee Also: privacy\n\n\n\nneural network\nA kind of AI made of many small parts that work a little like brain cells. Each part does a tiny bit of math. A neural network learns from examples.\nSee Also: machine learning, GPU\n\n\n\nneuron\nA cell that sends signals. Your brain has about 86 billion neurons. A neuron fires (sends a signal) only when the signals coming in add up to enough.\nSee Also: dendrite, axon, synapse, neural network\n\n\n\nnoise\nRandom dots with no picture in them, like the static on an old TV.\nSee Also: diffusion\n\n\n\noverfitting\nWhen an AI memorizes its training examples instead of learning the real pattern. It does very well on the training data but worse on new data.\n\nExample:\nA student who memorizes the answers to one practice test, but cannot solve new problems.\n\nSee Also: training, test data\n\n\n\npattern\nSomething that is the same, or repeats, in many examples.\n\nExample:\nIn most drawings of a cat, the ears are two triangles on top of the head. That is a pattern.\n\n\n\n\nperceptron\nThe first artificial neuron that could learn. Frank Rosenblatt built it in 1958. It multiplies inputs by weights, adds them, and fires if the total passes a threshold.\nSee Also: weight, threshold, neural network\n\n\n\npersona\nA character that someone pretends to be. You can tell an AI to use a persona, like “Act like a 15-year-old student.”\n\nExample:\nIn a 2025 Turing test, a chatbot with a persona fooled judges much more often than the same chatbot without one.\n\nSee Also: Turing test\n\n\n\npixel\nOne tiny square of a picture. A computer stores each pixel as a number. In a black-and-white picture, 0 is black and 255 is white.\nSee Also: computer vision\n\n\n\nplagiarism\nTurning in someone else’s words or ideas as your own. Turning in AI writing as your own, when the assignment does not allow it, is plagiarism too.\n\n\n\npredictable\nEasy to guess before it happens. AI writing is very predictable, because a chatbot picks likely next words. Simple, clear human writing is predictable too.\nSee Also: prediction\n\n\n\nprediction\nA best guess about something you do not know yet. A prediction can be wrong.\n\nExample:\nA phone keyboard makes a prediction about your next word.\n\n\n\n\nprivacy\nYour right to keep information about yourself to yourself, and to decide who gets to see it.\nSee Also: metadata, location data\n\n\n\nproduct\nThe thing you make in a project, like a flyer, a study guide, or a plan.\n\n\n\nprompt\nWhat you type to tell an AI what you want. A good prompt has a task, context, and a format.\n\nExample:\n“I am in 10th grade. Give me 3 reasons dogs make good pets. Use simple words.”\n\nSee Also: task, context, format\n\n\n\nprompt log\nA list of every prompt you used in a project, and what you did with each answer.\nSee Also: prompt\n\n\n\nrandom\nWith no pattern, so you cannot guess what comes next.\n\nExample:\nThe middle of Rule 30 looks random.\n\n\n\n\nrecommendation\nSomething an app chooses for you, because it predicts you will click it or like it.\nSee Also: feed, prediction\n\n\n\nregulation\nA rule made by a government, like a law about how AI can be used.\n\n\n\nresponsible\nBeing the one who must answer for what happened, and fix it. When an AI makes a mistake, people argue about who is responsible.\n\n\n\nreverse image search\nSearching with a picture instead of words, to find where else the picture is online and where it first appeared.\nSee Also: lateral reading\n\n\n\nrevise\nTo change your work to make it better, often after feedback.\nSee Also: feedback, draft\n\n\n\nrubric\nA chart that shows how your work will be graded.\n\n\n\nrule\nAn exact instruction that a computer follows: “If this happens, do that.” In a normal computer program, a person writes the rules.\n\nExample:\nAn alarm clock follows one rule: “If the time is 7:00, ring.”\n\nSee Also: computer program, machine learning\n\n\n\nscam\nA trick to steal your money or your information. AI makes scam messages harder to spot, because it writes perfectly in any language.\nSee Also: warning sign, imposter\n\n\n\nshortcut\nA clue that gives the right answer in the training examples, but is not the real reason. Clever Hans the horse watched people’s faces instead of doing math. An AI learned to look for snow instead of wolves.\nSee Also: bias\n\n\n\nskill\nSomething you can do well because you learned it and practiced it.\n\n\n\nsource\nWhere a fact comes from: a book, a website, a news story, or a person.\nSee Also: fact-check\n\n\n\nstereotype\nAn idea that all people in a group are the same, like “all nurses are women.” AI can learn stereotypes from its training data.\nSee Also: bias\n\n\n\nstyle\nThe way a picture looks: a photo, a cartoon, a watercolor painting, pixel art.\n\n\n\nsycophancy\nAgreeing with someone just to please them, even when they are wrong. A chatbot can learn this, because people often give good ratings to answers that agree with them.\nSee Also: hallucination\n\n\n\nsynapse\nThe tiny gap between two neurons. Chemicals carry the signal across it. When you practice, the synapses you use get stronger.\nSee Also: neuron\n\n\n\ntask\nOne piece of work, like “write a report” or “fix a pipe.” A job is made of many tasks. In a prompt, the task is the job you want the AI to do.\nSee Also: prompt, automation\n\n\n\ntest data\nNew examples that an AI never saw during training. We use them to check what the AI really learned.\n\nExample:\nAfter training on cards T1 to T10, the class neuron was tested on cards X1 to X6, with no fixing.\n\nSee Also: training\n\n\n\nthreshold\nThe number that the total must pass for a neuron to fire.\n\nExample:\nIf the threshold is 4 and the total is 5, the neuron fires.\n\nSee Also: weight\n\n\n\ntoken\nA word or a piece of a word that a chatbot reads and writes. For example, “playing” might be two tokens: “play” and “ing.”\nSee Also: large language model\n\n\n\ntraining\nShowing an AI many examples so it can fix its weights. After each mistake, the weights change a little.\nSee Also: weight, test data\n\n\n\ntraining data\nAll the examples an AI learned from: pictures, text, sounds, or numbers. An AI is only as good as its training data.\nSee Also: dataset, training\n\n\n\ntransfer learning\nStarting from an AI that already learned something, then teaching it a new job with a few new examples. It is much faster than starting from nothing.\n\nExample:\nTeachable Machine starts from a network that learned from millions of pictures. It only learns the last step from your pictures.\n\nSee Also: training\n\n\n\ntransformer\nA kind of neural network, first shared by Google scientists in 2017. It uses attention to connect the words in a sentence. It is the T in GPT.\nSee Also: attention, neural network, large language model\n\n\n\ntranslate\nTo change words from one language to another, with the same meaning.\nSee Also: back translation\n\n\n\ntrolley problem\nA famous thought experiment: a runaway trolley will hit 5 people. Would you pull a lever to send it toward 1 person instead? People still disagree about the answer.\nSee Also: ethics\n\n\n\nTuring test\nA game Alan Turing described in 1950. He called it the imitation game. A judge chats in writing with a person and a machine. If the judge cannot tell which one is the machine, the machine passes.\nSee Also: judge, chatbot\n\n\n\nunderstand\nTo know what something means, not only what it looks like. Whether AI can understand is a question people still argue about.\n\nExample:\nIn the Klingon Room, the person copies correct replies in Klingon, but they do not understand Klingon.\n\nSee Also: ELIZA effect\n\n\n\nverification code\nA short number a website sends you, to prove it is really you. Never share it with anyone.\nSee Also: scam\n\n\n\nverify\nTo check that something is true, using good sources.\nSee Also: fact-check\n\n\n\nvoice clone\nAn AI copy of a person’s voice, made from a short recording. Scammers use voice clones to pretend to be someone’s family member.\nSee Also: deepfake\n\n\n\nwarning sign\nA clue that something is wrong. Scam warning signs: hurry, fear, a prize, a secret, a strange way to pay, and a link or a code.\nSee Also: scam\n\n\n\nwatt-hour\nAn amount of electricity. A 10-watt light bulb that is on for one hour uses 10 watt-hours. Charging a phone uses about 15 watt-hours.\n\n\n\nweight\nA number that says how much an input matters to a neuron. A big weight means the input matters a lot. A negative weight means the input makes the neuron less likely to fire. When a neural network learns, it changes its weights.\nSee Also: input, threshold, neural network",
     "crumbs": [
       "Glossary"
     ]
