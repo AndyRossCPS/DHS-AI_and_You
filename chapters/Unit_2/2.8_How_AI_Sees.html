@@ -559,7 +559,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#find-the-edges" id="toc-find-the-edges" class="nav-link" data-scroll-target="#find-the-edges">2.8.3 - Find the Edges</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
-  <li><a href="#watch" id="toc-watch" class="nav-link" data-scroll-target="#watch">📺 Watch</a></li>
   <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
   </ul>
 </nav>
@@ -607,10 +606,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🟦</span> <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-slug="pixel" data-term="pixel" data-original-href="#glossary-pixel">pixel</a>: one tiny square of a picture. It is stored as a number.</li>
-<li><span class="icon">🔍</span> <a href="../../glossary.html#glossary-filter" class="glossary-link" data-slug="filter" data-term="filter" data-original-href="#glossary-filter">filter</a>: a small grid of numbers that slides over a picture to find something, like edges</li>
-<li><span class="icon">📐</span> <a href="../../glossary.html#glossary-edge" class="glossary-link" data-slug="edge" data-term="edge" data-original-href="#glossary-edge">edge</a>: a place where a picture changes fast from dark to light</li>
-<li><span class="icon">👁️</span> <a href="../../glossary.html#glossary-computer-vision" class="glossary-link" data-slug="computer-vision" data-term="computer vision" data-original-href="#glossary-computer-vision">computer vision</a>: AI that finds things in pictures and video</li>
+<li><span class="icon">🟦</span> <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-term="pixel" data-original-href="#glossary-pixel" data-slug="pixel">pixel</a>: one tiny square of a picture. It is stored as a number.</li>
+<li><span class="icon">🔍</span> <a href="../../glossary.html#glossary-filter" class="glossary-link" data-term="filter" data-original-href="#glossary-filter" data-slug="filter">filter</a>: a small grid of numbers that slides over a picture to find something, like edges</li>
+<li><span class="icon">📐</span> <a href="../../glossary.html#glossary-edge" class="glossary-link" data-term="edge" data-original-href="#glossary-edge" data-slug="edge">edge</a>: a place where a picture changes fast from dark to light</li>
+<li><span class="icon">👁️</span> <a href="../../glossary.html#glossary-computer-vision" class="glossary-link" data-term="computer vision" data-original-href="#glossary-computer-vision" data-slug="computer-vision">computer vision</a>: AI that finds things in pictures and video</li>
 </ul>
 </div>
 </div>
@@ -629,7 +628,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
 <section id="pixels-are-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="pixels-are-numbers">2.8.1 - Pixels Are Numbers</h3>
-<p>Zoom in on any photo and you see tiny squares. Each square is a <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-slug="pixel" data-term="pixel" data-original-href="#glossary-pixel">pixel</a>.</p>
+<p>Zoom in on any photo and you see tiny squares. Each square is a <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-term="pixel" data-original-href="#glossary-pixel" data-slug="pixel">pixel</a>.</p>
 <ul>
 <li>In a black-and-white picture, each pixel is one number: <strong>0</strong> is black, <strong>255</strong> is white, and the numbers between are grays.</li>
 <li>In a color picture, each pixel is <strong>three</strong> numbers: how much red, green, and blue.</li>
@@ -639,8 +638,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="finding-edges-with-a-filter" class="level3">
 <h3 class="anchored" data-anchor-id="finding-edges-with-a-filter">2.8.2 - Finding Edges with a Filter</h3>
-<p>Where does a picture change fast from dark to light? That is an <a href="../../glossary.html#glossary-edge" class="glossary-link" data-slug="edge" data-term="edge" data-original-href="#glossary-edge">edge</a>. Edges show where things begin and end.</p>
-<p>A <a href="../../glossary.html#glossary-filter" class="glossary-link" data-slug="filter" data-term="filter" data-original-href="#glossary-filter">filter</a> is a small 3 by 3 grid of numbers. It slides over the picture, one square at a time. At each square:</p>
+<p>Where does a picture change fast from dark to light? That is an <a href="../../glossary.html#glossary-edge" class="glossary-link" data-term="edge" data-original-href="#glossary-edge" data-slug="edge">edge</a>. Edges show where things begin and end.</p>
+<p>A <a href="../../glossary.html#glossary-filter" class="glossary-link" data-term="filter" data-original-href="#glossary-filter" data-slug="filter">filter</a> is a small 3 by 3 grid of numbers. It slides over the picture, one square at a time. At each square:</p>
 <ol type="1">
 <li><strong>Multiply</strong> the 9 picture numbers by the 9 filter numbers.</li>
 <li><strong>Add</strong> them up.</li>
@@ -824,14 +823,6 @@ ul.task-list li input[type="checkbox"] {
 <li>A self-driving car could make a mistake when … , because …</li>
 <li>Computer vision is helpful when … , and dangerous when …</li>
 </ul>
-</div>
-</section>
-<section id="watch" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="watch">📺 Watch</h2>
-<div class="watch" title="How Computer Vision Works (Code.org)">
-<div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube-nocookie.com/embed/2hXG8v8p0KM" title="How Computer Vision Works (Code.org)" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></div><p class="yt-school">🏫 <strong>At school:</strong> <a href="https://yout-ube.com/watch?v=2hXG8v8p0KM" target="_blank" rel="noopener">watch this video on yout-ube.com</a></p>
-<p><strong>While you watch:</strong> What does a computer see when it looks at a picture?</p>
-<p><strong>Captions in your language:</strong> Press <strong>CC</strong>, then ⚙️ <strong>Settings</strong>, then <strong>Subtitles/CC</strong>, then <strong>Auto-translate</strong>.</p>
 </div>
 </section>
 <section id="go-further" class="level2 unnumbered">

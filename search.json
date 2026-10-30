@@ -308,17 +308,6 @@
     ]
   },
   {
-    "objectID": "chapters/Unit_1/1.1_What_Is_AI.html#watch",
-    "href": "chapters/Unit_1/1.1_What_Is_AI.html#watch",
-    "title": "1.1 - What Is AI?",
-    "section": "📺 Watch",
-    "text": "📺 Watch\nWatch this at home or if we have time in class. It shows more examples of machine learning in your life.\n\n🏫 At school: watch this video on yout-ube.com\nWhile you watch: The video shows three ways a computer can learn from examples. Write one example of each.\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
-    "crumbs": [
-      "Unit 1: Where AI Came From",
-      "1.1 - What Is AI?"
-    ]
-  },
-  {
     "objectID": "chapters/Unit_1/1.1_What_Is_AI.html#go-further",
     "href": "chapters/Unit_1/1.1_What_Is_AI.html#go-further",
     "title": "1.1 - What Is AI?",
@@ -379,17 +368,6 @@
     "title": "1.2 - Can a Machine Think?",
     "section": "💬 Talk About It",
     "text": "💬 Talk About It\nTuring said: If you cannot tell the machine from a person, stop arguing about “thinking.”\nDo you agree? If a machine fools you, does that mean it thinks?\n\n\nIf a machine fools me, it does / does not mean the machine thinks, because …\nThe best question to catch the AI was … because …\nA person can … , but a chatbot cannot.\nI think an AI should / should not have to tell you it is an AI, because …",
-    "crumbs": [
-      "Unit 1: Where AI Came From",
-      "1.2 - Can a Machine Think?"
-    ]
-  },
-  {
-    "objectID": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#watch",
-    "href": "chapters/Unit_1/1.2_Can_a_Machine_Think.html#watch",
-    "title": "1.2 - Can a Machine Think?",
-    "section": "📺 Watch",
-    "text": "📺 Watch\n\n🏫 At school: watch this video on yout-ube.com\nWhile you watch: Find one chatbot from the video that tried to pass the test. Did it pass?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
     "crumbs": [
       "Unit 1: Where AI Came From",
       "1.2 - Can a Machine Think?"
@@ -598,7 +576,7 @@
     "href": "chapters/Unit_1/1.5_Data_Changes_Everything.html#watch",
     "title": "1.5 - Data Changes Everything",
     "section": "📺 Watch",
-    "text": "📺 Watch\n\n🏫 At school: watch this video on yout-ube.com\nThe talk is 18 minutes. In class, we watch the first part.\nWhile you watch: Fei-Fei Li compares computers to children. What do children do that computers could not?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
+    "text": "📺 Watch\n\n🏫 At school: watch this video on yout-ube.com\nFei-Fei Li gave this talk in 2015, three years after AlexNet won. It is history now: computers can do much more today. The talk is 18 minutes. In class, we watch the first part.\nWhile you watch: Fei-Fei Li compares computers to children. In 2015, what could children do that computers could not?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
     "crumbs": [
       "Unit 1: Where AI Came From",
       "1.5 - Data Changes Everything"
@@ -665,17 +643,6 @@
     "title": "1.6 - Transformers and ChatGPT",
     "section": "💬 Talk About It",
     "text": "💬 Talk About It\nChatGPT learned from text that people wrote: books, websites, news, and more. Most of those writers were never asked.\n\n\nWriters should / should not be asked before AI learns from their words, because …\nA chatbot writes one word at a time by …\nIn 10 years, I think AI will … , because …",
-    "crumbs": [
-      "Unit 1: Where AI Came From",
-      "1.6 - Transformers and ChatGPT"
-    ]
-  },
-  {
-    "objectID": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#watch",
-    "href": "chapters/Unit_1/1.6_Transformers_and_ChatGPT.html#watch",
-    "title": "1.6 - Transformers and ChatGPT",
-    "section": "📺 Watch",
-    "text": "📺 Watch\n\n🏫 At school: watch this video on yout-ube.com\nWhile you watch: How does a chatbot decide which word comes next?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
     "crumbs": [
       "Unit 1: Where AI Came From",
       "1.6 - Transformers and ChatGPT"
@@ -1034,17 +1001,6 @@
     ]
   },
   {
-    "objectID": "chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html#watch",
-    "href": "chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html#watch",
-    "title": "2.5 - Train a Human Neural Network",
-    "section": "📺 Watch",
-    "text": "📺 Watch\n\n🏫 At school: watch this video on yout-ube.com\nWhile you watch: What happens to the weights when the network makes a mistake?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
-    "crumbs": [
-      "Unit 2: Brains and Neural Networks",
-      "2.5 - Train a Human Neural Network"
-    ]
-  },
-  {
     "objectID": "chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html#go-further",
     "href": "chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html#go-further",
     "title": "2.5 - Train a Human Neural Network",
@@ -1232,17 +1188,6 @@
     ]
   },
   {
-    "objectID": "chapters/Unit_2/2.8_How_AI_Sees.html#watch",
-    "href": "chapters/Unit_2/2.8_How_AI_Sees.html#watch",
-    "title": "2.8 - How AI Sees",
-    "section": "📺 Watch",
-    "text": "📺 Watch\n\n🏫 At school: watch this video on yout-ube.com\nWhile you watch: What does a computer see when it looks at a picture?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
-    "crumbs": [
-      "Unit 2: Brains and Neural Networks",
-      "2.8 - How AI Sees"
-    ]
-  },
-  {
     "objectID": "chapters/Unit_2/2.8_How_AI_Sees.html#go-further",
     "href": "chapters/Unit_2/2.8_How_AI_Sees.html#go-further",
     "title": "2.8 - How AI Sees",
@@ -1303,17 +1248,6 @@
     "title": "2.9 - How Chatbots Work",
     "section": "💬 Talk About It",
     "text": "💬 Talk About It\nThe tiny chatbot wrote “My friend likes rice and beans.” Did it understand that sentence? Think back to the Klingon Room in Lesson 1.3.\n\n\nThe tiny chatbot did / did not understand, because …\nA real chatbot is like the tiny chatbot because …\nA real chatbot is different from the tiny chatbot because …\nIf a chatbot learned from text with mistakes in it, it would …",
-    "crumbs": [
-      "Unit 2: Brains and Neural Networks",
-      "2.9 - How Chatbots Work"
-    ]
-  },
-  {
-    "objectID": "chapters/Unit_2/2.9_How_Chatbots_Work.html#watch",
-    "href": "chapters/Unit_2/2.9_How_Chatbots_Work.html#watch",
-    "title": "2.9 - How Chatbots Work",
-    "section": "📺 Watch",
-    "text": "📺 Watch\n\n🏫 At school: watch this video on yout-ube.com\nThis short video was made for a museum show about the history of chatbots.\nWhile you watch: How many words did the model read? How is that like your count table?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
     "crumbs": [
       "Unit 2: Brains and Neural Networks",
       "2.9 - How Chatbots Work"
@@ -1826,17 +1760,6 @@
     ]
   },
   {
-    "objectID": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#watch",
-    "href": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#watch",
-    "title": "3.7 - Making Pictures with AI",
-    "section": "📺 Watch",
-    "text": "📺 Watch\n\n🏫 At school: watch this video on yout-ube.com\nWhile you watch: What does the AI learn from, before it can make a picture?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
-    "crumbs": [
-      "Unit 3: Using AI Well",
-      "3.7 - Making Pictures with AI"
-    ]
-  },
-  {
     "objectID": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#go-further",
     "href": "chapters/Unit_3/3.7_Making_Pictures_with_AI.html#go-further",
     "title": "3.7 - Making Pictures with AI",
@@ -2128,17 +2051,6 @@
     "title": "4.2 - Where Bias Comes From",
     "section": "💬 Talk About It",
     "text": "💬 Talk About It\nWho should fix bias in AI: the company that makes it, the government, or the people who use it? Is it OK to use an AI that works better for some people than for others?\n\n\nBias got into … because …\nClever Hans is like the wolf AI because …\nThe Turkish translation chose … because …\nThe people who should fix this are … , because …",
-    "crumbs": [
-      "Unit 4: When AI Gets It Wrong",
-      "4.2 - Where Bias Comes From"
-    ]
-  },
-  {
-    "objectID": "chapters/Unit_4/4.2_Where_Bias_Comes_From.html#watch",
-    "href": "chapters/Unit_4/4.2_Where_Bias_Comes_From.html#watch",
-    "title": "4.2 - Where Bias Comes From",
-    "section": "📺 Watch",
-    "text": "📺 Watch\n\n🏫 At school: watch this video on yout-ube.com\nWhile you watch: Where does the bias in the video come from?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
     "crumbs": [
       "Unit 4: When AI Gets It Wrong",
       "4.2 - Where Bias Comes From"
@@ -2640,17 +2552,6 @@
     ]
   },
   {
-    "objectID": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#watch",
-    "href": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#watch",
-    "title": "6.1 - Can AI Be Creative?",
-    "section": "📺 Watch",
-    "text": "📺 Watch\n\n🏫 At school: watch this video on yout-ube.com\nWhile you watch: Does the speaker think AI is creative, or a tool for creative people?\nCaptions in your language: Press CC, then ⚙️ Settings, then Subtitles/CC, then Auto-translate.",
-    "crumbs": [
-      "Unit 6: AI and Our Future",
-      "6.1 - Can AI Be Creative?"
-    ]
-  },
-  {
     "objectID": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#go-further",
     "href": "chapters/Unit_6/6.1_Can_AI_Be_Creative.html#go-further",
     "title": "6.1 - Can AI Be Creative?",
@@ -2974,7 +2875,7 @@
     "href": "chapters/Explore/explore-unit-1.html#explore-1-1",
     "title": "Explore More: Where AI Came From",
     "section": "",
-    "text": "Why Scientists Stopped Writing Rules\nFor many years, scientists tried to build AI with rules. A person wrote every rule. Rules worked for some jobs, like playing chess. Rules did not work well for seeing, hearing, or language. Think about the cat rule from class: every time you fix it, a new picture breaks it.\nSo scientists started showing computers examples instead. That is machine learning. You will learn this whole story in Lessons 1.4 and 1.5.\n\n\nAI Makes Predictions\nFinish this sentence:\n\nAfter school, I like to eat …\n\nYou did not know the answer from the sentence. You made a prediction. You used patterns from your own life.\nAI makes predictions too.\n\n\n\n\n\n\nA phone keyboard predicts your next word.\nA video app predicts the next video you will like.\nA chatbot predicts the next word of its answer. Then it predicts the next one. It does this again and again, very fast.\n\n\nAI does not know the answer. It makes its best guess from patterns. Most of the time, the guess is good. Sometimes it is very wrong. In Unit 4, you will learn how to catch it.\n\nTry it at home: Open a text message on a phone. Type “I am going to” and tap the middle word the phone suggests, again and again. What sentence does your phone write? Is it like you?\n\n\nMore to Try\n\nQuick, Draw! The Data: Pick one word. Look at hundreds of drawings of it. What do most people draw?\nAutoDraw: Draw something fast and messy. AI guesses what you wanted and gives you a clean picture.\nTeachable Machine: Teach a computer to know your own pictures or sounds. We will use it in Unit 2.\nHow AI Works (Code.org): More short videos about AI.",
+    "text": "Why Scientists Stopped Writing Rules\nFor many years, scientists tried to build AI with rules. A person wrote every rule. Rules worked for some jobs, like playing chess. Rules did not work well for seeing, hearing, or language. Think about the cat rule from class: every time you fix it, a new picture breaks it.\nSo scientists started showing computers examples instead. That is machine learning. You will learn this whole story in Lessons 1.4 and 1.5.\n\n\nAI Makes Predictions\nFinish this sentence:\n\nAfter school, I like to eat …\n\nYou did not know the answer from the sentence. You made a prediction. You used patterns from your own life.\nAI makes predictions too.\n\n\n\n\n\n\nA phone keyboard predicts your next word.\nA video app predicts the next video you will like.\nA chatbot predicts the next word of its answer. Then it predicts the next one. It does this again and again, very fast.\n\n\nAI does not know the answer. It makes its best guess from patterns. Most of the time, the guess is good. Sometimes it is very wrong. In Unit 4, you will learn how to catch it.\n\nTry it at home: Open a text message on a phone. Type “I am going to” and tap the middle word the phone suggests, again and again. What sentence does your phone write? Is it like you?\n\n\nMore to Try\n\nQuick, Draw! The Data: Pick one word. Look at hundreds of drawings of it. What do most people draw?\nAutoDraw: Draw something fast and messy. AI guesses what you wanted and gives you a clean picture.\nTeachable Machine: Teach a computer to know your own pictures or sounds. We will use it in Unit 2.",
     "crumbs": [
       "Explore More",
       "Explore More: Where AI Came From"
@@ -2985,7 +2886,7 @@
     "href": "chapters/Explore/explore-unit-1.html#explore-1-2",
     "title": "Explore More: Where AI Came From",
     "section": "From Lesson 1.2: Can a Machine Think?",
-    "text": "From Lesson 1.2: Can a Machine Think?\n\nWho Was Alan Turing?\n\nAlan Turing was born in London in 1912. He was a mathematician.\nIn 1936, he wrote about a machine that could do any calculation if you gave it the right steps. Every computer today uses this idea.\nIn World War II, he helped break the secret code of the German military.\nToday, his face is on the British 50 pound bank note.\n\n\n\nTuring’s Prediction\n\nTuring said: in about 50 years, a judge will pick the right player 70 times out of 100, or less. The judge gets 5 minutes of questions.\nSo a machine passes if it fools the judge at least 30 times out of 100.\n\nIt took longer than 50 years. But by 2025, some chatbots could do it.\n\n\nThe 2025 Study\nIn 2025, scientists at the University of California, San Diego played Turing’s game. Almost 300 people were judges. Each judge chatted with a person and a chatbot at the same time, for 5 minutes. Then the judge picked: Which one is the human?\n\nGPT-4.5 with a persona was picked as the human 73% of the time. That is more often than the real humans were picked!\nELIZA, a chatbot from 1966, was picked 23% of the time. (You meet ELIZA in Lesson 1.3.)\nGPT-4o with no persona was picked only 21% of the time.\n\n\nA normal chatbot writes long, perfect answers. Real teenagers write short answers. They make spelling mistakes. They use slang.\nThe long, perfect answers were a clue. The persona hid the clue.\n\nTry it: In the imitation game, ask “What is 4,567 × 89?” A person needs a long time. Does the AI answer fast? Hard math answered very fast is another clue.\n\n\nMore to Watch\n\nThe Turing Test (TED-Ed lesson): The same video from class, on TED, with subtitles in many languages.",
+    "text": "From Lesson 1.2: Can a Machine Think?\n\nWho Was Alan Turing?\n\nAlan Turing was born in London in 1912. He was a mathematician.\nIn 1936, he wrote about a machine that could do any calculation if you gave it the right steps. Every computer today uses this idea.\nIn World War II, he helped break the secret code of the German military.\nToday, his face is on the British 50 pound bank note.\n\n\n\nTuring’s Prediction\n\nTuring said: in about 50 years, a judge will pick the right player 70 times out of 100, or less. The judge gets 5 minutes of questions.\nSo a machine passes if it fools the judge at least 30 times out of 100.\n\nIt took longer than 50 years. But by 2025, some chatbots could do it.\n\n\nThe 2025 Study\nIn 2025, scientists at the University of California, San Diego played Turing’s game. Almost 300 people were judges. Each judge chatted with a person and a chatbot at the same time, for 5 minutes. Then the judge picked: Which one is the human?\n\nGPT-4.5 with a persona was picked as the human 73% of the time. That is more often than the real humans were picked!\nELIZA, a chatbot from 1966, was picked 23% of the time. (You meet ELIZA in Lesson 1.3.)\nGPT-4o with no persona was picked only 21% of the time.\n\n\nA normal chatbot writes long, perfect answers. Real teenagers write short answers. They make spelling mistakes. They use slang.\nThe long, perfect answers were a clue. The persona hid the clue.\n\nTry it: In the imitation game, ask “What is 4,567 × 89?” A person needs a long time. Does the AI answer fast? Hard math answered very fast is another clue.",
     "crumbs": [
       "Explore More",
       "Explore More: Where AI Came From"
