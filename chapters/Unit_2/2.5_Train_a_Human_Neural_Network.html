@@ -614,9 +614,9 @@ window.Quarto = {
 </header>
 
 
-<p>In Lesson 2.4, <strong>you</strong> chose the weights. Real AI does not work that way.</p>
+<p>In Lesson 2.4, <strong>you</strong> chose the weights. Real AI doesn’t work that way.</p>
 <p>A real neural network starts with bad weights. It looks at an example and makes a guess. If the guess is wrong, it <strong>fixes its weights a little</strong>. Then it looks at the next example. After many examples, the weights are good. Nobody chose them. The network learned them.</p>
-<p>Today, the class is a neuron that learns. You will start it with the <strong>wrong idea</strong> on purpose, and watch it fix itself.</p>
+<p>Today, the class is a neuron that learns. You’ll start it with the <strong>wrong idea</strong> on purpose, and watch it fix itself.</p>
 <div class="agenda">
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
 <ul>
@@ -637,10 +637,10 @@ window.Quarto = {
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🏋️</span> <a href="../../glossary.html#glossary-training" class="glossary-link" data-original-href="#glossary-training" data-slug="training" data-term="training">training</a>: showing an AI many examples so it can fix its weights</li>
-<li><span class="icon">🧪</span> <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-original-href="#glossary-test-data" data-slug="test-data" data-term="test data">test data</a>: new examples the AI never trained on, used to check what it learned</li>
-<li><span class="icon">➕</span> <a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-original-href="#glossary-bias-number" data-slug="bias-number" data-term="bias">bias</a>: in a neuron, an extra number that is always added to the total</li>
-<li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-weight" class="glossary-link" data-original-href="#glossary-weight" data-slug="weight" data-term="weight">weight</a>: a number that says how much an input matters</li>
+<li><span class="icon">🏋️</span> <a href="../../glossary.html#glossary-training" class="glossary-link" data-slug="training" data-original-href="#glossary-training" data-term="training">training</a>: showing an AI many examples so it can fix its weights</li>
+<li><span class="icon">🧪</span> <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-slug="test-data" data-original-href="#glossary-test-data" data-term="test data">test data</a>: new examples the AI never trained on, used to check what it learned</li>
+<li><span class="icon">➕</span> <a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-slug="bias-number" data-original-href="#glossary-bias-number" data-term="bias">bias</a>: in a neuron, an extra number that’s always added to the total</li>
+<li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-weight" class="glossary-link" data-slug="weight" data-original-href="#glossary-weight" data-term="weight">weight</a>: a number that says how much an input matters</li>
 </ul>
 </div>
 </div>
@@ -707,7 +707,7 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td></td>
-<td><strong><a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-original-href="#glossary-bias-number" data-slug="bias-number" data-term="bias">bias</a></strong> (always added)</td>
+<td><strong><a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-slug="bias-number" data-original-href="#glossary-bias-number" data-term="bias">bias</a></strong> (always added)</td>
 </tr>
 </tbody>
 </table>
@@ -720,7 +720,7 @@ window.Quarto = {
 <p>We start the neuron <strong>backwards</strong>:</p>
 <div class="remember" title="Starting weights">
 <p>Attack weight <span class="math inline">\(= -1\)</span> <span class="math inline">\(\qquad\)</span> Special weight <span class="math inline">\(= +1\)</span> <span class="math inline">\(\qquad\)</span> Bias <span class="math inline">\(= 0\)</span></p>
-<p>This neuron thinks that strong punchers are psychic! It is wrong on purpose. Watch it learn.</p>
+<p>This neuron thinks that strong punchers are psychic! It’s wrong on purpose. Watch it learn.</p>
 </div>
 <hr>
 </section>
@@ -757,7 +757,7 @@ window.Quarto = {
 <p>Machop has <strong>A = 3</strong> and <strong>S = 1</strong>.</p>
 <ol type="1">
 <li>Total <span class="math inline">\(= (3 \times -1) + (1 \times 1) + 0 = -3 + 1 + 0 = -2\)</span></li>
-<li><span class="math inline">\(-2\)</span> is not more than 0, so the neuron says <strong>PSYCHIC</strong>.</li>
+<li><span class="math inline">\(-2\)</span> isn’t more than 0, so the neuron says <strong>PSYCHIC</strong>.</li>
 <li>Flip the card: Machop is <strong>FIGHTING</strong>. Wrong!</li>
 <li>It said PSYCHIC but the card is FIGHTING, so <strong>ADD</strong>:
 <ul>
@@ -822,7 +822,7 @@ window.Quarto = {
 <li>Everyone writes each step on the sheet.</li>
 <li>After T10, the scorekeeper writes the number of mistakes. That was <strong>pass 1</strong>.</li>
 <li>Do <strong>pass 2</strong> with the same cards. Keep going until a whole pass has <strong>0 mistakes</strong>.</li>
-<li>Now use the <strong>test cards</strong>, X1 to X6. They are the <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-original-href="#glossary-test-data" data-slug="test-data" data-term="test data">test data</a>: the neuron never trained on them. <strong>Do not fix the weights on a test!</strong> Just record what the neuron says.</li>
+<li>Now use the <strong>test cards</strong>, X1 to X6. They’re the <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-slug="test-data" data-original-href="#glossary-test-data" data-term="test data">test data</a>: the neuron never trained on them. <strong>Do not fix the weights on a test!</strong> Just record what the neuron says.</li>
 </ol>
 </div>
 <div class="think" title="What happened on the test cards?">
@@ -1030,7 +1030,7 @@ window.Quarto = {
 </script>
 <div class="think" title="The neuron's whole rule is one line. Can you find it?">
 <p>At the end, the weights are <strong>3</strong>, <strong>−4</strong>, and <strong>0</strong>. So the total is <span class="math inline">\(3A - 4S\)</span>. The neuron says FIGHTING when <span class="math inline">\(3A - 4S &gt; 0\)</span>, which means <span class="math inline">\(3A &gt; 4S\)</span>.</p>
-<p>That is a line on the graph! The neuron learned: <em>if Attack is a lot bigger than Special Attack, it is a fighter.</em> Nobody told it that rule.</p>
+<p>That’s a line on the graph! The neuron learned: <em>if Attack is a lot bigger than Special Attack, it’s a fighter.</em> Nobody told it that rule.</p>
 </div>
 <div class="project" title="The Team Race">
 <p>Two teams train the neuron at the same time with the same cards. Team 1 starts with the backwards weights. Team 2 starts with all weights at 0. Who needs fewer mistakes? Do they end with the same weights? Do both get the test cards right?</p>
