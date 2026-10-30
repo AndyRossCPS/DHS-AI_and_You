@@ -607,9 +607,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🤝</span> <a href="../../glossary.html#glossary-synapse" class="glossary-link" data-slug="synapse" data-original-href="#glossary-synapse" data-term="synapse">synapse</a>: the tiny gap where one neuron passes a signal to the next</li>
-<li><span class="icon">🔔</span> <a href="../../glossary.html#glossary-conditioning" class="glossary-link" data-slug="conditioning" data-original-href="#glossary-conditioning" data-term="conditioning">conditioning</a>: learning to connect two things that happen together, like a sound and food</li>
-<li><span class="icon">📉</span> <a href="../../glossary.html#glossary-learning-curve" class="glossary-link" data-slug="learning-curve" data-original-href="#glossary-learning-curve" data-term="learning curve">learning curve</a>: a graph that shows how you get better with practice</li>
+<li><span class="icon">🤝</span> <a href="../../glossary.html#glossary-synapse" class="glossary-link" data-term="synapse" data-original-href="#glossary-synapse" data-slug="synapse">synapse</a>: the tiny gap where one neuron passes a signal to the next</li>
+<li><span class="icon">🔔</span> <a href="../../glossary.html#glossary-conditioning" class="glossary-link" data-term="conditioning" data-original-href="#glossary-conditioning" data-slug="conditioning">conditioning</a>: learning to connect two things that happen together, like a sound and food</li>
+<li><span class="icon">📉</span> <a href="../../glossary.html#glossary-learning-curve" class="glossary-link" data-term="learning curve" data-original-href="#glossary-learning-curve" data-slug="learning-curve">learning curve</a>: a graph that shows how you get better with practice</li>
 </ul>
 </div>
 </div>
@@ -645,7 +645,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Pavlov’s team played a sound, a clicking <strong>metronome</strong>, right before they gave the dogs food. They did this many times.</li>
 <li>Soon, the dogs drooled when they heard the clicking, <strong>with no food at all</strong>.</li>
 </ol>
-<p>The dogs’ brains connected the sound with food. This kind of learning is called <a href="../../glossary.html#glossary-conditioning" class="glossary-link" data-slug="conditioning" data-original-href="#glossary-conditioning" data-term="conditioning">conditioning</a>.</p>
+<p>The dogs’ brains connected the sound with food. This kind of learning is called <a href="../../glossary.html#glossary-conditioning" class="glossary-link" data-term="conditioning" data-original-href="#glossary-conditioning" data-slug="conditioning">conditioning</a>.</p>
 </div>
 <div class="remember" title="Learning changes connections">
 <p>In a brain, learning means changing <strong>how strong the connections are</strong> between neurons.</p>
@@ -663,12 +663,14 @@ ul.task-list li input[type="checkbox"] {
 <li>Move the orange dot onto the green circle. Press and hold.</li>
 <li>Trace the star all the way around. Stay inside the blue path. Come back to the green circle to finish.</li>
 <li>Do <strong>5 tries</strong> with the same pen. Write your time and mistakes on your sheet after each try.</li>
-<li>Make a graph of your times. This is your <strong><a href="../../glossary.html#glossary-learning-curve" class="glossary-link" data-slug="learning-curve" data-original-href="#glossary-learning-curve" data-term="learning curve">learning curve</a></strong>.</li>
+<li>Make a graph of your times. This is your <strong><a href="../../glossary.html#glossary-learning-curve" class="glossary-link" data-term="learning curve" data-original-href="#glossary-learning-curve" data-slug="learning-curve">learning curve</a></strong>.</li>
 </ol>
 </div>
 <!-- mirror_draw.html: Lesson 2.3. Trace a star with a "mirror" pen: the pen
      moves up when your hand moves down. Each try records time and mistakes,
-     so students can graph how practice changes their brain. -->
+     so students can graph how practice changes their brain. On a touch screen
+     a pad under the star takes the finger, so the finger never hides the star
+     (like a real mirror test, where your hand is hidden). -->
 <div class="md" id="md">
   <div class="md-bar">
     <label>Pen: <select class="md-mode">
@@ -680,6 +682,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
   <div class="md-msg">Put the orange pen dot on the green circle. Then press and hold, and trace the star all the way around.</div>
   <canvas class="md-canvas" width="480" height="480" aria-label="Mirror drawing area"></canvas>
+  <div class="md-pad" aria-label="Touch pad: move your finger here and watch the star"><span>Trace here with your finger.<br>Watch the star, not your finger.</span></div>
   
 <table class="md-table caption-top">
 <thead>
@@ -701,8 +704,11 @@ ul.task-list li input[type="checkbox"] {
 .md-bar { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; margin-bottom: 0.5rem; }
 .md-btn { border: 1px solid #2c3e50; background: #2c3e50; color: #fff; border-radius: 6px; padding: 0.3rem 0.8rem; font-weight: 600; cursor: pointer; }
 .md-btn.md-plain { background: #fff; color: #2c3e50; }
-.md-msg { min-height: 2.6em; font-weight: 600; margin-bottom: 0.4rem; }
+.md-msg { min-height: 4.6em; line-height: 1.5; font-weight: 600; margin-bottom: 0.4rem; }  /* fixed height: the star and pad never jump while you draw */
 .md-canvas { display: block; width: 100%; max-width: 480px; height: auto; margin: 0 auto; border: 2px solid #2c3e50; border-radius: 8px; background: #fff; cursor: none; touch-action: none; }
+.md-pad { display: none; position: relative; width: 100%; max-width: 480px; aspect-ratio: 1 / 1; margin: 0.5rem auto 0; background: #f2f4f6; border: 2px dashed #95a5a6; border-radius: 8px; touch-action: none; user-select: none; -webkit-user-select: none; }
+.md-pad span { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; color: #7f8c8d; font-weight: 600; pointer-events: none; }
+.md.pad-on .md-pad { display: block; }
 .md-table { margin: 0.6rem auto 0; border-collapse: collapse; }
 .md-table th, .md-table td { border: 1px solid #d9e1e8; padding: 0.2rem 0.7rem; text-align: center; }
 </style>
@@ -740,12 +746,25 @@ ul.task-list li input[type="checkbox"] {
     SEG.forEach((s, i) => { const e = segDist(s, p); if (e < d) { d = e; best = i; } });
     return { i: best, d };
   }
-  function map(e) {
-    const r = cv.getBoundingClientRect();
+  const pad = root.querySelector(".md-pad");
+  let down = false, justDone = false;  // justDone: don't restart until the finger lifts or leaves the circle
+  function usePad(on) {
+    root.classList.toggle("pad-on", on);
+    msg.textContent = on
+      ? "Touch the gray pad. Slide until the orange dot is on the green circle, then trace the star."
+      : "Put the orange pen dot on the green circle. Then press and hold, and trace the star all the way around.";
+  }
+  function map(e, el) {
+    const r = el.getBoundingClientRect();
     let x = ((e.clientX - r.left) / r.width) * W, y = ((e.clientY - r.top) / r.height) * H;
     if (mode.value === "ud") y = H - y;
     if (mode.value === "lr") x = W - x;
     return [x, y];
+  }
+  const atStart = (p, f = 1) => Math.hypot(p[0] - P[0][0], p[1] - P[0][1]) < START_R * f;
+  function begin(p) {
+    drawing = true; started = false; mistakes = 0; inside = true; visited = new Set(); trail = [p];
+    msg.textContent = "Go! Trace the star. Stay inside the blue path.";
   }
   function draw() {
     cx.clearRect(0, 0, W, H);
@@ -760,14 +779,16 @@ ul.task-list li input[type="checkbox"] {
     if (pen) { cx.fillStyle = "#d35400"; cx.beginPath(); cx.arc(pen[0], pen[1], 7, 0, 2 * Math.PI); cx.fill(); }
   }
   function finish() {
-    drawing = false; started = false;
+    drawing = false; started = false; justDone = true;
     const secs = ((performance.now() - t0) / 1000).toFixed(1);
     tries.push([mode.options[mode.selectedIndex].text.replace("mirror: ", ""), secs, mistakes]);
     tbody.innerHTML = tries.map((t, i) => `<tr><td>${i + 1}</td><td>${t[0]}</td><td>${t[1]}</td><td>${t[2]}</td></tr>`).join("");
     msg.textContent = `Done! ${secs} seconds, ${mistakes} mistakes. Go back to the green circle to try again.`;
   }
-  cv.addEventListener("pointermove", (e) => {
-    pen = map(e);
+  function move(e, el) {
+    pen = map(e, el);
+    if (justDone && !atStart(pen, 1.4)) justDone = false;
+    if (down && !drawing && !justDone && atStart(pen, 1.4)) begin(pen);
     if (drawing) {
       const n = nearest(pen);
       const now = n.d <= BAND / 2;
@@ -775,38 +796,51 @@ ul.task-list li input[type="checkbox"] {
       inside = now;
       if (now) visited.add(n.i);
       trail.push(pen);
-      const atStart = Math.hypot(pen[0] - P[0][0], pen[1] - P[0][1]) < START_R;
-      if (!started && !atStart) { started = true; t0 = performance.now(); }
-      if (started && atStart && visited.size === 10) finish();
+      if (!started && !atStart(pen)) { started = true; t0 = performance.now(); }
+      if (started && atStart(pen) && visited.size === 10) finish();
     }
     draw();
-  });
-  cv.addEventListener("pointerdown", (e) => {
+  }
+  function press(e, el) {
+    if (el === cv && e.pointerType === "touch") {
+      // a finger on the star hides it: use the pad instead
+      usePad(true);
+      msg.textContent = "Use the gray pad under the star, so your finger doesn't hide it.";
+      return;
+    }
     e.preventDefault();
-    cv.setPointerCapture(e.pointerId);
-    pen = map(e);
-    if (Math.hypot(pen[0] - P[0][0], pen[1] - P[0][1]) < START_R * 1.4) {
-      drawing = true; started = false; mistakes = 0; inside = true; visited = new Set(); trail = [pen];
-      msg.textContent = "Go! Trace the star. Stay inside the blue path.";
-    } else if (!drawing) {
-      msg.textContent = "Start on the green circle. Move the orange dot there first.";
-    }
+    try { el.setPointerCapture(e.pointerId); } catch (_) { /* some browsers refuse; drawing still works */ }
+    down = true; justDone = false;
+    pen = map(e, el);
+    if (atStart(pen, 1.4)) begin(pen);
+    else if (!drawing) msg.textContent = el === pad
+      ? "Slide your finger until the orange dot is on the green circle."
+      : "Start on the green circle. Move the orange dot there first.";
     draw();
-  });
-  cv.addEventListener("pointerup", () => {
+  }
+  function release(el) {
+    down = false;
     if (drawing) {
       if (started) msg.textContent = "You let go! Go back to the green circle and start again.";
       drawing = false; started = false;
     }
+    if (el === pad) { pen = null; draw(); }
+  }
+  [cv, pad].forEach((el) => {
+    el.addEventListener("pointermove", (e) => move(e, el));
+    el.addEventListener("pointerdown", (e) => press(e, el));
+    el.addEventListener("pointerup", () => release(el));
+    el.addEventListener("pointercancel", () => release(el));
   });
-  cv.addEventListener("pointerleave", () => { pen = null; draw(); });
+  cv.addEventListener("pointerleave", () => { if (!down) { pen = null; draw(); } });
   mode.addEventListener("change", () => { drawing = false; trail = []; draw(); msg.textContent = "New pen! Start on the green circle."; });
   root.querySelector(".md-reset").addEventListener("click", () => { tries = []; tbody.innerHTML = ""; trail = []; draw(); });
+  usePad(window.matchMedia ? matchMedia("(any-pointer: coarse)").matches : false);
   draw();
 })();
 </script>
 <div class="gotcha" title="No mouse?">
-<p>On a touch screen, use your finger. On a laptop, a mouse is easier than a touch pad, but a touch pad works too.</p>
+<p>On a touch screen, use the gray pad under the star. Your finger moves on the pad, and the pen moves on the star, so your finger doesn’t hide it. (In a real mirror test, your hand is hidden too.) On a laptop, a mouse is easier than a touch pad, but a touch pad works too.</p>
 </div>
 <div class="think" title="What does your learning curve look like?">
 <p>For most people, the time drops a lot after the first tries. Then it drops more slowly. Your brain was building new connections between what your eyes see and how your hand moves.</p>
