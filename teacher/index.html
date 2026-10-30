@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>AI and You: Teacher Guide</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+  :root { --bg: #fbfcfd; --fg: #1f2d36; --muted: #5b6b76; --line: #d9e1e8; --accent: #0f6e78; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #131b20; --fg: #e3eaee; --muted: #9aaab4; --line: #2c3a43; --accent: #5cc3cc; color-scheme: dark; } }
+  body { background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.7rem; } h2 { border-bottom: 2px solid var(--line); padding-bottom: 4px; margin-top: 2.2rem; }
+  h4 { margin: 1.4rem 0 0.3rem; } a { color: var(--accent); } code { font-size: 0.9em; }
+  header p.subtitle, header p.author { color: var(--muted); }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">AI and You: Teacher Guide</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#how-the-lessons-fit-the-calendar"
+id="toc-how-the-lessons-fit-the-calendar">How the Lessons Fit the
+Calendar</a></li>
+<li><a href="#lessons" id="toc-lessons">Lessons</a>
+<ul>
+<li><a href="#unit-1-where-ai-came-from"
+id="toc-unit-1-where-ai-came-from">Unit 1: Where AI Came From</a></li>
+<li><a href="#unit-2-brains-and-neural-networks"
+id="toc-unit-2-brains-and-neural-networks">Unit 2: Brains and Neural
+Networks</a></li>
+<li><a href="#unit-3-using-ai-well" id="toc-unit-3-using-ai-well">Unit
+3: Using AI Well</a></li>
+<li><a href="#unit-4-when-ai-gets-it-wrong"
+id="toc-unit-4-when-ai-gets-it-wrong">Unit 4: When AI Gets It
+Wrong</a></li>
+<li><a href="#unit-5-ai-in-the-real-world"
+id="toc-unit-5-ai-in-the-real-world">Unit 5: AI in the Real
+World</a></li>
+<li><a href="#unit-6-ai-and-our-future"
+id="toc-unit-6-ai-and-our-future">Unit 6: AI and Our Future</a></li>
+</ul></li>
+<li><a href="#dated-boxes-to-review-each-term"
+id="toc-dated-boxes-to-review-each-term">Dated Boxes to Review Each
+Term</a></li>
+<li><a href="#outside-websites" id="toc-outside-websites">Outside
+Websites</a></li>
+</ul>
+</nav>
+<p>This page is for Mr. Ross. Nothing in the book links here, and it is
+not in the site search. Bookmark this address.</p>
+<p>It is rebuilt every time the book is rendered, so it always matches
+the lessons.</p>
+<h2 id="how-the-lessons-fit-the-calendar">How the Lessons Fit the
+Calendar</h2>
+<ul>
+<li><strong>38 lessons, about 64 meetings.</strong> Each lesson has a
+40-minute core. The core is planned at twice the usual time, for
+language support. <strong>Go Further</strong> fills a second day when
+there is time. When you are behind, skip Go Further; never squeeze a
+core.</li>
+<li><strong>Explore More</strong> pages are for students working on
+their own. They are never needed for a core.</li>
+<li><strong>Raina</strong> (MagicSchool) is the only AI tool students
+use with an account. Every Raina activity has a fallback: you run it on
+the projector, or an unplugged version. Images share a usage limit, so
+plan pairs or turns.</li>
+<li><strong>No personal information</strong> goes into any AI tool: no
+names, pictures of people, addresses, phone numbers, birthdays, or
+student numbers.</li>
+<li><strong>Answer keys</strong> sit beside each student sheet:
+<code>handouts/Unit_X/&lt;name&gt;_KEY.pdf</code>. Nothing links to
+them.</li>
+</ul>
+<h2 id="lessons">Lessons</h2>
+<h3 id="unit-1-where-ai-came-from">Unit 1: Where AI Came From</h3>
+<h4 id="what-is-ai"><a href="../chapters/Unit_1/1.1_What_Is_AI.html">1.1
+- What Is AI?</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_1/1.1_What_Is_AI.pdf">What Is AI</a> (<a
+href="../handouts/Unit_1/1.1_What_Is_AI_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> Keep every student’s Big Question
+answer. You hand them back in Lesson 6.6.</p>
+<h4 id="can-a-machine-think"><a
+href="../chapters/Unit_1/1.2_Can_a_Machine_Think.html">1.2 - Can a
+Machine Think?</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_1/1.2_Can_a_Machine_Think.pdf">Can a Machine
+Think</a> (<a
+href="../handouts/Unit_1/1.2_Can_a_Machine_Think_KEY.pdf">key</a>)</p>
+<h4 id="the-first-chatbot"><a
+href="../chapters/Unit_1/1.3_The_First_Chatbot.html">1.3 - The First
+Chatbot</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_1/1.3_Klingon_Room_Rule_Book.pdf">Klingon Room
+Rule Book</a> (<a
+href="../handouts/Unit_1/1.3_Klingon_Room_Rule_Book_KEY.pdf">key</a>) ·
+<a href="../handouts/Unit_1/1.3_The_First_Chatbot.pdf">The First
+Chatbot</a> (<a
+href="../handouts/Unit_1/1.3_The_First_Chatbot_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> Print the Klingon Room rule book: one
+copy for each group.</p>
+<h4 id="rules-win-at-games"><a
+href="../chapters/Unit_1/1.4_Rules_Win_at_Games.html">1.4 - Rules Win at
+Games</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_1/1.4_Rules_Win_at_Games.pdf">Rules Win at
+Games</a> (<a
+href="../handouts/Unit_1/1.4_Rules_Win_at_Games_KEY.pdf">key</a>)</p>
+<h4 id="data-changes-everything"><a
+href="../chapters/Unit_1/1.5_Data_Changes_Everything.html">1.5 - Data
+Changes Everything</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_1/1.5_Data_Changes_Everything.pdf">Data Changes
+Everything</a> (<a
+href="../handouts/Unit_1/1.5_Data_Changes_Everything_KEY.pdf">key</a>)</p>
+<h4 id="transformers-and-chatgpt"><a
+href="../chapters/Unit_1/1.6_Transformers_and_ChatGPT.html">1.6 -
+Transformers and ChatGPT</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_1/1.6_Transformers_and_ChatGPT.pdf">Transformers
+and ChatGPT</a> (<a
+href="../handouts/Unit_1/1.6_Transformers_and_ChatGPT_KEY.pdf">key</a>)</p>
+<p><strong>Small class?.</strong> With only 4 or 5 people, many words
+get 1 vote. Break a tie by rolling a die, or ask everyone to write
+<strong>two</strong> words each.</p>
+<h3 id="unit-2-brains-and-neural-networks">Unit 2: Brains and Neural
+Networks</h3>
+<h4 id="simple-rules-complex-behavior"><a
+href="../chapters/Unit_2/2.1_Simple_Rules_Complex_Behavior.html">2.1 -
+Simple Rules, Complex Behavior</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_2/2.1_Simple_Rules_Complex_Behavior.pdf">Simple
+Rules Complex Behavior</a> (<a
+href="../handouts/Unit_2/2.1_Simple_Rules_Complex_Behavior_KEY.pdf">key</a>)</p>
+<h4 id="your-brain-is-made-of-cells"><a
+href="../chapters/Unit_2/2.2_Your_Brain_Is_Made_of_Cells.html">2.2 -
+Your Brain Is Made of Cells</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_2/2.2_Your_Brain_Is_Made_of_Cells.pdf">Your Brain
+Is Made of Cells</a> (<a
+href="../handouts/Unit_2/2.2_Your_Brain_Is_Made_of_Cells_KEY.pdf">key</a>)</p>
+<p><strong>Small class?.</strong> With only 4 or 5 people, the squeeze
+goes around too fast to time. Go around the circle <strong>5
+times</strong> without stopping. Then divide the time by 5.</p>
+<h4 id="how-brains-learn"><a
+href="../chapters/Unit_2/2.3_How_Brains_Learn.html">2.3 - How Brains
+Learn</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_2/2.3_How_Brains_Learn.pdf">How Brains Learn</a>
+(<a href="../handouts/Unit_2/2.3_How_Brains_Learn_KEY.pdf">key</a>)</p>
+<h4 id="the-artificial-neuron"><a
+href="../chapters/Unit_2/2.4_The_Artificial_Neuron.html">2.4 - The
+Artificial Neuron</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_2/2.4_The_Artificial_Neuron.pdf">The Artificial
+Neuron</a> (<a
+href="../handouts/Unit_2/2.4_The_Artificial_Neuron_KEY.pdf">key</a>)</p>
+<p><strong>Class size.</strong> <strong>4 students:</strong> one neuron
+and three inputs. <strong>More students:</strong> make two or three
+neurons. Then connect them: the neurons’ answers become the inputs for
+one more neuron. That is a <strong>network</strong>!</p>
+<h4 id="train-a-human-neural-network"><a
+href="../chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html">2.5 -
+Train a Human Neural Network</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_2/2.5_Pokemon_Cards.pdf">Pokemon Cards</a> (<a
+href="../handouts/Unit_2/2.5_Pokemon_Cards_KEY.pdf">key</a>) · <a
+href="../handouts/Unit_2/2.5_Train_a_Human_Neural_Network.pdf">Train a
+Human Neural Network</a> (<a
+href="../handouts/Unit_2/2.5_Train_a_Human_Neural_Network_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> Print and cut one set of Pokémon cards
+for each team.</p>
+<p><strong>Class size.</strong> <strong>4 students:</strong> the dealer
+is also the checker, and one weight keeper holds all 3 numbers.
+<strong>10 or more:</strong> make <strong>two teams</strong> with two
+sets of cards. Both teams start with the same weights. Which team
+finishes first? Do they end with the same weights?</p>
+<h4 id="watch-mr.-ross-build-an-ai"><a
+href="../chapters/Unit_2/2.6_Watch_Mr_Ross_Build_an_AI.html">2.6 - Watch
+Mr. Ross Build an AI</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_2/2.6_Watch_Mr_Ross_Build_an_AI.pdf">Watch Mr
+Ross Build an AI</a> (<a
+href="../handouts/Unit_2/2.6_Watch_Mr_Ross_Build_an_AI_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> Open the page on the projector and run
+the 2-number build once before class. Each run takes a few seconds on a
+Chromebook.</p>
+<h4 id="train-your-own-ai"><a
+href="../chapters/Unit_2/2.7_Train_Your_Own_AI.html">2.7 - Train Your
+Own AI</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_2/2.7_Train_Your_Own_AI.pdf">Train Your Own
+AI</a> (<a
+href="../handouts/Unit_2/2.7_Train_Your_Own_AI_KEY.pdf">key</a>)</p>
+<p><strong>Class size and cameras.</strong> <strong>Small
+class:</strong> each pair trains its own model, then you swap computers
+and test each other’s. <strong>Large class, or no cameras?</strong>
+Mr. Ross trains one model on the projector. Everyone comes up and adds
+pictures of <strong>their</strong> hands. A class model has more kinds
+of hands in it. Is it better?</p>
+<h4 id="how-ai-sees"><a
+href="../chapters/Unit_2/2.8_How_AI_Sees.html">2.8 - How AI
+Sees</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_2/2.8_How_AI_Sees.pdf">How AI Sees</a> (<a
+href="../handouts/Unit_2/2.8_How_AI_Sees_KEY.pdf">key</a>)</p>
+<h4 id="how-chatbots-work"><a
+href="../chapters/Unit_2/2.9_How_Chatbots_Work.html">2.9 - How Chatbots
+Work</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_2/2.9_How_Chatbots_Work.pdf">How Chatbots
+Work</a> (<a
+href="../handouts/Unit_2/2.9_How_Chatbots_Work_KEY.pdf">key</a>)</p>
+<h3 id="unit-3-using-ai-well">Unit 3: Using AI Well</h3>
+<h4 id="asking-good-questions"><a
+href="../chapters/Unit_3/3.1_Asking_Good_Questions.html">3.1 - Asking
+Good Questions</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_3/3.1_Asking_Good_Questions.pdf">Asking Good
+Questions</a> (<a
+href="../handouts/Unit_3/3.1_Asking_Good_Questions_KEY.pdf">key</a>)</p>
+<p><strong>Big class? Make it a race.</strong> Split into two teams.
+Mr. Ross puts one weak prompt on the projector. Each team writes a
+better prompt in 3 minutes. Mr. Ross tries both on the projector. The
+class votes: which answer is more useful? Then switch to a new weak
+prompt.</p>
+<h4 id="keep-talking"><a
+href="../chapters/Unit_3/3.2_Keep_Talking.html">3.2 - Keep
+Talking</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_3/3.2_Keep_Talking.pdf">Keep Talking</a> (<a
+href="../handouts/Unit_3/3.2_Keep_Talking_KEY.pdf">key</a>)</p>
+<p><strong>Class size.</strong> <strong>Small class (4 or 5):</strong>
+work as one group. Each person chooses the next follow-up move.
+<strong>Big class:</strong> two teams get the same topic and 3
+follow-ups each. Read both final answers aloud. Which team got the more
+useful answer?</p>
+<h4 id="writing-with-ai-not-by-ai"><a
+href="../chapters/Unit_3/3.3_Writing_with_AI.html">3.3 - Writing with
+AI, Not by AI</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_3/3.3_Writing_with_AI.pdf">Writing with AI</a>
+(<a href="../handouts/Unit_3/3.3_Writing_with_AI_KEY.pdf">key</a>)</p>
+<h4 id="research-and-checking"><a
+href="../chapters/Unit_3/3.4_Research_and_Checking.html">3.4 - Research
+and Checking</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_3/3.4_Research_and_Checking.pdf">Research and
+Checking</a> (<a
+href="../handouts/Unit_3/3.4_Research_and_Checking_KEY.pdf">key</a>)</p>
+<p><strong>Class size.</strong> <strong>Small class (4 or 5):</strong>
+work as one group. Each person checks a different fact. <strong>Big
+class:</strong> make it a race between teams. A team gets 1 point for
+each fact checked in 2 sources. A team <strong>loses</strong> 2 points
+for a check that is wrong. Speed is good. Being right is better.</p>
+<h4 id="ai-and-your-language"><a
+href="../chapters/Unit_3/3.5_AI_and_Your_Language.html">3.5 - AI and
+Your Language</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_3/3.5_AI_and_Your_Language.pdf">AI and Your
+Language</a> (<a
+href="../handouts/Unit_3/3.5_AI_and_Your_Language_KEY.pdf">key</a>)</p>
+<p><strong>Class size.</strong> <strong>Small class:</strong> each
+student tests their own language. Then everyone looks at the class chart
+together. <strong>Big class:</strong> students who share a language make
+a team. Each team makes a poster: the AI’s best and worst
+translation.</p>
+<h4 id="ai-and-math"><a
+href="../chapters/Unit_3/3.6_AI_and_Math.html">3.6 - AI and
+Math</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_3/3.6_AI_and_Math.pdf">AI and Math</a> (<a
+href="../handouts/Unit_3/3.6_AI_and_Math_KEY.pdf">key</a>)</p>
+<p><strong>Class size.</strong> <strong>Small class:</strong> everyone
+tests the chatbot, then the class makes one chart together. <strong>Big
+class:</strong> each pair tests only 2 of the 4 problems, but asks each
+one 3 times in new chats. Does the AI give the same answer every
+time?</p>
+<h4 id="making-pictures-with-ai"><a
+href="../chapters/Unit_3/3.7_Making_Pictures_with_AI.html">3.7 - Making
+Pictures with AI</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_3/3.7_Making_Pictures_with_AI.pdf">Making
+Pictures with AI</a> (<a
+href="../handouts/Unit_3/3.7_Making_Pictures_with_AI_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> Picture tools share one usage limit
+with graphs. Plan turns for pairs, and be ready to make the pictures on
+the projector.</p>
+<h4 id="project-solve-a-real-problem"><a
+href="../chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html">3.8 -
+Project: Solve a Real Problem</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_3/3.8_Project_Solve_a_Real_Problem.pdf">Project
+Solve a Real Problem</a> (<a
+href="../handouts/Unit_3/3.8_Project_Solve_a_Real_Problem_KEY.pdf">key</a>)</p>
+<h4 id="project-feedback-and-share"><a
+href="../chapters/Unit_3/3.9_Project_Feedback_and_Share.html">3.9 -
+Project: Feedback and Share</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_3/3.9_Project_Feedback_and_Share.pdf">Project
+Feedback and Share</a> (<a
+href="../handouts/Unit_3/3.9_Project_Feedback_and_Share_KEY.pdf">key</a>)</p>
+<p><strong>Class size.</strong> <strong>Small class (4 or 5):</strong>
+sit in a circle. Pass your project to the right. Write a note. Keep
+passing until everyone has read every project. <strong>Big
+class:</strong> 3 rounds of 4 minutes. Mr. Ross says when to move.</p>
+<h3 id="unit-4-when-ai-gets-it-wrong">Unit 4: When AI Gets It Wrong</h3>
+<h4 id="ai-makes-things-up"><a
+href="../chapters/Unit_4/4.1_AI_Makes_Things_Up.html">4.1 - AI Makes
+Things Up</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_4/4.1_AI_Makes_Things_Up.pdf">AI Makes Things
+Up</a> (<a
+href="../handouts/Unit_4/4.1_AI_Makes_Things_Up_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> Have the real answers ready for the
+questions about our school and Columbia: the year the school opened, the
+principal, the mascot, about how many students, and the mayor.</p>
+<p><strong>Class size.</strong> <strong>Small class:</strong> work as
+one group and test all the questions together. <strong>Big
+class:</strong> make it a contest. Each team gets 1 point for every
+made-up fact it catches <strong>and</strong> proves wrong with a real
+source.</p>
+<h4 id="where-bias-comes-from"><a
+href="../chapters/Unit_4/4.2_Where_Bias_Comes_From.html">4.2 - Where
+Bias Comes From</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_4/4.2_Where_Bias_Comes_From.pdf">Where Bias Comes
+From</a> (<a
+href="../handouts/Unit_4/4.2_Where_Bias_Comes_From_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> For Clever Hans, Round 2: seal a math
+problem in an envelope. Nobody in the room should know the answer.</p>
+<p><strong>Class size.</strong> <strong>4 students:</strong> Hans, a
+questioner, and a crowd of 2. <strong>Big class:</strong> make two Hans
+teams. Each team tries to fool the other team’s crowd in Round 1.</p>
+<h4 id="real-or-fake"><a
+href="../chapters/Unit_4/4.3_Real_or_Fake.html">4.3 - Real or
+Fake?</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_4/4.3_Real_or_Fake.pdf">Real or Fake</a> (<a
+href="../handouts/Unit_4/4.3_Real_or_Fake_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> Choose 2 pictures that spread online
+recently for Trace It Back. Check that the sites you need are not
+blocked.</p>
+<p><strong>Class size.</strong> <strong>Small class:</strong> work
+together on both pictures, then try the Pope picture from the top of the
+page. <strong>Big class:</strong> each pair gets one picture. Pairs with
+the same picture compare their proof. Then each group teaches the
+class.</p>
+<h4 id="why-ai-cheat-detectors-fail"><a
+href="../chapters/Unit_4/4.4_Why_AI_Cheat_Detectors_Fail.html">4.4 - Why
+AI Cheat Detectors Fail</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_4/4.4_Why_AI_Cheat_Detectors_Fail.pdf">Why AI
+Cheat Detectors Fail</a> (<a
+href="../handouts/Unit_4/4.4_Why_AI_Cheat_Detectors_Fail_KEY.pdf">key</a>)</p>
+<p><strong>Class size.</strong> <strong>Small class:</strong> everyone
+tests their own paragraph, then the class looks at all the results
+together. <strong>Big class:</strong> make a big chart on the board with
+two columns: “Human writing called AI” and “Human writing called human.”
+Every pair adds tally marks.</p>
+<h3 id="unit-5-ai-in-the-real-world">Unit 5: AI in the Real World</h3>
+<h4 id="your-data-your-privacy"><a
+href="../chapters/Unit_5/5.1_Your_Data_Your_Privacy.html">5.1 - Your
+Data, Your Privacy</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_5/5.1_Your_Data_Your_Privacy.pdf">Your Data Your
+Privacy</a> (<a
+href="../handouts/Unit_5/5.1_Your_Data_Your_Privacy_KEY.pdf">key</a>)</p>
+<h4 id="ai-scams"><a href="../chapters/Unit_5/5.2_AI_Scams.html">5.2 -
+AI Scams</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_5/5.2_AI_Scams.pdf">AI Scams</a> (<a
+href="../handouts/Unit_5/5.2_AI_Scams_KEY.pdf">key</a>)</p>
+<p><strong>Class size.</strong> <strong>Small class:</strong> go through
+the messages together on the projector. Everyone votes before each
+answer. <strong>Big class:</strong> two teams. Each team gets a point
+for each right answer <strong>and</strong> a point for naming a warning
+sign the other team missed.</p>
+<h4 id="ai-and-jobs"><a
+href="../chapters/Unit_5/5.3_AI_and_Jobs.html">5.3 - AI and
+Jobs</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_5/5.3_AI_and_Jobs.pdf">AI and Jobs</a> (<a
+href="../handouts/Unit_5/5.3_AI_and_Jobs_KEY.pdf">key</a>)</p>
+<p><strong>Class size.</strong> <strong>Small class:</strong> everyone
+sorts one job together first (the nurse), then pairs choose their own.
+<strong>Big class:</strong> pairs with the same kind of job (health,
+building, business, computers) join into a group and compare their
+sorts.</p>
+<h4 id="ai-and-the-news"><a
+href="../chapters/Unit_5/5.4_AI_and_the_News.html">5.4 - AI and the
+News</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_5/5.4_AI_and_the_News.pdf">AI and the News</a>
+(<a href="../handouts/Unit_5/5.4_AI_and_the_News_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> For Day 2, choose one news story or
+picture that spread online this month.</p>
+<p><strong>Class size.</strong> <strong>Small class:</strong> one
+student trains the feed on the projector while the class tells them what
+to click. Then a second student tries. <strong>Big class:</strong> every
+pair compares, then the class counts: how many pairs had feeds that were
+almost the same?</p>
+<h3 id="unit-6-ai-and-our-future">Unit 6: AI and Our Future</h3>
+<h4 id="can-ai-be-creative"><a
+href="../chapters/Unit_6/6.1_Can_AI_Be_Creative.html">6.1 - Can AI Be
+Creative?</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_6/6.1_Can_AI_Be_Creative.pdf">Can AI Be
+Creative</a> (<a
+href="../handouts/Unit_6/6.1_Can_AI_Be_Creative_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> For Day 2, make AI pictures of the
+same things students draw, or plan turns if pairs make them.</p>
+<p><strong>Class size.</strong> <strong>Small class:</strong> read the
+poems aloud together, one at a time, and vote after each. <strong>Big
+class:</strong> two teams. Each team must agree on one vote per poem,
+and explain its best clue.</p>
+<h4 id="ai-friends"><a href="../chapters/Unit_6/6.2_AI_Friends.html">6.2
+- AI Friends</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_6/6.2_AI_Friends.pdf">AI Friends</a> (<a
+href="../handouts/Unit_6/6.2_AI_Friends_KEY.pdf">key</a>)</p>
+<p><strong>Class size.</strong> <strong>Small class:</strong> do the
+sort together on the board. <strong>Big class:</strong> pairs sort
+first. Then two pairs join and compare. Talk about every card you put in
+different circles.</p>
+<h4 id="the-hidden-costs"><a
+href="../chapters/Unit_6/6.3_The_Hidden_Costs.html">6.3 - The Hidden
+Costs</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_6/6.3_The_Hidden_Costs.pdf">The Hidden Costs</a>
+(<a href="../handouts/Unit_6/6.3_The_Hidden_Costs_KEY.pdf">key</a>)</p>
+<p><strong>Class size.</strong> <strong>Small class:</strong> do the
+math together on the board, one step at a time. <strong>Big
+class:</strong> each pair guesses a different number of questions per
+day (5, 10, 20, 50). Compare the results: how much does the guess change
+the answer?</p>
+<h4 id="who-makes-the-rules"><a
+href="../chapters/Unit_6/6.4_Who_Makes_the_Rules.html">6.4 - Who Makes
+the Rules?</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_6/6.4_Who_Makes_the_Rules.pdf">Who Makes the
+Rules</a> (<a
+href="../handouts/Unit_6/6.4_Who_Makes_the_Rules_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> Bring tape to make two tracks on the
+floor, and paper people for a small class.</p>
+<p><strong>Class size.</strong> <strong>4 students:</strong> one at the
+lever, and paper people on the tracks. Everyone votes. <strong>Big
+class:</strong> take turns at the lever. Students on the tracks vote
+too.</p>
+<h4 id="possible-futures"><a
+href="../chapters/Unit_6/6.5_Possible_Futures.html">6.5 - Possible
+Futures</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_6/6.5_Possible_Futures.pdf">Possible Futures</a>
+(<a href="../handouts/Unit_6/6.5_Possible_Futures_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> Bring paper strips and tape for the
+paper chains, and write the robot’s goal card.</p>
+<p><strong>Class size.</strong> <strong>4 students:</strong> one robot,
+one loophole finder, and two rule writers. <strong>Big class:</strong>
+two teams. Each team writes rules for the other team’s robot. The team
+whose rules have the fewest loopholes wins.</p>
+<h4 id="the-big-question-again"><a
+href="../chapters/Unit_6/6.6_The_Big_Question_Again.html">6.6 - The Big
+Question, Again</a></h4>
+<p><strong>Sheets:</strong> <a
+href="../handouts/Unit_6/6.6_The_Big_Question_Again.pdf">The Big
+Question Again</a> (<a
+href="../handouts/Unit_6/6.6_The_Big_Question_Again_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> Bring back the Big Question answers
+from Lesson 1.1. Make orange cards and rule cards for the chips.</p>
+<p><strong>Class size.</strong> <strong>4 students:</strong> make a line
+of 4 with Mr. Ross. Replace one student each round. <strong>Big
+class:</strong> make two lines. One line stays all neurons. Compare the
+squeeze times.</p>
+<h2 id="dated-boxes-to-review-each-term">Dated Boxes to Review Each
+Term</h2>
+<p>These “Right now (fall 2026)” boxes go out of date. Check each one
+before you teach that lesson.</p>
+<ul>
+<li><a href="../chapters/Unit_1/1.6_Transformers_and_ChatGPT.html">1.6 -
+Transformers and ChatGPT</a>: There are many chatbots built this way:
+ChatGPT, Gemini, Claude, Copilot, Llama, and more.</li>
+<li><a href="../chapters/Unit_3/3.1_Asking_Good_Questions.html">3.1 -
+Asking Good Questions</a>: Your class AI tool is <strong>Raina</strong>,
+in MagicSchool.</li>
+<li><a href="../chapters/Unit_3/3.5_AI_and_Your_Language.html">3.5 - AI
+and Your Language</a>: About <strong>half</strong> of all websites are
+in English.</li>
+<li><a href="../chapters/Unit_3/3.6_AI_and_Math.html">3.6 - AI and
+Math</a>: In July 2025, AI from Google DeepMind and OpenAI scored at
+<strong>gold-medal</strong> level at the International Mathematical
+Olympiad.</li>
+<li><a href="../chapters/Unit_4/4.2_Where_Bias_Comes_From.html">4.2 -
+Where Bias Comes From</a>: After people complained, Google Translate
+started showing <strong>both</strong> “he” and “she” for some short
+sentences in some languages.</li>
+<li><a
+href="../chapters/Unit_4/4.4_Why_AI_Cheat_Detectors_Fail.html">4.4 - Why
+AI Cheat Detectors Fail</a>: Many schools still use AI detectors.</li>
+<li><a href="../chapters/Unit_5/5.1_Your_Data_Your_Privacy.html">5.1 -
+Your Data, Your Privacy</a>: Many social media apps remove the location
+from a photo when you post it.</li>
+<li><a href="../chapters/Unit_5/5.2_AI_Scams.html">5.2 - AI Scams</a>:
+In 2025, people in the United States reported losing <strong>$15.9
+billion</strong> to scams, more than ever before (Federal Trade
+Commission, March 2026).</li>
+<li><a href="../chapters/Unit_5/5.3_AI_and_Jobs.html">5.3 - AI and
+Jobs</a>: Experts disagree about how fast AI is changing jobs.</li>
+<li><a href="../chapters/Unit_5/5.4_AI_and_the_News.html">5.4 - AI and
+the News</a>: NewsGuard is a company that checks news sites.</li>
+<li><a href="../chapters/Unit_6/6.1_Can_AI_Be_Creative.html">6.1 - Can
+AI Be Creative?</a>: In the United States, the Copyright Office says a
+work made <strong>only</strong> by AI cannot have a copyright.</li>
+<li><a href="../chapters/Unit_6/6.2_AI_Friends.html">6.2 - AI
+Friends</a>: Some families have taken companion app companies to court,
+saying the apps harmed their children.</li>
+<li><a href="../chapters/Unit_6/6.3_The_Hidden_Costs.html">6.3 - The
+Hidden Costs</a>: In 2025, OpenAI said people send ChatGPT about
+<strong>2.5 billion</strong> questions every day.</li>
+<li><a href="../chapters/Unit_6/6.4_Who_Makes_the_Rules.html">6.4 - Who
+Makes the Rules?</a>: The <strong>European Union</strong> passed the
+first big AI law in 2024.</li>
+<li><a href="../chapters/Explore/explore-unit-3.html">Explore More, Unit
+3</a>: Some AI tools now have a <strong>memory</strong> feature.</li>
+<li><a href="../chapters/Explore/explore-unit-3.html">Explore More, Unit
+3</a>: Many chatbots can now search the web and show links.</li>
+<li><a href="../chapters/Explore/explore-unit-3.html">Explore More, Unit
+3</a>: Image generators improved fast.</li>
+<li><a href="../chapters/Explore/explore-unit-4.html">Explore More, Unit
+4</a>: Some cameras and AI tools now add <strong>Content
+Credentials</strong>: hidden information that says how a picture was
+made.</li>
+<li><a href="../chapters/Explore/explore-unit-5.html">Explore More, Unit
+5</a>: AI companies keep changing their rules about chats.</li>
+</ul>
+<h2 id="outside-websites">Outside Websites</h2>
+<p>Check these on the school network. A site is allowed if it needs no
+login, is not blocked, and collects no student data.</p>
+<ul>
+<li><code>autodraw.com</code>: <a href="https://www.autodraw.com/"
+class="uri">https://www.autodraw.com/</a> (students open; Explore
+1)</li>
+<li><code>code.org</code>: <a href="https://code.org/ai/how-ai-works"
+class="uri">https://code.org/ai/how-ai-works</a> (students open; Explore
+1)</li>
+<li><code>en.wikipedia.org</code>: <a
+href="https://en.wikipedia.org/wiki/Conus_textile"
+class="uri">https://en.wikipedia.org/wiki/Conus_textile</a> (students
+open; Explore 2)</li>
+<li><code>masswerk.at</code>: <a
+href="https://www.masswerk.at/elizabot/eliza.html"
+class="uri">https://www.masswerk.at/elizabot/eliza.html</a> (students
+open; Explore 1)</li>
+<li><code>openstreetmap.org</code>: <a
+href="https://www.openstreetmap.org/"
+class="uri">https://www.openstreetmap.org/</a> (students open;
+photo_secrets)</li>
+<li><code>quickdraw.withgoogle.com</code>: <a
+href="https://quickdraw.withgoogle.com/"
+class="uri">https://quickdraw.withgoogle.com/</a> (students open;
+1.1)</li>
+<li><code>quickdraw.withgoogle.com</code>: <a
+href="https://quickdraw.withgoogle.com/data"
+class="uri">https://quickdraw.withgoogle.com/data</a> (students open;
+Explore 1)</li>
+<li><code>teachablemachine.withgoogle.com</code>: <a
+href="https://teachablemachine.withgoogle.com/"
+class="uri">https://teachablemachine.withgoogle.com/</a> (students open;
+Explore 1)</li>
+<li><code>teachablemachine.withgoogle.com</code>: <a
+href="https://teachablemachine.withgoogle.com/train/image"
+class="uri">https://teachablemachine.withgoogle.com/train/image</a>
+(students open; 2.7)</li>
+<li><code>ted.com</code>: <a
+href="https://www.ted.com/talks/alex_gendler_the_turing_test_can_a_computer_pass_for_a_human"
+class="uri">https://www.ted.com/talks/alex_gendler_the_turing_test_can_a_computer_pass_for_a_human</a>
+(students open; Explore 1)</li>
+<li><code>tineye.com</code>: <a href="https://tineye.com/"
+class="uri">https://tineye.com/</a> (students open; 4.3)</li>
+<li><code>translate.google.com</code>: <a
+href="https://translate.google.com"
+class="uri">https://translate.google.com</a> (students open; 3.5)</li>
+<li><code>whichfaceisreal.com</code>: <a
+href="https://www.whichfaceisreal.com/"
+class="uri">https://www.whichfaceisreal.com/</a> (students open;
+4.3)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=WXuK6gekU1Y"
+class="uri">https://www.youtube.com/watch?v=WXuK6gekU1Y</a> (students
+open; Explore 1)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/embed/2hXG8v8p0KM"
+class="uri">https://www.youtube.com/embed/2hXG8v8p0KM</a> (video;
+2.8)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/embed/3wLqsRLvV-c"
+class="uri">https://www.youtube.com/embed/3wLqsRLvV-c</a> (video;
+1.2)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/embed/40riCqvRoMs"
+class="uri">https://www.youtube.com/embed/40riCqvRoMs</a> (video;
+1.5)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/embed/GoQG6Tin-1E"
+class="uri">https://www.youtube.com/embed/GoQG6Tin-1E</a> (video;
+3.4)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/embed/JrXazCEACVo"
+class="uri">https://www.youtube.com/embed/JrXazCEACVo</a> (video;
+2.5)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/embed/LPZh9BOjkQs"
+class="uri">https://www.youtube.com/embed/LPZh9BOjkQs</a> (video;
+2.9)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/embed/OeU5m6vRyCk"
+class="uri">https://www.youtube.com/embed/OeU5m6vRyCk</a> (video;
+1.1)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/embed/R9Plq-D1gEk"
+class="uri">https://www.youtube.com/embed/R9Plq-D1gEk</a> (video;
+2.1)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/embed/X-AWdfSFCHQ"
+class="uri">https://www.youtube.com/embed/X-AWdfSFCHQ</a> (video;
+1.6)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/embed/X994dDnmRmY"
+class="uri">https://www.youtube.com/embed/X994dDnmRmY</a> (video; 3.7,
+6.1)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/embed/x2mRoFNm22g"
+class="uri">https://www.youtube.com/embed/x2mRoFNm22g</a> (video;
+4.2)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=2hXG8v8p0KM"
+class="uri">https://www.youtube.com/watch?v=2hXG8v8p0KM</a> (video;
+2.8)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=3wLqsRLvV-c"
+class="uri">https://www.youtube.com/watch?v=3wLqsRLvV-c</a> (video;
+1.2)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=40riCqvRoMs"
+class="uri">https://www.youtube.com/watch?v=40riCqvRoMs</a> (video;
+1.5)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=GoQG6Tin-1E"
+class="uri">https://www.youtube.com/watch?v=GoQG6Tin-1E</a> (video;
+3.4)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=JrXazCEACVo"
+class="uri">https://www.youtube.com/watch?v=JrXazCEACVo</a> (video;
+2.5)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=LPZh9BOjkQs"
+class="uri">https://www.youtube.com/watch?v=LPZh9BOjkQs</a> (video;
+2.9)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=OeU5m6vRyCk"
+class="uri">https://www.youtube.com/watch?v=OeU5m6vRyCk</a> (video;
+1.1)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=R9Plq-D1gEk"
+class="uri">https://www.youtube.com/watch?v=R9Plq-D1gEk</a> (video;
+2.1)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=X-AWdfSFCHQ"
+class="uri">https://www.youtube.com/watch?v=X-AWdfSFCHQ</a> (video;
+1.6)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=X994dDnmRmY"
+class="uri">https://www.youtube.com/watch?v=X994dDnmRmY</a> (video; 3.7,
+6.1)</li>
+<li><code>youtube.com</code>: <a
+href="https://www.youtube.com/watch?v=x2mRoFNm22g"
+class="uri">https://www.youtube.com/watch?v=x2mRoFNm22g</a> (video;
+4.2)</li>
+<li><code>cdn.jsdelivr.net</code>: <a
+href="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"
+class="uri">https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js</a>
+(every page loads; every page)</li>
+<li><code>cdnjs.cloudflare.com</code>: <a
+href="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"
+class="uri">https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6</a>
+(every page loads; every page)</li>
+</ul>
+</body>
+</html>
