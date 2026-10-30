@@ -60,6 +60,96 @@
     ]
   },
   {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "About the Class\nAI and You A mini-block class with Mr. Ross, Frederick Douglass High School\nAI is everywhere now. It writes, draws, talks, answers questions, and even pretends to be a friend. Some people say it thinks like a human brain. Is that true?\nIn this class, you will learn how AI was built and how it works. You will use it for real tasks. You will act out famous experiments, train a neural network made of people, and test AI in your own language.\nBy the end, you will know how to use AI well and how to catch it when it is wrong. And you will decide for yourself what you think about it, and about the world it is building.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#about-your-teacher",
+    "href": "syllabus.html#about-your-teacher",
+    "title": "Syllabus",
+    "section": "About Your Teacher",
+    "text": "About Your Teacher\nBefore teaching, Mr. Ross spent more than 15 years working in AI and data science. He worked at Wolfram Research, the makers of Mathematica. Then he spent nearly ten years helping build a data science team at a Missouri company. He has a background in biology and statistics, and he still does AI work outside of school. He has worked with these tools since long before ChatGPT existed.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#what-you-will-learn",
+    "href": "syllabus.html#what-you-will-learn",
+    "title": "Syllabus",
+    "section": "What You Will Learn",
+    "text": "What You Will Learn\n\nHow AI was built, from the first ideas in the 1950s to the chatbots of today\nHow neural networks learn, and how they are like the brain and different from it\nHow to use AI well for writing, research, translation, math, and pictures\nHow to catch AI when it makes things up, is unfair, or is used to fake things\nHow AI is changing privacy, jobs, the news, creativity, and friendship\nWhat AI might mean for the future, and what you can do about it",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#the-big-question",
+    "href": "syllabus.html#the-big-question",
+    "title": "Syllabus",
+    "section": "The Big Question",
+    "text": "The Big Question\nOn the first day, you answer one question: Is AI like a human brain? Mr. Ross keeps your answer. On the last day, you answer again, with everything you learned in between.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#the-units",
+    "href": "syllabus.html#the-units",
+    "title": "Syllabus",
+    "section": "The Units",
+    "text": "The Units\nThe weeks are a plan. School events, field trips, and assemblies will move them.\n\n\n\nUnit\nWeeks\nLessons\n\n\n\n\n1: Where AI Came From\n1 to 2\n6\n\n\n2: Brains and Neural Networks\n3 to 6\n9\n\n\n3: Using AI Well\n7 to 10\n9\n\n\n4: When AI Gets It Wrong\n11 to 12\n4\n\n\n5: AI in the Real World\n13 to 14\n4\n\n\n6: AI and Our Future\n15 to 17\n6\n\n\n\n\nUnit 1: Where AI Came From\nThe story of AI, from Alan Turing’s question “Can machines think?” to ChatGPT. You play the imitation game and act out the Klingon Room. You play against a game bot made of rules. You label pictures the way the ImageNet workers did. The class builds a timeline on the wall. You also write your first answer to the Big Question.\n\n\nUnit 2: Brains and Neural Networks\nHow simple rules make complex behavior, how brain cells work, and how computer scientists copied the idea. You become a neuron, then the class trains a neural network made of people, using Pokémon cards. You watch Mr. Ross build a real AI. You train your own AI with a camera. You see how AI sees pictures and how chatbots write.\n\n\nUnit 3: Using AI Well\nThe heart of the class. You learn to write good prompts and ask follow-up questions. You get feedback on your own writing. You check facts, test translations in your home language, check AI’s math, and write prompts for pictures. Then you finish a real project that uses AI to solve a problem in your life. You share it with the class.\n\n\nUnit 4: When AI Gets It Wrong\nAI makes things up. It can be unfair to some people. It can be used to fake pictures and voices. You catch a chatbot inventing facts about our school. You act out the story of Clever Hans the horse. You test your eyes against fake faces. And you find out why AI cheat detectors blame students who are learning English.\n\n\nUnit 5: AI in the Real World\nWhat AI means for your privacy, your future job, and the news you see. You find the hidden location inside a photo. You sort real messages from scams. You break your dream job into tasks. And you watch a news feed learn what you like.\n\n\nUnit 6: AI and Our Future\nAI art, AI friends, the hidden costs of AI, the rules for AI, and possible futures. You act out the trolley problem and the paper clip machine. In the last lesson, you replace a “brain” one cell at a time. Then you read your answer from the first day, and answer the Big Question again.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#how-each-class-works",
+    "href": "syllabus.html#how-each-class-works",
+    "title": "Syllabus",
+    "section": "How Each Class Works",
+    "text": "How Each Class Works\nEvery lesson has a hands-on activity.\n\nWarm Up: a quick question or game.\nLearn Together: one big idea, with pictures and examples.\nTry It: a demo on the page, our class AI tool, or an activity you act out.\nTalk About It: a hard question to talk about with a partner. Sentence starters help.\nGo Further: more to do in class on a second day, when there is time.\nExplore More: extra pages for students who want to learn more on their own.\n\nEach lesson has a printable sheet to write on. If you miss a class, read the lesson page and do the Try It. The page has everything you need.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#what-we-use",
+    "href": "syllabus.html#what-we-use",
+    "title": "Syllabus",
+    "section": "What We Use",
+    "text": "What We Use\n\nA Chromebook and this book. The demos in the book work in any web browser, need no account, and send nothing anywhere.\nOur class AI tool: Raina, in MagicSchool. This is the only AI tool you use with an account in this class.\nA few free websites that need no login, like Google Translate and Teachable Machine. Mr. Ross checks each one first.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#your-privacy",
+    "href": "syllabus.html#your-privacy",
+    "title": "Syllabus",
+    "section": "Your Privacy",
+    "text": "Your Privacy\nNever type or upload personal information into any AI tool. That means no names, yours or anyone else’s. No pictures of yourself or other people. No addresses, phone numbers, birthdays, or student numbers. When a prompt needs a person, write “my friend” or “my grandmother” instead.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#using-ai-honestly",
+    "href": "syllabus.html#using-ai-honestly",
+    "title": "Syllabus",
+    "section": "Using AI Honestly",
+    "text": "Using AI Honestly\nIn this class, you learn when AI helps you learn and when it does the learning for you. Each assignment says how much AI you may use. If it does not say, ask first. When you use AI, write a short AI note that says what it did and what you did.\nThis syllabus and this book were written by Mr. Ross in collaboration with Claude, an AI assistant made by Anthropic.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
     "objectID": "course-map.html",
     "href": "course-map.html",
     "title": "Course Map",
