@@ -77,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles/glossary-tooltips.css">
 <link rel="stylesheet" href="../../styles/custom-callouts.css">
@@ -552,11 +581,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">👥 Learn Together</a>
   <ul class="collapse">
   <li><a href="#pixels-are-numbers" id="toc-pixels-are-numbers" class="nav-link" data-scroll-target="#pixels-are-numbers">2.8.1 - Pixels Are Numbers</a></li>
-  <li><a href="#finding-edges-with-a-filter" id="toc-finding-edges-with-a-filter" class="nav-link" data-scroll-target="#finding-edges-with-a-filter">2.8.2 - Finding Edges with a Filter</a></li>
+  <li><a href="#a-filter-is-a-neuron" id="toc-a-filter-is-a-neuron" class="nav-link" data-scroll-target="#a-filter-is-a-neuron">2.8.2 - A Filter Is a Neuron</a></li>
+  <li><a href="#layers-edges-then-shapes-then-things" id="toc-layers-edges-then-shapes-then-things" class="nav-link" data-scroll-target="#layers-edges-then-shapes-then-things">2.8.3 - Layers: Edges, Then Shapes, Then Things</a></li>
   </ul></li>
   <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
   <ul class="collapse">
-  <li><a href="#find-the-edges" id="toc-find-the-edges" class="nav-link" data-scroll-target="#find-the-edges">2.8.3 - Find the Edges</a></li>
+  <li><a href="#watch-the-layers" id="toc-watch-the-layers" class="nav-link" data-scroll-target="#watch-the-layers">2.8.4 - Watch the Layers</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
   <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
@@ -585,31 +615,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>To you, a photo is a face, a dog, or a street. To a computer, a photo is a <strong>grid of numbers</strong>. Nothing else.</p>
-<p>So how does a self-driving car find a person in the street? How does your phone find your face? It does math on the numbers: multiply and add, like the neurons you built.</p>
+<p>In Lesson 2.7, your AI told Rock from Paper from Scissors. But to a computer, a photo is a <strong>grid of numbers</strong>. Nothing else.</p>
+<p>So how does a network find a hand in a grid of numbers? It uses neurons, like the ones you built. And it uses <strong>layers</strong>: each layer finds something a little more complicated than the layer before.</p>
 <div class="agenda">
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
 <ul>
-<li><span class="icon">🔥</span> <strong>Warm Up</strong> Color by number <span class="time">8 min</span></li>
-<li><span class="icon">👥</span> <strong>Learn Together</strong> Pixels and filters <span class="time">10 min</span></li>
-<li><span class="icon">🛠️</span> <strong>Try It</strong> Find the edges <span class="time">14 min</span></li>
-<li><span class="icon">💬</span> <strong>Talk About It</strong> What could a car miss? <span class="time">8 min</span></li>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Color by number <span class="time">7 min</span></li>
+<li><span class="icon">👥</span> <strong>Learn Together</strong> Pixels, filters, and layers <span class="time">13 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Watch the layers <span class="time">14 min</span></li>
+<li><span class="icon">💬</span> <strong>Talk About It</strong> What could a car miss? <span class="time">6 min</span></li>
 </ul>
 </div>
 <div class="objectives">
 <ul class="task-list">
 <li><label><input type="checkbox">I can explain how a computer stores a picture as numbers.</label></li>
-<li><label><input type="checkbox">I can use a filter to find edges in a picture.</label></li>
+<li><label><input type="checkbox">I can explain how a filter is a neuron that looks at a small piece of a picture.</label></li>
+<li><label><input type="checkbox">I can explain how layers find edges, then shapes, then whole things.</label></li>
 <li><label><input type="checkbox">I can name ways computer vision is used, and what could go wrong.</label></li>
 </ul>
 </div>
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🟦</span> <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-original-href="#glossary-pixel" data-term="pixel" data-slug="pixel">pixel</a>: one tiny square of a picture. It’s stored as a number.</li>
-<li><span class="icon">🔍</span> <a href="../../glossary.html#glossary-filter" class="glossary-link" data-original-href="#glossary-filter" data-term="filter" data-slug="filter">filter</a>: a small grid of numbers that slides over a picture to find something, like edges</li>
-<li><span class="icon">📐</span> <a href="../../glossary.html#glossary-edge" class="glossary-link" data-original-href="#glossary-edge" data-term="edge" data-slug="edge">edge</a>: a place where a picture changes fast from dark to light</li>
-<li><span class="icon">👁️</span> <a href="../../glossary.html#glossary-computer-vision" class="glossary-link" data-original-href="#glossary-computer-vision" data-term="computer vision" data-slug="computer-vision">computer vision</a>: AI that finds things in pictures and video</li>
+<li><span class="icon">🟦</span> <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-original-href="#glossary-pixel" data-slug="pixel" data-term="pixel">pixel</a>: one tiny square of a picture. It’s stored as a number.</li>
+<li><span class="icon">🔍</span> <a href="../../glossary.html#glossary-filter" class="glossary-link" data-original-href="#glossary-filter" data-slug="filter" data-term="filter">filter</a>: a small grid of weights that slides over a picture to find something, like edges</li>
+<li><span class="icon">📐</span> <a href="../../glossary.html#glossary-edge" class="glossary-link" data-original-href="#glossary-edge" data-slug="edge" data-term="edge">edge</a>: a place where a picture changes fast from dark to light</li>
+<li><span class="icon">👁️</span> <a href="../../glossary.html#glossary-computer-vision" class="glossary-link" data-original-href="#glossary-computer-vision" data-slug="computer-vision" data-term="computer vision">computer vision</a>: AI that finds things in pictures and video</li>
 </ul>
 </div>
 </div>
@@ -628,7 +659,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
 <section id="pixels-are-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="pixels-are-numbers">2.8.1 - Pixels Are Numbers</h3>
-<p>Zoom in on any photo and you see tiny squares. Each square is a <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-original-href="#glossary-pixel" data-term="pixel" data-slug="pixel">pixel</a>.</p>
+<p>Zoom in on any photo and you see tiny squares. Each square is a <a href="../../glossary.html#glossary-pixel" class="glossary-link" data-original-href="#glossary-pixel" data-slug="pixel" data-term="pixel">pixel</a>.</p>
 <ul>
 <li>In a black-and-white picture, each pixel is one number: <strong>0</strong> is black, <strong>255</strong> is white, and the numbers between are grays.</li>
 <li>In a color picture, each pixel is <strong>three</strong> numbers: how much red, green, and blue.</li>
@@ -636,16 +667,36 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <hr>
 </section>
-<section id="finding-edges-with-a-filter" class="level3">
-<h3 class="anchored" data-anchor-id="finding-edges-with-a-filter">2.8.2 - Finding Edges with a Filter</h3>
-<p>Where does a picture change fast from dark to light? That’s an <a href="../../glossary.html#glossary-edge" class="glossary-link" data-original-href="#glossary-edge" data-term="edge" data-slug="edge">edge</a>. Edges show where things begin and end.</p>
-<p>A <a href="../../glossary.html#glossary-filter" class="glossary-link" data-original-href="#glossary-filter" data-term="filter" data-slug="filter">filter</a> is a small 3 by 3 grid of numbers. It slides over the picture, one square at a time. At each square:</p>
+<section id="a-filter-is-a-neuron" class="level3">
+<h3 class="anchored" data-anchor-id="a-filter-is-a-neuron">2.8.2 - A Filter Is a Neuron</h3>
+<p>Where does a picture change fast from dark to light? That’s an <a href="../../glossary.html#glossary-edge" class="glossary-link" data-original-href="#glossary-edge" data-slug="edge" data-term="edge">edge</a>. Edges show where things begin and end.</p>
+<p>To find edges, a vision network uses a <a href="../../glossary.html#glossary-filter" class="glossary-link" data-original-href="#glossary-filter" data-slug="filter" data-term="filter">filter</a>. A filter is a <strong>neuron</strong> with 9 inputs: a 3 by 3 patch of the picture. Its 9 weights are the filter’s numbers.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_2/2.8_filter_neuron.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A 3 by 3 patch of a picture: the left two columns are dark, 0, and the right column is light, 255. It's multiplied by 9 weights: minus 1, 0, plus 1 in each row. The neuron adds up 255 plus 255 plus 255 equals 765. Big? Yes, it fires: an edge. The same neuron at every spot makes a map of the edges: a small grid with a bright stripe down the middle." width="760"></p>
+</figure>
+</div>
 <ol type="1">
-<li><strong>Multiply</strong> the 9 picture numbers by the 9 filter numbers.</li>
-<li><strong>Add</strong> them up.</li>
+<li><strong>Multiply</strong> the 9 picture numbers by the 9 weights, and <strong>add</strong>. That’s the same <strong>multiply, add, compare</strong> as the neuron in Lesson 2.4.</li>
+<li>If the total is far from 0, the neuron fires: there’s an edge here. (A big <strong>minus</strong> number is an edge too, going the other way: light to dark.) Where the picture is the same on both sides, the <span class="math inline">\(-1\)</span>s and <span class="math inline">\(+1\)</span>s cancel. The total is 0: no edge.</li>
+<li>Then the <strong>same</strong> neuron moves one square over and looks again. It does this at every spot. Its answers make a new picture: a <strong>map</strong> of the edges.</li>
 </ol>
-<p>That’s the same <strong>multiply and add</strong> as the neuron in Lesson 2.4! If the answer is big, there’s an edge here. If the answer is 0, the picture is the same on both sides: no edge.</p>
 <hr>
+</section>
+<section id="layers-edges-then-shapes-then-things" class="level3">
+<h3 class="anchored" data-anchor-id="layers-edges-then-shapes-then-things">2.8.3 - Layers: Edges, Then Shapes, Then Things</h3>
+<p>Layer 1 finds edges. Layer 2 doesn’t look at the picture. It looks at <strong>layer 1’s maps</strong>. Where an up-and-down edge meets a side-to-side edge, a layer 2 neuron finds a <strong>corner</strong>.</p>
+<p>Every layer builds on the one before: edges, then corners and curves, then patterns, then parts, then whole things. Here’s what real neurons look for, layer by layer:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_2/2.8_feature_visualization.jpg" class="img-fluid figure-img" alt="Five columns of colorful computer-made pictures, three in each column. Edges: fine stripes. Textures: honeycomb, bumps, and ripples. Patterns: woven loops, fuzzy balls, and hexagons. Parts: flowers, dog noses with eyes, and pieces of cloth. Objects: buildings, dog faces, and bowls of food. An arrow under them goes from early layers to later layers." width="760"></p>
+<figcaption>What neurons look for, from early layers to later ones, in a real network called GoogLeNet. It learned from millions of ImageNet pictures (Lesson 1.5). Scientists asked each neuron: what picture makes you fire the most? Then the computer drew it. (From “Feature Visualization” by Chris Olah, Alexander Mordvintsev, and Ludwig Schubert, Distill, 2017, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>. Cropped and labeled.)</figcaption>
+</figure>
+</div>
+<div class="think" title="Who chose these filters?">
+<p><strong>Nobody.</strong> Nobody told this network to look for stripes, flowers, or dog noses. Training found every one of its filters, the same way the network in Lesson 2.6 found its weights.</p>
+<p>The first layer of almost every vision network ends up finding edges, like the filters you’ll try today.</p>
+</div>
 <div class="real-world" title="Computer vision is everywhere">
 <ul>
 <li><strong>Self-driving cars</strong> find lanes, signs, other cars, and people.</li>
@@ -658,15 +709,208 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="try-it" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
-<section id="find-the-edges" class="level3">
-<h3 class="anchored" data-anchor-id="find-the-edges">2.8.3 - Find the Edges</h3>
+<section id="watch-the-layers" class="level3">
+<h3 class="anchored" data-anchor-id="watch-the-layers">2.8.4 - Watch the Layers</h3>
+<p>This is a tiny vision network with two layers. Layer 1 has two edge neurons. Layer 2 has a corner neuron. Work with a partner.</p>
 <div class="steps">
 <ol type="1">
-<li>Choose the <strong>house</strong>. Turn on <strong>show the numbers</strong>. Find a 0 and a 255.</li>
-<li>The filter is <strong>find up-and-down edges</strong>. Look at the right side. Where is it bright?</li>
-<li>Click a bright square on the right. Read the math. Then click a dark one.</li>
-<li>Change the filter to <strong>find side-to-side edges</strong>. What changes?</li>
-<li>Draw your own picture with the pen. Which filter finds its edges best?</li>
+<li>Choose the <strong>square</strong>. Where does each edge neuron fire? Where does the corner neuron fire?</li>
+<li>Click a bright square in an edge map. Read the math. Then click a pale one.</li>
+<li>Click a green square in the corner map. Why did it fire?</li>
+<li>Try the <strong>L</strong>, the <strong>T</strong>, and the <strong>plus</strong>. Count the corners yourself first. Does the network agree?</li>
+<li>Try the <strong>circle</strong>. A circle has no corners. What does the network say? Why?</li>
+<li>Draw your own shape. Can you fool the corner neuron?</li>
+</ol>
+</div>
+<!-- vision_layers.html: Lesson 2.8. A tiny vision network with two layers.
+     Layer 1: two edge neurons (filters), copied to every spot.
+     Layer 2: a corner neuron that looks at layer 1's maps, not the picture:
+     it fires where BOTH edge maps fire. Draw a shape and watch each layer. -->
+<div class="vl" id="vl">
+  <div class="vl-bar">
+    <span class="vl-lbl">Picture:</span>
+    <button type="button" data-pic="square">square</button>
+    <button type="button" data-pic="L">letter L</button>
+    <button type="button" data-pic="T">letter T</button>
+    <button type="button" data-pic="plus">plus</button>
+    <button type="button" data-pic="house">house</button>
+    <button type="button" data-pic="circle">circle</button>
+    <button type="button" data-pic="blank">blank</button>
+  </div>
+  <div class="vl-bar">
+    <span class="vl-lbl">Pen:</span>
+    <button type="button" class="vl-pen on" data-v="0">⬛ dark (0)</button>
+    <button type="button" class="vl-pen" data-v="255">⬜ light (255)</button>
+    <span class="vl-hint">Click or drag on the picture to draw.</span>
+  </div>
+  <div class="vl-flow">
+    <div class="vl-col">
+      <div class="vl-h">The picture<br><small>numbers: 0 dark, 255 light</small></div>
+      <canvas class="vl-pic" width="320" height="320" aria-label="The picture. Click to draw."></canvas>
+    </div>
+    <div class="vl-arrow">→</div>
+    <div class="vl-col">
+      <div class="vl-h">Layer 1: edge neurons<br><small>each one is copied to every spot</small></div>
+      <div class="vl-sub">finds <b class="cv">up-and-down</b> edges</div>
+      <canvas class="vl-mv" width="192" height="192" aria-label="Up-and-down edge map"></canvas>
+      <div class="vl-sub">finds <b class="ch">side-to-side</b> edges</div>
+      <canvas class="vl-mh" width="192" height="192" aria-label="Side-to-side edge map"></canvas>
+    </div>
+    <div class="vl-arrow">→</div>
+    <div class="vl-col">
+      <div class="vl-h">Layer 2: corner neuron<br><small>looks at layer 1, not the picture</small></div>
+      <div class="vl-sub">fires where <b>both</b> edge maps fire</div>
+      <canvas class="vl-mc" width="192" height="192" aria-label="Corner map"></canvas>
+      <div class="vl-count" aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="vl-explain" aria-live="polite">Click a square on any map to see why it fired.</div>
+</div>
+
+<style>
+.vl { border: 1px solid #d9e1e8; border-radius: 10px; padding: 0.8rem; margin: 0.75rem 0 1.25rem; background: #fbfcfd; }
+.vl-bar { display: flex; flex-wrap: wrap; gap: 0.35rem 0.5rem; align-items: center; margin-bottom: 0.45rem; }
+.vl-bar button { border: 1px solid #b8c4cf; background: #fff; border-radius: 6px; padding: 0.15rem 0.6rem; cursor: pointer; }
+.vl-bar button.on { background: #2c3e50; color: #fff; border-color: #2c3e50; }
+.vl-lbl { font-weight: bold; }
+.vl-hint { color: #555; font-size: 0.88rem; }
+.vl-flow { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; justify-content: center; }
+.vl-col { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }
+.vl-h { font-weight: 700; text-align: center; font-size: 0.92rem; line-height: 1.25; }
+.vl-h small { font-weight: 400; color: #555; }
+.vl-sub { font-size: 0.85rem; }
+.vl-sub .cv { color: #2c6fae; } .vl-sub .ch { color: #d35400; }
+.vl-arrow { font-size: 1.8rem; color: #7f8c8d; }
+@media (max-width: 700px) { .vl-arrow { display: none; } }
+.vl canvas { border: 1px solid #2c3e50; background: #fff; cursor: pointer; touch-action: none; image-rendering: pixelated; max-width: 100%; height: auto; }
+.vl-pic { width: 320px; }
+.vl-mv, .vl-mh, .vl-mc { width: 192px; }
+.vl-count { font-size: 1.1rem; font-weight: 700; color: #1e8449; min-height: 1.5em; text-align: center; }
+.vl-explain { margin-top: 0.6rem; background: #fff; border-left: 4px solid #d35400; padding: 0.4rem 0.6rem; border-radius: 4px; line-height: 1.5; min-height: 4.5em; }
+.vl-explain table { border-collapse: collapse; display: inline-table; margin: 0.2rem 0.5rem 0.2rem 0; vertical-align: middle; }
+.vl-explain td { border: 1px solid #ccc; padding: 0 0.3rem; text-align: center; font-size: 0.82rem; min-width: 2.2em; }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("vl");
+  if (!root) return;
+  const N = 16, FIRE = 510;
+  const PICS = {
+    square: ["................", "................", "................", "................", "....########....", "....########....", "....########....", "....########....", "....########....", "....########....", "....########....", "....########....", "................", "................", "................", "................"],
+    L: ["................", "................", "...###..........", "...###..........", "...###..........", "...###..........", "...###..........", "...###..........", "...###..........", "...###..........", "...###..........", "...##########...", "...##########...", "...##########...", "................", "................"],
+    T: ["................", "..############..", "..############..", "..############..", "......####......", "......####......", "......####......", "......####......", "......####......", "......####......", "......####......", "......####......", "......####......", "................", "................", "................"],
+    plus: ["................", "................", "......####......", "......####......", "......####......", "..############..", "..############..", "..############..", "..############..", "......####......", "......####......", "......####......", "................", "................", "................", "................"],
+    house: ["................", "................", ".......##.......", "......####......", ".....######.....", "....########....", "...##########...", "..############..", "...##########...", "...##......##...", "...##..##..##...", "...##..##..##...", "...##..##..##...", "...##########...", "................", "................"],
+  };
+  const circle = () => Array.from({ length: N }, (_, i) => Array.from({ length: N }, (_, j) => ((i - 7.5) ** 2 + (j - 7.5) ** 2 <= 5.6 ** 2 ? 0 : 255)));
+  const fromRows = (rows) => rows.map((r) => [...r].map((ch) => (ch === "#" ? 0 : 255)));
+  const KV = [[-1, 0, 1], [-1, 0, 1], [-1, 0, 1]], KH = [[-1, -1, -1], [0, 0, 0], [1, 1, 1]];
+  let img = fromRows(PICS.square), pen = 0, V, H, Cn, sel = null;
+
+  const pic = root.querySelector(".vl-pic"), px = pic.getContext("2d");
+  const maps = { v: root.querySelector(".vl-mv"), h: root.querySelector(".vl-mh"), c: root.querySelector(".vl-mc") };
+  const explain = root.querySelector(".vl-explain"), count = root.querySelector(".vl-count");
+  const at = (i, j) => (i < 0 || j < 0 || i >= N || j >= N ? img[Math.max(0, Math.min(N - 1, i))][Math.max(0, Math.min(N - 1, j))] : img[i][j]);
+  const conv = (K) => Array.from({ length: N }, (_, i) => Array.from({ length: N }, (_, j) => {
+    let s = 0; for (let a = 0; a < 3; a++) for (let b = 0; b < 3; b++) s += K[a][b] * at(i + a - 1, j + b - 1); return s;
+  }));
+  function compute() {
+    V = conv(KV); H = conv(KH);
+    Cn = V.map((row, i) => row.map((v, j) => Math.abs(v) >= FIRE && Math.abs(H[i][j]) >= FIRE));
+    // count corner spots: groups of touching corner squares
+    const seen = Cn.map((r) => r.map(() => false)); let n = 0;
+    for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) if (Cn[i][j] && !seen[i][j]) {
+      n++; const st = [[i, j]]; seen[i][j] = true;
+      while (st.length) { const [a, b] = st.pop(); for (let da = -1; da <= 1; da++) for (let db = -1; db <= 1; db++) { const x = a + da, y = b + db; if (x >= 0 && y >= 0 && x < N && y < N && Cn[x][y] && !seen[x][y]) { seen[x][y] = true; st.push([x, y]); } } }
+    }
+    count.textContent = `Corners found: ${n}`;
+    root.dataset.corners = n;
+  }
+  function drawPic() {
+    const c = pic.width / N;
+    for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) { const v = img[i][j]; px.fillStyle = `rgb(${v},${v},${v})`; px.fillRect(j * c, i * c, c, c); }
+    px.strokeStyle = "rgba(127,140,141,0.35)"; px.lineWidth = 1;
+    for (let k = 0; k <= N; k++) { px.beginPath(); px.moveTo(k * c, 0); px.lineTo(k * c, pic.height); px.stroke(); px.beginPath(); px.moveTo(0, k * c); px.lineTo(pic.width, k * c); px.stroke(); }
+    if (sel) { px.strokeStyle = "#d35400"; px.lineWidth = 3; px.strokeRect((sel[1] - 1) * c, (sel[0] - 1) * c, 3 * c, 3 * c); }
+  }
+  function drawMap(key, M, rgb) {
+    const cv = maps[key], cx = cv.getContext("2d"), c = cv.width / N;
+    for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) {
+      let a, fired;
+      if (key === "c") { fired = M[i][j]; a = fired ? 1 : 0; } else { a = Math.min(1, Math.abs(M[i][j]) / 765); fired = Math.abs(M[i][j]) >= FIRE; }
+      const s = fired ? a : a * 0.35;
+      cx.fillStyle = `rgb(${Math.round(255 - (255 - rgb[0]) * s)},${Math.round(255 - (255 - rgb[1]) * s)},${Math.round(255 - (255 - rgb[2]) * s)})`;
+      cx.fillRect(j * c, i * c, c, c);
+    }
+    cx.strokeStyle = "rgba(127,140,141,0.25)"; cx.lineWidth = 1;
+    for (let k = 0; k <= N; k++) { cx.beginPath(); cx.moveTo(k * c, 0); cx.lineTo(k * c, cv.height); cx.stroke(); cx.beginPath(); cx.moveTo(0, k * c); cx.lineTo(cv.width, k * c); cx.stroke(); }
+    if (sel) { cx.strokeStyle = "#000"; cx.lineWidth = 2.5; cx.strokeRect(sel[1] * c, sel[0] * c, c, c); }
+  }
+  function draw() { compute(); drawPic(); drawMap("v", V, [44, 111, 174]); drawMap("h", H, [211, 84, 0]); drawMap("c", Cn, [30, 132, 73]); }
+
+  const cell = (e, cv) => { const r = cv.getBoundingClientRect(); return [Math.floor(((e.clientY - r.top) / r.height) * N), Math.floor(((e.clientX - r.left) / r.width) * N)]; };
+  const n = (v) => String(v).replace("-", "−");
+  function why(key, i, j) {
+    sel = [i, j]; draw();
+    if (key === "c") {
+      const v = Math.abs(V[i][j]) >= FIRE, h = Math.abs(H[i][j]) >= FIRE;
+      explain.innerHTML = `<b>Corner neuron, row ${i + 1}, column ${j + 1}.</b> It doesn't look at the picture. It looks at layer 1. ` +
+        `Up-and-down edge here? <b>${v ? "yes" : "no"}</b>. Side-to-side edge here? <b>${h ? "yes" : "no"}</b>. ` +
+        (v && h ? `<b style="color:#1e8449">Both: it fires. A corner!</b>` : `Not both, so it doesn't fire.`);
+      return;
+    }
+    const K = key === "v" ? KV : KH, M = key === "v" ? V : H;
+    const patch = [], prod = [];
+    for (let a = 0; a < 3; a++) { patch.push([]); prod.push([]); for (let b = 0; b < 3; b++) { const p = at(i + a - 1, j + b - 1); patch[a].push(p); prod[a].push(p * K[a][b]); } }
+    const tbl = (g) => `<table>${g.map((r) => `<tr>${r.map((x) => `<td>${n(x)}</td>`).join("")}</tr>`).join("")}</table>`;
+    const fired = Math.abs(M[i][j]) >= FIRE;
+    explain.innerHTML = `<b>${key === "v" ? "Up-and-down" : "Side-to-side"} edge neuron, row ${i + 1}, column ${j + 1}.</b> It looks at the 3 by 3 patch in the orange box.<br>` +
+      `patch ${tbl(patch)} × weights ${tbl(K)} = ${tbl(prod)} add them up: <b>${n(M[i][j])}</b>. ` +
+      (fired ? `That's far from 0${M[i][j] < 0 ? " (a big minus number: the edge goes from light to dark)" : ""}, so <b>it fires. An edge!</b>`
+             : `That's close to 0, so it doesn't fire.`) + ` <i>(It fires at 510 or more, plus or minus.)</i>`;
+  }
+  let down = false;
+  const paint = (e) => { const [i, j] = cell(e, pic); if (i < 0 || j < 0 || i >= N || j >= N) return; if (img[i][j] !== pen) { img[i][j] = pen; sel = null; draw(); } };
+  pic.addEventListener("pointerdown", (e) => { e.preventDefault(); down = true; try { pic.setPointerCapture(e.pointerId); } catch (_) {} paint(e); });
+  pic.addEventListener("pointermove", (e) => { if (down) paint(e); });
+  pic.addEventListener("pointerup", () => (down = false)); pic.addEventListener("pointercancel", () => (down = false));
+  for (const key of ["v", "h", "c"]) maps[key].addEventListener("click", (e) => { const [i, j] = cell(e, maps[key]); if (i >= 0 && j >= 0 && i < N && j < N) why(key, i, j); });
+  root.querySelectorAll("[data-pic]").forEach((b) => b.addEventListener("click", () => {
+    const k = b.dataset.pic;
+    img = k === "circle" ? circle() : k === "blank" ? fromRows(Array(N).fill(".".repeat(N))) : fromRows(PICS[k]);
+    sel = null; draw(); explain.textContent = "Click a square on any map to see why it fired.";
+  }));
+  root.querySelectorAll(".vl-pen").forEach((b) => b.addEventListener("click", () => { pen = +b.dataset.v; root.querySelectorAll(".vl-pen").forEach((x) => x.classList.toggle("on", x === b)); }));
+  draw();
+})();
+</script>
+<div class="think" title="Why did the circle have corners?">
+<p>Zoom in. A circle made of square pixels has tiny <strong>steps</strong>. Each step is a tiny corner, and the corner neuron can’t tell a tiny corner from a big one. It only sees a 3 by 3 patch.</p>
+<p>Real networks have many more layers. Each layer looks at a bigger piece of the picture than the one before. So later layers can tell a smooth curve from a sharp corner, and a circle from a square.</p>
+</div>
+</section>
+</section>
+<section id="talk" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
+<p>A self-driving car sees only numbers. What if it sees something it never saw in training: a person in a costume, snow on a stop sign, or a kangaroo?</p>
+<div class="frames">
+<ul>
+<li>A computer sees … , but I see …</li>
+<li>A self-driving car could make a mistake when … , because …</li>
+<li>Computer vision is helpful when … , and dangerous when …</li>
+</ul>
+</div>
+</section>
+<section id="go-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="Day 2: Find the Edge by Hand">
+<p>Do the edge problem on your sheet, with a partner. A tiny picture has dark squares (0) on the left and bright squares (9) on the right.</p>
+<ol type="1">
+<li>Put the up-and-down filter over the first 3 columns. Multiply each pair of numbers. Add all 9.</li>
+<li>Move the filter one column to the right. Do it again. Do all 4 places.</li>
+<li>Where are the big answers? Why there?</li>
+<li>Use the tool below to try more filters. Choose the <strong>house</strong> and turn on <strong>show the numbers</strong>. Click a square on the right to check the math.</li>
 </ol>
 </div>
 <!-- pixels_filters.html: Lesson 2.8. A picture is a grid of numbers
@@ -807,44 +1051,14 @@ ul.task-list li input[type="checkbox"] {
   load("house");
 })();
 </script>
-<div class="think" title="Why are the walls bright with one filter, and the bottom of the house bright with the other?">
-<p>The <strong>up-and-down</strong> filter compares the left side with the right side. It finds edges that go up and down, like walls.</p>
-<p>The <strong>side-to-side</strong> filter compares the top with the bottom. It finds edges that go across, like the bottom of the house.</p>
-<p>A real network has many filters like these, and it learns them by itself. (See Explore More to find out how.)</p>
-<p>Edges are only the first step. A real network puts edges together into shapes. Then it puts shapes together into parts, like an eye or a wheel. That’s how a network can find a person in a picture.</p>
-</div>
-</section>
-</section>
-<section id="talk" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
-<p>A self-driving car sees only numbers. What if it sees something it never saw in training: a person in a costume, snow on a stop sign, or a kangaroo?</p>
-<div class="frames">
-<ul>
-<li>A computer sees … , but I see …</li>
-<li>A self-driving car could make a mistake when … , because …</li>
-<li>Computer vision is helpful when … , and dangerous when …</li>
-</ul>
-</div>
-</section>
-<section id="go-further" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
-<div class="project" title="Day 2: Find the Edge by Hand">
-<p>Do the edge problem on your sheet, with a partner. A tiny picture has dark squares (0) on the left and bright squares (9) on the right.</p>
-<ol type="1">
-<li>Put the up-and-down filter over the first 3 columns. Multiply each pair of numbers. Add all 9.</li>
-<li>Move the filter one column to the right. Do it again. Do all 4 places.</li>
-<li>Where are the big answers? Why there?</li>
-<li>Check one answer with the tool in 2.8.3: turn on <strong>show the numbers</strong> and click a square.</li>
-</ol>
+<div class="project" title="Make a Blur">
+<p>In the tool above, choose the <strong>blur</strong> filter. Click a square and read the math. Why does blur add all 9 numbers and divide by 9? (Hint: what is the mean of 9 numbers?)</p>
 </div>
 <div class="project" title="Send a Secret Picture">
 <p>Draw a 10 by 10 picture on grid paper. Write it as numbers (0 and 1) on another paper. Give only the numbers to a partner. Can they draw your picture? This is how pictures travel over the internet.</p>
 </div>
-<div class="project" title="Make a Blur">
-<p>Choose the <strong>blur</strong> filter. Click a square and read the math. Why does blur add all 9 numbers and divide by 9? (Hint: what is the mean of 9 numbers?)</p>
-</div>
 <div class="explore-link">
-<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-2.html#explore-2-8">layers: from edges to a cat</a>. Read it on your own, if you want to learn more.</p>
+<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-2.html#explore-2-8">layers: from edges to a cat, and more pictures of what neurons see</a>. Read it on your own, if you want to learn more.</p>
 </div>
 
 
