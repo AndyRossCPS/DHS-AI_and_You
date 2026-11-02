@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2.6 - Build a Real AI – AI and You</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../chapters/Unit_2/2.7_Train_Your_Own_AI.html" rel="next">
+<link href="../../chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html" rel="prev">
+<link href="../../images/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b4d44d66d1752a05c2e2ea9554082b5e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles/glossary-tooltips.css">
+<link rel="stylesheet" href="../../styles/custom-callouts.css">
+<link rel="stylesheet" href="../../styles/custom-general.css">
+<link rel="stylesheet" href="../../styles/ai-and-you.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">AI and You</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_2/index.html">Unit 2: Brains and Neural Networks</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_2/2.6_Build_a_Real_AI.html">2.6 - Build a Real AI</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome to AI and You</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Map</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 1: Where AI Came From</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.1_What_Is_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 - What Is AI?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.2_Can_a_Machine_Think.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 - Can a Machine Think?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.3_The_First_Chatbot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.3 - The First Chatbot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.4_Rules_Win_at_Games.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.4 - Rules Win at Games</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.5_Data_Changes_Everything.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.5 - Data Changes Everything</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_1/1.6_Transformers_and_ChatGPT.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.6 - Transformers and ChatGPT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unit 2: Brains and Neural Networks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.1_Simple_Rules_Complex_Behavior.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 - Simple Rules, Complex Behavior</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.2_Your_Brain_Is_Made_of_Cells.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 - Your Brain Is Made of Cells</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.3_How_Brains_Learn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 - How Brains Learn</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.4_The_Artificial_Neuron.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 - The Artificial Neuron</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 - Train a Human Neural Network</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.6_Build_a_Real_AI.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2.6 - Build a Real AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.7_Train_Your_Own_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.7 - Train Your Own AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.8_How_AI_Sees.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.8 - How AI Sees</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_2/2.9_How_Chatbots_Work.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.9 - How Chatbots Work</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 3: Using AI Well</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.1_Asking_Good_Questions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.1 - Asking Good Questions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.2_Keep_Talking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.2 - Keep Talking</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.3_Writing_with_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.3 - Writing with AI, Not by AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.4_Research_and_Checking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.4 - Research and Checking</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.5_AI_and_Your_Language.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.5 - AI and Your Language</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.6_AI_and_Math.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.6 - AI and Math</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.7_Making_Pictures_with_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.7 - Making Pictures with AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.8_Project_Solve_a_Real_Problem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.8 - Project: Solve a Real Problem</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_3/3.9_Project_Feedback_and_Share.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.9 - Project: Feedback and Share</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 4: When AI Gets It Wrong</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/4.1_AI_Makes_Things_Up.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.1 - AI Makes Things Up</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/4.2_Where_Bias_Comes_From.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.2 - Where Bias Comes From</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/4.3_Real_or_Fake.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.3 - Real or Fake?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_4/4.4_Why_AI_Cheat_Detectors_Fail.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.4 - Why AI Cheat Detectors Fail</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 5: AI in the Real World</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_5/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_5/5.1_Your_Data_Your_Privacy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.1 - Your Data, Your Privacy</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_5/5.2_AI_Scams.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.2 - AI Scams</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_5/5.3_AI_and_Jobs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.3 - AI and Jobs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_5/5.4_AI_and_the_News.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5.4 - AI and the News</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 6: AI and Our Future</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/6.1_Can_AI_Be_Creative.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.1 - Can AI Be Creative?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/6.2_AI_Friends.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 - AI Friends</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/6.3_The_Hidden_Costs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3 - The Hidden Costs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/6.4_Who_Makes_the_Rules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4 - Who Makes the Rules?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/6.5_Possible_Futures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.5 - Possible Futures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Unit_6/6.6_The_Big_Question_Again.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.6 - The Big Question, Again</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Explore More</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Where AI Came From</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Brains and Neural Networks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: Using AI Well</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: When AI Gets It Wrong</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: AI in the Real World</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/Explore/explore-unit-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Explore More: AI and Our Future</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#warmup" id="toc-warmup" class="nav-link active" data-scroll-target="#warmup">🔥 Warm Up</a></li>
+  <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">👥 Learn Together</a>
+  <ul class="collapse">
+  <li><a href="#six-steps-to-build-an-ai" id="toc-six-steps-to-build-an-ai" class="nav-link" data-scroll-target="#six-steps-to-build-an-ai">2.6.1 - Six Steps to Build an AI</a></li>
+  <li><a href="#how-to-read-the-network" id="toc-how-to-read-the-network" class="nav-link" data-scroll-target="#how-to-read-the-network">2.6.2 - How to Read the Network</a></li>
+  </ul></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
+  <ul class="collapse">
+  <li><a href="#predict-train-and-test" id="toc-predict-train-and-test" class="nav-link" data-scroll-target="#predict-train-and-test">2.6.3 - Predict, Train, and Test</a></li>
+  </ul></li>
+  <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
+  <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/Unit_2/index.html">Unit 2: Brains and Neural Networks</a></li><li class="breadcrumb-item"><a href="../../chapters/Unit_2/2.6_Build_a_Real_AI.html">2.6 - Build a Real AI</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">2.6 - Build a Real AI</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In Lesson 2.5, the class trained a network of 3 neurons on 8 cards. It took about 20 minutes, and every step was done by hand.</p>
+<p>A computer can do the same work on <strong>300</strong> creatures, with <strong>many</strong> neurons, in a few seconds. Today, you build it yourself. You’ll watch its weights change while it learns.</p>
+<p>Mr.&nbsp;Ross, who wrote this book, built AI for his job for many years. He made this tool for you. Your job is to <strong>predict</strong> what will happen, then train the network, and then test it.</p>
+<div class="agenda">
+<p><strong>Today’s Plan</strong> (40 minutes)</p>
+<ul>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> How long by hand? <span class="time">5 min</span></li>
+<li><span class="icon">👥</span> <strong>Learn Together</strong> Six steps, and how to read the network <span class="time">8 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Predict, train, and test <span class="time">20 min</span></li>
+<li><span class="icon">💬</span> <strong>Talk About It</strong> What could go wrong? <span class="time">7 min</span></li>
+</ul>
+</div>
+<div class="objectives">
+<ul class="task-list">
+<li><label><input type="checkbox">I can name the six steps to build an AI.</label></li>
+<li><label><input type="checkbox">I can read a picture of a network: its weights and its hidden neurons.</label></li>
+<li><label><input type="checkbox">I can explain why we keep test data apart from training data.</label></li>
+<li><label><input type="checkbox">I can explain why an AI can only learn what is in its data.</label></li>
+</ul>
+</div>
+<div class="vocab">
+<div class="word-cards">
+<ul>
+<li><span class="icon">🏋️</span> <a href="../../glossary.html#glossary-training" class="glossary-link" data-term="training" data-original-href="#glossary-training" data-slug="training">training</a>: showing an AI many examples so it can fix its weights</li>
+<li><span class="icon">🧪</span> <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-term="test data" data-original-href="#glossary-test-data" data-slug="test-data">test data</a>: new examples the AI never trained on, used to check what it learned</li>
+<li><span class="icon">📝</span> <a href="../../glossary.html#glossary-overfitting" class="glossary-link" data-term="overfitting" data-original-href="#glossary-overfitting" data-slug="overfitting">overfitting</a>: when an AI memorizes its training examples instead of learning the real pattern</li>
+<li><span class="icon">🖼️</span> <a href="../../glossary.html#glossary-dataset" class="glossary-link" data-term="dataset" data-original-href="#glossary-dataset" data-slug="dataset">dataset</a>: a big collection of examples</li>
+</ul>
+</div>
+</div>
+<div class="guided-notes-link">
+<p><a href="../../handouts/Unit_2/2.6_Build_a_Real_AI.pdf" target="_blank">Printable lesson sheet</a> - the sheet you write on today.</p>
+</div>
+<section id="warmup" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="warmup">🔥 Warm Up</h2>
+<p>The class network needed <strong>2 passes</strong> through <strong>8 cards</strong>. Each card took about <strong>1 minute</strong>.</p>
+<p>The computer trains on <strong>240 creatures</strong>, and does <strong>300 passes</strong>. How long would that take by hand? Work it out with a partner.</p>
+<div class="think" title="Answer">
+<p><span class="math inline">\(240 \times 300 = 72{,}000\)</span> cards. At 1 minute each, that’s <span class="math inline">\(72{,}000\)</span> minutes: about <strong>1,200 hours</strong>, or <strong>50 days</strong> without sleeping!</p>
+<p>A computer does it in a few seconds.</p>
+</div>
+</section>
+<section id="learn" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
+<section id="six-steps-to-build-an-ai" class="level3">
+<h3 class="anchored" data-anchor-id="six-steps-to-build-an-ai">2.6.1 - Six Steps to Build an AI</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_2/2.6_build_steps.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Six steps. 1, get data: 300 made-up creatures. 2, ask a question: Fighter or Wizard? 3, split the data: 80% train, 20% test. 4, build the network: how many hidden neurons? 5, train: many passes, fix the weights. 6, test, then use it on creatures it never saw." width="560"></p>
+</figure>
+</div>
+<ol type="1">
+<li><strong>Get data.</strong> The <a href="../../glossary.html#glossary-dataset" class="glossary-link" data-term="dataset" data-original-href="#glossary-dataset" data-slug="dataset">dataset</a> has <strong>300 creatures</strong>, the same made-up creatures from the cards. Each one has 6 numbers: Strength, Magic, Speed, Toughness, Height, and Weight. Each one also has a type and a home.</li>
+<li><strong>Ask a question.</strong> For example: <em>Is it a Fighter or a Wizard?</em></li>
+<li><strong>Split the data.</strong> Most creatures go into the <strong>training data</strong>. The rest go into the <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-term="test data" data-original-href="#glossary-test-data" data-slug="test-data">test data</a>. The network never trains on the test data.</li>
+<li><strong>Build the network.</strong> Choose how many neurons go in its hidden layer.</li>
+<li><strong>Train.</strong> Each <strong>pass</strong>, the network looks at every training creature. Then it changes every weight a little, to make fewer mistakes. This is <a href="../../glossary.html#glossary-backpropagation" class="glossary-link" data-term="backpropagation" data-original-href="#glossary-backpropagation" data-slug="backpropagation">backpropagation</a>, the computer’s way to play Who’s to Blame (Lesson 2.5).</li>
+<li><strong>Test, then use it.</strong> Check it on the test creatures. Then ask it about any creature.</li>
+</ol>
+<div class="remember" title="Why keep the test data apart?">
+<p>Imagine you get the answers to a test the day before. You get 100%. Did you learn the math? Maybe not! You might have just <strong>memorized</strong> the answers.</p>
+<p>An AI can do the same thing. The only fair check is data it has <strong>never seen</strong>.</p>
+</div>
+</section>
+<section id="how-to-read-the-network" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-read-the-network">2.6.2 - How to Read the Network</h3>
+<p>The tool draws the network while it trains.</p>
+<ul>
+<li><strong>Left:</strong> the inputs, the numbers that go in. <strong>Middle:</strong> the hidden neurons. <strong>Right:</strong> the answers.</li>
+<li><strong>Every line is a weight.</strong> A <strong>blue</strong> line is a positive weight. An <strong>orange</strong> line is a negative weight. A <strong>thicker</strong> line is a bigger weight. Watch the lines change while it trains.</li>
+<li><strong>On a 2-number question, each hidden neuron is a small square.</strong> It’s a tiny map: Strength goes right, Magic goes up. It’s <strong>blue</strong> where that neuron fires, and <strong>orange</strong> where it doesn’t. Each one draws one line, like the neuron in Lesson 2.4.</li>
+<li><strong>Ask the network</strong> about one creature. The picture lights up for that creature, and the answers show how sure the network is.</li>
+</ul>
+</section>
+</section>
+<section id="try-it" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
+<section id="predict-train-and-test" class="level3">
+<h3 class="anchored" data-anchor-id="predict-train-and-test">2.6.3 - Predict, Train, and Test</h3>
+<p>Work with a partner. Before each run, <strong>predict</strong> the test score on your sheet. Then train.</p>
+<div class="steps">
+<ol type="1">
+<li><strong>Run 1:</strong> <em>Fighter or Wizard?</em> (2 numbers), 4 hidden neurons. Train at <strong>slow</strong> speed. Watch the lines change.</li>
+<li><strong>Run 2:</strong> <em>Can it join the club?</em> (2 numbers). First use <strong>0</strong> hidden neurons. Then use <strong>2</strong>, like the class network. Look at the two small squares.</li>
+<li><strong>Run 3:</strong> <em>Fighter or Wizard?</em> (<strong>all 6 numbers</strong>), 16 hidden neurons. More information. Will it do better?</li>
+<li><strong>Run 4:</strong> <em>Where does it live?</em> (all 6 numbers), 16 hidden neurons.</li>
+<li>After each run, write the training score and the test score on your sheet.</li>
+</ol>
+</div>
+<!-- build_ai.html: Lesson 2.6. Build and train a real neural network in the
+     browser, on the made-up creature data (scripts/make-creatures.py, 300
+     creatures). Students choose a question and the number of hidden neurons,
+     then watch the weights change while it trains. For 2-number questions,
+     each hidden neuron shows a small map of what it looks for.
+     Plain JavaScript: standardized inputs, one hidden layer (tanh) or none,
+     softmax output, full-batch Adam (backpropagation). Nothing leaves the page. -->
+<div class="bai" id="bai">
+  <div class="bai-step"><span class="n">1</span> <b>Choose a question</b>
+    <select class="bai-q">
+      <option value="fw2">Fighter or Wizard? (2 numbers: Strength, Magic)</option>
+      <option value="club2">Can it join the club? (2 numbers: Strength, Magic)</option>
+      <option value="fw6">Fighter or Wizard? (all 6 numbers)</option>
+      <option value="home6">Where does it live: Forest, Mountain, or Lake? (all 6 numbers)</option>
+      <option value="type2">Which type: Fighter, Wizard, Giant, or Mini? (2 numbers)</option>
+    </select>
+  </div>
+  <div class="bai-info"></div>
+  <div class="bai-step"><span class="n">2</span> <b>Split the data</b> 80% for training, 20% for testing.
+    <button type="button" class="bai-btn bai-plain bai-split">🔀 New random split</button>
+  </div>
+  <div class="bai-step"><span class="n">3</span> <b>Build the network</b>
+    <label>Hidden neurons: <select class="bai-h"><option value="0">0 (no hidden layer)</option><option value="2">2</option><option value="4" selected="">4</option><option value="8">8</option><option value="16">16</option></select></label>
+  </div>
+  <div class="bai-step"><span class="n">4</span> <b>Train</b>
+    <button type="button" class="bai-btn bai-train">▶ Train 300 passes</button>
+    <button type="button" class="bai-btn bai-plain bai-one">+1 pass</button>
+    <button type="button" class="bai-btn bai-plain bai-stop">⏸ Stop</button>
+    <label>Speed: <select class="bai-speed"><option value="slow">slow</option><option value="normal" selected="">normal</option><option value="fast">fast</option></select></label>
+    <span class="bai-ep">Pass 0</span>
+  </div>
+  <div class="bai-netbox">
+    <div class="bai-scores"></div>
+    <canvas class="bai-net" width="660" height="300" aria-label="The network: inputs on the left, hidden neurons in the middle, answers on the right. Each line is a weight."></canvas>
+    <div class="bai-key"><span class="pos">━</span> positive weight &nbsp; <span class="neg">━</span> negative weight &nbsp; thicker = bigger weight. <span class="bai-mini-key">Each hidden neuron's square is a tiny copy of the map below (Strength goes right, Magic goes up). <span class="pos">Blue</span>: it fires there. <span class="neg">Orange</span>: it doesn't.</span></div>
+  </div>
+  <div class="bai-charts">
+    <div class="bai-chartbox">
+      <canvas class="bai-acc" width="460" height="260"></canvas>
+      <div class="bai-key"><span class="tr">—</span> right on training data &nbsp; <span class="te">—</span> right on test data &nbsp; <span class="gu">- -</span> always guess the most common answer</div>
+    </div>
+    <div class="bai-chartbox bai-mapbox">
+      <canvas class="bai-map" width="360" height="360"></canvas>
+      <div class="bai-key">What the network says for every Strength and Magic. Dots: creatures (hollow = test).</div>
+    </div>
+  </div>
+  <div class="bai-step"><span class="n">5</span> <b>Test and use it</b>
+    <input class="bai-name" list="bai-names" placeholder="Type a creature's name">
+    <datalist id="bai-names"></datalist>
+    <button type="button" class="bai-btn bai-ask">🔮 Ask the network</button>
+  </div>
+  <div class="bai-out"></div>
+</div>
+
+<style>
+.bai { border: 1px solid #d9e1e8; border-radius: 10px; padding: 0.8rem; margin: 0.75rem 0 1.25rem; background: #fbfcfd; }
+.bai-step { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.7rem; margin: 0.5rem 0; }
+.bai-step .n { display: inline-flex; width: 1.6em; height: 1.6em; border-radius: 50%; background: #d35400; color: #fff; font-weight: bold; align-items: center; justify-content: center; }
+.bai-step select, .bai-step input { font-size: 0.95rem; padding: 0.15rem 0.3rem; max-width: 100%; }
+.bai-info { background: #fff; border: 1px solid #e3e8ed; border-radius: 6px; padding: 0.4rem 0.6rem; font-size: 0.92rem; line-height: 1.5; }
+.bai-btn { border: 1px solid #2c3e50; background: #2c3e50; color: #fff; border-radius: 6px; padding: 0.3rem 0.8rem; font-weight: 600; cursor: pointer; }
+.bai-btn.bai-plain { background: #fff; color: #2c3e50; }
+.bai-ep { font-weight: bold; }
+.bai-netbox { background: #fff; border: 1px solid #e3e8ed; border-radius: 8px; padding: 0.4rem; margin: 0.4rem 0; }
+.bai-net { width: 100%; height: auto; display: block; }
+.bai-charts { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.bai-chartbox { flex: 1 1 300px; }
+.bai-mapbox { flex: 0 1 300px; }
+.bai-charts canvas { width: 100%; height: auto; background: #fff; border: 1px solid #e3e8ed; border-radius: 6px; display: block; }
+.bai-key { font-size: 0.8rem; color: #444; margin-top: 0.2rem; }
+.bai-key .tr { color: #2c6fae; font-weight: bold; } .bai-key .te { color: #d35400; font-weight: bold; } .bai-key .gu { color: #888; font-weight: bold; }
+.bai-key .pos { color: #2c6fae; font-weight: bold; } .bai-key .neg { color: #d35400; font-weight: bold; }
+.bai-out { line-height: 1.6; }
+.bai-scores { font-size: 1.05rem; margin: 0 0 0.3rem 0.2rem; }
+.bai-out .bar { display: flex; align-items: center; gap: 0.4rem; margin: 0.1rem 0; }
+.bai-out .bar i { display: inline-block; height: 0.9em; background: #d35400; border-radius: 2px; }
+.bai-out .bar span { min-width: 6.5em; }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("bai");
+  if (!root) return;
+  // name, type, strength, magic, speed, toughness, height, weight, home
+  const CREATURES = [["Fumbo","fighter",51,61,38,21,1.6,77,"forest"],["Plillux","fighter",80,50,73,61,1.5,66,"forest"],["Sambos","mini",15,16,38,54,0.7,17,"mountain"],["Snimbik","wizard",42,57,40,65,2.0,142,"mountain"],["Grapis","mini",28,20,50,58,0.4,7,"lake"],["Skape","mini",30,36,37,62,0.5,7,"mountain"],["Dakundu","mini",29,43,39,64,0.7,21,"forest"],["Trandi","fighter",69,50,59,65,1.5,74,"mountain"],["Lullom","wizard",38,64,17,50,1.9,160,"forest"],["Flellik","mini",23,5,47,24,0.5,7,"mountain"],["Vomanak","giant",79,89,49,39,3.2,298,"mountain"],["Tragil","mini",7,19,54,61,0.7,10,"mountain"],["Skabil","wizard",46,71,55,71,1.3,60,"mountain"],["Tarra","giant",82,71,36,52,3.6,247,"mountain"],["Degi","fighter",71,51,78,34,1.6,68,"forest"],["Vasi","giant",95,96,66,44,2.9,248,"mountain"],["Sandam","fighter",50,33,58,43,1.9,88,"mountain"],["Volar","mini",18,40,69,52,0.6,11,"mountain"],["Doremar","mini",24,5,40,59,0.3,3,"lake"],["Bribas","giant",93,88,63,52,3.7,372,"lake"],["Drosa","wizard",36,55,44,59,1.3,53,"mountain"],["Kinax","mini",22,13,30,21,0.6,16,"mountain"],["Rumbim","wizard",42,77,59,39,1.5,72,"forest"],["Trames","mini",23,22,39,47,0.5,12,"forest"],["Suma","mini",14,26,59,60,0.4,4,"mountain"],["Glarril","mini",34,9,54,50,0.5,12,"forest"],["Flishun","mini",28,20,84,47,0.5,9,"lake"],["Snoki","giant",100,81,38,19,2.8,300,"lake"],["Grikun","wizard",48,65,56,62,1.5,57,"lake"],["Glakos","fighter",82,44,52,51,1.4,82,"forest"],["Karrir","fighter",75,45,30,85,1.9,145,"lake"],["Rezivil","fighter",91,39,44,55,1.3,50,"mountain"],["Gronar","mini",5,32,32,49,0.3,2,"lake"],["Tirox","mini",18,15,42,58,0.7,14,"lake"],["Mimbox","mini",5,38,86,44,0.5,7,"lake"],["Trorrul","giant",75,87,51,63,2.7,196,"mountain"],["Plaril","mini",5,23,55,45,0.5,6,"forest"],["Tibi","fighter",57,25,63,37,1.5,73,"lake"],["Pasir","wizard",38,67,29,34,1.0,27,"lake"],["Drambax","wizard",42,58,60,23,1.7,108,"lake"],["Sarras","mini",29,34,29,24,0.5,8,"forest"],["Gilax","giant",76,79,65,26,3.0,191,"mountain"],["Mundax","wizard",67,67,53,50,1.1,24,"lake"],["Pepa","giant",68,69,44,61,3.3,302,"lake"],["Dibox","giant",78,83,71,27,3.2,265,"forest"],["Tedux","mini",18,21,18,61,0.2,2,"mountain"],["Titomo","mini",26,37,53,58,0.5,6,"forest"],["Snombos","wizard",49,69,47,52,1.6,74,"forest"],["Grivax","giant",73,95,66,37,3.0,349,"lake"],["Lodovuk","wizard",20,58,50,48,1.7,76,"lake"],["Risum","mini",19,14,29,47,0.4,5,"forest"],["Pleshok","mini",27,18,41,50,0.6,9,"mountain"],["Krellis","fighter",61,25,63,43,2.4,149,"mountain"],["Konik","fighter",69,36,45,31,1.3,64,"lake"],["Krerron","mini",31,24,60,44,0.6,12,"forest"],["Plikux","mini",17,28,52,52,0.5,5,"lake"],["Troshe","mini",5,26,77,26,0.5,7,"mountain"],["Porris","fighter",82,34,40,91,1.2,55,"forest"],["Peban","giant",99,98,61,15,2.6,200,"mountain"],["Dranda","wizard",31,58,57,85,1.2,44,"mountain"],["Punogil","mini",17,25,65,53,0.4,5,"lake"],["Dapuk","wizard",32,82,55,30,1.7,79,"mountain"],["Zozondi","giant",83,83,48,68,3.8,334,"mountain"],["Vokon","mini",21,10,68,45,0.8,19,"forest"],["Tazu","fighter",87,44,48,39,1.3,63,"forest"],["Niton","mini",20,20,25,51,0.5,7,"mountain"],["Nonam","mini",21,34,67,35,0.5,5,"mountain"],["Fakir","mini",5,30,49,55,0.5,7,"forest"],["Kromos","fighter",81,38,41,51,1.7,86,"forest"],["Grige","fighter",80,41,49,31,1.3,55,"mountain"],["Vepul","wizard",38,69,47,33,1.1,27,"forest"],["Trombar","wizard",42,95,75,51,2.0,132,"mountain"],["Trapok","fighter",56,34,43,57,1.7,107,"forest"],["Biva","fighter",51,25,52,56,2.2,92,"lake"],["Rilok","fighter",54,33,72,55,1.5,42,"forest"],["Duvus","mini",9,17,50,48,0.6,11,"lake"],["Zirrige","mini",5,19,65,50,0.3,2,"mountain"],["Zoran","wizard",52,57,40,59,1.0,30,"lake"],["Note","fighter",60,40,49,30,1.7,105,"forest"],["Tresho","mini",31,15,64,34,0.4,3,"mountain"],["Plemi","giant",82,78,51,26,2.8,230,"lake"],["Dradidi","giant",97,72,51,51,1.8,92,"lake"],["Gozar","wizard",22,62,49,61,1.6,77,"lake"],["Beko","fighter",59,52,49,58,1.3,54,"forest"],["Skanu","fighter",74,29,56,37,1.8,71,"forest"],["Glebon","mini",37,30,35,15,0.6,20,"forest"],["Desak","giant",69,73,44,38,3.1,197,"mountain"],["Granu","wizard",35,54,52,41,1.9,113,"mountain"],["Zasham","wizard",46,74,29,47,1.7,83,"forest"],["Zimbam","mini",6,29,79,27,0.5,10,"forest"],["Veshek","wizard",41,58,38,76,1.5,58,"forest"],["Koroke","fighter",59,42,56,35,1.6,79,"lake"],["Skonkas","wizard",37,57,53,51,1.7,91,"mountain"],["Flombo","giant",69,80,29,53,2.3,214,"forest"],["Zirrax","mini",30,28,62,72,0.6,7,"lake"],["Krasusa","mini",23,15,25,45,0.3,2,"lake"],["Rundu","fighter",54,42,60,44,1.3,54,"forest"],["Pona","wizard",13,85,25,50,1.2,25,"forest"],["Gepak","giant",67,69,43,31,3.4,384,"mountain"],["Snalas","mini",20,46,63,51,0.6,10,"forest"],["Plunkox","fighter",66,44,52,46,1.7,76,"mountain"],["Ralli","wizard",51,53,67,28,2.0,118,"lake"],["Vosok","giant",89,73,54,43,3.3,377,"forest"],["Glerrir","fighter",64,15,60,53,1.4,77,"lake"],["Mesolla","mini",37,22,53,55,0.4,6,"mountain"],["Vala","mini",33,12,65,58,0.6,11,"lake"],["Pindux","wizard",45,59,27,34,1.9,121,"lake"],["Plambul","wizard",49,44,54,74,1.8,88,"forest"],["Tilol","mini",36,26,45,92,0.6,9,"lake"],["Lika","wizard",22,62,60,17,1.5,61,"lake"],["Lindur","mini",61,8,64,51,0.3,3,"mountain"],["Fellir","fighter",68,34,45,62,2.0,166,"mountain"],["Brazom","fighter",65,42,47,43,1.7,65,"mountain"],["Sibi","fighter",45,36,43,39,1.7,64,"lake"],["Drolle","fighter",62,28,40,46,1.0,25,"forest"],["Glaza","giant",64,55,48,27,3.6,456,"mountain"],["Feva","mini",5,21,77,48,0.5,10,"mountain"],["Tukix","mini",36,43,61,39,0.5,8,"forest"],["Skite","giant",89,77,47,47,2.8,169,"forest"],["Glabo","wizard",56,49,43,26,0.9,24,"forest"],["Gite","fighter",60,49,61,51,1.2,43,"lake"],["Tamonki","mini",10,30,54,46,0.6,15,"lake"],["Rive","giant",100,87,25,54,3.3,275,"lake"],["Snenkor","mini",45,52,59,59,0.5,6,"mountain"],["Doza","fighter",64,29,40,52,1.2,67,"lake"],["Kinen","giant",63,65,45,60,3.4,395,"forest"],["Bomber","fighter",64,44,43,54,1.3,54,"lake"],["Naku","mini",5,20,34,47,0.6,9,"mountain"],["Pimis","mini",37,33,18,53,0.4,5,"mountain"],["Gobe","mini",13,5,69,22,0.5,11,"forest"],["Sirral","wizard",52,69,39,44,1.7,136,"mountain"],["Gobur","giant",55,82,38,52,2.9,293,"lake"],["Galla","wizard",17,63,41,62,1.0,34,"forest"],["Tashe","mini",67,21,44,39,0.5,5,"mountain"],["Poserer","giant",80,71,37,19,3.6,295,"mountain"],["Mumbur","wizard",54,98,30,51,1.3,47,"lake"],["Snopol","mini",9,33,44,51,0.5,11,"mountain"],["Kashel","mini",18,38,65,45,0.5,9,"forest"],["Krider","mini",20,22,51,63,0.7,18,"forest"],["Tramepu","fighter",55,44,75,61,1.5,50,"mountain"],["Skedis","fighter",64,34,38,59,1.4,68,"mountain"],["Fipa","wizard",39,58,48,81,1.0,52,"lake"],["Snipun","mini",6,25,48,37,0.6,7,"mountain"],["Skupok","fighter",57,49,73,70,1.6,66,"mountain"],["Flabim","mini",31,28,57,40,0.3,2,"mountain"],["Lobo","wizard",45,72,53,62,1.7,67,"lake"],["Redix","fighter",58,18,44,59,1.9,96,"mountain"],["Fletox","mini",32,25,81,71,0.3,4,"lake"],["Peniruk","mini",36,5,30,53,0.6,12,"lake"],["Glandok","mini",21,38,44,59,0.4,7,"mountain"],["Penom","giant",100,74,52,45,2.7,197,"mountain"],["Grinko","giant",100,85,66,34,2.9,359,"lake"],["Bobil","giant",84,92,29,37,3.9,434,"lake"],["Florren","giant",86,77,42,50,2.9,198,"forest"],["Migi","giant",71,78,58,40,3.2,182,"forest"],["Skuli","wizard",35,50,38,86,1.9,112,"forest"],["Plamon","giant",85,77,51,70,1.8,58,"mountain"],["Droton","mini",27,18,69,38,0.5,8,"lake"],["Rarar","wizard",50,30,61,15,1.6,113,"forest"],["Plura","wizard",48,77,38,49,1.1,53,"lake"],["Snomba","mini",17,9,37,48,0.4,5,"lake"],["Dimbos","mini",14,24,39,31,0.5,6,"forest"],["Lonkoba","wizard",38,44,44,70,1.9,226,"mountain"],["Lotin","mini",34,32,64,49,0.6,10,"mountain"],["Lanis","mini",21,22,59,37,0.3,2,"forest"],["Nagil","wizard",35,53,45,40,1.7,121,"lake"],["Grashil","wizard",49,77,49,46,1.9,150,"mountain"],["Bindos","wizard",53,43,63,54,1.5,75,"mountain"],["Doshik","fighter",61,33,33,77,1.4,50,"forest"],["Vugak","wizard",41,78,35,27,1.3,64,"lake"],["Fulinda","giant",79,94,63,44,2.3,145,"lake"],["Tisi","fighter",72,61,31,69,1.3,41,"mountain"],["Kisam","mini",22,21,45,37,0.7,18,"lake"],["Skome","mini",18,6,78,42,0.7,12,"mountain"],["Groshon","wizard",24,62,58,43,1.9,98,"lake"],["Krozin","mini",28,24,43,52,0.5,8,"mountain"],["Snumbik","fighter",62,29,57,53,1.5,61,"mountain"],["Tesel","giant",88,65,32,39,2.3,177,"mountain"],["Biman","giant",87,100,35,61,3.5,290,"lake"],["Nerre","wizard",34,74,39,42,1.7,74,"lake"],["Lusa","fighter",51,55,27,46,1.7,57,"lake"],["Muril","mini",16,9,58,41,0.5,10,"mountain"],["Lellom","giant",85,65,79,5,3.4,228,"lake"],["Trimbo","mini",21,25,51,11,0.4,4,"forest"],["Glashom","giant",85,96,46,68,4.1,374,"lake"],["Nusan","wizard",29,55,13,43,1.4,50,"lake"],["Fembux","fighter",54,44,20,52,1.8,112,"lake"],["Gibox","fighter",56,40,52,47,2.4,152,"mountain"],["Vigis","giant",78,100,25,45,3.9,386,"mountain"],["Drankam","mini",44,26,60,65,0.6,9,"forest"],["Sopuvan","giant",92,84,21,44,2.9,297,"lake"],["Puvur","giant",86,90,79,60,3.2,309,"lake"],["Rindom","giant",77,74,49,32,2.8,244,"lake"],["Driris","giant",95,90,37,24,3.2,421,"forest"],["Rapon","wizard",41,71,51,56,1.8,67,"forest"],["Snava","mini",25,17,69,63,0.5,10,"mountain"],["Drulax","wizard",67,58,39,37,1.3,75,"forest"],["Snokel","mini",16,37,38,35,0.7,25,"lake"],["Pimix","giant",95,74,41,21,2.8,259,"lake"],["Gezex","mini",5,16,63,31,0.6,9,"lake"],["Krubivi","giant",76,83,40,78,2.5,219,"lake"],["Tuvadul","fighter",91,20,66,61,1.8,95,"lake"],["Drendak","giant",79,66,15,47,4.1,628,"lake"],["Renku","mini",13,24,48,82,0.6,10,"mountain"],["Nendar","giant",76,91,61,38,3.1,322,"mountain"],["Kripa","wizard",35,70,52,52,1.6,91,"forest"],["Tenko","giant",73,76,63,56,2.9,237,"forest"],["Bise","wizard",56,69,47,23,1.4,61,"forest"],["Zorrak","wizard",35,75,33,49,1.5,79,"forest"],["Sidik","wizard",58,53,57,47,0.9,31,"lake"],["Favi","giant",85,76,47,48,2.8,200,"mountain"],["Drazux","fighter",63,41,26,46,1.3,41,"mountain"],["Skedex","mini",25,24,54,52,0.4,4,"lake"],["Boshin","mini",19,14,30,43,0.7,26,"forest"],["Pilak","mini",14,32,21,60,0.5,6,"forest"],["Ledam","mini",32,17,65,55,0.5,6,"lake"],["Ropo","fighter",74,38,27,13,1.7,66,"forest"],["Snarrol","giant",86,77,70,52,3.2,176,"lake"],["Brenon","mini",31,33,57,43,0.4,9,"lake"],["Snandux","wizard",16,63,56,67,1.8,146,"mountain"],["Vopom","wizard",18,88,31,63,2.4,160,"forest"],["Purrin","mini",41,11,46,52,0.6,9,"lake"],["Krondak","mini",20,19,47,39,0.7,16,"lake"],["Sezek","wizard",20,68,64,66,1.5,64,"mountain"],["Trebir","mini",21,25,55,52,0.6,12,"mountain"],["Vogemar","fighter",60,74,16,52,1.4,66,"forest"],["Puvos","wizard",35,60,56,71,1.4,79,"lake"],["Glarir","fighter",64,32,67,62,1.6,53,"lake"],["Plobi","wizard",46,52,60,62,1.1,44,"mountain"],["Suvas","wizard",37,68,97,38,1.7,104,"lake"],["Dotol","wizard",48,77,50,78,1.3,50,"forest"],["Snuri","fighter",69,43,54,77,1.2,36,"forest"],["Tivex","fighter",61,29,32,40,1.3,41,"forest"],["Rebuk","mini",5,30,43,58,0.6,9,"lake"],["Plina","wizard",33,67,61,51,1.0,28,"lake"],["Bapok","wizard",35,63,58,15,1.8,134,"lake"],["Gutos","mini",11,23,60,50,0.5,6,"lake"],["Trabin","fighter",62,56,43,29,1.6,61,"forest"],["Retir","wizard",19,58,54,56,1.1,33,"forest"],["Flerres","fighter",67,58,72,58,1.7,75,"forest"],["Glidis","fighter",75,50,34,36,1.4,34,"mountain"],["Sapam","giant",86,80,52,68,3.4,316,"forest"],["Troli","fighter",68,23,39,42,1.6,66,"mountain"],["Glunkum","mini",28,9,55,46,0.6,11,"forest"],["Skunde","mini",48,30,62,81,0.5,7,"lake"],["Morran","wizard",71,52,74,53,1.3,36,"lake"],["Mosirri","wizard",22,60,69,44,1.6,86,"forest"],["Pendos","wizard",38,61,43,33,1.4,40,"lake"],["Trazu","fighter",63,47,39,58,1.8,89,"forest"],["Skemul","mini",13,33,25,61,0.4,4,"lake"],["Snito","fighter",67,31,40,42,1.7,108,"mountain"],["Zirim","mini",30,14,43,59,0.6,10,"forest"],["Grobu","fighter",68,27,64,37,1.7,71,"mountain"],["Boro","wizard",38,67,49,33,1.6,75,"lake"],["Rokunes","mini",20,19,56,54,0.7,10,"forest"],["Grikak","fighter",54,30,45,66,1.6,84,"forest"],["Voso","fighter",50,51,57,25,1.5,64,"forest"],["Drimi","giant",81,84,55,68,3.3,293,"mountain"],["Snurri","mini",40,5,63,49,0.4,5,"forest"],["Flurri","fighter",53,33,67,66,1.9,68,"lake"],["Snabi","fighter",75,34,23,67,1.7,72,"forest"],["Latere","mini",23,35,57,87,0.6,13,"forest"],["Kruber","giant",93,87,37,47,2.3,98,"mountain"],["Drorrer","giant",78,75,51,50,3.3,249,"mountain"],["Totem","fighter",60,39,56,57,1.6,77,"lake"],["Lora","giant",80,85,42,50,2.5,133,"lake"],["Fasu","giant",64,100,58,47,3.1,260,"mountain"],["Ribu","giant",87,92,49,34,3.6,369,"forest"],["Vukom","mini",26,23,56,52,0.6,8,"lake"],["Pleve","mini",33,37,35,71,0.5,5,"mountain"],["Brodok","mini",21,29,61,36,0.5,6,"forest"],["Tello","mini",11,10,70,28,0.5,5,"mountain"],["Ponox","mini",30,14,43,41,0.5,5,"lake"],["Nigas","wizard",33,72,49,25,1.6,92,"forest"],["Lesim","giant",63,84,31,54,2.7,237,"forest"],["Borinox","fighter",89,38,65,57,1.8,101,"mountain"],["Zoshes","wizard",37,58,45,36,0.8,25,"forest"],["Suvar","wizard",51,73,33,39,1.3,66,"lake"],["Vasim","giant",70,81,27,30,2.1,146,"forest"],["Trallam","fighter",51,62,28,57,1.3,48,"mountain"],["Saton","giant",72,100,32,63,3.0,260,"mountain"],["Dririm","wizard",51,71,43,26,1.5,78,"lake"],["Vapa","giant",50,100,28,57,4.0,399,"mountain"],["Skedo","giant",72,72,23,39,3.5,487,"lake"],["Flonda","mini",17,16,40,35,0.7,16,"mountain"],["Dozima","giant",84,80,65,50,3.4,491,"mountain"],["Trapak","mini",26,35,46,33,0.4,5,"lake"],["Kigo","mini",18,26,43,38,0.5,7,"lake"],["Snuna","fighter",56,33,49,55,1.2,37,"mountain"],["Rondok","fighter",81,35,68,65,1.1,55,"lake"],["Krubu","wizard",32,40,70,68,1.4,64,"forest"],["Zembo","fighter",49,42,54,46,1.8,176,"mountain"],["Vishos","fighter",72,44,54,33,1.8,104,"lake"],["Zaki","fighter",83,20,36,61,1.0,24,"mountain"],["Kakok","mini",14,17,60,53,0.3,2,"forest"],["Porur","wizard",16,75,73,45,1.7,89,"forest"],["Flibix","fighter",85,47,52,25,2.0,102,"lake"],["Skosu","fighter",74,30,33,53,1.6,44,"lake"],["Gambu","wizard",9,71,69,54,1.3,67,"forest"],["Kranki","mini",11,5,48,49,0.2,1,"mountain"]];  // made by scripts/make-creatures.py
+  const FEATS = ["Strength", "Magic", "Speed", "Toughness", "Height", "Weight"];
+  const ALL6 = [0, 1, 2, 3, 4, 5];
+  const QUESTIONS = {
+    fw2: { keep: (r) => r[1] === "fighter" || r[1] === "wizard", label: (r) => r[1], classes: ["fighter", "wizard"], feats: [0, 1] },
+    club2: { keep: () => true, label: (r) => (r[1] === "fighter" || r[1] === "wizard" ? "can join" : "can't join"), classes: ["can join", "can't join"], feats: [0, 1] },
+    fw6: { keep: (r) => r[1] === "fighter" || r[1] === "wizard", label: (r) => r[1], classes: ["fighter", "wizard"], feats: ALL6 },
+    home6: { keep: () => true, label: (r) => r[8], classes: ["forest", "mountain", "lake"], feats: ALL6 },
+    type2: { keep: () => true, label: (r) => r[1], classes: ["fighter", "wizard", "giant", "mini"], feats: [0, 1] },
+  };
+  const COLORS = { fighter: "#c0392b", wizard: "#7d3c98", giant: "#2c3e50", mini: "#16a085", "can join": "#1e8449", "can't join": "#95a5a6", forest: "#27ae60", mountain: "#8e6e53", lake: "#2c6fae" };
+  const POS = [44, 111, 174], NEG = [211, 84, 0];
+  const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+  // seeded random numbers, so a split and a start can be repeated
+  let seed = 7;
+  const rand = () => { seed |= 0; seed = (seed + 0x6D2B79F5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const gauss = () => Math.sqrt(-2 * Math.log(rand() + 1e-12)) * Math.cos(2 * Math.PI * rand());
+
+  let Q, classes, rows, train, test, mean, sd, net, hist, epoch, running = false, splitSeed = 7, asked = null;
+  const qEl = root.querySelector(".bai-q"), hEl = root.querySelector(".bai-h"), spEl = root.querySelector(".bai-speed");
+  const info = root.querySelector(".bai-info"), epEl = root.querySelector(".bai-ep"), out = root.querySelector(".bai-out");
+  const acc = root.querySelector(".bai-acc"), ax = acc.getContext("2d");
+  const map = root.querySelector(".bai-map"), mx = map.getContext("2d");
+  const nc = root.querySelector(".bai-net"), nx = nc.getContext("2d");
+  const mapbox = root.querySelector(".bai-mapbox"), miniKey = root.querySelector(".bai-mini-key");
+
+  function setup() {
+    Q = QUESTIONS[qEl.value];
+    rows = CREATURES.filter(Q.keep);
+    classes = Q.classes;
+    seed = splitSeed;
+    const idx = rows.map((_, i) => i);
+    for (let i = idx.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
+    const cut = Math.round(rows.length * 0.8);
+    train = idx.slice(0, cut).map((i) => rows[i]); test = idx.slice(cut).map((i) => rows[i]);
+    const X = (r) => Q.feats.map((f) => r[2 + f]);
+    mean = Q.feats.map((_, k) => train.reduce((s, r) => s + X(r)[k], 0) / train.length);
+    sd = Q.feats.map((_, k) => Math.sqrt(train.reduce((s, r) => s + (X(r)[k] - mean[k]) ** 2, 0) / train.length) || 1);
+    const counts = classes.map((c) => rows.filter((r) => Q.label(r) === c).length);
+    hist = { train: [], test: [], guess: Math.max(...counts) / rows.length };
+    info.innerHTML = `<b>${rows.length}</b> creatures. The network sees <b>${Q.feats.map((f) => FEATS[f]).join(", ")}</b>. ` +
+      `It must say: <b>${classes.map(cap).join(" or ")}</b>.<br>` +
+      `Training: ${train.length} creatures. Test: ${test.length} creatures (the network never trains on these).<br>` +
+      `Always guessing the most common answer gets <b>${Math.round(100 * hist.guess)}%</b> right. Can the network beat that?`;
+    mapbox.style.display = Q.feats.length === 2 ? "" : "none";
+    build();
+    out.innerHTML = "";
+    root.querySelector("#bai-names").innerHTML = rows.map((r) => `<option value="${r[0]}">`).join("");
+  }
+  const inputs = (r) => Q.feats.map((f, k) => (r[2 + f] - mean[k]) / sd[k]);
+  function build() {
+    const H = +hEl.value, D = Q.feats.length, K = classes.length;
+    seed = 99;
+    const M = (a, b, s) => Array.from({ length: a }, () => Array.from({ length: b }, () => gauss() * s));
+    net = H ? { H, W1: M(H, D, Math.sqrt(1 / D)), b1: new Array(H).fill(0), W2: M(K, H, Math.sqrt(1 / H)), b2: new Array(K).fill(0) }
+            : { H: 0, W2: M(K, D, 0.1), b2: new Array(K).fill(0) };
+    net.m = {}; net.v = {}; net.t = 0;
+    epoch = 0; asked = null; hist.train = []; hist.test = []; record(); drawAll(); epEl.textContent = "Pass 0";
+  }
+  function forward(x) {
+    let h = x;
+    if (net.H) h = net.W1.map((w, j) => Math.tanh(w.reduce((s, wi, i) => s + wi * x[i], net.b1[j])));
+    const z = net.W2.map((w, k) => w.reduce((s, wi, i) => s + wi * h[i], net.b2[k]));
+    const m = Math.max(...z), e = z.map((v) => Math.exp(v - m)), S = e.reduce((a, b) => a + b, 0);
+    return { h, p: e.map((v) => v / S) };
+  }
+  const predict = (r) => { const p = forward(inputs(r)).p; return p.indexOf(Math.max(...p)); };
+  const score = (set) => set.filter((r) => classes[predict(r)] === Q.label(r)).length / set.length;
+  function record() {
+    hist.train.push(score(train)); hist.test.push(score(test));
+    root.dataset.train = hist.train[hist.train.length - 1].toFixed(3);  // read by the page test
+    root.dataset.test = hist.test[hist.test.length - 1].toFixed(3);
+  }
+
+  // one pass: look at every training creature, then change every weight a little (backpropagation + Adam)
+  function trainStep() {
+    const lr = 0.02, b1 = 0.9, b2 = 0.999;
+    const g = { W2: net.W2.map((w) => w.map(() => 0)), b2: net.b2.map(() => 0) };
+    if (net.H) { g.W1 = net.W1.map((w) => w.map(() => 0)); g.b1 = net.b1.map(() => 0); }
+    for (const r of train) {
+      const x = inputs(r), { h, p } = forward(x), y = classes.indexOf(Q.label(r));
+      const dz = p.map((v, k) => v - (k === y ? 1 : 0));
+      dz.forEach((d, k) => { g.b2[k] += d; h.forEach((hi, i) => (g.W2[k][i] += d * hi)); });
+      if (net.H) {
+        h.forEach((hi, j) => {
+          const dh = dz.reduce((s, d, k) => s + d * net.W2[k][j], 0) * (1 - hi * hi);
+          g.b1[j] += dh; x.forEach((xi, i) => (g.W1[j][i] += dh * xi));
+        });
+      }
+    }
+    net.t++;
+    const upd = (name) => {
+      const P = net[name], G = g[name], flat = Array.isArray(P[0]);
+      if (!net.m[name]) { net.m[name] = flat ? P.map((r) => r.map(() => 0)) : P.map(() => 0); net.v[name] = flat ? P.map((r) => r.map(() => 0)) : P.map(() => 0); }
+      const step = (pv, gv, mv, vv) => {
+        gv /= train.length;
+        const m = b1 * mv + (1 - b1) * gv, v = b2 * vv + (1 - b2) * gv * gv;
+        const mh = m / (1 - b1 ** net.t), vh = v / (1 - b2 ** net.t);
+        return [pv - (lr * mh) / (Math.sqrt(vh) + 1e-8), m, v];
+      };
+      if (flat) P.forEach((row, a) => row.forEach((_, b) => { const [p, m, v] = step(P[a][b], G[a][b], net.m[name][a][b], net.v[name][a][b]); P[a][b] = p; net.m[name][a][b] = m; net.v[name][a][b] = v; }));
+      else P.forEach((_, a) => { const [p, m, v] = step(P[a], G[a], net.m[name][a], net.v[name][a]); P[a] = p; net.m[name][a] = m; net.v[name][a] = v; });
+    };
+    ["W2", "b2"].concat(net.H ? ["W1", "b1"] : []).forEach(upd);
+    epoch++;
+  }
+
+  // ---- the network picture ----
+  function drawNet() {
+    const D = Q.feats.length, H = net.H, K = classes.length, mini = H && D === 2;
+    const box = mini ? (H <= 2 ? 72 : H <= 4 ? 58 : H <= 8 ? 40 : 30) : 0, gapH = mini ? box + 10 : 34;
+    const rowsN = Math.max(D, H, K);
+    const W = nc.width, Hh = Math.max(220, 50 + Math.max(D * 46, H * gapH, K * 50));
+    if (nc.height !== Hh) nc.height = Hh;
+    nx.clearRect(0, 0, W, Hh);
+    const xIn = 150, xH = H ? 340 : 0, xOut = H ? 520 : 440;
+    const col = (n, gap) => Array.from({ length: n }, (_, i) => Hh / 2 + (i - (n - 1) / 2) * gap);
+    const yIn = col(D, 46), yH = col(H, gapH), yOut = col(K, 50);
+    const f = asked ? forward(inputs(asked)) : null;
+    // lines: each one is a weight
+    const line = (x1, y1, x2, y2, w, dim) => {
+      const a = Math.min(1, Math.abs(w) / 1.5), c = w >= 0 ? POS : NEG;
+      nx.strokeStyle = `rgba(${c[0]},${c[1]},${c[2]},${(0.15 + 0.85 * a) * (dim ? 0.3 : 1)})`;
+      nx.lineWidth = 0.6 + 5 * a;
+      nx.beginPath(); nx.moveTo(x1, y1); nx.lineTo(x2, y2); nx.stroke();
+    };
+    const R = 13;
+    if (H) {
+      for (let j = 0; j < H; j++) for (let i = 0; i < D; i++) line(xIn + R, yIn[i], xH - (box ? box / 2 : R), yH[j], net.W1[j][i]);
+      for (let k = 0; k < K; k++) for (let j = 0; j < H; j++) line(xH + (box ? box / 2 : R), yH[j], xOut - R, yOut[k], net.W2[k][j], f && Math.abs(f.h[j]) < 0.2);
+    } else {
+      for (let k = 0; k < K; k++) for (let i = 0; i < D; i++) line(xIn + R, yIn[i], xOut - R, yOut[k], net.W2[k][i]);
+    }
+    // input neurons
+    nx.font = "bold 13px sans-serif"; nx.textBaseline = "middle";
+    for (let i = 0; i < D; i++) {
+      nx.fillStyle = "#eaf2fa"; nx.strokeStyle = "#2c6fae"; nx.lineWidth = 2;
+      nx.beginPath(); nx.arc(xIn, yIn[i], R, 0, 2 * Math.PI); nx.fill(); nx.stroke();
+      nx.fillStyle = "#2c3e50"; nx.textAlign = "right";
+      nx.fillText(FEATS[Q.feats[i]] + (asked ? " " + asked[2 + Q.feats[i]] : ""), xIn - R - 6, yIn[i]);
+    }
+    // hidden neurons: a small map of where each one fires, or a circle
+    for (let j = 0; j < H; j++) {
+      const y = yH[j];
+      if (mini) {
+        const x0 = xH - box / 2, y0 = y - box / 2, step = 2;
+        for (let px = 0; px < box; px += step) for (let py = 0; py < box; py += step) {
+          const s = (px / box) * 100, m = (1 - py / box) * 100;
+          const v = Math.tanh(net.W1[j][0] * (s - mean[0]) / sd[0] + net.W1[j][1] * (m - mean[1]) / sd[1] + net.b1[j]);
+          const c = v >= 0 ? POS : NEG, a = Math.abs(v);
+          nx.fillStyle = `rgb(${Math.round(255 - (255 - c[0]) * a * 0.75)},${Math.round(255 - (255 - c[1]) * a * 0.75)},${Math.round(255 - (255 - c[2]) * a * 0.75)})`;
+          nx.fillRect(x0 + px, y0 + py, step, step);
+        }
+        nx.strokeStyle = f ? (f.h[j] > 0 ? "#2c6fae" : "#d35400") : "#2c3e50"; nx.lineWidth = f ? 3 : 1.5;
+        nx.strokeRect(x0, y0, box, box);
+        if (f) { const s = asked[2], m = asked[3]; nx.fillStyle = "#000"; nx.beginPath(); nx.arc(x0 + (s / 100) * box, y0 + (1 - m / 100) * box, 2.5, 0, 2 * Math.PI); nx.fill(); }
+      } else {
+        const v = f ? f.h[j] : 0, c = v >= 0 ? POS : NEG, a = Math.abs(v);
+        nx.fillStyle = f ? `rgb(${Math.round(255 - (255 - c[0]) * a * 0.8)},${Math.round(255 - (255 - c[1]) * a * 0.8)},${Math.round(255 - (255 - c[2]) * a * 0.8)})` : "#fdf2e9";
+        nx.strokeStyle = "#d35400"; nx.lineWidth = 2;
+        nx.beginPath(); nx.arc(xH, y, R, 0, 2 * Math.PI); nx.fill(); nx.stroke();
+      }
+    }
+    // output neurons
+    for (let k = 0; k < K; k++) {
+      const p = f ? f.p[k] : 0;
+      nx.fillStyle = f ? `rgba(30,132,73,${0.12 + 0.88 * p})` : "#eafaf1"; nx.strokeStyle = "#1e8449"; nx.lineWidth = 2;
+      nx.beginPath(); nx.arc(xOut, yOut[k], R, 0, 2 * Math.PI); nx.fill(); nx.stroke();
+      nx.fillStyle = COLORS[classes[k]]; nx.textAlign = "left";
+      nx.fillText(cap(classes[k]) + (f ? `  ${Math.round(100 * p)}%` : ""), xOut + R + 6, yOut[k]);
+    }
+    nx.fillStyle = "#555"; nx.font = "bold 12px sans-serif"; nx.textAlign = "center"; nx.textBaseline = "alphabetic";
+    nx.fillText("inputs", xIn, 16); if (H) nx.fillText("hidden layer", xH, 16); nx.fillText("answers", xOut, 16);
+    miniKey.style.display = mini ? "" : "none";
+  }
+  function drawAcc() {
+    const W = acc.width, H = acc.height, L = 40, B = 30, T = 12, R = 10;
+    ax.clearRect(0, 0, W, H);
+    ax.strokeStyle = "#e3e8ed"; ax.fillStyle = "#555"; ax.font = "12px sans-serif"; ax.textAlign = "right";
+    for (let v = 0; v <= 100; v += 25) { const y = H - B - (v / 100) * (H - B - T); ax.beginPath(); ax.moveTo(L, y); ax.lineTo(W - R, y); ax.stroke(); ax.fillText(v + "%", L - 4, y + 4); }
+    ax.textAlign = "center"; ax.fillText("passes through the training data", (L + W - R) / 2, H - 6);
+    const n = Math.max(300, hist.train.length - 1);
+    const X = (i) => L + (i / n) * (W - L - R), Y = (v) => H - B - v * (H - B - T);
+    ax.setLineDash([5, 4]); ax.strokeStyle = "#888"; ax.beginPath(); ax.moveTo(L, Y(hist.guess)); ax.lineTo(W - R, Y(hist.guess)); ax.stroke(); ax.setLineDash([]);
+    [["train", "#2c6fae"], ["test", "#d35400"]].forEach(([k, c]) => {
+      ax.strokeStyle = c; ax.lineWidth = 2.5; ax.beginPath();
+      hist[k].forEach((v, i) => (i ? ax.lineTo(X(i), Y(v)) : ax.moveTo(X(i), Y(v)))); ax.stroke();
+    });
+    ax.lineWidth = 1;
+    const last = hist.test.length - 1;
+    root.querySelector(".bai-scores").innerHTML =
+      `Right on training data: <b style="color:#2c6fae">${Math.round(100 * hist.train[last])}%</b> &nbsp; ` +
+      `Right on test data: <b style="color:#d35400">${Math.round(100 * hist.test[last])}%</b>`;
+  }
+  function drawMap() {
+    if (Q.feats.length !== 2) return;
+    const W = map.width, H = map.height, MAX = 100;
+    const img = mx.createImageData(W, H);
+    const hex = classes.map((c) => { const h = COLORS[c]; return [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)]; });
+    const step = 4;
+    for (let py = 0; py < H; py += step) for (let px = 0; px < W; px += step) {
+      const s = (px / W) * MAX, m = ((H - py) / H) * MAX;
+      const p = forward([(s - mean[0]) / sd[0], (m - mean[1]) / sd[1]]).p, k = p.indexOf(Math.max(...p));
+      for (let dy = 0; dy < step; dy++) for (let dx = 0; dx < step; dx++) {
+        const o = 4 * ((py + dy) * W + px + dx);
+        img.data[o] = 255 - (255 - hex[k][0]) * 0.28; img.data[o + 1] = 255 - (255 - hex[k][1]) * 0.28; img.data[o + 2] = 255 - (255 - hex[k][2]) * 0.28; img.data[o + 3] = 255;
+      }
+    }
+    mx.putImageData(img, 0, 0);
+    [[train, true], [test, false]].forEach(([set, fill]) => set.forEach((r) => {
+      const x = (r[2] / MAX) * W, y = H - (r[3] / MAX) * H, c = COLORS[Q.label(r)];
+      mx.beginPath(); mx.arc(x, y, 3.5, 0, 2 * Math.PI);
+      if (fill) { mx.fillStyle = c; mx.fill(); } else { mx.strokeStyle = c; mx.lineWidth = 1.6; mx.stroke(); }
+    }));
+    if (asked) { const x = (asked[2] / MAX) * W, y = H - (asked[3] / MAX) * H; mx.strokeStyle = "#000"; mx.lineWidth = 2.5; mx.beginPath(); mx.arc(x, y, 8, 0, 2 * Math.PI); mx.stroke(); }
+    mx.fillStyle = "#2c3e50"; mx.font = "12px sans-serif"; mx.textAlign = "center";
+    mx.fillText("Strength →", W / 2, H - 6);
+    mx.save(); mx.translate(12, H / 2); mx.rotate(-Math.PI / 2); mx.fillText("Magic →", 0, 0); mx.restore();
+    mx.font = "bold 12px sans-serif"; mx.textAlign = "left";
+    classes.forEach((c, k) => { mx.fillStyle = COLORS[c]; mx.fillText("● " + cap(c), 22, 16 + 15 * k); });
+  }
+  function drawAll() { drawNet(); drawAcc(); drawMap(); }
+
+  function run() {
+    if (running) return;
+    running = true;
+    const goal = epoch + 300;
+    let last = 0;
+    const tick = (now) => {
+      if (!running) return;
+      const sp = spEl.value;
+      if (sp === "slow" && now - last < 90) { requestAnimationFrame(tick); return; }
+      last = now;
+      const per = sp === "fast" ? 6 : 1;
+      for (let i = 0; i < per && epoch < goal; i++) { trainStep(); record(); }
+      epEl.textContent = "Pass " + epoch;
+      drawNet(); drawAcc();
+      if (sp !== "fast" || epoch % 6 === 0 || epoch >= goal) drawMap();
+      if (epoch < goal) requestAnimationFrame(tick); else { running = false; drawMap(); }
+    };
+    requestAnimationFrame(tick);
+  }
+  root.querySelector(".bai-train").addEventListener("click", run);
+  root.querySelector(".bai-one").addEventListener("click", () => { if (running) return; trainStep(); record(); epEl.textContent = "Pass " + epoch; drawAll(); });
+  root.querySelector(".bai-stop").addEventListener("click", () => { running = false; });
+  root.querySelector(".bai-split").addEventListener("click", () => { running = false; splitSeed = Math.floor(Math.random() * 1e6); setup(); });
+  qEl.addEventListener("change", () => { running = false; setup(); });
+  hEl.addEventListener("change", () => { running = false; build(); out.innerHTML = ""; });
+  root.querySelector(".bai-ask").addEventListener("click", () => {
+    const name = root.querySelector(".bai-name").value.trim().toLowerCase();
+    const r = rows.find((x) => x[0].toLowerCase() === name);
+    if (!r) { out.innerHTML = "Pick a name from the list. (Only creatures in this question's data.)"; return; }
+    asked = r;
+    const p = forward(inputs(r)).p;
+    const order = p.map((v, k) => [v, k]).sort((a, b) => b[0] - a[0]);
+    const inTest = test.includes(r);
+    out.innerHTML = `<b>${r[0]}</b> (${inTest ? "a <b>test</b> creature: the network never trained on it" : "a training creature: the network has seen it"}). ` +
+      `It sees ${Q.feats.map((f) => FEATS[f] + " " + r[2 + f]).join(", ")}. Look at the network picture: it lights up for ${r[0]}.<br>` +
+      order.map(([v, k]) => `<div class="bar"><span>${cap(classes[k])}</span><i style="width:${Math.round(v * 220)}px"></i>${Math.round(100 * v)}%</div>`).join("") +
+      `Really: <b>${cap(Q.label(r))}</b> (a ${cap(r[1])} that lives in the ${cap(r[8])}).`;
+    drawNet(); drawMap();
+  });
+  setup();
+})();
+</script>
+<div class="think" title="Run 1 vs. the class neuron">
+<p>The class neuron from Lesson 2.4 got about <strong>88%</strong> of all 140 Fighters and Wizards right. This network gets about the same on the test creatures. Look at the big map: the border is almost a straight line. Fighter or Wizard really is a one-line question, so more neurons don’t help much.</p>
+</div>
+<div class="think" title="Run 2: why did 0 hidden neurons fail?">
+<p>With <strong>0</strong> hidden neurons, the network can draw only <strong>one</strong> line. It gets about <strong>55%</strong>, about the same as always guessing “can’t join.”</p>
+<p>With <strong>2</strong> hidden neurons, it gets about <strong>97%</strong>. Look at the two small squares. In our tests, one fires only in the corner where the Giants live. The other fires everywhere except the corner where the Minis live. The answer is “can join” when the second fires and the first doesn’t. That’s <strong>Start B</strong> from Lesson 2.5! Nobody told the network to look for Giants and Minis.</p>
+</div>
+<div class="think" title="Run 3 used MORE numbers. Why was it worse?">
+<p>The training score went up to <strong>100%</strong>, but the test score went down, to about <strong>80%</strong>.</p>
+<p>In the recipe for these creatures, Fighters and Wizards have the <strong>same</strong> Speed, Toughness, Height, and Weight. Those numbers are noise. The network found “patterns” in the training data that weren’t real. This is called <a href="../../glossary.html#glossary-overfitting" class="glossary-link" data-term="overfitting" data-original-href="#glossary-overfitting" data-slug="overfitting">overfitting</a>: learning the training examples by heart instead of the real pattern. Look for the gap between the blue line (training) and the orange line (test).</p>
+</div>
+<div class="think" title="Run 4: why couldn't it learn where a creature lives?">
+<p>The training score climbed, but the test score stayed at about <strong>35%</strong>, the same as guessing. In the recipe, each creature’s home was picked <strong>at random</strong>. Nothing in the 6 numbers says where it lives. The network only memorized the training creatures.</p>
+<p><strong>An AI can only learn what is in its data.</strong> If the answer isn’t in the data, no network can find it.</p>
+</div>
+</section>
+</section>
+<section id="talk" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
+<p>This AI took only a few seconds to build. Now imagine someone builds an AI like this to decide who gets a job or who gets a loan.</p>
+<div class="frames">
+<ul>
+<li>The test data must be kept apart because …</li>
+<li>In Run 3, more numbers made it worse because …</li>
+<li>An AI can only learn what is in its data, so …</li>
+<li>If someone used an AI like this to make decisions about <strong>people</strong>, a problem could be …</li>
+</ul>
+</div>
+</section>
+<section id="go-further" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
+<div class="project" title="Day 2: Ask the Network, and Be the Data Scientist">
+<p>Use the tool in 2.6.3 with a partner.</p>
+<ol type="1">
+<li>Train <em>Fighter or Wizard?</em> with 2 numbers.</li>
+<li><strong>Ask the network.</strong> Type the name of a creature from the cards, like Krellis or Pona. Was it right? Was it a training creature or a test creature? Watch the picture light up. Try 3 creatures.</li>
+<li>Try <em>Which type?</em> with 0 hidden neurons, then with 4. Write the test scores.</li>
+<li>Choose <em>Fighter or Wizard? (all 6 numbers)</em>. Train with 0, 2, 4, 8, and 16 hidden neurons. Which gets the best <strong>test</strong> score? Is the biggest network always the best?</li>
+<li>Press <strong>New random split</strong> and train again. Do the scores change?</li>
+</ol>
+</div>
+<div class="project" title="An AI for Our School?">
+<p>Think of something at school that an AI could predict. What data would you need? Who owns that data? Who should say yes before anyone uses it? Write your plan in 5 sentences.</p>
+</div>
+<div class="explore-link">
+<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-2.html#explore-2-6">the secret recipe for the creatures, and how data scientists split data</a>. Read it on your own, if you want to learn more.</p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script src="../../scripts/popper.min.js"></script>
+<script src="../../scripts/tippy.min.js"></script>
+<script src="../../scripts/glossary-tooltips.js"></script>
+<script src="../../scripts/custom-callouts.js"></script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html" class="pagination-link" aria-label="2.5 - Train a Human Neural Network">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2.5 - Train a Human Neural Network</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../chapters/Unit_2/2.7_Train_Your_Own_AI.html" class="pagination-link" aria-label="2.7 - Train Your Own AI">
+        <span class="nav-page-text">2.7 - Train Your Own AI</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Written by Mr.&nbsp;Ross in collaboration with Claude, an AI assistant made by Anthropic.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

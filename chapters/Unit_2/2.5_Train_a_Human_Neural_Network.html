@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../chapters/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI.html" rel="next">
+<link href="../../chapters/Unit_2/2.6_Build_a_Real_AI.html" rel="next">
 <link href="../../chapters/Unit_2/2.4_The_Artificial_Neuron.html" rel="prev">
 <link href="../../images/logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -278,8 +278,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2.6 - Watch Your Teacher Build an AI</span></a>
+  <a href="../../chapters/Unit_2/2.6_Build_a_Real_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 - Build a Real AI</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -580,12 +580,12 @@ window.Quarto = {
   <li><a href="#warmup" id="toc-warmup" class="nav-link active" data-scroll-target="#warmup">🔥 Warm Up</a></li>
   <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">👥 Learn Together</a>
   <ul class="collapse">
-  <li><a href="#the-class-neuron" id="toc-the-class-neuron" class="nav-link" data-scroll-target="#the-class-neuron">2.5.1 - The Class Neuron</a></li>
-  <li><a href="#the-fix-rule" id="toc-the-fix-rule" class="nav-link" data-scroll-target="#the-fix-rule">2.5.2 - The Fix Rule</a></li>
+  <li><a href="#the-class-network" id="toc-the-class-network" class="nav-link" data-scroll-target="#the-class-network">2.5.1 - The Class Network</a></li>
+  <li><a href="#the-fix-rule-and-whos-to-blame" id="toc-the-fix-rule-and-whos-to-blame" class="nav-link" data-scroll-target="#the-fix-rule-and-whos-to-blame">2.5.2 - The Fix Rule, and Who’s to Blame</a></li>
   </ul></li>
   <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
   <ul class="collapse">
-  <li><a href="#train-the-class-neuron" id="toc-train-the-class-neuron" class="nav-link" data-scroll-target="#train-the-class-neuron">2.5.3 - Train the Class Neuron</a></li>
+  <li><a href="#train-the-class-network" id="toc-train-the-class-network" class="nav-link" data-scroll-target="#train-the-class-network">2.5.3 - Train the Class Network</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
   <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
@@ -614,33 +614,33 @@ window.Quarto = {
 </header>
 
 
-<p>In Lesson 2.4, <strong>you</strong> chose the weights. Real AI doesn’t work that way.</p>
-<p>A real neural network starts with bad weights. It looks at an example and makes a guess. If the guess is wrong, it <strong>fixes its weights a little</strong>. Then it looks at the next example. After many examples, the weights are good. Nobody chose them. The network learned them.</p>
-<p>Today, the class is a neuron that learns. You’ll start it with the <strong>wrong idea</strong> on purpose, and watch it fix itself.</p>
+<p>In Lesson 2.4, one neuron sorted Fighters from Wizards. Its whole rule was one straight line.</p>
+<p>Now your class runs a club. <strong>Fighters and Wizards can join. Giants and Minis can’t.</strong> Giants are strong at both Strength and Magic. Minis are weak at both.</p>
+<p>One neuron can’t learn this rule. Today, the class becomes a real network, with a hidden layer. It starts with bad weights, and it learns by fixing its own mistakes.</p>
 <div class="agenda">
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
 <ul>
-<li><span class="icon">🔥</span> <strong>Warm Up</strong> Fighter or psychic? <span class="time">5 min</span></li>
-<li><span class="icon">👥</span> <strong>Learn Together</strong> The fix rule <span class="time">8 min</span></li>
-<li><span class="icon">🛠️</span> <strong>Try It</strong> Train the class neuron <span class="time">20 min</span></li>
-<li><span class="icon">💬</span> <strong>Talk About It</strong> Was it wrong? <span class="time">7 min</span></li>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Can one neuron do it? <span class="time">7 min</span></li>
+<li><span class="icon">👥</span> <strong>Learn Together</strong> The network and the fix rule <span class="time">10 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Train the class network <span class="time">17 min</span></li>
+<li><span class="icon">💬</span> <strong>Talk About It</strong> What did the hidden neurons learn? <span class="time">6 min</span></li>
 </ul>
 </div>
 <div class="objectives">
 <ul class="task-list">
-<li><label><input type="checkbox">I can calculate what the class neuron says for a card.</label></li>
+<li><label><input type="checkbox">I can explain why one neuron can’t answer some questions.</label></li>
+<li><label><input type="checkbox">I can calculate what each neuron in a small network says.</label></li>
 <li><label><input type="checkbox">I can use the fix rule to change the weights after a mistake.</label></li>
-<li><label><input type="checkbox">I can explain how a neuron learns from its mistakes.</label></li>
-<li><label><input type="checkbox">I can explain why a neuron trained on a few examples still makes mistakes.</label></li>
+<li><label><input type="checkbox">I can explain what the hidden neurons learned.</label></li>
 </ul>
 </div>
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🏋️</span> <a href="../../glossary.html#glossary-training" class="glossary-link" data-slug="training" data-original-href="#glossary-training" data-term="training">training</a>: showing an AI many examples so it can fix its weights</li>
-<li><span class="icon">🧪</span> <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-slug="test-data" data-original-href="#glossary-test-data" data-term="test data">test data</a>: new examples the AI never trained on, used to check what it learned</li>
-<li><span class="icon">➕</span> <a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-slug="bias-number" data-original-href="#glossary-bias-number" data-term="bias">bias</a>: in a neuron, an extra number that’s always added to the total</li>
-<li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-weight" class="glossary-link" data-slug="weight" data-original-href="#glossary-weight" data-term="weight">weight</a>: a number that says how much an input matters</li>
+<li><span class="icon">🏋️</span> <a href="../../glossary.html#glossary-training" class="glossary-link" data-term="training" data-slug="training" data-original-href="#glossary-training">training</a>: showing an AI many examples so it can fix its weights</li>
+<li><span class="icon">🧪</span> <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-term="test data" data-slug="test-data" data-original-href="#glossary-test-data">test data</a>: new examples the AI never trained on, used to check what it learned</li>
+<li><span class="icon">🧱</span> <a href="../../glossary.html#glossary-layer" class="glossary-link" data-term="layer" data-slug="layer" data-original-href="#glossary-layer">layer</a>: a row of neurons in a neural network. Each layer sends its answers to the next one</li>
+<li><span class="icon">🔙</span> <a href="../../glossary.html#glossary-backpropagation" class="glossary-link" data-term="backpropagation" data-slug="backpropagation" data-original-href="#glossary-backpropagation">backpropagation</a>: how real networks learn: after a mistake, the blame goes back through the layers, and every weight changes a little</li>
 </ul>
 </div>
 </div>
@@ -648,85 +648,76 @@ window.Quarto = {
 <p><a href="../../handouts/Unit_2/2.5_Train_a_Human_Neural_Network.pdf" target="_blank">Printable lesson sheet</a> - the sheet you write on today.</p>
 </div>
 <div class="guided-notes-link">
-<p><a href="../../handouts/Unit_2/2.5_Pokemon_Cards.pdf" target="_blank">Pokémon cards</a>: print one set for each team.</p>
+<p><a href="../../handouts/Unit_2/2.5_Creature_Cards.pdf" target="_blank">Creature cards</a>: print one set for each network.</p>
 </div>
 <section id="warmup" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="warmup">🔥 Warm Up</h2>
-<p><strong>Pokémon</strong> are creatures from a video game. Every Pokémon has a <strong>type</strong>.</p>
-<ul>
-<li><strong>Fighting</strong> Pokémon punch and kick. They have high <strong>Attack</strong>.</li>
-<li><strong>Psychic</strong> Pokémon use the power of their minds. They have high <strong>Special Attack</strong>.</li>
-</ul>
-<p>Look at these two cards. What type is each one? Tell a partner why.</p>
+<p>“Strong” means <strong>4 or 5 stars</strong>. Each creature in the club question has one of four patterns:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th></th>
-<th style="text-align: center;">Attack</th>
-<th style="text-align: center;">Special Attack</th>
+<th>Creature</th>
+<th style="text-align: center;">Strong Strength?</th>
+<th style="text-align: center;">Strong Magic?</th>
+<th style="text-align: center;">Can it join?</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Hitmonchan</strong></td>
-<td style="text-align: center;">★★★★☆ (4)</td>
-<td style="text-align: center;">★☆☆☆☆ (1)</td>
+<td>Fighter</td>
+<td style="text-align: center;">yes (1)</td>
+<td style="text-align: center;">no (0)</td>
+<td style="text-align: center;"><strong>YES</strong></td>
 </tr>
 <tr class="even">
-<td><strong>Gardevoir</strong></td>
-<td style="text-align: center;">★★☆☆☆ (2)</td>
-<td style="text-align: center;">★★★★☆ (4)</td>
+<td>Wizard</td>
+<td style="text-align: center;">no (0)</td>
+<td style="text-align: center;">yes (1)</td>
+<td style="text-align: center;"><strong>YES</strong></td>
+</tr>
+<tr class="odd">
+<td>Giant</td>
+<td style="text-align: center;">yes (1)</td>
+<td style="text-align: center;">yes (1)</td>
+<td style="text-align: center;"><strong>NO</strong></td>
+</tr>
+<tr class="even">
+<td>Mini</td>
+<td style="text-align: center;">no (0)</td>
+<td style="text-align: center;">no (0)</td>
+<td style="text-align: center;"><strong>NO</strong></td>
 </tr>
 </tbody>
 </table>
-<div class="think" title="Answers">
-<p>Hitmonchan is <strong>Fighting</strong>: lots of Attack. Gardevoir is <strong>Psychic</strong>: lots of Special Attack.</p>
-<p>You used a rule in your head: <em>compare the two numbers.</em> Can a neuron learn that rule from examples, without being told?</p>
+<p>With a partner, try to make <strong>one</strong> neuron that gets all 4 rows right. Choose a weight for Strong Strength, a weight for Strong Magic, and a threshold. The neuron says YES if the total is more than the threshold.</p>
+<div class="think" title="Did you find weights that work?">
+<p>Nobody can! To let Fighters in, Strength needs a big weight. To let Wizards in, Magic needs a big weight. But a Giant has <strong>both</strong>. Its total is even bigger, so it gets in too.</p>
+<p>In 1969, Marvin Minsky and Seymour Papert wrote a famous book. It proved that one neuron can’t solve problems like this. Many people stopped working on neural networks for years. This was part of an AI winter (Lesson 1.4).</p>
+<p>The answer is a <strong>network</strong>, with a hidden layer.</p>
 </div>
 </section>
 <section id="learn" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
-<section id="the-class-neuron" class="level3">
-<h3 class="anchored" data-anchor-id="the-class-neuron">2.5.1 - The Class Neuron</h3>
-<p>The neuron has two inputs and three numbers it can change:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Inputs (from the card)</th>
-<th>The neuron’s numbers</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>A</strong> = Attack stars (1 to 5)</td>
-<td><strong>Attack weight</strong></td>
-</tr>
-<tr class="even">
-<td><strong>S</strong> = Special Attack stars (1 to 5)</td>
-<td><strong>Special weight</strong></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><strong><a href="../../glossary.html#glossary-bias-number" class="glossary-link" data-slug="bias-number" data-original-href="#glossary-bias-number" data-term="bias">bias</a></strong> (always added)</td>
-</tr>
-</tbody>
-</table>
-<p><span class="math display">\[\text{total} = (A \times \text{Attack weight}) + (S \times \text{Special weight}) + \text{bias}\]</span></p>
-<ul>
-<li>If the total is <strong>more than 0</strong>, the neuron says <strong>FIGHTING</strong>.</li>
-<li>If the total is <strong>0 or less</strong>, the neuron says <strong>PSYCHIC</strong>.</li>
-</ul>
-<p>(The bias does the same job as the threshold in Lesson 2.4.)</p>
-<p>We start the neuron <strong>backwards</strong>:</p>
-<div class="remember" title="Starting weights">
-<p>Attack weight <span class="math inline">\(= -1\)</span> <span class="math inline">\(\qquad\)</span> Special weight <span class="math inline">\(= +1\)</span> <span class="math inline">\(\qquad\)</span> Bias <span class="math inline">\(= 0\)</span></p>
-<p>This neuron thinks that strong punchers are psychic! It’s wrong on purpose. Watch it learn.</p>
+<section id="the-class-network" class="level3">
+<h3 class="anchored" data-anchor-id="the-class-network">2.5.1 - The Class Network</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_2/2.5_class_network.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The class network. Two inputs: Strong Strength, 1 or 0, and Strong Magic, 1 or 0. Two hidden neurons, Hidden 1 and Hidden 2, each with threshold 1. One output neuron, Can it join, with threshold 1. Weights: Strong Strength to Hidden 1 is minus 1. Strong Strength to Hidden 2 is 0. Strong Magic to Hidden 1 is plus 1. Strong Magic to Hidden 2 is minus 1. Hidden 1 to Output is plus 1. Hidden 2 to Output is plus 1. A neuron fires (stands up) if its total is more than its threshold." width="720"></p>
+</figure>
 </div>
+<p>Each neuron is a <strong>team</strong> of students. Each team keeps its numbers on a whiteboard. The starting numbers are wrong on purpose.</p>
+<p>To run one card:</p>
+<ol type="1">
+<li><strong>Read the card.</strong> Strong Strength? Strong Magic? Each answer is <strong>1</strong> (yes) or <strong>0</strong> (no).</li>
+<li><strong>Hidden teams:</strong> add the weights of the inputs that are <strong>1</strong>. (An input that’s 0 adds nothing.) If your total is <strong>more than</strong> your threshold, stand up. You fired!</li>
+<li><strong>Output team:</strong> add the weights of the hidden teams that are <strong>standing</strong>. More than your threshold? Say “Can join!” If not, say “Can’t join.”</li>
+<li><strong>Check:</strong> unfold the card. Was the network right?</li>
+</ol>
 <hr>
 </section>
-<section id="the-fix-rule" class="level3">
-<h3 class="anchored" data-anchor-id="the-fix-rule">2.5.2 - The Fix Rule</h3>
-<p>After each card, check the answer. Then follow the fix rule.</p>
+<section id="the-fix-rule-and-whos-to-blame" class="level3">
+<h3 class="anchored" data-anchor-id="the-fix-rule-and-whos-to-blame">2.5.2 - The Fix Rule, and Who’s to Blame</h3>
+<p>When the network is wrong, <strong>one</strong> neuron changes. Every neuron uses the same fix rule:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -735,44 +726,48 @@ window.Quarto = {
 <thead>
 <tr class="header">
 <th>What happened</th>
-<th>What to do</th>
+<th>What that neuron does</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>✅ The neuron was <strong>right</strong></td>
-<td>Change nothing.</td>
+<td>It <strong>should have fired</strong>, but it didn’t</td>
+<td><strong>ADD:</strong> +1 to the weight of each input that was 1. Threshold −1.</td>
 </tr>
 <tr class="even">
-<td>❌ It said <strong>PSYCHIC</strong>, but the card is <strong>FIGHTING</strong></td>
-<td><strong>ADD</strong>: Attack weight + A, Special weight + S, bias + 1</td>
-</tr>
-<tr class="odd">
-<td>❌ It said <strong>FIGHTING</strong>, but the card is <strong>PSYCHIC</strong></td>
-<td><strong>SUBTRACT</strong>: Attack weight − A, Special weight − S, bias − 1</td>
+<td>It <strong>fired</strong>, but it <strong>shouldn’t have</strong></td>
+<td><strong>SUBTRACT:</strong> −1 from the weight of each input that was 1. Threshold +1.</td>
 </tr>
 </tbody>
 </table>
-<div class="real-world" title="Example: card T1, Machop">
-<p>Machop has <strong>A = 3</strong> and <strong>S = 1</strong>.</p>
+<p>An input that was 0 didn’t cause the mistake, so its weight stays the same.</p>
+<p>But <strong>which</strong> neuron should change? Play <strong>Who’s to Blame?</strong></p>
+<div class="steps">
 <ol type="1">
-<li>Total <span class="math inline">\(= (3 \times -1) + (1 \times 1) + 0 = -3 + 1 + 0 = -2\)</span></li>
-<li><span class="math inline">\(-2\)</span> isn’t more than 0, so the neuron says <strong>PSYCHIC</strong>.</li>
-<li>Flip the card: Machop is <strong>FIGHTING</strong>. Wrong!</li>
-<li>It said PSYCHIC but the card is FIGHTING, so <strong>ADD</strong>:
-<ul>
-<li>Attack weight: <span class="math inline">\(-1 + 3 = 2\)</span></li>
-<li>Special weight: <span class="math inline">\(1 + 1 = 2\)</span></li>
-<li>Bias: <span class="math inline">\(0 + 1 = 1\)</span></li>
-</ul></li>
+<li>Look at the two hidden neurons. Which one was <strong>least sure</strong>? That’s the one whose total was <strong>closest to its threshold</strong>.</li>
+<li>Imagine that neuron changed its answer. Would the network be right now?</li>
+<li><strong>Yes:</strong> that hidden neuron uses the fix rule. <strong>No:</strong> the output neuron uses the fix rule.</li>
 </ol>
 </div>
+<div class="real-world" title="Example: card T1, Konik">
+<p>Konik has Strength 4 stars and Magic 2 stars. Strong Strength = <strong>1</strong>. Strong Magic = <strong>0</strong>.</p>
+<ol type="1">
+<li><strong>Hidden 1:</strong> total <span class="math inline">\(= -1\)</span>. More than 1? No.&nbsp;It stays seated (0).</li>
+<li><strong>Hidden 2:</strong> total <span class="math inline">\(= 0\)</span>. More than 1? No.&nbsp;It stays seated (0).</li>
+<li><strong>Output:</strong> nobody is standing, so its total <span class="math inline">\(= 0\)</span>. More than 1? No: “Can’t join.”</li>
+<li><strong>Check:</strong> Konik is a Fighter. It <strong>can</strong> join. Wrong!</li>
+<li><strong>Who’s to blame?</strong> Hidden 1 is 2 away from its threshold (<span class="math inline">\(-1\)</span> to <span class="math inline">\(1\)</span>). Hidden 2 is 1 away (<span class="math inline">\(0\)</span> to <span class="math inline">\(1\)</span>). Hidden 2 is least sure.</li>
+<li>If Hidden 2 stood up, the output total would be 1. More than 1? No.&nbsp;Still wrong. So the <strong>output</strong> neuron fixes itself.</li>
+<li>It should have fired: <strong>ADD.</strong> Both of its inputs were 0, so its weights stay the same. Its threshold goes from 1 to <strong>0</strong>.</li>
+</ol>
+</div>
+<p>This is a simple version of a real method from 1988, called MADALINE Rule II. Bernard Widrow and Rodney Winter made it.</p>
 </section>
 </section>
 <section id="try-it" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
-<section id="train-the-class-neuron" class="level3">
-<h3 class="anchored" data-anchor-id="train-the-class-neuron">2.5.3 - Train the Class Neuron</h3>
+<section id="train-the-class-network" class="level3">
+<h3 class="anchored" data-anchor-id="train-the-class-network">2.5.3 - Train the Class Network</h3>
 <p>Each person has a job.</p>
 <table class="caption-top table">
 <colgroup>
@@ -791,24 +786,29 @@ window.Quarto = {
 <tr class="odd">
 <td>🃏</td>
 <td><strong>Card dealer</strong></td>
-<td>Read the card’s name and stars out loud. Keep the type hidden.</td>
+<td>Read the card’s name and stars. Say the inputs: “Strong Strength 1, Strong Magic 0.” Keep the answer hidden.</td>
 </tr>
 <tr class="even">
-<td>⚖️</td>
-<td><strong>Weight keepers</strong></td>
-<td>Each one holds one number (Attack weight, Special weight, or bias) on a whiteboard or paper. Change it after a mistake.</td>
+<td>🟠</td>
+<td><strong>Hidden 1 team</strong></td>
+<td>Add your weights. Stand up if you fire. Fix your numbers when you’re to blame.</td>
 </tr>
 <tr class="odd">
-<td>🧠</td>
-<td><strong>The neuron</strong></td>
-<td>Calculate the total out loud. Say FIGHTING or PSYCHIC.</td>
+<td>🟠</td>
+<td><strong>Hidden 2 team</strong></td>
+<td>The same, with your own numbers.</td>
 </tr>
 <tr class="even">
+<td>🟢</td>
+<td><strong>Output team</strong></td>
+<td>Add the weights of the hidden teams that are standing. Say “Can join!” or “Can’t join.”</td>
+</tr>
+<tr class="odd">
 <td>✅</td>
 <td><strong>Checker</strong></td>
-<td>Flip the card. Say “right” or “wrong.” If wrong, say ADD or SUBTRACT.</td>
+<td>Unfold the card. Say “right” or “wrong.” If it’s wrong, lead Who’s to Blame.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>📊</td>
 <td><strong>Scorekeeper</strong></td>
 <td>Count the mistakes in each pass. Write them on the board.</td>
@@ -817,229 +817,293 @@ window.Quarto = {
 </table>
 <div class="steps">
 <ol type="1">
-<li>Write the starting weights on the board: <span class="math inline">\(-1\)</span>, <span class="math inline">\(+1\)</span>, <span class="math inline">\(0\)</span>.</li>
-<li>Go through the training cards <strong>in order</strong>: T1, T2, … T10. For each card: neuron, checker, fix rule.</li>
+<li>Write the starting numbers on the board.</li>
+<li>Use the training cards <strong>in order</strong>: T1, T2, … T8. For each card: hidden teams, output team, check. If it’s wrong, play Who’s to Blame and fix.</li>
 <li>Everyone writes each step on the sheet.</li>
-<li>After T10, the scorekeeper writes the number of mistakes. That was <strong>pass 1</strong>.</li>
+<li>After T8, the scorekeeper writes the number of mistakes. That was <strong>pass 1</strong>.</li>
 <li>Do <strong>pass 2</strong> with the same cards. Keep going until a whole pass has <strong>0 mistakes</strong>.</li>
-<li>Now use the <strong>test cards</strong>, X1 to X6. They’re the <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-slug="test-data" data-original-href="#glossary-test-data" data-term="test data">test data</a>: the neuron never trained on them. <strong>Do not fix the weights on a test!</strong> Just record what the neuron says.</li>
+<li>Now use the <strong>test cards</strong>, X1 to X6. They’re the <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-term="test data" data-slug="test-data" data-original-href="#glossary-test-data">test data</a>: the network never trained on them. <strong>Don’t fix anything on a test!</strong> Just record what the network says.</li>
 </ol>
 </div>
+<p>Check your class’s work here. Step through the same cards, or flip the inputs and watch which neurons fire.</p>
+<!-- network_trainer.html: Lesson 2.5. The class network (2 inputs, 2 hidden
+     neurons, 1 output) learns the club question with the fix rule and
+     "Who's to Blame?" (a simple version of MADALINE Rule II, Winter and
+     Widrow 1988). Same cards, same order, same starting numbers as the sheet.
+     Start B learns a different way; Start C gets stuck. -->
+<div class="ntw" id="ntw">
+  <div class="ntw-bar">
+    <span class="ntw-lbl">Start:</span>
+    <button type="button" class="ntw-btn ntw-start ntw-on" data-s="A">A (the class)</button>
+    <button type="button" class="ntw-btn ntw-start" data-s="B">B</button>
+    <button type="button" class="ntw-btn ntw-start" data-s="C">C</button>
+    <span class="ntw-pass"></span>
+  </div>
+  <svg class="ntw-svg" viewbox="0 0 660 330" role="img" aria-label="The class network: two inputs, two hidden neurons, and one output neuron. Each line shows its weight."></svg>
+  <div class="ntw-key"><span class="pos">━</span> positive weight &nbsp; <span class="neg">━</span> negative weight &nbsp; thicker = bigger &nbsp; <span class="fire">●</span> fires (stands up)</div>
+  <div class="ntw-bar">
+    <button type="button" class="ntw-btn ntw-main ntw-next">▶ Next step</button>
+    <button type="button" class="ntw-btn ntw-pass-btn">⏩ Finish this pass</button>
+    <button type="button" class="ntw-btn ntw-test">🧪 Test cards</button>
+  </div>
+  <div class="ntw-msg" aria-live="polite"></div>
+  <div class="ntw-tables">
+    <table class="ntw-what" data-quarto-disable-processing="true"><caption>What each neuron fires for, right now</caption>
+      <thead><tr><th></th><th>Fighter<br><small>1, 0</small></th><th>Wizard<br><small>0, 1</small></th><th>Giant<br><small>1, 1</small></th><th>Mini<br><small>0, 0</small></th></tr></thead><tbody></tbody></table>
+    <div class="ntw-try"><b>Try it:</b> show the network a creature.
+      <div><button type="button" class="ntw-btn" data-x="1,0">Fighter</button><button type="button" class="ntw-btn" data-x="0,1">Wizard</button><button type="button" class="ntw-btn" data-x="1,1">Giant</button><button type="button" class="ntw-btn" data-x="0,0">Mini</button></div>
+    </div>
+  </div>
+  <div class="ntw-res"></div>
+</div>
+
+<style>
+.ntw { border: 1px solid #d9e1e8; border-radius: 10px; padding: 0.8rem; margin: 0.75rem 0 1.25rem; background: #fbfcfd; }
+.ntw-bar { display: flex; flex-wrap: wrap; gap: 0.4rem 0.5rem; align-items: center; margin: 0.3rem 0; }
+.ntw-lbl { font-weight: bold; }
+.ntw-btn { border: 1px solid #2c3e50; background: #fff; color: #2c3e50; border-radius: 6px; padding: 0.3rem 0.7rem; font-weight: 600; cursor: pointer; }
+.ntw-btn.ntw-main, .ntw-btn.ntw-on { background: #2c3e50; color: #fff; }
+.ntw-pass { margin-left: auto; font-weight: bold; }
+.ntw-svg { display: block; width: 100%; height: auto; background: #fff; border: 1px solid #d9e1e8; border-radius: 8px; }
+.ntw-key { font-size: 0.82rem; margin: 0.25rem 0 0.2rem; }
+.ntw-key .pos { color: #2c6fae; font-weight: bold; } .ntw-key .neg { color: #d35400; font-weight: bold; } .ntw-key .fire { color: #f1c40f; font-size: 1.1rem; }
+.ntw-msg { background: #fff; border: 1px solid #d9e1e8; border-radius: 8px; padding: 0.5rem 0.7rem; line-height: 1.6; min-height: 9.5em; }
+.ntw-msg .ok { color: #1e8449; font-weight: bold; } .ntw-msg .no { color: #c0392b; font-weight: bold; }
+.ntw-tables { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: flex-start; margin-top: 0.6rem; }
+.ntw-what { border-collapse: collapse; font-size: 0.9rem; }
+.ntw-what caption { text-align: left; font-weight: bold; padding-bottom: 0.2rem; }
+.ntw-what th, .ntw-what td { border: 1px solid #d9e1e8; padding: 0.15rem 0.45rem; text-align: center; }
+.ntw-what td.y { background: #fdebd0; font-weight: bold; }
+.ntw-try div { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.3rem; }
+.ntw-res { margin-top: 0.5rem; line-height: 1.5; }
+.ntw-res table { border-collapse: collapse; margin-top: 0.3rem; font-size: 0.92rem; }
+.ntw-res td, .ntw-res th { border: 1px solid #d9e1e8; padding: 0.15rem 0.5rem; text-align: center; }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("ntw");
+  if (!root) return;
+  const NS = "http://www.w3.org/2000/svg";
+  // name, strength stars, magic stars, type
+  const DECK = [["T1 Konik", 4, 2, "Fighter"], ["T2 Pasir", 2, 4, "Wizard"], ["T3 Vasi", 5, 5, "Giant"], ["T4 Skape", 2, 2, "Mini"],
+                ["T5 Porris", 5, 2, "Fighter"], ["T6 Galla", 1, 4, "Wizard"], ["T7 Gilax", 4, 4, "Giant"], ["T8 Grapis", 2, 1, "Mini"]];
+  const TEST = [["X1 Kromos", 5, 2, "Fighter"], ["X2 Vepul", 2, 4, "Wizard"], ["X3 Tarra", 5, 4, "Giant"], ["X4 Volar", 1, 2, "Mini"],
+                ["X5 Tibi", 3, 2, "Fighter"], ["X6 Gobur", 3, 5, "Giant"]];
+  // [strength weight, magic weight, threshold] for each hidden neuron; [hidden 1 weight, hidden 2 weight, threshold] for the output
+  const STARTS = { A: { H: [[-1, 1, 1], [0, -1, 1]], O: [1, 1, 1] }, B: { H: [[1, 1, 0], [1, 1, 1]], O: [1, 0, 0] }, C: { H: [[1, 1, 0], [1, 1, 0]], O: [1, 1, 1] } };
+  const MAXPASS = 6;
+  const joins = (t) => t === "Fighter" || t === "Wizard";
+  const strong = (s) => (s >= 4 ? 1 : 0);
+  const n = (v) => String(v).replace("-", "−");
+
+  let H, O, start = "A", i, pass, mistakes, passLog, phase, cur, changed, done;
+  const svg = root.querySelector(".ntw-svg"), msg = root.querySelector(".ntw-msg"), res = root.querySelector(".ntw-res");
+  const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); (p || svg).appendChild(e); return e; };
+
+  // positions
+  const P = { s: [85, 90], m: [85, 240], h1: [345, 90], h2: [345, 240], o: [560, 165] };
+  const edges = [["s", "h1", () => H[0][0], () => H[0]], ["m", "h1", () => H[0][1], () => H[0]], ["s", "h2", () => H[1][0], () => H[1]],
+                 ["m", "h2", () => H[1][1], () => H[1]], ["h1", "o", () => O[0], () => O], ["h2", "o", () => O[1], () => O]];
+  const lines = [], tags = [];
+  edges.forEach(([a, b], k) => {
+    const x1 = P[a][0] + (a.length === 1 ? 70 : 40), y1 = P[a][1], x2 = P[b][0] - 40, y2 = P[b][1];
+    lines.push(el("line", { x1, y1, x2, y2, "stroke-linecap": "round" }));
+    const t = k < 4 ? (k === 1 || k === 2 ? 0.25 : 0.5) : 0.45;
+    const tx = x1 + t * (x2 - x1), ty = y1 + t * (y2 - y1) + (k === 0 ? -16 : k === 3 ? 18 : 0);
+    const g = el("g", {});
+    const r = el("rect", { x: tx - 20, y: ty - 13, width: 40, height: 26, rx: 5, fill: "#fff", "stroke-width": 2 }, g);
+    const tx2 = el("text", { x: tx, y: ty + 6, "text-anchor": "middle", "font-size": 17, "font-weight": 700 }, g);
+    tags.push([r, tx2]);
+  });
+  const box = (key, label) => {
+    const [x, y] = P[key];
+    el("rect", { x: x - 70, y: y - 30, width: 140, height: 60, rx: 8, fill: "#eaf2fa", stroke: "#2c6fae", "stroke-width": 2 });
+    el("text", { x, y: y - 8, "text-anchor": "middle", "font-size": 14, "font-weight": 700, fill: "#2c3e50" }).textContent = label;
+    return el("text", { x, y: y + 18, "text-anchor": "middle", "font-size": 20, "font-weight": 700, fill: "#2c6fae" });
+  };
+  const inS = box("s", "Strong Strength?"), inM = box("m", "Strong Magic?");
+  const neuron = (key, label, color) => {
+    const [x, y] = P[key];
+    const c = el("circle", { cx: x, cy: y, r: 40, "stroke-width": 3, stroke: color });
+    el("text", { x, y: y - 47, "text-anchor": "middle", "font-size": 14, "font-weight": 700, fill: color }).textContent = label;
+    const th = el("text", { x, y: y - 6, "text-anchor": "middle", "font-size": 12, fill: "#2c3e50" });
+    const tot = el("text", { x, y: y + 16, "text-anchor": "middle", "font-size": 15, "font-weight": 700, fill: "#2c3e50" });
+    return { c, th, tot, color };
+  };
+  const N = { h1: neuron("h1", "Hidden 1", "#d35400"), h2: neuron("h2", "Hidden 2", "#d35400"), o: neuron("o", "Output", "#1e8449") };
+  const outTxt = el("text", { x: 560, y: 235, "text-anchor": "middle", "font-size": 15, "font-weight": 700, fill: "#1e8449" });
+
+  function forward(x) {
+    const ht = H.map((w) => w[0] * x[0] + w[1] * x[1]);
+    const h = ht.map((t, j) => (t > H[j][2] ? 1 : 0));
+    const ot = O[0] * h[0] + O[1] * h[1];
+    return { x, ht, h, ot, y: ot > O[2] ? 1 : 0 };
+  }
+  function draw(f) {
+    edges.forEach(([a, b, wv, owner], k) => {
+      const w = wv(), L = lines[k], [r, t] = tags[k];
+      const col = w > 0 ? "#2c6fae" : w < 0 ? "#d35400" : "#b8c4ce";
+      const active = f && ((a === "s" && f.x[0]) || (a === "m" && f.x[1]) || (a === "h1" && f.h[0]) || (a === "h2" && f.h[1]));
+      L.setAttribute("stroke", col); L.setAttribute("stroke-width", 2 + 2.2 * Math.min(4, Math.abs(w)));
+      L.setAttribute("stroke-dasharray", w === 0 ? "6 5" : ""); L.setAttribute("opacity", f && !active ? 0.35 : 1);
+      r.setAttribute("stroke", col); t.setAttribute("fill", col === "#b8c4ce" ? "#7f8c8d" : col);
+      t.textContent = (w > 0 ? "+" : "") + n(w);
+      r.setAttribute("fill", changed && changed.includes(k) ? "#fff3b0" : "#fff");
+    });
+    inS.textContent = f ? f.x[0] : "1 or 0"; inM.textContent = f ? f.x[1] : "1 or 0";
+    [["h1", 0], ["h2", 1]].forEach(([key, j]) => {
+      const nn = N[key];
+      nn.th.textContent = "threshold " + n(H[j][2]);
+      nn.tot.textContent = f ? "total " + n(f.ht[j]) : "";
+      nn.c.setAttribute("fill", f && f.h[j] ? "#f9d56e" : "#fdf2e9");
+      nn.th.setAttribute("font-weight", changed && changed.includes(10 + j) ? 700 : 400);
+    });
+    N.o.th.textContent = "threshold " + n(O[2]);
+    N.o.th.setAttribute("font-weight", changed && changed.includes(12) ? 700 : 400);
+    N.o.tot.textContent = f ? "total " + n(f.ot) : "";
+    N.o.c.setAttribute("fill", f && f.y ? "#f9d56e" : "#eafaf1");
+    outTxt.textContent = f ? (f.y ? "Can join!" : "Can't join") : "Can it join?";
+    // what each neuron fires for
+    const pats = [[1, 0], [0, 1], [1, 1], [0, 0]];
+    const fr = pats.map(forward);
+    root.querySelector(".ntw-what tbody").innerHTML = [["Hidden 1", (q) => q.h[0]], ["Hidden 2", (q) => q.h[1]], ["Output (can join)", (q) => q.y]]
+      .map(([lbl, g]) => `<tr><th>${lbl}</th>${fr.map((q) => `<td class="${g(q) ? "y" : ""}">${g(q) ? "fires" : "–"}</td>`).join("")}</tr>`).join("");
+    root.dataset.h = JSON.stringify(H); root.dataset.o = JSON.stringify(O);
+  }
+  const stars = (k) => "★".repeat(k) + "☆".repeat(5 - k);
+
+  function reset(s) {
+    start = s; H = STARTS[s].H.map((w) => w.slice()); O = STARTS[s].O.slice();
+    i = 0; pass = 1; mistakes = 0; passLog = []; phase = "run"; cur = null; changed = null; done = false;
+    root.querySelectorAll(".ntw-start").forEach((b) => b.classList.toggle("ntw-on", b.dataset.s === s));
+    msg.innerHTML = `Start ${s}. Press <b>Next step</b> to show the network card T1.`;
+    res.innerHTML = ""; showPass(); draw(null);
+  }
+  function showPass() {
+    root.querySelector(".ntw-pass").textContent = `Pass ${pass}` + (passLog.length ? ` · mistakes so far: ${passLog.map((m, k) => `pass ${k + 1}: ${m}`).join(", ")}` : "");
+  }
+  function runCard() {
+    const [name, s, m, t] = DECK[i], x = [strong(s), strong(m)], f = forward(x), want = joins(t) ? 1 : 0;
+    changed = null;
+    cur = { name, s, m, t, f, want };
+    const hid = (j) => `<b>Hidden ${j + 1}:</b> total ${n(f.ht[j])}. More than ${n(H[j][2])}? ${f.h[j] ? "Yes: it stands up." : "No: it stays seated."}`;
+    msg.innerHTML = `<b>${name}</b>: Strength ${stars(s)} (${s}), Magic ${stars(m)} (${m}). Inputs: <b>${x[0]}</b> and <b>${x[1]}</b>.<br>` +
+      `${hid(0)}<br>${hid(1)}<br><b>Output:</b> total ${n(f.ot)}. More than ${n(O[2])}? ${f.y ? "Yes: <b>Can join!</b>" : "No: <b>Can't join.</b>"}<br>` +
+      `Really: ${t}, ${want ? "can join" : "can't join"}. ` + (f.y === want ? `<span class="ok">✓ Right.</span>` : `<span class="no">✗ Wrong.</span> Press <b>Next step</b> for Who's to Blame.`);
+    draw(f);
+    if (f.y !== want) { mistakes++; phase = "fix"; } else advance();
+  }
+  function fixCard() {
+    const { f, want } = cur, x = f.x;
+    const d = [0, 1].map((j) => Math.abs(f.ht[j] - H[j][2]));
+    const j = d[0] <= d[1] ? 0 : 1;
+    const h2 = f.h.slice(); h2[j] = 1 - h2[j];
+    const fixes = O[0] * h2[0] + O[1] * h2[1] > O[2] ? 1 : 0;
+    let text = `<b>Who's to Blame?</b> Hidden 1 is ${d[0]} away from its threshold. Hidden 2 is ${d[1]} away. <b>Hidden ${j + 1}</b> is least sure. `;
+    if (fixes === want) {
+      const up = h2[j] === 1, sgn = up ? 1 : -1;
+      H[j][0] += sgn * x[0]; H[j][1] += sgn * x[1]; H[j][2] -= sgn;
+      changed = [x[0] ? (j ? 2 : 0) : -1, x[1] ? (j ? 3 : 1) : -1, 10 + j];
+      text += `If it changed its answer, the network would be right. So <b>Hidden ${j + 1} fixes itself</b>: it ${up ? "should have fired: <b>ADD</b>" : "fired, but shouldn't have: <b>SUBTRACT</b>"}. ` +
+        `New numbers: weights ${n(H[j][0])} and ${n(H[j][1])}, threshold ${n(H[j][2])}.`;
+    } else {
+      const sgn = want ? 1 : -1;
+      O[0] += sgn * f.h[0]; O[1] += sgn * f.h[1]; O[2] -= sgn;
+      changed = [f.h[0] ? 4 : -1, f.h[1] ? 5 : -1, 12];
+      text += `If it changed its answer, the network would still be wrong. So <b>the output fixes itself</b>: it ${want ? "should have fired: <b>ADD</b>" : "fired, but shouldn't have: <b>SUBTRACT</b>"}. ` +
+        `New numbers: weights ${n(O[0])} and ${n(O[1])}, threshold ${n(O[2])}.`;
+    }
+    msg.innerHTML += `<br>${text} <i>(Changed numbers are highlighted.)</i>`;
+    draw(f);
+    phase = "run"; advance();
+  }
+  function advance() {
+    i++;
+    if (i < DECK.length) return;
+    passLog.push(mistakes);
+    if (mistakes === 0) { done = true; msg.innerHTML += `<br><span class="ok">Pass ${pass} had 0 mistakes. The network learned the rule!</span> Press <b>Test cards</b>.`; }
+    else if (pass >= MAXPASS) { done = true; msg.innerHTML += `<br><span class="no">${MAXPASS} passes and still making mistakes. This network is stuck.</span>`; }
+    else { msg.innerHTML += `<br>End of pass ${pass}: ${mistakes} mistake${mistakes === 1 ? "" : "s"}. Next: pass ${pass + 1}.`; i = 0; pass++; mistakes = 0; }
+    root.dataset.done = done ? "1" : ""; root.dataset.passes = JSON.stringify(passLog);
+    showPass();
+  }
+  function step() { if (done) return; if (phase === "fix") fixCard(); else runCard(); }
+  root.querySelector(".ntw-next").addEventListener("click", step);
+  root.querySelector(".ntw-pass-btn").addEventListener("click", () => {
+    if (done) return;
+    const p = pass;
+    let guard = 0;
+    while (!done && pass === p && guard++ < 40) step();
+  });
+  root.querySelectorAll(".ntw-start").forEach((b) => b.addEventListener("click", () => reset(b.dataset.s)));
+  root.querySelectorAll(".ntw-try button").forEach((b) => b.addEventListener("click", () => {
+    const x = b.dataset.x.split(",").map(Number), f = forward(x);
+    changed = null; draw(f);
+    msg.innerHTML = `<b>A ${b.textContent}</b>: inputs ${x[0]} and ${x[1]}. Hidden 1 ${f.h[0] ? "fires" : "stays seated"}. Hidden 2 ${f.h[1] ? "fires" : "stays seated"}. ` +
+      `The network says <b>${f.y ? "Can join!" : "Can't join."}</b> (Training goes on from where it was.)`;
+  }));
+  root.querySelector(".ntw-test").addEventListener("click", () => {
+    let right = 0;
+    const rows = TEST.map(([name, s, m, t]) => {
+      const f = forward([strong(s), strong(m)]), want = joins(t) ? 1 : 0, ok = f.y === want; if (ok) right++;
+      return `<tr><td>${name}</td><td>${s}</td><td>${m}</td><td>${f.x[0]}, ${f.x[1]}</td><td>${f.y ? "Can join" : "Can't join"}</td><td>${t}</td><td>${ok ? "✓" : "✗"}</td></tr>`;
+    });
+    res.innerHTML = `With the numbers it has now, the network gets <b>${right} of ${TEST.length}</b> test cards right. (No fixing on a test!)` +
+      `<table><tr><th>Card</th><th>Strength</th><th>Magic</th><th>Inputs</th><th>Network says</th><th>Really</th><th></th></tr>${rows.join("")}</table>`;
+    root.dataset.test = right;
+  });
+  reset("A");
+})();
+</script>
+<div class="think" title="Look at the final numbers. What does each hidden neuron look for?">
+<p><strong>Hidden 1</strong> ends with weights <span class="math inline">\(-2\)</span> (Strength) and <span class="math inline">\(+2\)</span> (Magic), and threshold 0. It fires only for strong Magic <strong>without</strong> strong Strength. It’s a <strong>Wizard detector</strong>.</p>
+<p><strong>Hidden 2</strong> ends with weights <span class="math inline">\(+1\)</span> and <span class="math inline">\(-1\)</span>, and threshold 0. It fires only for a <strong>Fighter</strong>.</p>
+<p>The output fires if <strong>either</strong> one is standing. Nobody told the hidden neurons to look for Wizards and Fighters. They found it by fixing mistakes.</p>
+</div>
 <div class="think" title="What happened on the test cards?">
-<p>The neuron got <strong>Primeape</strong>, <strong>Mewtwo</strong>, and <strong>Hypno</strong> right.</p>
-<p>Then look at the last three:</p>
+<p>The network got X1 to X4 right. Then look at the last two:</p>
 <ul>
-<li><strong>Gallade</strong> is Psychic <strong>and</strong> Fighting. The neuron said Fighting.</li>
-<li><strong>Lucario</strong> is a Fighting type with very high Special Attack. The neuron said Psychic.</li>
-<li><strong>Medicham</strong> is Fighting <strong>and</strong> Psychic. The neuron said Psychic.</li>
+<li><strong>Tibi</strong> (X5) is a Fighter, but its Strength is only 3 stars. To the network, it looks like a Mini: “Can’t join.” Wrong.</li>
+<li><strong>Gobur</strong> (X6) is a Giant, but its Strength is only 3 stars. To the network, it looks like a Wizard: “Can join.” Wrong.</li>
 </ul>
-<p>The neuron only knows two numbers. It never saw a Pokémon with two types. It did its best with what it learned.</p>
+<p>The network only sees two yes-or-no answers. A creature near the line between “strong” and “not strong” fools it.</p>
 </div>
 </section>
 </section>
 <section id="talk" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
-<p>The neuron said Gallade is a Fighting type. Gallade is Psychic <strong>and</strong> Fighting. Was the neuron wrong, or was the question wrong?</p>
+<p>Your class needed about 20 minutes for <strong>9 numbers</strong>. The network in Lesson 2.6 has hundreds. A chatbot has billions.</p>
+<p>Real networks share the blame with <a href="../../glossary.html#glossary-backpropagation" class="glossary-link" data-term="backpropagation" data-slug="backpropagation" data-original-href="#glossary-backpropagation">backpropagation</a>. After a mistake, the computer works out how much each weight caused it, from the last layer back to the first. Then it changes every weight a little. It does this billions of times.</p>
 <div class="frames">
 <ul>
-<li>The neuron <strong>was</strong> / <strong>was not</strong> wrong about Gallade, because …</li>
-<li>The neuron learned the rule … without anyone telling it.</li>
-<li>To do better, the neuron needs to know …</li>
-<li>A real AI that makes decisions about <strong>people</strong> with only two numbers would be a problem because …</li>
+<li>The hidden neurons learned to …</li>
+<li>Nobody told them to look for Fighters, but …</li>
+<li>One neuron couldn’t do it because …</li>
+<li>The network got Tibi wrong because …</li>
 </ul>
 </div>
 </section>
 <section id="go-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
-<div class="project" title="Day 2: Check Our Math, and Find the Line">
-<p>This tool has the same neuron, the same cards, and the same fix rule. Work with a partner.</p>
+<div class="project" title="Day 2: Same Cards, Different Start">
+<p>Use the tool in 2.5.3 with a partner. It has three starts.</p>
 <ol type="1">
-<li>Step through the training cards, one at a time. Do the weights match your class’s work?</li>
-<li>The picture shows every training card. The black line is the neuron’s line. The neuron calls the cards on one side FIGHTING. It calls the cards on the other side PSYCHIC. Watch the line move when the neuron makes a mistake.</li>
-<li>Press <strong>Test on all 140 Fighting and Psychic Pokémon</strong>. How many does the neuron get right?</li>
-<li>On your sheet, draw the neuron’s line on the graph.</li>
+<li>Press <strong>Start A</strong>. Step through all the cards. Does the tool match your class’s work?</li>
+<li>Press <strong>Start B</strong>. Train until a pass has 0 mistakes. What does each hidden neuron fire for now?</li>
+<li>Press <strong>Start C</strong>. Train for 6 passes. What happens?</li>
+<li>Write what you found on your sheet.</li>
 </ol>
 </div>
-<!-- neuron_trainer.html: Lesson 2.5. The class's Fighting-or-Psychic neuron,
-     step by step, to check the class's math. Same deck, same order, same
-     starting weights and fix rule as the printed cards. The plot shows the
-     neuron's decision line. Data: Mr. Ross's Pokédex CSV (stars = stat / 30,
-     rounded, from 1 to 5). -->
-<div class="nt" id="nt">
-  <div class="nt-top">
-    <div class="nt-left">
-      <div class="nt-weights">
-        <div><span>Attack weight</span><b class="nt-wa">-1</b></div>
-        <div><span>Special weight</span><b class="nt-ws">1</b></div>
-        <div><span>Bias</span><b class="nt-b">0</b></div>
-      </div>
-      <div class="nt-card" aria-live="polite"></div>
-      <div class="nt-bar">
-        <button type="button" class="nt-btn nt-step">▶ Next card</button>
-        <button type="button" class="nt-btn nt-plain nt-pass">⏩ Finish this pass</button>
-        <button type="button" class="nt-btn nt-plain nt-reset">↺ Start over</button>
-      </div>
-      <div class="nt-log"></div>
-    </div>
-    <div class="nt-right">
-      <canvas class="nt-plot" width="420" height="420" aria-label="Plot of the cards and the neuron's decision line"></canvas>
-      <div class="nt-key"><span class="f">■</span> Fighting card &nbsp; <span class="p">●</span> Psychic card &nbsp; <span class="l">—</span> the neuron's line</div>
-    </div>
-  </div>
-  <div class="nt-bottom">
-    <button type="button" class="nt-btn nt-plain nt-test">🧪 Test the 6 new cards</button>
-    <button type="button" class="nt-btn nt-plain nt-all">📊 Test on all 140 Fighting and Psychic Pokémon</button>
-    <div class="nt-res"></div>
-  </div>
-</div>
-
-<style>
-.nt { border: 1px solid #d9e1e8; border-radius: 10px; padding: 0.8rem; margin: 0.75rem 0 1.25rem; background: #fbfcfd; }
-.nt-top { display: flex; flex-wrap: wrap; gap: 1rem; }
-.nt-left { flex: 1 1 280px; display: flex; flex-direction: column; gap: 0.5rem; }
-.nt-right { flex: 0 1 360px; }
-.nt-weights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
-.nt-weights div { background: #fff; border: 2px solid #d35400; border-radius: 8px; text-align: center; padding: 0.3rem; }
-.nt-weights span { display: block; font-size: 0.8rem; color: #555; }
-.nt-weights b { font-size: 1.5rem; color: #d35400; }
-.nt-card { min-height: 7.5em; background: #fff; border: 1px solid #d9e1e8; border-radius: 8px; padding: 0.5rem 0.7rem; line-height: 1.55; }
-.nt-card .ok { color: #1e8449; font-weight: bold; }
-.nt-card .no { color: #c0392b; font-weight: bold; }
-.nt-bar, .nt-bottom { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
-.nt-bottom { margin-top: 0.7rem; border-top: 1px solid #e3e8ed; padding-top: 0.6rem; }
-.nt-btn { border: 1px solid #2c3e50; background: #2c3e50; color: #fff; border-radius: 6px; padding: 0.3rem 0.8rem; font-weight: 600; cursor: pointer; }
-.nt-btn.nt-plain { background: #fff; color: #2c3e50; }
-.nt-log { font-size: 0.9rem; color: #333; }
-.nt-plot { width: 100%; height: auto; background: #fff; border: 1px solid #e3e8ed; border-radius: 8px; display: block; }
-.nt-key { font-size: 0.85rem; margin-top: 0.3rem; }
-.nt-key .f { color: #d35400; } .nt-key .p { color: #7d3c98; } .nt-key .l { color: #2c3e50; font-weight: bold; }
-.nt-res { flex-basis: 100%; line-height: 1.6; }
-.nt-res table { border-collapse: collapse; margin-top: 0.3rem; }
-.nt-res td, .nt-res th { border: 1px solid #d9e1e8; padding: 0.15rem 0.5rem; text-align: center; }
-</style>
-
-<script>
-(() => {
-  const root = document.getElementById("nt");
-  if (!root) return;
-  // name, attack stars, special attack stars, F or P (second type in note)
-  const DECK = [
-    ["Machop",3,1,"F"],["Abra",1,4,"P"],["Machamp",4,2,"F"],["Espeon",2,4,"P"],["Hitmonlee",4,1,"F"],
-    ["Kirlia",1,2,"P"],["Conkeldurr",5,2,"F"],["Alakazam",2,5,"P"],["Makuhita",2,1,"F"],["Mr. Mime",2,3,"P"]];
-  const TEST = [
-    ["Primeape",4,2,"F",""],["Mewtwo",4,5,"P",""],["Hypno",2,2,"P",""],
-    ["Gallade",4,2,"P","Psychic and Fighting"],["Lucario",4,4,"F","Fighting and Steel"],["Medicham",2,2,"F","Fighting and Psychic"]];
-  const ALL = [["mankey",3,1,"F"],["primeape",4,2,"F"],["abra",1,4,"P"],["kadabra",1,4,"P"],["alakazam",2,5,"P"],["machop",3,1,"F"],["machoke",3,2,"F"],["machamp",4,2,"F"],["drowzee",2,1,"P"],["hypno",2,2,"P"],["hitmonlee",4,1,"F"],["hitmonchan",4,1,"F"],["mr-mime",2,3,"P"],["mewtwo",4,5,"P"],["mew",3,3,"P"],["natu",2,2,"P"],["xatu",3,3,"P"],["espeon",2,4,"P"],["unown",2,2,"P"],["wobbuffet",1,1,"P"],["tyrogue",1,1,"F"],["hitmontop",3,1,"F"],["lugia",3,3,"P"],["celebi",3,3,"P"],["ralts",1,2,"P"],["kirlia",1,2,"P"],["gardevoir",2,4,"P"],["makuhita",2,1,"F"],["hariyama",4,1,"F"],["meditite",1,1,"F"],["medicham",2,2,"F"],["spoink",1,2,"P"],["grumpig",2,3,"P"],["chimecho",2,3,"P"],["wynaut",1,1,"P"],["deoxys-normal",5,5,"P"],["chingling",1,2,"P"],["mime-jr",1,2,"P"],["riolu",2,1,"F"],["lucario",4,4,"F"],["gallade",4,2,"P"],["uxie",3,3,"P"],["mesprit",4,4,"P"],["azelf",4,4,"P"],["cresselia",2,3,"P"],["victini",3,3,"P"],["munna",1,2,"P"],["musharna",2,4,"P"],["woobat",2,2,"P"],["swoobat",2,3,"P"],["timburr",3,1,"F"],["gurdurr",4,1,"F"],["conkeldurr",5,2,"F"],["throh",3,1,"F"],["sawk",4,1,"F"],["sigilyph",2,3,"P"],["gothita",1,2,"P"],["gothorita",2,3,"P"],["gothitelle",2,3,"P"],["solosis",1,4,"P"],["duosion",1,4,"P"],["reuniclus",2,4,"P"],["elgyem",2,3,"P"],["beheeyem",3,4,"P"],["mienfoo",3,2,"F"],["mienshao",4,3,"F"],["pancham",3,2,"F"],["pangoro",4,2,"F"],["espurr",2,2,"P"],["meowstic-male",2,3,"P"],["hawlucha",3,2,"F"],["hoopa",4,5,"P"],["crabrawler",3,1,"F"],["crabominable",4,2,"F"],["passimian",4,1,"F"],["tapu-lele",3,4,"P"],["cosmog",1,1,"P"],["cosmoem",1,1,"P"],["solgaleo",5,4,"P"],["lunala",4,5,"P"],["necrozma",4,4,"P"],["marshadow",4,3,"F"],["clobbopus",2,2,"F"],["grapploct",4,2,"F"],["hatenna",1,2,"P"],["hattrem",1,3,"P"],["hatterene",3,5,"P"],["sirfetchd",5,2,"F"],["falinks",3,2,"F"],["indeedee-male",2,4,"P"],["zamazenta",4,3,"F"],["kubfu",3,2,"F"],["urshifu-single-strike",4,2,"F"],["calyrex",3,3,"P"],["sneasler",4,1,"F"],["flittle",1,2,"P"],["espathra",2,3,"P"],["annihilape",4,2,"F"],["iron-hands",5,2,"F"],["koraidon",5,3,"F"],["deoxys-attack",5,5,"P"],["deoxys-defense",2,2,"P"],["deoxys-speed",3,3,"P"],["meowstic-female",2,3,"P"],["alakazam-mega",2,5,"P"],["mewtwo-mega-x",5,5,"P"],["mewtwo-mega-y",5,5,"P"],["gardevoir-mega",3,5,"P"],["medicham-mega",3,3,"F"],["lucario-mega",5,5,"F"],["gallade-mega",5,2,"P"],["hoopa-unbound",5,5,"P"],["oricorio-pau",2,3,"P"],["necrozma-dusk",5,4,"P"],["necrozma-dawn",4,5,"P"],["necrozma-ultra",5,5,"P"],["ponyta-galar",3,2,"P"],["rapidash-galar",3,3,"P"],["slowpoke-galar",2,1,"P"],["farfetchd-galar",3,2,"F"],["articuno-galar",3,4,"P"],["zapdos-galar",4,3,"F"],["indeedee-female",2,3,"P"],["zamazenta-crowned",4,3,"F"],["urshifu-rapid-strike",4,2,"F"],["calyrex-ice",5,3,"P"],["calyrex-shadow",3,5,"P"],["machamp-gmax",4,2,"F"],["hatterene-gmax",3,5,"P"],["urshifu-single-strike-gmax",4,2,"F"],["urshifu-rapid-strike-gmax",4,2,"F"],["sneasel-hisui",3,1,"F"],["braviary-hisui",3,4,"P"],["tauros-paldea-combat-breed",4,1,"F"],["tauros-paldea-blaze-breed",4,1,"F"],["tauros-paldea-aqua-breed",4,1,"F"],["koraidon-limited-build",5,3,"F"],["koraidon-sprinting-build",5,3,"F"],["koraidon-swimming-build",5,3,"F"],["koraidon-gliding-build",5,3,"F"]];
-  const START = [-1, 1, 0];
-  let w, i, pass, mistakes, history;
-  const NAME = { F: "FIGHTING", P: "PSYCHIC" };
-
-  const card = root.querySelector(".nt-card"), log = root.querySelector(".nt-log"), res = root.querySelector(".nt-res");
-  const cv = root.querySelector(".nt-plot"), cx = cv.getContext("2d");
-  const total = (a, s) => a * w[0] + s * w[1] + w[2];
-  const says = (a, s) => (total(a, s) > 0 ? "F" : "P");
-
-  function reset() { w = START.slice(); i = 0; pass = 1; mistakes = 0; history = []; card.innerHTML = "Press <b>Next card</b> to start pass 1."; log.textContent = ""; res.innerHTML = ""; draw(); show(); }
-  function show() {
-    root.querySelector(".nt-wa").textContent = w[0];
-    root.querySelector(".nt-ws").textContent = w[1];
-    root.querySelector(".nt-b").textContent = w[2];
-  }
-  function step() {
-    if (pass > 1 && i === 0 && history.length && history[history.length - 1] === 0) {
-      card.innerHTML = "The last pass had <b>0 mistakes</b>. The neuron has learned! Now test it on new cards."; return false;
-    }
-    const [n, a, s, t] = DECK[i];
-    const tot = total(a, s), g = says(a, s), ok = g === t;
-    const fmt = (v) => (v < 0 ? "(" + v + ")" : v);
-    let html = `<b>Pass ${pass}, card ${i + 1}: ${n}</b><br>Attack ${a}, Special ${s}<br>` +
-      `Total = ${a} × ${fmt(w[0])} + ${s} × ${fmt(w[1])} + ${fmt(w[2])} = <b>${tot}</b>` +
-      ` → says <b>${NAME[g]}</b>. Really: ${NAME[t]}. `;
-    if (ok) html += '<span class="ok">Right! No change.</span>';
-    else {
-      const y = t === "F" ? 1 : -1;
-      w = [w[0] + y * a, w[1] + y * s, w[2] + y];
-      mistakes++;
-      html += `<span class="no">Wrong! ${y > 0 ? "ADD" : "SUBTRACT"}:</span> new weights ${w[0]}, ${w[1]}, bias ${w[2]}.`;
-    }
-    card.innerHTML = html;
-    i++;
-    if (i === DECK.length) {
-      history.push(mistakes);
-      log.textContent = history.map((m, k) => `Pass ${k + 1}: ${m} mistake${m === 1 ? "" : "s"}`).join(" · ");
-      i = 0; pass++; mistakes = 0;
-    }
-    show(); draw();
-    return true;
-  }
-  function draw() {
-    const W = cv.width, H = cv.height, pad = 46;
-    const X = (a) => pad + ((a - 0.5) / 5) * (W - pad - 14), Y = (s) => H - pad - ((s - 0.5) / 5) * (H - pad - 14);
-    cx.clearRect(0, 0, W, H);
-    // shade the two sides
-    const img = cx.createImageData(W, H);
-    for (let py = 0; py < H; py++) for (let px = 0; px < W; px++) {
-      const a = 0.5 + ((px - pad) / (W - pad - 14)) * 5, s = 0.5 + ((H - pad - py) / (H - pad - 14)) * 5;
-      if (a < 0.5 || a > 5.5 || s < 0.5 || s > 5.5) continue;
-      const f = total(a, s) > 0, k = 4 * (py * W + px);
-      img.data[k] = f ? 252 : 241; img.data[k + 1] = f ? 228 : 228; img.data[k + 2] = f ? 211 : 246; img.data[k + 3] = 255;
-    }
-    cx.putImageData(img, 0, 0);
-    cx.strokeStyle = "#d9e1e8"; cx.lineWidth = 1;
-    for (let v = 1; v <= 5; v++) {
-      cx.beginPath(); cx.moveTo(X(v), Y(0.5)); cx.lineTo(X(v), Y(5.5)); cx.stroke();
-      cx.beginPath(); cx.moveTo(X(0.5), Y(v)); cx.lineTo(X(5.5), Y(v)); cx.stroke();
-    }
-    cx.fillStyle = "#2c3e50"; cx.font = "14px sans-serif"; cx.textAlign = "center";
-    for (let v = 1; v <= 5; v++) { cx.fillText(v, X(v), H - pad + 18); cx.fillText(v, pad - 16, Y(v) + 5); }
-    cx.fillText("Attack stars", (X(0.5) + X(5.5)) / 2, H - 8);
-    cx.save(); cx.translate(12, (Y(0.5) + Y(5.5)) / 2); cx.rotate(-Math.PI / 2); cx.fillText("Special Attack stars", 0, 0); cx.restore();
-    cx.font = "bold 13px sans-serif";
-    cx.fillStyle = "#b9550b"; cx.fillText("says FIGHTING", X(4.6), Y(0.75));
-    cx.fillStyle = "#6c3483"; cx.fillText("says PSYCHIC", X(1.4), Y(5.3));
-    // the line where total = 0
-    if (w[1] !== 0 || w[0] !== 0) {
-      cx.strokeStyle = "#2c3e50"; cx.lineWidth = 3; cx.beginPath();
-      if (w[1] !== 0) { const s0 = -(w[0] * 0.5 + w[2]) / w[1], s1 = -(w[0] * 5.5 + w[2]) / w[1]; cx.moveTo(X(0.5), Y(s0)); cx.lineTo(X(5.5), Y(s1)); }
-      else { const a0 = -w[2] / w[0]; cx.moveTo(X(a0), Y(0.5)); cx.lineTo(X(a0), Y(5.5)); }
-      cx.stroke();
-    }
-    // cards
-    DECK.forEach(([n, a, s, t], k) => {
-      const x = X(a), y = Y(s);
-      cx.fillStyle = t === "F" ? "#d35400" : "#7d3c98";
-      if (t === "F") cx.fillRect(x - 7, y - 7, 14, 14); else { cx.beginPath(); cx.arc(x, y, 8, 0, 2 * Math.PI); cx.fill(); }
-      cx.fillStyle = "#2c3e50"; cx.font = "11px sans-serif"; cx.textAlign = "left"; cx.fillText(n, x + 10, y - 6); cx.textAlign = "center";
-    });
-  }
-  root.querySelector(".nt-step").addEventListener("click", step);
-  root.querySelector(".nt-pass").addEventListener("click", () => { const p = pass; while (pass === p && step()) {} });
-  root.querySelector(".nt-reset").addEventListener("click", reset);
-  root.querySelector(".nt-test").addEventListener("click", () => {
-    res.innerHTML = "<b>Test cards</b> (no fixing on a test!)<table><tr><th>Card</th><th>Attack</th><th>Special</th><th>Total</th><th>Says</th><th>Really</th></tr>" +
-      TEST.map(([n, a, s, t, note]) => `<tr><td>${n}</td><td>${a}</td><td>${s}</td><td>${total(a, s)}</td><td>${NAME[says(a, s)]}</td><td>${note || NAME[t]}</td></tr>`).join("") + "</table>";
-  });
-  root.querySelector(".nt-all").addEventListener("click", () => {
-    const right = ALL.filter(([n, a, s, t]) => says(a, s) === t).length;
-    const most = Math.max(ALL.filter((r) => r[3] === "F").length, ALL.filter((r) => r[3] === "P").length);
-    res.innerHTML = `With these weights, the neuron gets <b>${right} of ${ALL.length}</b> right (${Math.round((100 * right) / ALL.length)}%).<br>` +
-      `Always guessing the most common type would get ${most} of ${ALL.length} (${Math.round((100 * most) / ALL.length)}%).`;
-  });
-  reset();
-})();
-</script>
-<div class="think" title="The neuron's whole rule is one line. Can you find it?">
-<p>At the end, the weights are <strong>3</strong>, <strong>−4</strong>, and <strong>0</strong>. So the total is <span class="math inline">\(3A - 4S\)</span>. The neuron says FIGHTING when <span class="math inline">\(3A - 4S &gt; 0\)</span>, which means <span class="math inline">\(3A &gt; 4S\)</span>.</p>
-<p>That’s a line on the graph! The neuron learned: <em>if Attack is a lot bigger than Special Attack, it’s a fighter.</em> Nobody told it that rule.</p>
+<div class="think" title="What did the three starts do?">
+<p><strong>Start B</strong> learns a different way. Hidden 1 fires for any creature that’s strong at <strong>something</strong>. Hidden 2 fires only for <strong>Giants</strong>. The output says yes when Hidden 1 fires and Hidden 2 doesn’t. Same answers, but a different network inside!</p>
+<p><strong>Start C</strong> never learns. Its two hidden neurons start as twins, and the network goes around in circles. Real networks get stuck too. That’s one reason computer scientists start from random weights and use many neurons.</p>
 </div>
 <div class="project" title="The Team Race">
-<p>Two teams train the neuron at the same time with the same cards. Team 1 starts with the backwards weights. Team 2 starts with all weights at 0. Who needs fewer mistakes? Do they end with the same weights? Do both get the test cards right?</p>
-</div>
-<div class="project" title="Make Your Own Deck">
-<p>Pick two groups that two numbers can tell apart. For example: basketball players and soccer players (height and weight), or fruits and vegetables (sweet and crunchy, from 1 to 5). Make 10 cards. Train the class neuron on your deck.</p>
+<p>Two networks train at the same time with the same cards. Network 1 uses Start A, the numbers on the board. Network 2 uses Start B: Hidden 1 weights 1 and 1, threshold 0. Hidden 2 weights 1 and 1, threshold 1. Output weights 1 and 0, threshold 0. Who needs fewer fixes? Do they end with the same numbers?</p>
 </div>
 <div class="explore-link">
-<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-2.html#explore-2-5">why the fix rule works, and shuffling the cards</a>. Read it on your own, if you want to learn more.</p>
+<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-2.html#explore-2-5">why the fix rule works, and how backpropagation shares the blame</a>. Read it on your own, if you want to learn more.</p>
 </div>
 
 
@@ -1457,8 +1521,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../chapters/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI.html" class="pagination-link" aria-label="2.6 - Watch Your Teacher Build an AI">
-        <span class="nav-page-text">2.6 - Watch Your Teacher Build an AI</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../chapters/Unit_2/2.6_Build_a_Real_AI.html" class="pagination-link" aria-label="2.6 - Build a Real AI">
+        <span class="nav-page-text">2.6 - Build a Real AI</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

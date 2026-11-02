@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../chapters/Unit_2/2.8_How_AI_Sees.html" rel="next">
-<link href="../../chapters/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI.html" rel="prev">
+<link href="../../chapters/Unit_2/2.6_Build_a_Real_AI.html" rel="prev">
 <link href="../../images/logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -249,8 +249,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2.6 - Watch Your Teacher Build an AI</span></a>
+  <a href="../../chapters/Unit_2/2.6_Build_a_Real_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 - Build a Real AI</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -585,8 +585,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Until now, someone else trained the AI: the class, or your teacher.</p>
-<p>Today, <strong>you</strong> train an AI to recognize hand signs, with your camera, in about 10 minutes. No code. No account.</p>
+<p>In Lesson 2.6, you trained a network on numbers. Today, <strong>you</strong> train an AI to see. It learns to recognize Rock, Paper, and Scissors hand signs, with your camera, in about 10 minutes. No code. No account.</p>
 <p>Then you try to fool it. That’s the most important part.</p>
 <div class="agenda">
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
@@ -607,9 +606,9 @@ ul.task-list li input[type="checkbox"] {
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🏷️</span> <a href="../../glossary.html#glossary-label" class="glossary-link" data-slug="label" data-term="label" data-original-href="#glossary-label">label</a>: the right answer for an example, like “rock”</li>
-<li><span class="icon">🏋️</span> <a href="../../glossary.html#glossary-training" class="glossary-link" data-slug="training" data-term="training" data-original-href="#glossary-training">training</a>: showing an AI many examples so it can fix its weights</li>
-<li><span class="icon">🧪</span> <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-slug="test-data" data-term="test data" data-original-href="#glossary-test-data">test data</a>: new examples the AI never trained on</li>
+<li><span class="icon">🏷️</span> <a href="../../glossary.html#glossary-label" class="glossary-link" data-term="label" data-original-href="#glossary-label" data-slug="label">label</a>: the right answer for an example, like “rock”</li>
+<li><span class="icon">🏋️</span> <a href="../../glossary.html#glossary-training" class="glossary-link" data-term="training" data-original-href="#glossary-training" data-slug="training">training</a>: showing an AI many examples so it can fix its weights</li>
+<li><span class="icon">🧪</span> <a href="../../glossary.html#glossary-test-data" class="glossary-link" data-term="test data" data-original-href="#glossary-test-data" data-slug="test-data">test data</a>: new examples the AI never trained on</li>
 </ul>
 </div>
 </div>
@@ -619,7 +618,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="warmup" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="warmup">🔥 Warm Up</h2>
 <p>You can train an AI to tell apart any pictures your camera can see. What would you teach it? Write two ideas on your sheet.</p>
-<p>Examples: rock and paper. Thumbs up and thumbs down. A pen and a pencil. A cup and a book.</p>
+<p>Examples: rock, paper, and scissors. Thumbs up and thumbs down. A pen and a pencil. A cup and a book.</p>
 </section>
 <section id="learn" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="learn">👥 Learn Together</h2>
@@ -638,7 +637,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td><strong>Class</strong></td>
 <td>one kind of thing, like “rock”</td>
-<td>a <a href="../../glossary.html#glossary-label" class="glossary-link" data-slug="label" data-term="label" data-original-href="#glossary-label">label</a></td>
+<td>a <a href="../../glossary.html#glossary-label" class="glossary-link" data-term="label" data-original-href="#glossary-label" data-slug="label">label</a></td>
 </tr>
 <tr class="even">
 <td><strong>Samples</strong></td>
@@ -648,12 +647,12 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td><strong>Train Model</strong></td>
 <td>the network fixes its weights</td>
-<td><p><a href="../../glossary.html#glossary-training" class="glossary-link" data-slug="training" data-term="training" data-original-href="#glossary-training">training</a></p></td>
+<td><p><a href="../../glossary.html#glossary-training" class="glossary-link" data-term="training" data-original-href="#glossary-training" data-slug="training">training</a></p></td>
 </tr>
 <tr class="even">
 <td><strong>Preview</strong></td>
 <td>try it on new pictures</td>
-<td><p><a href="../../glossary.html#glossary-test-data" class="glossary-link" data-slug="test-data" data-term="test data" data-original-href="#glossary-test-data">test data</a></p></td>
+<td><p><a href="../../glossary.html#glossary-test-data" class="glossary-link" data-term="test data" data-original-href="#glossary-test-data" data-slug="test-data">test data</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -671,7 +670,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="steps">
 <ol type="1">
 <li>Open <a href="https://teachablemachine.withgoogle.com/train/image" target="_blank">Teachable Machine</a>. Choose <strong>Standard image model</strong>.</li>
-<li>Rename <strong>Class 1</strong> to “Rock” and <strong>Class 2</strong> to “Paper.”</li>
+<li>Rename <strong>Class 1</strong> to “Rock” and <strong>Class 2</strong> to “Paper.” Press <strong>Add a class</strong> and name it “Scissors.”</li>
 <li>For each class, press <strong>Webcam</strong>. Make the hand sign. <strong>Hold to Record</strong> about <strong>50 pictures</strong>. Move your hand a little while you record.</li>
 <li>Press <strong>Train Model</strong>. Wait. Don’t switch to another tab while it trains.</li>
 <li>In <strong>Preview</strong>, make each sign. Watch the bars. Is your AI right?</li>
@@ -707,9 +706,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="go-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
 <div class="project" title="Day 2: Make It Harder to Fool">
-<p>Open Teachable Machine again with your partner. Train Rock and Paper like yesterday.</p>
+<p>Open Teachable Machine again with your partner. Train Rock, Paper, and Scissors like yesterday.</p>
 <ol type="1">
-<li>Press <strong>Add a class</strong> and name it “Scissors.” Record about 50 pictures.</li>
 <li>Try two new tricks. Change the <strong>background</strong>: hold up a book or a poster. Then make the sign with a <strong>glove</strong> or a sock on your hand.</li>
 <li>Now make your AI harder to fool. Add more <strong>kinds</strong> of examples: both hands, different people, near and far, different light. Train again.</li>
 <li>Test all the tricks again. Did your AI get better? Write what changed on your sheet.</li>
@@ -1137,8 +1135,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../chapters/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI.html" class="pagination-link" aria-label="2.6 - Watch Your Teacher Build an AI">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2.6 - Watch Your Teacher Build an AI</span>
+      <a href="../../chapters/Unit_2/2.6_Build_a_Real_AI.html" class="pagination-link" aria-label="2.6 - Build a Real AI">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2.6 - Build a Real AI</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

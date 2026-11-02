@@ -334,40 +334,64 @@ href="../handouts/Unit_2/2.3_How_Brains_Learn.pdf">How Brains Learn</a>
 href="../chapters/Unit_2/2.4_The_Artificial_Neuron.html">2.4 - The
 Artificial Neuron</a></h4>
 <p><strong>Sheets:</strong> <a
+href="../handouts/Unit_2/2.4_Creature_Cards.pdf">Creature Cards</a> (<a
+href="../handouts/Unit_2/2.4_Creature_Cards_KEY.pdf">key</a>) · <a
 href="../handouts/Unit_2/2.4_The_Artificial_Neuron.pdf">The Artificial
 Neuron</a> (<a
 href="../handouts/Unit_2/2.4_The_Artificial_Neuron_KEY.pdf">key</a>)</p>
-<p><strong>Class size.</strong> <strong>4 students:</strong> one neuron
-and three inputs. <strong>More students:</strong> make two or three
-neurons. Then connect them: the neurons’ answers become the inputs for
-one more neuron. That’s a <strong>network</strong> with one hidden
-layer, like the picture in 2.4.2.</p>
+<p><strong>Before class.</strong> Print and cut one set of creature
+cards. Fold each card so the type is hidden.</p>
+<p>The creatures are made up, from a recipe in
+<code>scripts/make-creatures.py</code>: Fighters have high Strength and
+low Magic, Wizards the opposite, with some overlap. The same 300
+creatures are used in 2.4, 2.5, and 2.6, so the class can compare what
+each network learns with the real recipe (Explore More, Unit 2).</p>
+<p><strong>Class size and hints.</strong> <strong>4 students:</strong>
+each student takes one or two cards. <strong>More students:</strong>
+groups of 2 or 3, one card each. Extra students keep score and write the
+numbers on the board. <strong>Big class:</strong> two teams fix their
+own neuron. Who gets 6 of 6 first?</p>
+<p><strong>If the class is stuck:</strong> “Lullom has more Magic. Which
+weight should push its total down?” One answer that works: Strength
+weight 1, Magic weight <span class="math inline">−1</span>, threshold 0.
+Many others work too. The starting numbers get 2 of 6 right.</p>
 <h4 id="train-a-human-neural-network"><a
 href="../chapters/Unit_2/2.5_Train_a_Human_Neural_Network.html">2.5 -
 Train a Human Neural Network</a></h4>
 <p><strong>Sheets:</strong> <a
-href="../handouts/Unit_2/2.5_Pokemon_Cards.pdf">Pokemon Cards</a> (<a
-href="../handouts/Unit_2/2.5_Pokemon_Cards_KEY.pdf">key</a>) · <a
+href="../handouts/Unit_2/2.5_Creature_Cards.pdf">Creature Cards</a> (<a
+href="../handouts/Unit_2/2.5_Creature_Cards_KEY.pdf">key</a>) · <a
 href="../handouts/Unit_2/2.5_Train_a_Human_Neural_Network.pdf">Train a
 Human Neural Network</a> (<a
 href="../handouts/Unit_2/2.5_Train_a_Human_Neural_Network_KEY.pdf">key</a>)</p>
-<p><strong>Before class.</strong> Print and cut one set of Pokémon cards
-for each team.</p>
-<p><strong>Class size.</strong> <strong>4 students:</strong> the dealer
-is also the checker, and one weight keeper holds all 3 numbers.
-<strong>10 or more:</strong> make <strong>two teams</strong> with two
-sets of cards. Both teams start with the same weights. Which team
-finishes first? Do they end with the same weights?</p>
-<h4 id="watch-your-teacher-build-an-ai"><a
-href="../chapters/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI.html">2.6 -
-Watch Your Teacher Build an AI</a></h4>
+<p><strong>Before class.</strong> Print and cut one set of creature
+cards for each network. Fold each card so the answer is hidden.</p>
+<p>Draw the class network on the board, big, with its starting numbers
+(the picture in 2.5.1). Leave room to erase and rewrite each number. The
+key on the sheet follows the cards in order: the network makes 5
+mistakes in pass 1, and 0 in pass 2.</p>
+<p><strong>Class size.</strong> <strong>4 students:</strong> one student
+for each neuron, and one dealer who is also the checker and scorekeeper.
+<strong>5 to 9:</strong> two or three students on each neuron team.
+<strong>10 or more:</strong> make <strong>two networks</strong> with two
+sets of cards. Both start with the same numbers. Which network learns
+first? Do they end with the same numbers?</p>
+<p><strong>Timing:</strong> a card takes about a minute, a fix about
+two. The key path makes 5 fixes in pass 1 (T1, T2, T3, T5, T6) and none
+in pass 2.</p>
+<h4 id="build-a-real-ai"><a
+href="../chapters/Unit_2/2.6_Build_a_Real_AI.html">2.6 - Build a Real
+AI</a></h4>
 <p><strong>Sheets:</strong> <a
-href="../handouts/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI.pdf">Watch
-Your Teacher Build an AI</a> (<a
-href="../handouts/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI_KEY.pdf">key</a>)</p>
-<p><strong>Before class.</strong> Open the page on the projector and run
-the 2-number build once before class. Each run takes a few seconds on a
-Chromebook.</p>
+href="../handouts/Unit_2/2.6_Build_a_Real_AI.pdf">Build a Real AI</a>
+(<a href="../handouts/Unit_2/2.6_Build_a_Real_AI_KEY.pdf">key</a>)</p>
+<p><strong>Before class.</strong> Open the page on the projector. Do Run
+1 together at <strong>slow</strong> speed, so everyone sees the lines
+change and learns to read the picture. Then pairs do the other runs on
+Chromebooks. Each run takes a few seconds at normal speed, and about 30
+seconds at slow speed.</p>
+<p>Scores change a little with each new random split. The patterns in
+the think boxes stay the same.</p>
 <h4 id="train-your-own-ai"><a
 href="../chapters/Unit_2/2.7_Train_Your_Own_AI.html">2.7 - Train Your
 Own AI</a></h4>
@@ -777,7 +801,7 @@ href="https://translate.google.com"
 class="uri">https://translate.google.com</a> (students open; 3.5)</li>
 <li><code>w3.org</code>: <a href="http://www.w3.org/2000/svg"
 class="uri">http://www.w3.org/2000/svg</a> (students open;
-stadium_wave)</li>
+network_trainer, stadium_wave)</li>
 <li><code>whichfaceisreal.com</code>: <a
 href="https://www.whichfaceisreal.com/"
 class="uri">https://www.whichfaceisreal.com/</a> (students open;

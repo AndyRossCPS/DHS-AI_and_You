@@ -278,8 +278,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2.6 - Watch Your Teacher Build an AI</span></a>
+  <a href="../../chapters/Unit_2/2.6_Build_a_Real_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 - Build a Real AI</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -597,17 +597,17 @@ window.Quarto = {
   <li><a href="#explore-2-4" id="toc-explore-2-4" class="nav-link" data-scroll-target="#explore-2-4">From Lesson 2.4: The Artificial Neuron</a>
   <ul class="collapse">
   <li><a href="#the-first-neuron-machine" id="toc-the-first-neuron-machine" class="nav-link" data-scroll-target="#the-first-neuron-machine">The First Neuron Machine</a></li>
-  <li><a href="#the-problem-one-neuron-cant-solve" id="toc-the-problem-one-neuron-cant-solve" class="nav-link" data-scroll-target="#the-problem-one-neuron-cant-solve">The Problem One Neuron Can’t Solve</a></li>
-  <li><a href="#the-fix-more-neurons" id="toc-the-fix-more-neurons" class="nav-link" data-scroll-target="#the-fix-more-neurons">The Fix: More Neurons</a></li>
+  <li><a href="#a-neuron-that-sees" id="toc-a-neuron-that-sees" class="nav-link" data-scroll-target="#a-neuron-that-sees">A Neuron That Sees</a></li>
   </ul></li>
   <li><a href="#explore-2-5" id="toc-explore-2-5" class="nav-link" data-scroll-target="#explore-2-5">From Lesson 2.5: Train a Human Neural Network</a>
   <ul class="collapse">
   <li><a href="#why-the-fix-rule-works" id="toc-why-the-fix-rule-works" class="nav-link" data-scroll-target="#why-the-fix-rule-works">Why the Fix Rule Works</a></li>
+  <li><a href="#whos-to-blame-for-real" id="toc-whos-to-blame-for-real" class="nav-link" data-scroll-target="#whos-to-blame-for-real">Who’s to Blame, for Real</a></li>
   <li><a href="#will-it-always-finish" id="toc-will-it-always-finish" class="nav-link" data-scroll-target="#will-it-always-finish">Will It Always Finish?</a></li>
-  <li><a href="#shuffle-the-cards" id="toc-shuffle-the-cards" class="nav-link" data-scroll-target="#shuffle-the-cards">Shuffle the Cards</a></li>
   </ul></li>
-  <li><a href="#explore-2-6" id="toc-explore-2-6" class="nav-link" data-scroll-target="#explore-2-6">From Lesson 2.6: Watch Your Teacher Build an AI</a>
+  <li><a href="#explore-2-6" id="toc-explore-2-6" class="nav-link" data-scroll-target="#explore-2-6">From Lesson 2.6: Build a Real AI</a>
   <ul class="collapse">
+  <li><a href="#the-secret-recipe" id="toc-the-secret-recipe" class="nav-link" data-scroll-target="#the-secret-recipe">The Secret Recipe</a></li>
   <li><a href="#how-a-network-draws-a-curved-border" id="toc-how-a-network-draws-a-curved-border" class="nav-link" data-scroll-target="#how-a-network-draws-a-curved-border">How a Network Draws a Curved Border</a></li>
   <li><a href="#three-piles-not-two" id="toc-three-piles-not-two" class="nav-link" data-scroll-target="#three-piles-not-two">Three Piles, Not Two</a></li>
   <li><a href="#the-data-behind-the-ai" id="toc-the-data-behind-the-ai" class="nav-link" data-scroll-target="#the-data-behind-the-ai">The Data Behind the AI</a></li>
@@ -739,83 +739,238 @@ window.Quarto = {
 <p>In 1943, Warren McCulloch and Walter Pitts showed that a neuron could be written as math: multiply, add, compare. In 1958, Frank Rosenblatt built the <strong>Mark I Perceptron</strong>, a machine as big as a room. It had a camera made of 400 light sensors, in a 20 by 20 grid. Its weights were real knobs, turned by small motors when it learned.</p>
 <p>The newspapers were very excited. One story said the Navy expected it to walk, talk, see, and even be conscious one day. (You read about this in Lesson 1.4.)</p>
 </section>
-<section id="the-problem-one-neuron-cant-solve" class="level3">
-<h3 class="anchored" data-anchor-id="the-problem-one-neuron-cant-solve">The Problem One Neuron Can’t Solve</h3>
-<p>Try to make one neuron that answers this question with two inputs, A and B:</p>
-<blockquote class="blockquote">
-<p>Is <strong>exactly one</strong> of them on?</p>
-</blockquote>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">A</th>
-<th style="text-align: center;">B</th>
-<th style="text-align: center;">The answer should be</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">NO</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">YES</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">YES</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">NO</td>
-</tr>
-</tbody>
-</table>
-<p>Choose weights for A and B and a threshold. Test all 4 rows. You won’t find any that work! Here is why. To say YES when only A is on, A needs a big enough weight. The same for B. But then when <strong>both</strong> are on, the total is even bigger, and the neuron says YES again.</p>
-<p>In 1969, Marvin Minsky and Seymour Papert wrote a famous book that proved one neuron can’t solve problems like this. Many people stopped working on neural networks for years. This was part of an AI winter (Lesson 1.4).</p>
-</section>
-<section id="the-fix-more-neurons" class="level3">
-<h3 class="anchored" data-anchor-id="the-fix-more-neurons">The Fix: More Neurons</h3>
-<p>The answer is a <strong>network</strong>. Two neurons can look at the inputs first. A third neuron looks at their answers. Try it with the class: one neuron fires if A or B is on. Another fires only if A and B are both on. The last neuron fires if the first one fires and the second one does <strong>not</strong>. Together, they solve it.</p>
-<p>Today’s neural networks have many layers of neurons, one after another. Each layer looks at the answers of the layer before.</p>
+<section id="a-neuron-that-sees" class="level3">
+<h3 class="anchored" data-anchor-id="a-neuron-that-sees">A Neuron That Sees</h3>
+<p>The Mark I looked at pictures. Here’s a tiny version. This neuron looks at a 3 by 3 picture. Each square is an input: <strong>1</strong> if it’s black, <strong>0</strong> if it’s white. Each square has its own <strong>weight</strong>. The neuron says <strong>X</strong> if the total is more than the threshold. Otherwise it says <strong>O</strong>.</p>
+<ol type="1">
+<li>Draw an X. All the weights are 0. What does the neuron say? Why?</li>
+<li>Change the weights with <strong>+</strong> and <strong>−</strong>. Try to get <strong>6 out of 6</strong> right on the test pictures.</li>
+<li>Stuck? Ask: which squares are black in an X but white in an O?</li>
+</ol>
+<!-- xo_neuron.html: Explore More for Lesson 2.4. One artificial neuron looks at a 3x3 picture.
+     Each square has a weight. Score = add the weights of the black squares.
+     Score above the threshold means X, otherwise O. Students set the weights. -->
+<div class="xo" id="xo">
+  <div class="xo-top">
+    <div class="xo-col">
+      <div class="xo-h">1. Draw a picture</div>
+      <div class="xo-draw" aria-label="Picture to test. Click squares."></div>
+      <div class="xo-mini">
+        <button type="button" data-pic="X">X</button>
+        <button type="button" data-pic="O">O</button>
+        <button type="button" data-pic="clear">clear</button>
+      </div>
+    </div>
+    <div class="xo-col">
+      <div class="xo-h">2. The weights</div>
+      <div class="xo-weights" aria-label="Weights. Use plus and minus."></div>
+      <label class="xo-th">Threshold <button type="button" class="xo-tm">−</button> <b class="xo-tv">0</b> <button type="button" class="xo-tp">+</button></label>
+    </div>
+    <div class="xo-col xo-outcol">
+      <div class="xo-h">3. The neuron decides</div>
+      <div class="xo-sum"></div>
+      <div class="xo-out"></div>
+    </div>
+  </div>
+  <div class="xo-test">
+    <div class="xo-h">4. Test your weights on 6 pictures</div>
+    <div class="xo-cases"></div>
+    <div class="xo-bar">
+      <button type="button" class="xo-btn xo-plain xo-zero">↺ All weights 0</button>
+      <button type="button" class="xo-btn xo-plain xo-show">💡 Show one good answer</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.xo { border: 1px solid #d9e1e8; border-radius: 10px; padding: 0.8rem; margin: 0.75rem 0 1.25rem; background: #fbfcfd; }
+.xo-top { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: flex-start; }
+.xo-col { display: flex; flex-direction: column; gap: 0.4rem; }
+.xo-outcol { flex: 1 1 180px; }
+.xo-h { font-weight: bold; }
+.xo-draw, .xo-weights { display: grid; grid-template-columns: repeat(3, 58px); grid-template-rows: repeat(3, 58px); gap: 4px; }
+.xo-draw button { border: 2px solid #2c3e50; background: #fff; border-radius: 4px; cursor: pointer; }
+.xo-draw button.on { background: #2c3e50; }
+.xo-w { border: 2px solid #d35400; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: bold; font-size: 1.15rem; }
+.xo-w .pm { display: flex; gap: 2px; }
+.xo-w button { border: 1px solid #b8c4cf; background: #fff; border-radius: 3px; width: 22px; height: 20px; line-height: 1; padding: 0; cursor: pointer; font-size: 0.9rem; }
+.xo-mini { display: flex; gap: 0.3rem; }
+.xo-mini button, .xo-th button { border: 1px solid #b8c4cf; background: #fff; border-radius: 5px; padding: 0.05rem 0.5rem; cursor: pointer; }
+.xo-th { font-weight: 600; }
+.xo-sum { font-size: 1.05rem; line-height: 1.5; }
+.xo-out { font-size: 2rem; font-weight: bold; color: #1e8449; }
+.xo-test { margin-top: 0.9rem; border-top: 1px solid #e3e8ed; padding-top: 0.6rem; }
+.xo-cases { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 0.4rem 0; }
+.xo-case { text-align: center; font-size: 0.9rem; }
+.xo-case .g { display: grid; grid-template-columns: repeat(3, 14px); grid-template-rows: repeat(3, 14px); gap: 2px; margin: 0 auto 0.2rem; }
+.xo-case .g span { border: 1px solid #2c3e50; }
+.xo-case .g span.on { background: #2c3e50; }
+.xo-case .r { font-weight: bold; }
+.xo-case .r.ok { color: #1e8449; }
+.xo-case .r.no { color: #c0392b; }
+.xo-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.3rem; }
+.xo-btn { border: 1px solid #2c3e50; background: #2c3e50; color: #fff; border-radius: 6px; padding: 0.3rem 0.8rem; font-weight: 600; cursor: pointer; }
+.xo-btn.xo-plain { background: #fff; color: #2c3e50; }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("xo");
+  if (!root) return;
+  const X = [1,0,1, 0,1,0, 1,0,1], O = [1,1,1, 1,0,1, 1,1,1];
+  const CASES = [
+    { name: "X", pic: X, want: "X" },
+    { name: "O", pic: O, want: "O" },
+    { name: "messy X", pic: [1,0,0, 0,1,0, 1,0,1], want: "X" },
+    { name: "messy O", pic: [1,1,0, 1,0,1, 1,1,1], want: "O" },
+    { name: "plus (+)", pic: [0,1,0, 1,1,1, 0,1,0], want: "O" },
+    { name: "small o", pic: [0,1,0, 1,0,1, 0,1,0], want: "O" },
+  ];
+  const GOOD = [0,-1,0, -1,3,-1, 0,-1,0];
+  let pic = X.slice(), w = new Array(9).fill(0), th = 0;
+
+  const drawEl = root.querySelector(".xo-draw"), wEl = root.querySelector(".xo-weights");
+  for (let i = 0; i < 9; i++) {
+    const b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-label", "square " + (i + 1));
+    b.addEventListener("click", () => { pic[i] ^= 1; draw(); });
+    drawEl.appendChild(b);
+    const c = document.createElement("div"); c.className = "xo-w";
+    c.innerHTML = `<span class="v">0</span><span class="pm"><button type="button" aria-label="minus">−</button><button type="button" aria-label="plus">+</button></span>`;
+    const [m, p] = c.querySelectorAll("button");
+    m.addEventListener("click", () => { w[i] = Math.max(-5, w[i] - 1); draw(); });
+    p.addEventListener("click", () => { w[i] = Math.min(5, w[i] + 1); draw(); });
+    wEl.appendChild(c);
+  }
+  const score = (P) => P.reduce((s, v, i) => s + v * w[i], 0);
+  const decide = (P) => (score(P) > th ? "X" : "O");
+
+  function draw() {
+    drawEl.querySelectorAll("button").forEach((b, i) => b.classList.toggle("on", !!pic[i]));
+    wEl.querySelectorAll(".xo-w").forEach((c, i) => {
+      c.querySelector(".v").textContent = (w[i] > 0 ? "+" : "") + w[i];
+      const a = Math.min(1, Math.abs(w[i]) / 5);
+      c.style.background = w[i] > 0 ? `rgba(30,132,73,${a * 0.45})` : w[i] < 0 ? `rgba(192,57,43,${a * 0.45})` : "#fff";
+    });
+    root.querySelector(".xo-tv").textContent = th;
+    const parts = pic.map((v, i) => (v ? (w[i] < 0 ? `(${w[i]})` : `${w[i]}`) : null)).filter((x) => x !== null);
+    root.querySelector(".xo-sum").innerHTML =
+      `Add the weights of the <b>black</b> squares:<br>${parts.length ? parts.join(" + ") : "0"} = <b>${score(pic)}</b><br>` +
+      `Is ${score(pic)} more than ${th}? <b>${score(pic) > th ? "Yes" : "No"}</b>`;
+    root.querySelector(".xo-out").textContent = "It's an " + decide(pic) + "!";
+    const cases = root.querySelector(".xo-cases");
+    cases.innerHTML = "";
+    let right = 0;
+    CASES.forEach((k) => {
+      const got = decide(k.pic), ok = got === k.want; if (ok) right++;
+      const d = document.createElement("div"); d.className = "xo-case";
+      d.innerHTML = `<div class="g">${k.pic.map((v) => `<span class="${v ? "on" : ""}"></span>`).join("")}</div>${k.name}<br>should be <b>${k.want}</b><br><span class="r ${ok ? "ok" : "no"}">says ${got} ${ok ? "✔" : "✖"}</span>`;
+      cases.appendChild(d);
+    });
+    const t = document.createElement("div"); t.className = "xo-case";
+    t.innerHTML = `<div style="font-size:1.6rem;font-weight:bold;margin-top:0.6rem">${right} / 6</div>right`;
+    cases.appendChild(t);
+  }
+  root.querySelectorAll("[data-pic]").forEach((b) => b.addEventListener("click", () => {
+    pic = b.dataset.pic === "X" ? X.slice() : b.dataset.pic === "O" ? O.slice() : new Array(9).fill(0); draw();
+  }));
+  root.querySelector(".xo-tm").addEventListener("click", () => { th = Math.max(-9, th - 1); draw(); });
+  root.querySelector(".xo-tp").addEventListener("click", () => { th = Math.min(9, th + 1); draw(); });
+  root.querySelector(".xo-zero").addEventListener("click", () => { w = new Array(9).fill(0); th = 0; draw(); });
+  root.querySelector(".xo-show").addEventListener("click", () => { w = GOOD.slice(); th = 0; draw(); });
+  draw();
+})();
+</script>
+<div class="think" title="Look at your weights. Do they make a picture?">
+<p>They often do! Squares that are <strong>only black in an X</strong> (like the center) get <strong>positive</strong> weights. Squares that are <strong>only black in an O</strong> (like the sides) get <strong>negative</strong> weights. The weights are a picture of what the neuron is looking for.</p>
+</div>
+<div class="project" title="A Neuron for a Letter">
+<p>Make the picture bigger in your head: 5 by 5 squares. On grid paper, choose weights that tell a <strong>T</strong> from an <strong>L</strong>. Test your weights on a partner’s T and L.</p>
+</div>
 </section>
 </section>
 <section id="explore-2-5" class="level2">
 <h2 class="anchored" data-anchor-id="explore-2-5">From Lesson 2.5: Train a Human Neural Network</h2>
 <section id="why-the-fix-rule-works" class="level3">
 <h3 class="anchored" data-anchor-id="why-the-fix-rule-works">Why the Fix Rule Works</h3>
-<p>Say the neuron said PSYCHIC, but the card is FIGHTING. The total was too small. The fix rule says <strong>ADD</strong>: Attack weight + A, Special weight + S, bias + 1.</p>
-<p>What happens to the total for that same card? Each part of the total gets bigger:</p>
-<ul>
-<li>The Attack part grows by <span class="math inline">\(A \times A\)</span>.</li>
-<li>The Special part grows by <span class="math inline">\(S \times S\)</span>.</li>
-<li>The bias grows by 1.</li>
-</ul>
-<p>So the new total is bigger by <span class="math inline">\(A \times A + S \times S + 1\)</span>. That number is always more than 0. The fix always pushes the total <strong>toward the right answer</strong> for that card. SUBTRACT works the same way, in the other direction.</p>
-<p><strong>Try it with Machop</strong> (<span class="math inline">\(A = 3\)</span>, <span class="math inline">\(S = 1\)</span>): the total was <span class="math inline">\(-2\)</span>. After the fix, it should be bigger by <span class="math inline">\(3 \times 3 + 1 \times 1 + 1 = 11\)</span>. Check: <span class="math inline">\((3 \times 2) + (1 \times 2) + 1 = 9\)</span>. And <span class="math inline">\(-2 + 11 = 9\)</span>. It works!</p>
+<p>Say a neuron should have fired, but it didn’t. Its total wasn’t more than its threshold. The fix rule says <strong>ADD</strong>: +1 to the weight of each input that was 1, and threshold −1.</p>
+<p>What happens for that same card? Each input that was 1 adds 1 more to the total. And the threshold drops by 1. So the gap between the total and the threshold shrinks by <strong>at least 1</strong>. The fix always pushes that neuron <strong>toward the right answer</strong> for that card. SUBTRACT works the same way, in the other direction.</p>
+<p><strong>Try it with Hidden 1 and card T2, Pasir</strong> (inputs 0 and 1). Before the fix, the weights were <span class="math inline">\(-1\)</span> and <span class="math inline">\(+1\)</span>, and the threshold was 1. The total was 1: not more than 1. After ADD, the weights are <span class="math inline">\(-1\)</span> and <span class="math inline">\(+2\)</span>, and the threshold is 0. Now the total is 2: more than 0. It fires!</p>
+</section>
+<section id="whos-to-blame-for-real" class="level3">
+<h3 class="anchored" data-anchor-id="whos-to-blame-for-real">Who’s to Blame, for Real</h3>
+<p>Your class’s rule is a simple version of <strong>MADALINE Rule II</strong>, made by Bernard Widrow and Rodney Winter in 1988. Its big idea: change the neuron that was <strong>least sure</strong>, because that changes the network as little as possible.</p>
+<p>Today’s networks use <strong>backpropagation</strong> instead. It became famous in 1986, from a paper by David Rumelhart, Geoffrey Hinton, and Ronald Williams. Two things make it different:</p>
+<ol type="1">
+<li>Each neuron gives a <strong>smooth</strong> answer, like “0.8 sure”, not only yes or no. So the computer can work out <strong>how much</strong> each weight caused the mistake.</li>
+<li>Every weight changes, a little, after every pass. The blame starts at the answer and goes <strong>back</strong> through the layers, one at a time. That’s where the name comes from.</li>
+</ol>
 </section>
 <section id="will-it-always-finish" class="level3">
 <h3 class="anchored" data-anchor-id="will-it-always-finish">Will It Always Finish?</h3>
-<p>Frank Rosenblatt used this fix rule for his perceptron in 1958. Mathematicians later proved something surprising. If <strong>any</strong> straight line can split the training cards into two groups, the fix rule will always find one. It makes a limited number of mistakes, and then it stops making them.</p>
-<p>But if no straight line can split the cards, the neuron never stops making mistakes. (See the problem one neuron can’t solve, in the section for Lesson 2.4.)</p>
-</section>
-<section id="shuffle-the-cards" class="level3">
-<h3 class="anchored" data-anchor-id="shuffle-the-cards">Shuffle the Cards</h3>
-<p>Train again, but shuffle the training cards first. Use the <strong>Check Our Math</strong> tool in Lesson 2.5, or do it on paper. Do you end with the same weights? Does the neuron still get the training cards right? Do different weights give different answers on the test cards?</p>
+<p>For <strong>one</strong> neuron, mathematicians proved something surprising in the 1960s. If <strong>any</strong> straight line can split the training cards into two groups, the fix rule will always find one. It makes a limited number of mistakes, and then it stops.</p>
+<p>For a <strong>network</strong>, there’s no promise like that. Start C in the Lesson 2.5 tool gets stuck forever. Real networks can get stuck too. Computer scientists fix this with more neurons, random starting weights, and lots of practice runs.</p>
 </section>
 </section>
 <section id="explore-2-6" class="level2">
-<h2 class="anchored" data-anchor-id="explore-2-6">From Lesson 2.6: Watch Your Teacher Build an AI</h2>
+<h2 class="anchored" data-anchor-id="explore-2-6">From Lesson 2.6: Build a Real AI</h2>
+<section id="the-secret-recipe" class="level3">
+<h3 class="anchored" data-anchor-id="the-secret-recipe">The Secret Recipe</h3>
+<p>The creatures in Lessons 2.4, 2.5, and 2.6 are made up. Mr.&nbsp;Ross made them with a computer, from this recipe:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th style="text-align: center;">How many</th>
+<th style="text-align: center;">Strength</th>
+<th style="text-align: center;">Magic</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fighter</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">about 66</td>
+<td style="text-align: center;">about 40</td>
+<td>about 1.5 meters tall</td>
+</tr>
+<tr class="even">
+<td>Wizard</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">about 40</td>
+<td style="text-align: center;">about 66</td>
+<td>about 1.5 meters tall</td>
+</tr>
+<tr class="odd">
+<td>Giant</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">about 82</td>
+<td style="text-align: center;">about 82</td>
+<td>about 3 meters tall</td>
+</tr>
+<tr class="even">
+<td>Mini</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">about 24</td>
+<td style="text-align: center;">about 24</td>
+<td>about half a meter tall</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Each creature’s numbers are <strong>spread out</strong> around these, so some Fighters have lots of Magic, and some Wizards are strong.</li>
+<li><strong>Speed</strong> and <strong>Toughness</strong> are about 50 for every type. They say nothing about the type.</li>
+<li><strong>Weight</strong> comes from height: taller creatures are heavier.</li>
+<li><strong>Home</strong> (Forest, Mountain, or Lake) was picked <strong>at random</strong>.</li>
+</ul>
+<p>Now you can check the networks against the truth. For <em>Fighter or Wizard?</em>, the best rule is “more Strength than Magic: Fighter.” It gets <strong>128 of 140</strong> right, about 91%. Even a perfect AI can’t do better, because some Fighters and Wizards overlap. For <em>Where does it live?</em>, even a perfect AI can’t beat guessing.</p>
+<p>Real data is different: <strong>nobody</strong> knows the recipe. That’s why scientists need AI to find patterns, and why they need test data to check them.</p>
+</section>
 <section id="how-a-network-draws-a-curved-border" class="level3">
 <h3 class="anchored" data-anchor-id="how-a-network-draws-a-curved-border">How a Network Draws a Curved Border</h3>
-<p>The class neuron in Lesson 2.5 had one rule: one straight line. Everything on one side was FIGHTING. Everything on the other side was PSYCHIC.</p>
-<p>A network has <strong>hidden neurons</strong> between the inputs and the answer. Each hidden neuron draws its own line. The last neuron looks at all of their answers together. Many short lines, put together, can make a curved border.</p>
-<p>Try it with the AI tool in Lesson 2.6. Choose <em>Fighting or Psychic?</em> with 2 numbers. Train with <strong>0</strong> hidden neurons and look at the colored map. Then train with <strong>16</strong>. How is the border different?</p>
+<p>The class neuron in Lesson 2.4 had one rule: one straight line.</p>
+<p>A network has <strong>hidden neurons</strong> between the inputs and the answer. Each hidden neuron draws its own line. The output neurons look at all of their answers together. Two lines can make a band, like the club in Run 2. Many short lines, put together, can make a curved border.</p>
+<p>Try it with the tool in Lesson 2.6. Choose <em>Which type?</em> Train with <strong>0</strong> hidden neurons and look at the colored map. Then train with <strong>16</strong>. How is the border different?</p>
 </section>
 <section id="three-piles-not-two" class="level3">
 <h3 class="anchored" data-anchor-id="three-piles-not-two">Three Piles, Not Two</h3>
@@ -829,16 +984,16 @@ window.Quarto = {
 </section>
 <section id="the-data-behind-the-ai" class="level3">
 <h3 class="anchored" data-anchor-id="the-data-behind-the-ai">The Data Behind the AI</h3>
-<p>The Pokédex has 1,281 Pokémon. That’s small for AI. A big image AI learns from millions or billions of pictures. A chatbot learns from a huge amount of text. The steps are the same six steps you saw in class. Only the size is different.</p>
+<p>The creature data has 300 creatures. That’s tiny for AI. A big image AI learns from millions or billions of pictures. A chatbot learns from a huge amount of text. The steps are the same six steps you saw in class. Only the size is different.</p>
 </section>
 </section>
 <section id="explore-2-7" class="level2">
 <h2 class="anchored" data-anchor-id="explore-2-7">From Lesson 2.7: Train Your Own AI</h2>
 <section id="why-teachable-machine-learns-so-fast" class="level3">
 <h3 class="anchored" data-anchor-id="why-teachable-machine-learns-so-fast">Why Teachable Machine Learns So Fast</h3>
-<p>The Pokémon AI in Lesson 2.6 started from nothing. Teachable Machine doesn’t. It starts with a network that <strong>already learned</strong> from millions of pictures, like the ImageNet pictures in Lesson 1.5. That network already knows about edges, shapes, and colors (you’ll see how in Lesson 2.8).</p>
+<p>The creature AI in Lesson 2.6 started from nothing. Teachable Machine doesn’t. It starts with a network that <strong>already learned</strong> from millions of pictures, like the ImageNet pictures in Lesson 1.5. That network already knows about edges, shapes, and colors (you’ll see how in Lesson 2.8).</p>
 <p>So Teachable Machine only learns the <strong>last step</strong> from your pictures: which shapes go with “rock.” That’s why it needs only about 50 pictures and a few seconds.</p>
-<p>This is called <a href="../../glossary.html#glossary-transfer-learning" class="glossary-link" data-slug="transfer-learning" data-term="transfer learning" data-original-href="#glossary-transfer-learning">transfer learning</a>: starting from an AI that already learned something, then teaching it a new job. It’s like learning a new sport when you already know how to run and catch.</p>
+<p>This is called <a href="../../glossary.html#glossary-transfer-learning" class="glossary-link" data-term="transfer learning" data-slug="transfer-learning" data-original-href="#glossary-transfer-learning">transfer learning</a>: starting from an AI that already learned something, then teaching it a new job. It’s like learning a new sport when you already know how to run and catch.</p>
 </section>
 <section id="transfer-learning-everywhere" class="level3">
 <h3 class="anchored" data-anchor-id="transfer-learning-everywhere">Transfer Learning Everywhere</h3>

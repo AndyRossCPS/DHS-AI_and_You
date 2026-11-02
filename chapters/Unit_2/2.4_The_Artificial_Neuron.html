@@ -278,8 +278,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/Unit_2/2.6_Watch_Your_Teacher_Build_an_AI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2.6 - Watch Your Teacher Build an AI</span></a>
+  <a href="../../chapters/Unit_2/2.6_Build_a_Real_AI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 - Build a Real AI</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -585,7 +585,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
   <ul class="collapse">
-  <li><a href="#be-a-neuron" id="toc-be-a-neuron" class="nav-link" data-scroll-target="#be-a-neuron">2.4.3 - Be a Neuron</a></li>
+  <li><a href="#find-the-weights" id="toc-find-the-weights" class="nav-link" data-scroll-target="#find-the-weights">2.4.3 - Find the Weights</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
   <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
@@ -622,13 +622,13 @@ window.Quarto = {
 <figcaption>The Mark I Perceptron, around 1960. Its camera has 400 light sensors. Here it looks at a letter C. The panels behind it hold its connections and their weights. (U.S. Navy photo, public domain)</figcaption>
 </figure>
 </div>
-<p>That simple idea is the building block of every neural network today. Today, the class becomes one.</p>
+<p>That simple idea is the building block of every neural network today. Today, you’ll build one by hand.</p>
 <div class="agenda">
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
 <ul>
-<li><span class="icon">🔥</span> <strong>Warm Up</strong> Should I go? <span class="time">7 min</span></li>
+<li><span class="icon">🔥</span> <strong>Warm Up</strong> Fighter or Wizard? <span class="time">7 min</span></li>
 <li><span class="icon">👥</span> <strong>Learn Together</strong> One neuron, then a network <span class="time">13 min</span></li>
-<li><span class="icon">🛠️</span> <strong>Try It</strong> Be a neuron <span class="time">14 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Find the weights <span class="time">14 min</span></li>
 <li><span class="icon">💬</span> <strong>Talk About It</strong> Who picks the weights? <span class="time">6 min</span></li>
 </ul>
 </div>
@@ -636,66 +636,55 @@ window.Quarto = {
 <ul class="task-list">
 <li><label><input type="checkbox">I can explain inputs, weights, and a threshold.</label></li>
 <li><label><input type="checkbox">I can calculate what an artificial neuron decides.</label></li>
-<li><label><input type="checkbox">I can compare an artificial neuron with a real neuron.</label></li>
+<li><label><input type="checkbox">I can change the weights to fix a neuron’s mistakes.</label></li>
 <li><label><input type="checkbox">I can name the layers of a neural network.</label></li>
 </ul>
 </div>
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">📥</span> <a href="../../glossary.html#glossary-input" class="glossary-link" data-original-href="#glossary-input" data-slug="input" data-term="input">input</a>: a number that goes into a neuron</li>
-<li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-weight" class="glossary-link" data-original-href="#glossary-weight" data-slug="weight" data-term="weight">weight</a>: a number that says how much an input matters</li>
-<li><span class="icon">🚦</span> <a href="../../glossary.html#glossary-threshold" class="glossary-link" data-original-href="#glossary-threshold" data-slug="threshold" data-term="threshold">threshold</a>: the number the total must pass for the neuron to fire</li>
-<li><span class="icon">🔵</span> <a href="../../glossary.html#glossary-perceptron" class="glossary-link" data-original-href="#glossary-perceptron" data-slug="perceptron" data-term="perceptron">perceptron</a>: the first artificial neuron that could learn (1958)</li>
-<li><span class="icon">🧱</span> <a href="../../glossary.html#glossary-layer" class="glossary-link" data-original-href="#glossary-layer" data-slug="layer" data-term="layer">layer</a>: a row of neurons in a neural network. Each layer sends its answers to the next one</li>
+<li><span class="icon">📥</span> <a href="../../glossary.html#glossary-input" class="glossary-link" data-slug="input" data-original-href="#glossary-input" data-term="input">input</a>: a number that goes into a neuron</li>
+<li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-weight" class="glossary-link" data-slug="weight" data-original-href="#glossary-weight" data-term="weight">weight</a>: a number that says how much an input matters</li>
+<li><span class="icon">🚦</span> <a href="../../glossary.html#glossary-threshold" class="glossary-link" data-slug="threshold" data-original-href="#glossary-threshold" data-term="threshold">threshold</a>: the number the total must be more than for the neuron to fire</li>
+<li><span class="icon">🔵</span> <a href="../../glossary.html#glossary-perceptron" class="glossary-link" data-slug="perceptron" data-original-href="#glossary-perceptron" data-term="perceptron">perceptron</a>: the first artificial neuron that could learn (1958)</li>
+<li><span class="icon">🧱</span> <a href="../../glossary.html#glossary-layer" class="glossary-link" data-slug="layer" data-original-href="#glossary-layer" data-term="layer">layer</a>: a row of neurons in a neural network. Each layer sends its answers to the next one</li>
 </ul>
 </div>
 </div>
 <div class="guided-notes-link">
 <p><a href="../../handouts/Unit_2/2.4_The_Artificial_Neuron.pdf" target="_blank">Printable lesson sheet</a> - the sheet you write on today.</p>
 </div>
+<div class="guided-notes-link">
+<p><a href="../../handouts/Unit_2/2.4_Creature_Cards.pdf" target="_blank">Creature cards</a>: print one set for the class.</p>
+</div>
 <section id="warmup" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="warmup">🔥 Warm Up</h2>
-<p>Your friends invite you to play soccer after school. Should you go? Three things matter:</p>
+<p>These cards are for made-up creatures. Each card shows two numbers, as stars: <strong>Strength</strong> (how hard it hits) and <strong>Magic</strong>.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 38%">
-<col style="width: 38%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Question</th>
-<th style="text-align: center;">Answer: 1 = yes, 0 = no</th>
-<th style="text-align: center;">How much does it matter to you? (0 to 3)</th>
+<th>Card</th>
+<th style="text-align: center;">Strength</th>
+<th style="text-align: center;">Magic</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Is it sunny?</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td><strong>Krellis</strong></td>
+<td style="text-align: center;">★★★★☆ (4)</td>
+<td style="text-align: center;">★★☆☆☆ (2)</td>
 </tr>
 <tr class="even">
-<td>Are my friends going?</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td>Is my homework done?</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td><strong>Lullom</strong></td>
+<td style="text-align: center;">★★☆☆☆ (2)</td>
+<td style="text-align: center;">★★★★☆ (4)</td>
 </tr>
 </tbody>
 </table>
-<ol type="1">
-<li>Fill in the table on your sheet. <strong>You</strong> decide how much each thing matters.</li>
-<li>Multiply each answer by how much it matters. Add them up.</li>
-<li>If the total is <strong>4 or more</strong>, you go!</li>
-</ol>
-<p>Compare with a partner. You had the same answers (1 or 0). Did you make the same decision?</p>
-<div class="think" title="Why did partners make different decisions?">
-<p>Because you chose different numbers for <strong>how much it matters</strong>. Those numbers are called <strong>weights</strong>. The weights decide everything.</p>
+<p>One is a <strong>Fighter</strong>. One is a <strong>Wizard</strong>. Which is which? Tell a partner why.</p>
+<div class="think" title="Answer">
+<p>Krellis is the <strong>Fighter</strong>: more Strength than Magic. Lullom is the <strong>Wizard</strong>: more Magic than Strength.</p>
+<p>You used a rule in your head: <em>compare the two numbers.</em> Today, you’ll build a neuron that uses a rule like that.</p>
 </div>
 </section>
 <section id="learn" class="level2 unnumbered">
@@ -705,16 +694,16 @@ window.Quarto = {
 <p>An artificial neuron does three things:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../images/Unit_2/2.4_artificial_neuron.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Three inputs: Sunny 1, Friends going 1, Homework done 0. Each is multiplied by a weight: 2, 3, and 1. The neuron adds them up: 2 plus 3 plus 0 is 5. Is it 4 or more? Yes. Output: go." width="720"></p>
+<p><img src="../../images/Unit_2/2.4_artificial_neuron.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Two inputs from a card: Strength 4 stars and Magic 2 stars. Strength is multiplied by 1. Magic is multiplied by minus 1. The neuron adds them up: 4 minus 2 is 2. Is it more than 0? Yes. Output: Fighter." width="720"></p>
 </figure>
 </div>
 <ol type="1">
-<li><strong>Multiply</strong> each <a href="../../glossary.html#glossary-input" class="glossary-link" data-original-href="#glossary-input" data-slug="input" data-term="input">input</a> by its <a href="../../glossary.html#glossary-weight" class="glossary-link" data-original-href="#glossary-weight" data-slug="weight" data-term="weight">weight</a>.</li>
+<li><strong>Multiply</strong> each <a href="../../glossary.html#glossary-input" class="glossary-link" data-slug="input" data-original-href="#glossary-input" data-term="input">input</a> by its <a href="../../glossary.html#glossary-weight" class="glossary-link" data-slug="weight" data-original-href="#glossary-weight" data-term="weight">weight</a>.</li>
 <li><strong>Add</strong> them up.</li>
-<li><strong>Compare</strong> the total with the <a href="../../glossary.html#glossary-threshold" class="glossary-link" data-original-href="#glossary-threshold" data-slug="threshold" data-term="threshold">threshold</a>. If the total is big enough, the neuron fires: <strong>YES</strong>. If not: <strong>NO</strong>.</li>
+<li><strong>Compare</strong> the total with the <a href="../../glossary.html#glossary-threshold" class="glossary-link" data-slug="threshold" data-original-href="#glossary-threshold" data-term="threshold">threshold</a>. If the total is <strong>more than</strong> the threshold, the neuron fires: <strong>Fighter</strong>. If not: <strong>Wizard</strong>.</li>
 </ol>
-<p><span class="math display">\[\text{total} = (\text{input}_1 \times \text{weight}_1) + (\text{input}_2 \times \text{weight}_2) + (\text{input}_3 \times \text{weight}_3)\]</span></p>
-<p>A weight can be <strong>negative</strong>. A negative weight says: <em>this input makes me LESS likely to fire.</em></p>
+<p><span class="math display">\[\text{total} = (\text{Strength} \times \text{Strength weight}) + (\text{Magic} \times \text{Magic weight})\]</span></p>
+<p>A weight can be <strong>negative</strong>. Here the Magic weight is <span class="math inline">\(-1\)</span>. It says: <em>more Magic makes me LESS likely to say Fighter.</em></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -741,7 +730,7 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td>Fires only if the total is big enough</td>
-<td>Fires only if the total passes the threshold</td>
+<td>Fires only if the total is more than the threshold</td>
 </tr>
 </tbody>
 </table>
@@ -751,43 +740,183 @@ window.Quarto = {
 </section>
 <section id="from-one-neuron-to-a-network" class="level3">
 <h3 class="anchored" data-anchor-id="from-one-neuron-to-a-network">2.4.2 - From One Neuron to a Network</h3>
-<p>One neuron makes one small decision. A <a href="../../glossary.html#glossary-neural-network" class="glossary-link" data-original-href="#glossary-neural-network" data-slug="neural-network" data-term="neural network">neural network</a> connects many neurons. They’re arranged in rows called <a href="../../glossary.html#glossary-layer" class="glossary-link" data-original-href="#glossary-layer" data-slug="layer" data-term="layers">layers</a>.</p>
+<p>One neuron makes one small decision. A <a href="../../glossary.html#glossary-neural-network" class="glossary-link" data-slug="neural-network" data-original-href="#glossary-neural-network" data-term="neural network">neural network</a> connects many neurons. They’re arranged in rows called <a href="../../glossary.html#glossary-layer" class="glossary-link" data-slug="layer" data-original-href="#glossary-layer" data-term="layers">layers</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../images/Unit_2/2.4_network.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A small neural network. On the left, three inputs: Sunny 1, Friends going 1, Homework done 0. In the middle, a column of four neurons. On the right, two neurons: go and stay home. Lines connect every input to every middle neuron, and every middle neuron to both right neurons. The top middle neuron's three lines are highlighted with weights times 2, times 3, and times 1. It's labeled: one neuron, like the one above: multiply, add, compare. A note says each line is a weight. Labels under the columns: input layer, the numbers go in. Hidden layer, its answers go to the next layer. Output layer, one neuron for each answer." width="720"></p>
+<p><img src="../../images/Unit_2/2.4_network.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A small neural network. On the left, two inputs: Strength 4 and Magic 2. In the middle, a column of three neurons. On the right, two neurons: Fighter and Wizard. Lines connect every input to every middle neuron, and every middle neuron to both right neurons. The top middle neuron's two lines are highlighted with weights times 1 and times minus 1. It's labeled: one neuron, like the one above: multiply, add, compare. A note says each line is a weight. Labels under the columns: input layer, the numbers go in. Hidden layer, its answers go to the next layer. Output layer, one neuron for each answer." width="720"></p>
 </figure>
 </div>
 <ol type="1">
-<li>The <strong>input layer</strong> holds the numbers that go in. Here, they’re the three answers from the warm-up.</li>
-<li>Every neuron in the <strong>hidden layer</strong> gets every input. Each one multiplies, adds, and compares, like the neuron above. Each one has its <strong>own</strong> weights. Its answer isn’t “go” or “stay”. Its answer goes to the next layer as an input.</li>
+<li>The <strong>input layer</strong> holds the numbers that go in. Here, they’re the two numbers from a card.</li>
+<li>Every neuron in the <strong>hidden layer</strong> gets every input. Each one multiplies, adds, and compares, like the neuron above. Each one has its <strong>own</strong> weights. Its answer isn’t “Fighter” or “Wizard”. Its answer goes to the next layer as an input.</li>
 <li>The <strong>output layer</strong> gives the answer. There’s one neuron for each possible answer. The one with the biggest total wins.</li>
 </ol>
-<p>Every line is a <strong>weight</strong>. Count them: <span class="math inline">\(3 \times 4 + 4 \times 2 = 20\)</span> weights. The chatbots you use have <strong>billions</strong> of weights and many hidden layers.</p>
+<p>Every line is a <strong>weight</strong>. Count them: <span class="math inline">\(2 \times 3 + 3 \times 2 = 12\)</span> weights. The chatbots you use have <strong>billions</strong> of weights and many hidden layers.</p>
 <div class="think" title="Why is it called hidden?">
-<p>You see the numbers that go in and the answer that comes out. You don’t see what the middle neurons decide. Nobody tells them what to look for, either. They find it while the network learns. (Lesson 2.5 shows how.)</p>
+<p>You see the numbers that go in and the answer that comes out. You don’t see what the middle neurons decide. Nobody tells them what to look for, either. They find it while the network learns. In Lesson 2.5, the class becomes a network and watches this happen.</p>
 </div>
 </section>
 </section>
 <section id="try-it" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
-<section id="be-a-neuron" class="level3">
-<h3 class="anchored" data-anchor-id="be-a-neuron">2.4.3 - Be a Neuron</h3>
+<section id="find-the-weights" class="level3">
+<h3 class="anchored" data-anchor-id="find-the-weights">2.4.3 - Find the Weights</h3>
+<p>Your teacher writes a neuron on the board. Its numbers are <strong>wrong</strong>. Your job is to fix them.</p>
 <div class="steps">
 <ol type="1">
-<li>One person is the <strong>neuron</strong>. The neuron gets a <strong>threshold</strong> card: 3.</li>
-<li>Three people are <strong>inputs</strong>: <strong>A</strong>, <strong>B</strong>, and <strong>C</strong>. Their weight cards are <strong>A: +2</strong>, <strong>B: +2</strong>, and <strong>C: −1</strong>.</li>
-<li>Your teacher calls out who is “on” (the rounds are on your sheet). The inputs that are on hold up their cards.</li>
-<li>The neuron adds the cards that are up. If the total is <strong>3 or more</strong>, the neuron stands up (fires)!</li>
-<li>Do 5 rounds. Then switch jobs.</li>
+<li>The neuron starts with <strong>Strength weight 1</strong>, <strong>Magic weight 1</strong>, and <strong>threshold 5</strong>.</li>
+<li>Each group gets one or two creature cards. Keep the type folded under.</li>
+<li>Calculate the total for your card. Is it more than the threshold? Say “Fighter” or “Wizard” out loud. Then unfold the card. Right or wrong?</li>
+<li>Count the right answers on the board.</li>
+<li>As a class, change <strong>one</strong> number. Look at the wrong cards first. Should a weight go up or down? Then test every card again.</li>
+<li>Keep going until all 6 cards are right. Write your weights on your sheet.</li>
 </ol>
+</div>
+<p>Check your class’s weights here. Change the numbers and watch the line move.</p>
+<!-- neuron_weights.html: Lesson 2.4. One neuron, three numbers you change by
+     hand: Strength weight, Magic weight, threshold. It reads the class's six
+     creature cards and draws its rule as a line. Then test it on all 140
+     Fighters and Wizards in the made-up data (scripts/make-creatures.py). -->
+<div class="nw" id="nw">
+  <div class="nw-top">
+    <div class="nw-left">
+      <div class="nw-nums">
+        <div class="nw-num"><span>Strength weight</span><div><button type="button" data-k="0" data-d="-1">−</button><b class="nw-v0">1</b><button type="button" data-k="0" data-d="1">+</button></div></div>
+        <div class="nw-num"><span>Magic weight</span><div><button type="button" data-k="1" data-d="-1">−</button><b class="nw-v1">1</b><button type="button" data-k="1" data-d="1">+</button></div></div>
+        <div class="nw-num nw-th"><span>Threshold</span><div><button type="button" data-k="2" data-d="-1">−</button><b class="nw-v2">5</b><button type="button" data-k="2" data-d="1">+</button></div></div>
+      </div>
+      <div class="nw-rule"></div>
+      <table class="nw-cards" data-quarto-disable-processing="true"><thead><tr><th>Card</th><th>Strength</th><th>Magic</th><th>Total</th><th>Neuron says</th><th>Really</th><th></th></tr></thead><tbody></tbody></table>
+      <div class="nw-score" aria-live="polite"></div>
+      <button type="button" class="nw-btn nw-reset">↺ Start over (1, 1, 5)</button>
+    </div>
+    <div class="nw-right">
+      <canvas class="nw-plot" width="400" height="400" aria-label="The six cards on a graph of Strength and Magic, and the neuron's line"></canvas>
+      <div class="nw-key"><span class="f">■</span> Fighter &nbsp; <span class="w">●</span> Wizard &nbsp; Shaded: where the neuron says <span class="f">Fighter</span> or <span class="w">Wizard</span>. The black line is where the total equals the threshold.</div>
+    </div>
+  </div>
+  <div class="nw-bottom">
+    <button type="button" class="nw-btn nw-all">📊 Test on all 140 Fighters and Wizards</button>
+    <div class="nw-res"></div>
+  </div>
+</div>
+
+<style>
+.nw { border: 1px solid #d9e1e8; border-radius: 10px; padding: 0.8rem; margin: 0.75rem 0 1.25rem; background: #fbfcfd; }
+.nw-top { display: flex; flex-wrap: wrap; gap: 1rem; }
+.nw-left { flex: 1 1 300px; display: flex; flex-direction: column; gap: 0.5rem; }
+.nw-right { flex: 0 1 340px; margin: 0 auto; }
+.nw-nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+.nw-num { background: #fff; border: 2px solid #d35400; border-radius: 8px; text-align: center; padding: 0.3rem 0.2rem; }
+.nw-num.nw-th { border-color: #2c3e50; }
+.nw-num span { display: block; font-size: 0.8rem; color: #555; }
+.nw-num div { display: flex; align-items: center; justify-content: center; gap: 0.35rem; }
+.nw-num b { font-size: 1.5rem; min-width: 1.6em; color: #d35400; }
+.nw-num.nw-th b { color: #2c3e50; }
+.nw-num button { width: 2rem; height: 2rem; border-radius: 50%; border: 1px solid #2c3e50; background: #fff; font-size: 1.2rem; font-weight: bold; cursor: pointer; line-height: 1; }
+.nw-rule { font-size: 0.95rem; background: #fff; border: 1px solid #e3e8ed; border-radius: 6px; padding: 0.35rem 0.6rem; }
+.nw-cards { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+.nw-cards th, .nw-cards td { border: 1px solid #d9e1e8; padding: 0.15rem 0.35rem; text-align: center; }
+.nw-cards td.ok { color: #1e8449; font-weight: bold; } .nw-cards td.no { color: #c0392b; font-weight: bold; }
+.nw-score { font-size: 1.1rem; font-weight: bold; min-height: 1.5em; }
+.nw-btn { border: 1px solid #2c3e50; background: #fff; color: #2c3e50; border-radius: 6px; padding: 0.3rem 0.8rem; font-weight: 600; cursor: pointer; align-self: flex-start; }
+.nw-plot { width: 100%; height: auto; background: #fff; border: 1px solid #e3e8ed; border-radius: 8px; display: block; }
+.nw-key { font-size: 0.82rem; margin-top: 0.3rem; line-height: 1.4; }
+.nw-key .f { color: #c0392b; font-weight: bold; } .nw-key .w { color: #7d3c98; font-weight: bold; }
+.nw-bottom { margin-top: 0.7rem; border-top: 1px solid #e3e8ed; padding-top: 0.6rem; }
+.nw-res { margin-top: 0.4rem; line-height: 1.6; min-height: 1.6em; }
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("nw");
+  if (!root) return;
+  // name, type, strength, magic, speed, toughness, height, weight, home
+  const CREATURES = [["Fumbo","fighter",51,61,38,21,1.6,77,"forest"],["Plillux","fighter",80,50,73,61,1.5,66,"forest"],["Sambos","mini",15,16,38,54,0.7,17,"mountain"],["Snimbik","wizard",42,57,40,65,2.0,142,"mountain"],["Grapis","mini",28,20,50,58,0.4,7,"lake"],["Skape","mini",30,36,37,62,0.5,7,"mountain"],["Dakundu","mini",29,43,39,64,0.7,21,"forest"],["Trandi","fighter",69,50,59,65,1.5,74,"mountain"],["Lullom","wizard",38,64,17,50,1.9,160,"forest"],["Flellik","mini",23,5,47,24,0.5,7,"mountain"],["Vomanak","giant",79,89,49,39,3.2,298,"mountain"],["Tragil","mini",7,19,54,61,0.7,10,"mountain"],["Skabil","wizard",46,71,55,71,1.3,60,"mountain"],["Tarra","giant",82,71,36,52,3.6,247,"mountain"],["Degi","fighter",71,51,78,34,1.6,68,"forest"],["Vasi","giant",95,96,66,44,2.9,248,"mountain"],["Sandam","fighter",50,33,58,43,1.9,88,"mountain"],["Volar","mini",18,40,69,52,0.6,11,"mountain"],["Doremar","mini",24,5,40,59,0.3,3,"lake"],["Bribas","giant",93,88,63,52,3.7,372,"lake"],["Drosa","wizard",36,55,44,59,1.3,53,"mountain"],["Kinax","mini",22,13,30,21,0.6,16,"mountain"],["Rumbim","wizard",42,77,59,39,1.5,72,"forest"],["Trames","mini",23,22,39,47,0.5,12,"forest"],["Suma","mini",14,26,59,60,0.4,4,"mountain"],["Glarril","mini",34,9,54,50,0.5,12,"forest"],["Flishun","mini",28,20,84,47,0.5,9,"lake"],["Snoki","giant",100,81,38,19,2.8,300,"lake"],["Grikun","wizard",48,65,56,62,1.5,57,"lake"],["Glakos","fighter",82,44,52,51,1.4,82,"forest"],["Karrir","fighter",75,45,30,85,1.9,145,"lake"],["Rezivil","fighter",91,39,44,55,1.3,50,"mountain"],["Gronar","mini",5,32,32,49,0.3,2,"lake"],["Tirox","mini",18,15,42,58,0.7,14,"lake"],["Mimbox","mini",5,38,86,44,0.5,7,"lake"],["Trorrul","giant",75,87,51,63,2.7,196,"mountain"],["Plaril","mini",5,23,55,45,0.5,6,"forest"],["Tibi","fighter",57,25,63,37,1.5,73,"lake"],["Pasir","wizard",38,67,29,34,1.0,27,"lake"],["Drambax","wizard",42,58,60,23,1.7,108,"lake"],["Sarras","mini",29,34,29,24,0.5,8,"forest"],["Gilax","giant",76,79,65,26,3.0,191,"mountain"],["Mundax","wizard",67,67,53,50,1.1,24,"lake"],["Pepa","giant",68,69,44,61,3.3,302,"lake"],["Dibox","giant",78,83,71,27,3.2,265,"forest"],["Tedux","mini",18,21,18,61,0.2,2,"mountain"],["Titomo","mini",26,37,53,58,0.5,6,"forest"],["Snombos","wizard",49,69,47,52,1.6,74,"forest"],["Grivax","giant",73,95,66,37,3.0,349,"lake"],["Lodovuk","wizard",20,58,50,48,1.7,76,"lake"],["Risum","mini",19,14,29,47,0.4,5,"forest"],["Pleshok","mini",27,18,41,50,0.6,9,"mountain"],["Krellis","fighter",61,25,63,43,2.4,149,"mountain"],["Konik","fighter",69,36,45,31,1.3,64,"lake"],["Krerron","mini",31,24,60,44,0.6,12,"forest"],["Plikux","mini",17,28,52,52,0.5,5,"lake"],["Troshe","mini",5,26,77,26,0.5,7,"mountain"],["Porris","fighter",82,34,40,91,1.2,55,"forest"],["Peban","giant",99,98,61,15,2.6,200,"mountain"],["Dranda","wizard",31,58,57,85,1.2,44,"mountain"],["Punogil","mini",17,25,65,53,0.4,5,"lake"],["Dapuk","wizard",32,82,55,30,1.7,79,"mountain"],["Zozondi","giant",83,83,48,68,3.8,334,"mountain"],["Vokon","mini",21,10,68,45,0.8,19,"forest"],["Tazu","fighter",87,44,48,39,1.3,63,"forest"],["Niton","mini",20,20,25,51,0.5,7,"mountain"],["Nonam","mini",21,34,67,35,0.5,5,"mountain"],["Fakir","mini",5,30,49,55,0.5,7,"forest"],["Kromos","fighter",81,38,41,51,1.7,86,"forest"],["Grige","fighter",80,41,49,31,1.3,55,"mountain"],["Vepul","wizard",38,69,47,33,1.1,27,"forest"],["Trombar","wizard",42,95,75,51,2.0,132,"mountain"],["Trapok","fighter",56,34,43,57,1.7,107,"forest"],["Biva","fighter",51,25,52,56,2.2,92,"lake"],["Rilok","fighter",54,33,72,55,1.5,42,"forest"],["Duvus","mini",9,17,50,48,0.6,11,"lake"],["Zirrige","mini",5,19,65,50,0.3,2,"mountain"],["Zoran","wizard",52,57,40,59,1.0,30,"lake"],["Note","fighter",60,40,49,30,1.7,105,"forest"],["Tresho","mini",31,15,64,34,0.4,3,"mountain"],["Plemi","giant",82,78,51,26,2.8,230,"lake"],["Dradidi","giant",97,72,51,51,1.8,92,"lake"],["Gozar","wizard",22,62,49,61,1.6,77,"lake"],["Beko","fighter",59,52,49,58,1.3,54,"forest"],["Skanu","fighter",74,29,56,37,1.8,71,"forest"],["Glebon","mini",37,30,35,15,0.6,20,"forest"],["Desak","giant",69,73,44,38,3.1,197,"mountain"],["Granu","wizard",35,54,52,41,1.9,113,"mountain"],["Zasham","wizard",46,74,29,47,1.7,83,"forest"],["Zimbam","mini",6,29,79,27,0.5,10,"forest"],["Veshek","wizard",41,58,38,76,1.5,58,"forest"],["Koroke","fighter",59,42,56,35,1.6,79,"lake"],["Skonkas","wizard",37,57,53,51,1.7,91,"mountain"],["Flombo","giant",69,80,29,53,2.3,214,"forest"],["Zirrax","mini",30,28,62,72,0.6,7,"lake"],["Krasusa","mini",23,15,25,45,0.3,2,"lake"],["Rundu","fighter",54,42,60,44,1.3,54,"forest"],["Pona","wizard",13,85,25,50,1.2,25,"forest"],["Gepak","giant",67,69,43,31,3.4,384,"mountain"],["Snalas","mini",20,46,63,51,0.6,10,"forest"],["Plunkox","fighter",66,44,52,46,1.7,76,"mountain"],["Ralli","wizard",51,53,67,28,2.0,118,"lake"],["Vosok","giant",89,73,54,43,3.3,377,"forest"],["Glerrir","fighter",64,15,60,53,1.4,77,"lake"],["Mesolla","mini",37,22,53,55,0.4,6,"mountain"],["Vala","mini",33,12,65,58,0.6,11,"lake"],["Pindux","wizard",45,59,27,34,1.9,121,"lake"],["Plambul","wizard",49,44,54,74,1.8,88,"forest"],["Tilol","mini",36,26,45,92,0.6,9,"lake"],["Lika","wizard",22,62,60,17,1.5,61,"lake"],["Lindur","mini",61,8,64,51,0.3,3,"mountain"],["Fellir","fighter",68,34,45,62,2.0,166,"mountain"],["Brazom","fighter",65,42,47,43,1.7,65,"mountain"],["Sibi","fighter",45,36,43,39,1.7,64,"lake"],["Drolle","fighter",62,28,40,46,1.0,25,"forest"],["Glaza","giant",64,55,48,27,3.6,456,"mountain"],["Feva","mini",5,21,77,48,0.5,10,"mountain"],["Tukix","mini",36,43,61,39,0.5,8,"forest"],["Skite","giant",89,77,47,47,2.8,169,"forest"],["Glabo","wizard",56,49,43,26,0.9,24,"forest"],["Gite","fighter",60,49,61,51,1.2,43,"lake"],["Tamonki","mini",10,30,54,46,0.6,15,"lake"],["Rive","giant",100,87,25,54,3.3,275,"lake"],["Snenkor","mini",45,52,59,59,0.5,6,"mountain"],["Doza","fighter",64,29,40,52,1.2,67,"lake"],["Kinen","giant",63,65,45,60,3.4,395,"forest"],["Bomber","fighter",64,44,43,54,1.3,54,"lake"],["Naku","mini",5,20,34,47,0.6,9,"mountain"],["Pimis","mini",37,33,18,53,0.4,5,"mountain"],["Gobe","mini",13,5,69,22,0.5,11,"forest"],["Sirral","wizard",52,69,39,44,1.7,136,"mountain"],["Gobur","giant",55,82,38,52,2.9,293,"lake"],["Galla","wizard",17,63,41,62,1.0,34,"forest"],["Tashe","mini",67,21,44,39,0.5,5,"mountain"],["Poserer","giant",80,71,37,19,3.6,295,"mountain"],["Mumbur","wizard",54,98,30,51,1.3,47,"lake"],["Snopol","mini",9,33,44,51,0.5,11,"mountain"],["Kashel","mini",18,38,65,45,0.5,9,"forest"],["Krider","mini",20,22,51,63,0.7,18,"forest"],["Tramepu","fighter",55,44,75,61,1.5,50,"mountain"],["Skedis","fighter",64,34,38,59,1.4,68,"mountain"],["Fipa","wizard",39,58,48,81,1.0,52,"lake"],["Snipun","mini",6,25,48,37,0.6,7,"mountain"],["Skupok","fighter",57,49,73,70,1.6,66,"mountain"],["Flabim","mini",31,28,57,40,0.3,2,"mountain"],["Lobo","wizard",45,72,53,62,1.7,67,"lake"],["Redix","fighter",58,18,44,59,1.9,96,"mountain"],["Fletox","mini",32,25,81,71,0.3,4,"lake"],["Peniruk","mini",36,5,30,53,0.6,12,"lake"],["Glandok","mini",21,38,44,59,0.4,7,"mountain"],["Penom","giant",100,74,52,45,2.7,197,"mountain"],["Grinko","giant",100,85,66,34,2.9,359,"lake"],["Bobil","giant",84,92,29,37,3.9,434,"lake"],["Florren","giant",86,77,42,50,2.9,198,"forest"],["Migi","giant",71,78,58,40,3.2,182,"forest"],["Skuli","wizard",35,50,38,86,1.9,112,"forest"],["Plamon","giant",85,77,51,70,1.8,58,"mountain"],["Droton","mini",27,18,69,38,0.5,8,"lake"],["Rarar","wizard",50,30,61,15,1.6,113,"forest"],["Plura","wizard",48,77,38,49,1.1,53,"lake"],["Snomba","mini",17,9,37,48,0.4,5,"lake"],["Dimbos","mini",14,24,39,31,0.5,6,"forest"],["Lonkoba","wizard",38,44,44,70,1.9,226,"mountain"],["Lotin","mini",34,32,64,49,0.6,10,"mountain"],["Lanis","mini",21,22,59,37,0.3,2,"forest"],["Nagil","wizard",35,53,45,40,1.7,121,"lake"],["Grashil","wizard",49,77,49,46,1.9,150,"mountain"],["Bindos","wizard",53,43,63,54,1.5,75,"mountain"],["Doshik","fighter",61,33,33,77,1.4,50,"forest"],["Vugak","wizard",41,78,35,27,1.3,64,"lake"],["Fulinda","giant",79,94,63,44,2.3,145,"lake"],["Tisi","fighter",72,61,31,69,1.3,41,"mountain"],["Kisam","mini",22,21,45,37,0.7,18,"lake"],["Skome","mini",18,6,78,42,0.7,12,"mountain"],["Groshon","wizard",24,62,58,43,1.9,98,"lake"],["Krozin","mini",28,24,43,52,0.5,8,"mountain"],["Snumbik","fighter",62,29,57,53,1.5,61,"mountain"],["Tesel","giant",88,65,32,39,2.3,177,"mountain"],["Biman","giant",87,100,35,61,3.5,290,"lake"],["Nerre","wizard",34,74,39,42,1.7,74,"lake"],["Lusa","fighter",51,55,27,46,1.7,57,"lake"],["Muril","mini",16,9,58,41,0.5,10,"mountain"],["Lellom","giant",85,65,79,5,3.4,228,"lake"],["Trimbo","mini",21,25,51,11,0.4,4,"forest"],["Glashom","giant",85,96,46,68,4.1,374,"lake"],["Nusan","wizard",29,55,13,43,1.4,50,"lake"],["Fembux","fighter",54,44,20,52,1.8,112,"lake"],["Gibox","fighter",56,40,52,47,2.4,152,"mountain"],["Vigis","giant",78,100,25,45,3.9,386,"mountain"],["Drankam","mini",44,26,60,65,0.6,9,"forest"],["Sopuvan","giant",92,84,21,44,2.9,297,"lake"],["Puvur","giant",86,90,79,60,3.2,309,"lake"],["Rindom","giant",77,74,49,32,2.8,244,"lake"],["Driris","giant",95,90,37,24,3.2,421,"forest"],["Rapon","wizard",41,71,51,56,1.8,67,"forest"],["Snava","mini",25,17,69,63,0.5,10,"mountain"],["Drulax","wizard",67,58,39,37,1.3,75,"forest"],["Snokel","mini",16,37,38,35,0.7,25,"lake"],["Pimix","giant",95,74,41,21,2.8,259,"lake"],["Gezex","mini",5,16,63,31,0.6,9,"lake"],["Krubivi","giant",76,83,40,78,2.5,219,"lake"],["Tuvadul","fighter",91,20,66,61,1.8,95,"lake"],["Drendak","giant",79,66,15,47,4.1,628,"lake"],["Renku","mini",13,24,48,82,0.6,10,"mountain"],["Nendar","giant",76,91,61,38,3.1,322,"mountain"],["Kripa","wizard",35,70,52,52,1.6,91,"forest"],["Tenko","giant",73,76,63,56,2.9,237,"forest"],["Bise","wizard",56,69,47,23,1.4,61,"forest"],["Zorrak","wizard",35,75,33,49,1.5,79,"forest"],["Sidik","wizard",58,53,57,47,0.9,31,"lake"],["Favi","giant",85,76,47,48,2.8,200,"mountain"],["Drazux","fighter",63,41,26,46,1.3,41,"mountain"],["Skedex","mini",25,24,54,52,0.4,4,"lake"],["Boshin","mini",19,14,30,43,0.7,26,"forest"],["Pilak","mini",14,32,21,60,0.5,6,"forest"],["Ledam","mini",32,17,65,55,0.5,6,"lake"],["Ropo","fighter",74,38,27,13,1.7,66,"forest"],["Snarrol","giant",86,77,70,52,3.2,176,"lake"],["Brenon","mini",31,33,57,43,0.4,9,"lake"],["Snandux","wizard",16,63,56,67,1.8,146,"mountain"],["Vopom","wizard",18,88,31,63,2.4,160,"forest"],["Purrin","mini",41,11,46,52,0.6,9,"lake"],["Krondak","mini",20,19,47,39,0.7,16,"lake"],["Sezek","wizard",20,68,64,66,1.5,64,"mountain"],["Trebir","mini",21,25,55,52,0.6,12,"mountain"],["Vogemar","fighter",60,74,16,52,1.4,66,"forest"],["Puvos","wizard",35,60,56,71,1.4,79,"lake"],["Glarir","fighter",64,32,67,62,1.6,53,"lake"],["Plobi","wizard",46,52,60,62,1.1,44,"mountain"],["Suvas","wizard",37,68,97,38,1.7,104,"lake"],["Dotol","wizard",48,77,50,78,1.3,50,"forest"],["Snuri","fighter",69,43,54,77,1.2,36,"forest"],["Tivex","fighter",61,29,32,40,1.3,41,"forest"],["Rebuk","mini",5,30,43,58,0.6,9,"lake"],["Plina","wizard",33,67,61,51,1.0,28,"lake"],["Bapok","wizard",35,63,58,15,1.8,134,"lake"],["Gutos","mini",11,23,60,50,0.5,6,"lake"],["Trabin","fighter",62,56,43,29,1.6,61,"forest"],["Retir","wizard",19,58,54,56,1.1,33,"forest"],["Flerres","fighter",67,58,72,58,1.7,75,"forest"],["Glidis","fighter",75,50,34,36,1.4,34,"mountain"],["Sapam","giant",86,80,52,68,3.4,316,"forest"],["Troli","fighter",68,23,39,42,1.6,66,"mountain"],["Glunkum","mini",28,9,55,46,0.6,11,"forest"],["Skunde","mini",48,30,62,81,0.5,7,"lake"],["Morran","wizard",71,52,74,53,1.3,36,"lake"],["Mosirri","wizard",22,60,69,44,1.6,86,"forest"],["Pendos","wizard",38,61,43,33,1.4,40,"lake"],["Trazu","fighter",63,47,39,58,1.8,89,"forest"],["Skemul","mini",13,33,25,61,0.4,4,"lake"],["Snito","fighter",67,31,40,42,1.7,108,"mountain"],["Zirim","mini",30,14,43,59,0.6,10,"forest"],["Grobu","fighter",68,27,64,37,1.7,71,"mountain"],["Boro","wizard",38,67,49,33,1.6,75,"lake"],["Rokunes","mini",20,19,56,54,0.7,10,"forest"],["Grikak","fighter",54,30,45,66,1.6,84,"forest"],["Voso","fighter",50,51,57,25,1.5,64,"forest"],["Drimi","giant",81,84,55,68,3.3,293,"mountain"],["Snurri","mini",40,5,63,49,0.4,5,"forest"],["Flurri","fighter",53,33,67,66,1.9,68,"lake"],["Snabi","fighter",75,34,23,67,1.7,72,"forest"],["Latere","mini",23,35,57,87,0.6,13,"forest"],["Kruber","giant",93,87,37,47,2.3,98,"mountain"],["Drorrer","giant",78,75,51,50,3.3,249,"mountain"],["Totem","fighter",60,39,56,57,1.6,77,"lake"],["Lora","giant",80,85,42,50,2.5,133,"lake"],["Fasu","giant",64,100,58,47,3.1,260,"mountain"],["Ribu","giant",87,92,49,34,3.6,369,"forest"],["Vukom","mini",26,23,56,52,0.6,8,"lake"],["Pleve","mini",33,37,35,71,0.5,5,"mountain"],["Brodok","mini",21,29,61,36,0.5,6,"forest"],["Tello","mini",11,10,70,28,0.5,5,"mountain"],["Ponox","mini",30,14,43,41,0.5,5,"lake"],["Nigas","wizard",33,72,49,25,1.6,92,"forest"],["Lesim","giant",63,84,31,54,2.7,237,"forest"],["Borinox","fighter",89,38,65,57,1.8,101,"mountain"],["Zoshes","wizard",37,58,45,36,0.8,25,"forest"],["Suvar","wizard",51,73,33,39,1.3,66,"lake"],["Vasim","giant",70,81,27,30,2.1,146,"forest"],["Trallam","fighter",51,62,28,57,1.3,48,"mountain"],["Saton","giant",72,100,32,63,3.0,260,"mountain"],["Dririm","wizard",51,71,43,26,1.5,78,"lake"],["Vapa","giant",50,100,28,57,4.0,399,"mountain"],["Skedo","giant",72,72,23,39,3.5,487,"lake"],["Flonda","mini",17,16,40,35,0.7,16,"mountain"],["Dozima","giant",84,80,65,50,3.4,491,"mountain"],["Trapak","mini",26,35,46,33,0.4,5,"lake"],["Kigo","mini",18,26,43,38,0.5,7,"lake"],["Snuna","fighter",56,33,49,55,1.2,37,"mountain"],["Rondok","fighter",81,35,68,65,1.1,55,"lake"],["Krubu","wizard",32,40,70,68,1.4,64,"forest"],["Zembo","fighter",49,42,54,46,1.8,176,"mountain"],["Vishos","fighter",72,44,54,33,1.8,104,"lake"],["Zaki","fighter",83,20,36,61,1.0,24,"mountain"],["Kakok","mini",14,17,60,53,0.3,2,"forest"],["Porur","wizard",16,75,73,45,1.7,89,"forest"],["Flibix","fighter",85,47,52,25,2.0,102,"lake"],["Skosu","fighter",74,30,33,53,1.6,44,"lake"],["Gambu","wizard",9,71,69,54,1.3,67,"forest"],["Kranki","mini",11,5,48,49,0.2,1,"mountain"]];  // made by scripts/make-creatures.py
+  const CARDS = [["Krellis", 4, 2, "F"], ["Lullom", 2, 4, "W"], ["Rezivil", 5, 2, "F"], ["Pona", 1, 5, "W"], ["Sandam", 3, 2, "F"], ["Skabil", 3, 4, "W"]];
+  const START = [1, 1, 5], NAME = { F: "Fighter", W: "Wizard" }, COL = { F: "#c0392b", W: "#7d3c98" };
+  const stars = (v) => Math.max(1, Math.min(5, Math.ceil(v / 20)));
+  let w = START.slice();
+  const tbody = root.querySelector(".nw-cards tbody"), score = root.querySelector(".nw-score");
+  const rule = root.querySelector(".nw-rule"), res = root.querySelector(".nw-res");
+  const cv = root.querySelector(".nw-plot"), cx = cv.getContext("2d");
+  const total = (s, m) => s * w[0] + m * w[1];
+  const says = (s, m) => (total(s, m) > w[2] ? "F" : "W");
+
+  function draw() {
+    const W = cv.width, H = cv.height, L = 46, B = 44, T = 14, R = 14;
+    const X = (s) => L + ((s - 0.5) / 5) * (W - L - R), Y = (m) => H - B - ((m - 0.5) / 5) * (H - B - T);
+    cx.clearRect(0, 0, W, H);
+    // shade every small square by what the neuron says there
+    const step = 4;
+    for (let px = L; px < W - R; px += step) for (let py = T; py < H - B; py += step) {
+      const s = 0.5 + ((px - L) / (W - L - R)) * 5, m = 0.5 + ((H - B - py) / (H - B - T)) * 5;
+      cx.fillStyle = says(s, m) === "F" ? "#fbe3df" : "#efe3f5";
+      cx.fillRect(px, py, step, step);
+    }
+    cx.strokeStyle = "#d9e1e8"; cx.lineWidth = 1;
+    for (let k = 1; k <= 5; k++) { cx.beginPath(); cx.moveTo(X(k), T); cx.lineTo(X(k), H - B); cx.stroke(); cx.beginPath(); cx.moveTo(L, Y(k)); cx.lineTo(W - R, Y(k)); cx.stroke(); }
+    // the line: where the total equals the threshold
+    cx.save(); cx.beginPath(); cx.rect(L, T, W - L - R, H - B - T); cx.clip();
+    cx.strokeStyle = "#2c3e50"; cx.lineWidth = 3; cx.beginPath();
+    if (w[1] !== 0) { const m0 = (w[2] - w[0] * 0) / w[1], m6 = (w[2] - w[0] * 6) / w[1]; cx.moveTo(X(0), Y(m0)); cx.lineTo(X(6), Y(m6)); }
+    else if (w[0] !== 0) { const s0 = w[2] / w[0]; cx.moveTo(X(s0), Y(0)); cx.lineTo(X(s0), Y(6)); }
+    cx.stroke(); cx.restore();
+    cx.fillStyle = "#2c3e50"; cx.font = "13px sans-serif"; cx.textAlign = "center";
+    for (let k = 1; k <= 5; k++) { cx.fillText(k, X(k), H - B + 16); cx.fillText(k, L - 12, Y(k) + 4); }
+    cx.font = "bold 13px sans-serif"; cx.fillText("Strength (stars) →", (L + W - R) / 2, H - 8);
+    cx.save(); cx.translate(14, (T + H - B) / 2); cx.rotate(-Math.PI / 2); cx.fillText("Magic (stars) →", 0, 0); cx.restore();
+    // the cards
+    CARDS.forEach(([n, s, m, t]) => {
+      cx.fillStyle = COL[t]; cx.strokeStyle = "#fff"; cx.lineWidth = 2;
+      cx.beginPath();
+      if (t === "F") cx.rect(X(s) - 9, Y(m) - 9, 18, 18); else cx.arc(X(s), Y(m), 10, 0, 2 * Math.PI);
+      cx.fill(); cx.stroke();
+      cx.fillStyle = "#2c3e50"; cx.font = "bold 12px sans-serif"; cx.textAlign = s >= 5 ? "right" : "left";
+      cx.fillText(n, X(s) + (s >= 5 ? -12 : 12), Y(m) - 8);
+    });
+  }
+  function show() {
+    [0, 1, 2].forEach((k) => (root.querySelector(".nw-v" + k).textContent = String(w[k]).replace("-", "−")));
+    const n = (v) => String(v).replace("-", "−");
+    rule.innerHTML = `Total = (Strength × ${n(w[0])}) + (Magic × ${n(w[1])}). If the total is <b>more than ${n(w[2])}</b>, the neuron says <b>Fighter</b>. If not, it says <b>Wizard</b>.`;
+    let right = 0;
+    tbody.innerHTML = CARDS.map(([n, s, m, t]) => {
+      const y = says(s, m), ok = y === t; if (ok) right++;
+      return `<tr><td><b>${n}</b></td><td>${s}</td><td>${m}</td><td>${String(total(s, m)).replace("-", "−")}</td><td>${NAME[y]}</td><td>${NAME[t]}</td><td class="${ok ? "ok" : "no"}">${ok ? "✓" : "✗"}</td></tr>`;
+    }).join("");
+    score.innerHTML = right === 6 ? `6 of 6 right! You found weights that work.` : `${right} of 6 right. Change one number and look again.`;
+    root.dataset.right = right;
+    res.innerHTML = "";
+    draw();
+  }
+  root.querySelectorAll(".nw-num button").forEach((b) => b.addEventListener("click", () => {
+    const k = +b.dataset.k; w[k] = Math.max(-9, Math.min(20, w[k] + +b.dataset.d)); show();
+  }));
+  root.querySelector(".nw-reset").addEventListener("click", () => { w = START.slice(); show(); });
+  root.querySelector(".nw-all").addEventListener("click", () => {
+    const fw = CREATURES.filter((r) => r[1] === "fighter" || r[1] === "wizard");
+    let right = 0, f = 0, wz = 0;
+    fw.forEach((r) => { const t = r[1] === "fighter" ? "F" : "W", y = says(stars(r[2]), stars(r[3])); if (y === t) { right++; t === "F" ? f++ : wz++; } });
+    const nf = fw.filter((r) => r[1] === "fighter").length, nw = fw.length - nf;
+    res.innerHTML = `Your neuron got <b>${right} of ${fw.length}</b> right: <b>${Math.round((100 * right) / fw.length)}%</b>. ` +
+      `(Fighters: ${f} of ${nf}. Wizards: ${wz} of ${nw}.) Guessing gets about 50%.`;
+    root.dataset.all = right;
+  });
+  show();
+})();
+</script>
+<div class="think" title="Look at the graph. What does the neuron's rule look like?">
+<p>It’s <strong>one straight line</strong>. The neuron says Fighter on one side and Wizard on the other. Every set of weights makes a line. Changing a weight turns or moves the line.</p>
 </div>
 </section>
 </section>
 <section id="talk" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="talk">💬 Talk About It</h2>
-<p>Today, <strong>you</strong> chose every weight. But ChatGPT has billions of weights. Nobody can choose them by hand.</p>
+<p>Your class picked <strong>3 numbers</strong>, and it took a while. The network in 2.4.2 has 12. A chatbot has <strong>billions</strong>. Nobody can choose them by hand.</p>
 <div class="frames">
 <ul>
+<li>We fixed the weights by …</li>
 <li>An artificial neuron is like a real neuron because …</li>
 <li>An artificial neuron is different from a real neuron because …</li>
 <li>I think an AI with billions of weights gets them by …</li>
@@ -796,159 +925,23 @@ window.Quarto = {
 </section>
 <section id="go-further" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="go-further">🚀 Go Further</h2>
-<div class="project" title="Day 2: Build a Neuron That Sees">
-<p>This neuron looks at a 3 by 3 picture. Each square is an input: <strong>1</strong> if it’s black, <strong>0</strong> if it’s white. Each square has its own <strong>weight</strong>. The neuron says <strong>X</strong> if the total is more than the threshold. Otherwise it says <strong>O</strong>. Work with a partner.</p>
+<div class="project" title="Day 2: Test Your Neuron on 140 Creatures">
+<p>The data has 140 Fighters and Wizards. Your class’s neuron only saw 6 of them. Work with a partner.</p>
 <ol type="1">
-<li>Draw an X. All the weights are 0. What does the neuron say? Why?</li>
-<li>Change the weights with <strong>+</strong> and <strong>−</strong>. Try to get <strong>6 out of 6</strong> right on the test pictures.</li>
-<li>Write your weights on your sheet.</li>
-<li>Stuck? Ask: which squares are black in an X but white in an O?</li>
+<li>Put your class’s weights into the tool in 2.4.3.</li>
+<li>Press <strong>Test on all 140 Fighters and Wizards</strong>. Write the score on your sheet.</li>
+<li>Try to beat it. Change the numbers. What’s your best score?</li>
+<li>Look at the graph. Can <strong>any</strong> line get all 140 right? Why not?</li>
 </ol>
 </div>
-<!-- xo_neuron.html: Lesson 2.4. One artificial neuron looks at a 3x3 picture.
-     Each square has a weight. Score = add the weights of the black squares.
-     Score above the threshold means X, otherwise O. Students set the weights. -->
-<div class="xo" id="xo">
-  <div class="xo-top">
-    <div class="xo-col">
-      <div class="xo-h">1. Draw a picture</div>
-      <div class="xo-draw" aria-label="Picture to test. Click squares."></div>
-      <div class="xo-mini">
-        <button type="button" data-pic="X">X</button>
-        <button type="button" data-pic="O">O</button>
-        <button type="button" data-pic="clear">clear</button>
-      </div>
-    </div>
-    <div class="xo-col">
-      <div class="xo-h">2. The weights</div>
-      <div class="xo-weights" aria-label="Weights. Use plus and minus."></div>
-      <label class="xo-th">Threshold <button type="button" class="xo-tm">−</button> <b class="xo-tv">0</b> <button type="button" class="xo-tp">+</button></label>
-    </div>
-    <div class="xo-col xo-outcol">
-      <div class="xo-h">3. The neuron decides</div>
-      <div class="xo-sum"></div>
-      <div class="xo-out"></div>
-    </div>
-  </div>
-  <div class="xo-test">
-    <div class="xo-h">4. Test your weights on 6 pictures</div>
-    <div class="xo-cases"></div>
-    <div class="xo-bar">
-      <button type="button" class="xo-btn xo-plain xo-zero">↺ All weights 0</button>
-      <button type="button" class="xo-btn xo-plain xo-show">💡 Show one good answer</button>
-    </div>
-  </div>
-</div>
-
-<style>
-.xo { border: 1px solid #d9e1e8; border-radius: 10px; padding: 0.8rem; margin: 0.75rem 0 1.25rem; background: #fbfcfd; }
-.xo-top { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: flex-start; }
-.xo-col { display: flex; flex-direction: column; gap: 0.4rem; }
-.xo-outcol { flex: 1 1 180px; }
-.xo-h { font-weight: bold; }
-.xo-draw, .xo-weights { display: grid; grid-template-columns: repeat(3, 58px); grid-template-rows: repeat(3, 58px); gap: 4px; }
-.xo-draw button { border: 2px solid #2c3e50; background: #fff; border-radius: 4px; cursor: pointer; }
-.xo-draw button.on { background: #2c3e50; }
-.xo-w { border: 2px solid #d35400; border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: bold; font-size: 1.15rem; }
-.xo-w .pm { display: flex; gap: 2px; }
-.xo-w button { border: 1px solid #b8c4cf; background: #fff; border-radius: 3px; width: 22px; height: 20px; line-height: 1; padding: 0; cursor: pointer; font-size: 0.9rem; }
-.xo-mini { display: flex; gap: 0.3rem; }
-.xo-mini button, .xo-th button { border: 1px solid #b8c4cf; background: #fff; border-radius: 5px; padding: 0.05rem 0.5rem; cursor: pointer; }
-.xo-th { font-weight: 600; }
-.xo-sum { font-size: 1.05rem; line-height: 1.5; }
-.xo-out { font-size: 2rem; font-weight: bold; color: #1e8449; }
-.xo-test { margin-top: 0.9rem; border-top: 1px solid #e3e8ed; padding-top: 0.6rem; }
-.xo-cases { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 0.4rem 0; }
-.xo-case { text-align: center; font-size: 0.9rem; }
-.xo-case .g { display: grid; grid-template-columns: repeat(3, 14px); grid-template-rows: repeat(3, 14px); gap: 2px; margin: 0 auto 0.2rem; }
-.xo-case .g span { border: 1px solid #2c3e50; }
-.xo-case .g span.on { background: #2c3e50; }
-.xo-case .r { font-weight: bold; }
-.xo-case .r.ok { color: #1e8449; }
-.xo-case .r.no { color: #c0392b; }
-.xo-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.3rem; }
-.xo-btn { border: 1px solid #2c3e50; background: #2c3e50; color: #fff; border-radius: 6px; padding: 0.3rem 0.8rem; font-weight: 600; cursor: pointer; }
-.xo-btn.xo-plain { background: #fff; color: #2c3e50; }
-</style>
-
-<script>
-(() => {
-  const root = document.getElementById("xo");
-  if (!root) return;
-  const X = [1,0,1, 0,1,0, 1,0,1], O = [1,1,1, 1,0,1, 1,1,1];
-  const CASES = [
-    { name: "X", pic: X, want: "X" },
-    { name: "O", pic: O, want: "O" },
-    { name: "messy X", pic: [1,0,0, 0,1,0, 1,0,1], want: "X" },
-    { name: "messy O", pic: [1,1,0, 1,0,1, 1,1,1], want: "O" },
-    { name: "plus (+)", pic: [0,1,0, 1,1,1, 0,1,0], want: "O" },
-    { name: "small o", pic: [0,1,0, 1,0,1, 0,1,0], want: "O" },
-  ];
-  const GOOD = [0,-1,0, -1,3,-1, 0,-1,0];
-  let pic = X.slice(), w = new Array(9).fill(0), th = 0;
-
-  const drawEl = root.querySelector(".xo-draw"), wEl = root.querySelector(".xo-weights");
-  for (let i = 0; i < 9; i++) {
-    const b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-label", "square " + (i + 1));
-    b.addEventListener("click", () => { pic[i] ^= 1; draw(); });
-    drawEl.appendChild(b);
-    const c = document.createElement("div"); c.className = "xo-w";
-    c.innerHTML = `<span class="v">0</span><span class="pm"><button type="button" aria-label="minus">−</button><button type="button" aria-label="plus">+</button></span>`;
-    const [m, p] = c.querySelectorAll("button");
-    m.addEventListener("click", () => { w[i] = Math.max(-5, w[i] - 1); draw(); });
-    p.addEventListener("click", () => { w[i] = Math.min(5, w[i] + 1); draw(); });
-    wEl.appendChild(c);
-  }
-  const score = (P) => P.reduce((s, v, i) => s + v * w[i], 0);
-  const decide = (P) => (score(P) > th ? "X" : "O");
-
-  function draw() {
-    drawEl.querySelectorAll("button").forEach((b, i) => b.classList.toggle("on", !!pic[i]));
-    wEl.querySelectorAll(".xo-w").forEach((c, i) => {
-      c.querySelector(".v").textContent = (w[i] > 0 ? "+" : "") + w[i];
-      const a = Math.min(1, Math.abs(w[i]) / 5);
-      c.style.background = w[i] > 0 ? `rgba(30,132,73,${a * 0.45})` : w[i] < 0 ? `rgba(192,57,43,${a * 0.45})` : "#fff";
-    });
-    root.querySelector(".xo-tv").textContent = th;
-    const parts = pic.map((v, i) => (v ? (w[i] < 0 ? `(${w[i]})` : `${w[i]}`) : null)).filter((x) => x !== null);
-    root.querySelector(".xo-sum").innerHTML =
-      `Add the weights of the <b>black</b> squares:<br>${parts.length ? parts.join(" + ") : "0"} = <b>${score(pic)}</b><br>` +
-      `Is ${score(pic)} more than ${th}? <b>${score(pic) > th ? "Yes" : "No"}</b>`;
-    root.querySelector(".xo-out").textContent = "It's an " + decide(pic) + "!";
-    const cases = root.querySelector(".xo-cases");
-    cases.innerHTML = "";
-    let right = 0;
-    CASES.forEach((k) => {
-      const got = decide(k.pic), ok = got === k.want; if (ok) right++;
-      const d = document.createElement("div"); d.className = "xo-case";
-      d.innerHTML = `<div class="g">${k.pic.map((v) => `<span class="${v ? "on" : ""}"></span>`).join("")}</div>${k.name}<br>should be <b>${k.want}</b><br><span class="r ${ok ? "ok" : "no"}">says ${got} ${ok ? "✔" : "✖"}</span>`;
-      cases.appendChild(d);
-    });
-    const t = document.createElement("div"); t.className = "xo-case";
-    t.innerHTML = `<div style="font-size:1.6rem;font-weight:bold;margin-top:0.6rem">${right} / 6</div>right`;
-    cases.appendChild(t);
-  }
-  root.querySelectorAll("[data-pic]").forEach((b) => b.addEventListener("click", () => {
-    pic = b.dataset.pic === "X" ? X.slice() : b.dataset.pic === "O" ? O.slice() : new Array(9).fill(0); draw();
-  }));
-  root.querySelector(".xo-tm").addEventListener("click", () => { th = Math.max(-9, th - 1); draw(); });
-  root.querySelector(".xo-tp").addEventListener("click", () => { th = Math.min(9, th + 1); draw(); });
-  root.querySelector(".xo-zero").addEventListener("click", () => { w = new Array(9).fill(0); th = 0; draw(); });
-  root.querySelector(".xo-show").addEventListener("click", () => { w = GOOD.slice(); th = 0; draw(); });
-  draw();
-})();
-</script>
-<div class="think" title="Look at your weights. Do they make a picture?">
-<p>They often do! Squares that are <strong>only black in an X</strong> (like the center) get <strong>positive</strong> weights. Squares that are <strong>only black in an O</strong> (like the sides) get <strong>negative</strong> weights. The weights are a picture of what the neuron is looking for.</p>
+<div class="think" title="Why can't one line get 100%?">
+<p>A few Fighters have as much Magic as a Wizard. A few Wizards are strong. They land on the wrong side of every line. The best line gets about <strong>88%</strong> right.</p>
 </div>
 <div class="project" title="My Decision Neuron">
 <p>Make a neuron for a decision in your life: what to eat, what to watch, whether to go out. Pick 4 inputs and give each a weight. Test it on 5 days from last week. Does it decide what you really did?</p>
 </div>
-<div class="project" title="A Neuron for a Letter">
-<p>Make the picture bigger in your head: 5 by 5 squares. On grid paper, choose weights that tell a <strong>T</strong> from an <strong>L</strong>. Test your weights on a partner’s T and L.</p>
-</div>
 <div class="explore-link">
-<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-2.html#explore-2-4">the first neuron machine, and the problem one neuron can’t solve</a>. Read it on your own, if you want to learn more.</p>
+<p>🔭 <strong>Explore More:</strong> <a href="../../chapters/Explore/explore-unit-2.html#explore-2-4">the first neuron machine, and a neuron that sees</a>. Read it on your own, if you want to learn more.</p>
 </div>
 
 
