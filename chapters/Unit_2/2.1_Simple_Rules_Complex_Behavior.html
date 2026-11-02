@@ -608,10 +608,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="vocab">
 <div class="word-cards">
 <ul>
-<li><span class="icon">🔲</span> <a href="../../glossary.html#glossary-cellular-automaton" class="glossary-link" data-term="cellular automaton" data-original-href="#glossary-cellular-automaton" data-slug="cellular-automaton">cellular automaton</a>: a row or grid of cells that change color by following a rule</li>
-<li><span class="icon">🌊</span> <a href="../../glossary.html#glossary-emergence" class="glossary-link" data-term="emergence" data-original-href="#glossary-emergence" data-slug="emergence">emergence</a>: when many simple parts together make something complicated that no one planned</li>
-<li><span class="icon">🎲</span> <a href="../../glossary.html#glossary-random" class="glossary-link" data-term="random" data-original-href="#glossary-random" data-slug="random">random</a>: with no pattern, so you can’t guess what comes next</li>
-<li><span class="icon">📏</span> <a href="../../glossary.html#glossary-rule" class="glossary-link" data-term="rule" data-original-href="#glossary-rule" data-slug="rule">rule</a>: an exact instruction, like “If this happens, do that.”</li>
+<li><span class="icon">🔲</span> <a href="../../glossary.html#glossary-cellular-automaton" class="glossary-link" data-original-href="#glossary-cellular-automaton" data-term="cellular automaton" data-slug="cellular-automaton">cellular automaton</a>: a row or grid of cells that change color by following a rule</li>
+<li><span class="icon">🌊</span> <a href="../../glossary.html#glossary-emergence" class="glossary-link" data-original-href="#glossary-emergence" data-term="emergence" data-slug="emergence">emergence</a>: when many simple parts together make something complicated that no one planned</li>
+<li><span class="icon">🎲</span> <a href="../../glossary.html#glossary-random" class="glossary-link" data-original-href="#glossary-random" data-term="random" data-slug="random">random</a>: with no pattern, so you can’t guess what comes next</li>
+<li><span class="icon">📏</span> <a href="../../glossary.html#glossary-rule" class="glossary-link" data-original-href="#glossary-rule" data-term="rule" data-slug="rule">rule</a>: an exact instruction, like “If this happens, do that.”</li>
 </ul>
 </div>
 </div>
@@ -622,11 +622,11 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="unnumbered anchored" data-anchor-id="warmup">🔥 Warm Up</h2>
 <p>Watch a crowd make a wave. Every person follows <strong>one rule</strong>:</p>
 <blockquote class="blockquote">
-<p>When the person on your left raises their hands, raise your hands. Put them down after one second.</p>
+<p>When the person on your left raises their hands, raise your hands. Put them down quickly.</p>
 </blockquote>
 <!-- stadium_wave.html: Lesson 2.1 warm-up. A row of people who all follow one
      rule: "When the person on your left raises their hands, raise yours. Put
-     them down after one second." The wave moves down the row, but each person
+     them down quickly." The wave moves down the row, but each person
      only moves up and down: emergence. For classes too small to make a
      convincing wave themselves. -->
 <div class="sw" id="sw">
@@ -659,7 +659,8 @@ ul.task-list li input[type="checkbox"] {
   const svg = root.querySelector(".sw-svg"), msg = root.querySelector(".sw-msg");
   const speed = root.querySelector(".sw-speed"), watch = root.querySelector(".sw-watch"), brk = root.querySelector(".sw-break");
   const NS = "http://www.w3.org/2000/svg", N = 28, GAP = 27, X0 = 30, SEAT = 118;
-  const WATCH = 11, BROKEN = 17, HOLD = 1000;   // one second up
+  const WATCH = 11, BROKEN = 17, DOWN = 140;
+  let HOLD = 560;   // time up; set from the speed so about 3 or 4 people are up at once
   const PERSON = "#2e86c1", IGNORE = "#aab7b8", INK = "#2c3e50";
   const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); (parent || svg).appendChild(e); return e; };
 
@@ -706,12 +707,13 @@ ul.task-list li input[type="checkbox"] {
     if (t === null || t < 0) return 0;
     if (t < 150) return t / 150;
     if (t < HOLD) return 1;
-    if (t < HOLD + 220) return 1 - (t - HOLD) / 220;
+    if (t < HOLD + DOWN) return 1 - (t - HOLD) / DOWN;
     return 0;
   }
   function plan() {
     // each person watches only the person on their left
     const react = +speed.value;
+    HOLD = 3.5 * react;
     raisedAt = new Array(N).fill(null);
     for (let i = 0; i < N; i++) {
       if (brk.checked && i === BROKEN) break;           // this person never raises, so nobody after them does
@@ -724,7 +726,7 @@ ul.task-list li input[type="checkbox"] {
     for (let i = 0; i < N; i++) {
       const r = raisedAt[i];
       pose(i, lift(r === null ? null : t - r));
-      if (r !== null && t - r < HOLD + 220) busy = true;
+      if (r !== null && t - r < HOLD + DOWN) busy = true;
       if (r !== null && t >= r) front = i;
     }
     if (front !== lastSeen) {
@@ -759,7 +761,7 @@ ul.task-list li input[type="checkbox"] {
 <p>If there’s time, try it yourselves. Sit in a row and follow the same rule. Even 4 people can pass a small wave.</p>
 <div class="think" title="Who was in charge of the wave?">
 <p>Nobody! Each person only watched one neighbor. The person you watched only went up and down. The wave moved across the row, but no person did.</p>
-<p>When many simple parts make something bigger that nobody planned, we call it <strong><a href="../../glossary.html#glossary-emergence" class="glossary-link" data-term="emergence" data-original-href="#glossary-emergence" data-slug="emergence">emergence</a></strong>.</p>
+<p>When many simple parts make something bigger that nobody planned, we call it <strong><a href="../../glossary.html#glossary-emergence" class="glossary-link" data-original-href="#glossary-emergence" data-term="emergence" data-slug="emergence">emergence</a></strong>.</p>
 </div>
 </section>
 <section id="learn" class="level2 unnumbered">
@@ -773,7 +775,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="../../images/Unit_2/2.1_rule30_card.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Rule 30 card. Eight patterns of three squares. Under each, the color of the middle square in the next row. Black, black, black gives white. Black, black, white gives white. Black, white, black gives white. Black, white, white gives black. White, black, black gives black. White, black, white gives black. White, white, black gives black. White, white, white gives white." width="700"></p>
 </figure>
 </div>
-<p>There are only 8 possible patterns of 3 squares. So a rule card has 8 answers. This card is called <strong>Rule 30</strong>. A world like this is called a <a href="../../glossary.html#glossary-cellular-automaton" class="glossary-link" data-term="cellular automaton" data-original-href="#glossary-cellular-automaton" data-slug="cellular-automaton">cellular automaton</a>.</p>
+<p>There are only 8 possible patterns of 3 squares. So a rule card has 8 answers. This card is called <strong>Rule 30</strong>. A world like this is called a <a href="../../glossary.html#glossary-cellular-automaton" class="glossary-link" data-original-href="#glossary-cellular-automaton" data-term="cellular automaton" data-slug="cellular-automaton">cellular automaton</a>.</p>
 <hr>
 </section>
 <section id="rule-30" class="level3">
@@ -784,7 +786,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="../../images/Unit_2/2.1_rule30_big.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Rule 30 after 80 rows: a large triangle. The left side has stripes. The middle and right look random, with small white triangles of many sizes." width="640"></p>
 </figure>
 </div>
-<p>The rule is tiny. But the middle of the picture looks <strong><a href="../../glossary.html#glossary-random" class="glossary-link" data-term="random" data-original-href="#glossary-random" data-slug="random">random</a></strong>. Even Wolfram can’t say what row 1,000 will look like. The only way to know is to make all 999 rows before it.</p>
+<p>The rule is tiny. But the middle of the picture looks <strong><a href="../../glossary.html#glossary-random" class="glossary-link" data-original-href="#glossary-random" data-term="random" data-slug="random">random</a></strong>. Even Wolfram can’t say what row 1,000 will look like. The only way to know is to make all 999 rows before it.</p>
 <div class="remember" title="The big idea">
 <p>Simple rules can make behavior that is <strong>just as complicated</strong> as anything else. Wolfram calls this the <strong>Principle of Computational Equivalence</strong>. He thinks a row of cells, the weather, and a brain can all be equally complicated. Not every scientist agrees.</p>
 <p>This matters for AI. A neural network is made of tiny parts that follow simple rules. So is your brain.</p>
