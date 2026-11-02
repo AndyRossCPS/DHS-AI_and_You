@@ -581,10 +581,11 @@ window.Quarto = {
   <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn">👥 Learn Together</a>
   <ul class="collapse">
   <li><a href="#multiply-add-compare" id="toc-multiply-add-compare" class="nav-link" data-scroll-target="#multiply-add-compare">2.4.1 - Multiply, Add, Compare</a></li>
+  <li><a href="#from-one-neuron-to-a-network" id="toc-from-one-neuron-to-a-network" class="nav-link" data-scroll-target="#from-one-neuron-to-a-network">2.4.2 - From One Neuron to a Network</a></li>
   </ul></li>
   <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">🛠️ Try It</a>
   <ul class="collapse">
-  <li><a href="#be-a-neuron" id="toc-be-a-neuron" class="nav-link" data-scroll-target="#be-a-neuron">2.4.2 - Be a Neuron</a></li>
+  <li><a href="#be-a-neuron" id="toc-be-a-neuron" class="nav-link" data-scroll-target="#be-a-neuron">2.4.3 - Be a Neuron</a></li>
   </ul></li>
   <li><a href="#talk" id="toc-talk" class="nav-link" data-scroll-target="#talk">💬 Talk About It</a></li>
   <li><a href="#go-further" id="toc-go-further" class="nav-link" data-scroll-target="#go-further">🚀 Go Further</a></li>
@@ -626,9 +627,9 @@ window.Quarto = {
 <p><strong>Today’s Plan</strong> (40 minutes)</p>
 <ul>
 <li><span class="icon">🔥</span> <strong>Warm Up</strong> Should I go? <span class="time">7 min</span></li>
-<li><span class="icon">👥</span> <strong>Learn Together</strong> Multiply, add, compare <span class="time">10 min</span></li>
-<li><span class="icon">🛠️</span> <strong>Try It</strong> Be a neuron <span class="time">16 min</span></li>
-<li><span class="icon">💬</span> <strong>Talk About It</strong> Who picks the weights? <span class="time">7 min</span></li>
+<li><span class="icon">👥</span> <strong>Learn Together</strong> One neuron, then a network <span class="time">13 min</span></li>
+<li><span class="icon">🛠️</span> <strong>Try It</strong> Be a neuron <span class="time">14 min</span></li>
+<li><span class="icon">💬</span> <strong>Talk About It</strong> Who picks the weights? <span class="time">6 min</span></li>
 </ul>
 </div>
 <div class="objectives">
@@ -636,6 +637,7 @@ window.Quarto = {
 <li><label><input type="checkbox">I can explain inputs, weights, and a threshold.</label></li>
 <li><label><input type="checkbox">I can calculate what an artificial neuron decides.</label></li>
 <li><label><input type="checkbox">I can compare an artificial neuron with a real neuron.</label></li>
+<li><label><input type="checkbox">I can name the layers of a neural network.</label></li>
 </ul>
 </div>
 <div class="vocab">
@@ -645,6 +647,7 @@ window.Quarto = {
 <li><span class="icon">⚖️</span> <a href="../../glossary.html#glossary-weight" class="glossary-link" data-original-href="#glossary-weight" data-slug="weight" data-term="weight">weight</a>: a number that says how much an input matters</li>
 <li><span class="icon">🚦</span> <a href="../../glossary.html#glossary-threshold" class="glossary-link" data-original-href="#glossary-threshold" data-slug="threshold" data-term="threshold">threshold</a>: the number the total must pass for the neuron to fire</li>
 <li><span class="icon">🔵</span> <a href="../../glossary.html#glossary-perceptron" class="glossary-link" data-original-href="#glossary-perceptron" data-slug="perceptron" data-term="perceptron">perceptron</a>: the first artificial neuron that could learn (1958)</li>
+<li><span class="icon">🧱</span> <a href="../../glossary.html#glossary-layer" class="glossary-link" data-original-href="#glossary-layer" data-slug="layer" data-term="layer">layer</a>: a row of neurons in a neural network. Each layer sends its answers to the next one</li>
 </ul>
 </div>
 </div>
@@ -746,11 +749,29 @@ window.Quarto = {
 <p>An artificial neuron is only <strong>multiply, add, compare</strong>. That’s all. A neural network is many of these, connected together.</p>
 </div>
 </section>
+<section id="from-one-neuron-to-a-network" class="level3">
+<h3 class="anchored" data-anchor-id="from-one-neuron-to-a-network">2.4.2 - From One Neuron to a Network</h3>
+<p>One neuron makes one small decision. A <a href="../../glossary.html#glossary-neural-network" class="glossary-link" data-original-href="#glossary-neural-network" data-slug="neural-network" data-term="neural network">neural network</a> connects many neurons. They’re arranged in rows called <a href="../../glossary.html#glossary-layer" class="glossary-link" data-original-href="#glossary-layer" data-slug="layer" data-term="layers">layers</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/Unit_2/2.4_network.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A small neural network. On the left, three inputs: Sunny 1, Friends going 1, Homework done 0. In the middle, a column of four neurons. On the right, two neurons: go and stay home. Lines connect every input to every middle neuron, and every middle neuron to both right neurons. The top middle neuron's three lines are highlighted with weights times 2, times 3, and times 1. It's labeled: one neuron, like the one above: multiply, add, compare. A note says each line is a weight. Labels under the columns: input layer, the numbers go in. Hidden layer, its answers go to the next layer. Output layer, one neuron for each answer." width="720"></p>
+</figure>
+</div>
+<ol type="1">
+<li>The <strong>input layer</strong> holds the numbers that go in. Here, they’re the three answers from the warm-up.</li>
+<li>Every neuron in the <strong>hidden layer</strong> gets every input. Each one multiplies, adds, and compares, like the neuron above. Each one has its <strong>own</strong> weights. Its answer isn’t “go” or “stay”. Its answer goes to the next layer as an input.</li>
+<li>The <strong>output layer</strong> gives the answer. There’s one neuron for each possible answer. The one with the biggest total wins.</li>
+</ol>
+<p>Every line is a <strong>weight</strong>. Count them: <span class="math inline">\(3 \times 4 + 4 \times 2 = 20\)</span> weights. The chatbots you use have <strong>billions</strong> of weights and many hidden layers.</p>
+<div class="think" title="Why is it called hidden?">
+<p>You see the numbers that go in and the answer that comes out. You don’t see what the middle neurons decide. Nobody tells them what to look for, either. They find it while the network learns. (Lesson 2.5 shows how.)</p>
+</div>
+</section>
 </section>
 <section id="try-it" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="try-it">🛠️ Try It</h2>
 <section id="be-a-neuron" class="level3">
-<h3 class="anchored" data-anchor-id="be-a-neuron">2.4.2 - Be a Neuron</h3>
+<h3 class="anchored" data-anchor-id="be-a-neuron">2.4.3 - Be a Neuron</h3>
 <div class="steps">
 <ol type="1">
 <li>One person is the <strong>neuron</strong>. The neuron gets a <strong>threshold</strong> card: 3.</li>
